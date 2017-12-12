@@ -5,6 +5,11 @@ from vectorization.VectorizerSet import ngram_count_tf_idf
 import vectorization.VectorizerSet as vectorSets
 from dictionary import TerminologicalDictionary
 from classification.classify_kmeans import Clustering_kmeans
+import nltk
+
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('stopword')
 
 texts, labels = get_bdrv_data()
 
