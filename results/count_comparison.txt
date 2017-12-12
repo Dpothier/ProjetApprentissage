@@ -1,0 +1,9 @@
+Mean accuracy for by count: 0.7483788254755996 
+Mean accuracy for by count, stemming: 0.7413523573200992 
+Mean accuracy for by count, pos: 0.7535235732009925 
+Mean accuracy for by count, stemming, pos: 0.7515963606286187 
+Mean accuracy for by count, lemma: 0.7548097601323407 
+Mean accuracy for by count, lemma, pos: 0.7516087675765094 
+Mean accuracy for by count, amp 3: 0.7509801488833747 
+Mean accuracy for by count, amp, lemma: 0.7522746071133168 
+Mean accuracy for By count, amp, lemma, pos: 0.7541852770885028 

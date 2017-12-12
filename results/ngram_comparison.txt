@@ -1,0 +1,9 @@
+Mean accuracy for by count: 0.7291025641025641 
+Mean accuracy for by count, bigram: 0.7015550041356493 
+Mean accuracy for by count, trigram: 0.686095947063689 
+Mean accuracy for by tf: 0.42354838709677417 
+Mean accuracy for by tf, bigram: 0.43072373862696434 
+Mean accuracy for by tf, trigram: 0.43320926385442526 
+Mean accuracy for by tfidf: 0.6130769230769231 
+Mean accuracy for by tfidf, bigram: 0.5872704714640198 
+Mean accuracy for by tfidf, trigram: 0.5847311827956989 

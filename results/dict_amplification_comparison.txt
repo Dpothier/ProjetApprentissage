@@ -1,0 +1,15 @@
+Mean accuracy for by count, amp 2: 0.7162737799834574 
+Mean accuracy for by count, amp 3: 0.7272291149710505 
+Mean accuracy for by count, amp 4: 0.7265922249793219 
+Mean accuracy for by count, amp 10: 0.7285359801488833 
+Mean accuracy for by count, amp 15: 0.7246277915632755 
+Mean accuracy for by tf, amp 2: 0.42805210918114145 
+Mean accuracy for by tf, amp 3: 0.4249462365591398 
+Mean accuracy for by tf, amp 4: 0.4312489660876759 
+Mean accuracy for by tf, amp 10: 0.42682382133995034 
+Mean accuracy for by tf, amp 15: 0.42940033085194373 
+Mean accuracy for by tfidf, amp 2: 0.6104218362282878 
+Mean accuracy for by tfidf, amp 3: 0.6046029776674938 
+Mean accuracy for by tfidf, amp 4: 0.61616211745244 
+Mean accuracy for by tfidf, amp 10: 0.6135773366418527 
+Mean accuracy for by tfidf, amp 15: 0.6122497932175351 
