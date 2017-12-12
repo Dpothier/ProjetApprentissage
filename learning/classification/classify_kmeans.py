@@ -21,9 +21,9 @@ class Clustering_kmeans:
  		results = []
  		for n in range(2, self.k+1, 2):
  			algo = KMeans(n_clusters=n, random_state=0)
-		    algo.fit(data_vector)
-		    predictions = algo.predict(data_vector)
-		    silhouette_score = silhouette_score(data_vector, predictions)
+ 			algo.fit(data_vector)
+ 			predictions = algo.predict(data_vector)
+ 			silhouette_score = silhouette_score(data_vector, predictions)
 
  			results.append(n, silhouette_score)
  		return results
