@@ -1,0 +1,20 @@
+\begin{table}[] 
+\begin{center}
+\caption{Knn pour différents nombres de voisins}
+\label{tab:q2_knn}
+\begin{tabular}
+{ | r | r | r | r |}
+\hline
+Number of neighbours &Training Accuracy & Testing Accuracy & Execution time \\
+\hline
+1 & 1.0 & 0.988799358976 & 106.666666667 \\
+3 & 0.993699909883 & 0.98739963892 & 243.666666667 \\
+5 & 0.991700009833 & 0.986199758848 & 308.0 \\
+7 & 0.988899939784 & 0.98459995876 & 317.0 \\
+9 & 0.986900039734 & 0.983200238704 & 391.333333333 \\
+11 & 0.984800129683 & 0.98040043852 & 397.333333333 \\
+23 & 0.971700019432 & 0.968600997688 & 481.666666667 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}

@@ -1,0 +1,16 @@
+\begin{table}[] 
+\begin{center}
+\caption{Résultats d'optimisations d'hyperparamètres pour trois méthodes par discriminant}
+\label{tab:q2_results}
+\begin{tabular}
+{ | r | r | r | r | r | r |}
+\hline
+Algorithme &Taux de classement entraînement & Taux de classement entraînement & Temps d'exécution & Premier hyperparamètre & Deuxième hyperparamètre \\
+\hline
+Knn & 1.0 & 0.991485809683 & 332 & 1 &  \\
+SVM & 0.9996 & 0.993989983306 & 771 & 10 & 0.8 \\
+MLP & 0.9962 & 0.986978297162 & 10960 & 6 & 100 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}

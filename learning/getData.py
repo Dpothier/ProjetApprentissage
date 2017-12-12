@@ -16,3 +16,6 @@ def get_bdrv_data():
         numeric_targets = encoder.fit_transform(targets)
 
         return data, numeric_targets
+
+
+def get_carcomplaints_data():
