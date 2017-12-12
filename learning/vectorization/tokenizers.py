@@ -2,6 +2,7 @@ import nltk
 from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 from nltk import word_tokenize
+from nltk.corpus import stopwords
 
 
 class Tokenizer:
@@ -24,7 +25,7 @@ class NLTKTokenizer:
     def __call__(self, doc):
         return word_tokenize(doc)
 
-class StemmerPostProcessor:
+class StemmerPostTokenizer:
     porter_stemmer = None
     def __init__(self):
         self.porter_stemmer = PorterStemmer()
@@ -32,7 +33,7 @@ class StemmerPostProcessor:
     def __call__(self, tokens):
         return [self.porter_stemmer.stem(t) for t in tokens]
 
-class POSFilterPostprocessor:
+class POSFilterPostTokenizer:
     def __call__(self, tokens):
         tagged_tokens = nltk.pos_tag(tokens)
         filtered_tag_tokens = [token[0] for token in tagged_tokens if token[1] in ["NN", "NNS", "NNP", "NNPS", "JJ", "JJR",
@@ -40,7 +41,7 @@ class POSFilterPostprocessor:
                                                                                    "VBG", "VBN", "VBP", "VBZ"]]
         return filtered_tag_tokens
 
-class RareWordsPostprocessor:
+class RareWordsPostTokenizer:
     rare_words = []
     def __init__(self, rare_words=[]):
         self.rare_words = rare_words
@@ -48,7 +49,7 @@ class RareWordsPostprocessor:
     def __call__(self, tokens):
         return [token for token in tokens if token not in self.rare_words]
 
-class WordNetLemmatizerPostprocessor:
+class WordNetLemmatizerPostTokenizer:
     lemmatizer = None
 
     def __init__(self):
@@ -57,7 +58,7 @@ class WordNetLemmatizerPostprocessor:
     def __call__(self, tokens):
         return [self.lemmatizer.lemmatize(t) for t in tokens]
 
-class DictionaryAmplificationPostprocessor:
+class DictionaryAmplificationPostTokenizer:
     dictionary = None
     amplification_factor = 3
 
@@ -74,3 +75,15 @@ class DictionaryAmplificationPostprocessor:
             else:
                 amplified_tokens.append(token)
         return amplified_tokens
+
+class StopWordPostTokenizer:
+
+    def __call__(self, tokens):
+        stopWords = set(stopwords.words('english'))
+        wordsFiltered = []
+
+        for t in tokens:
+            if t not in stopWords:
+                wordsFiltered.append(t)
+
+        return wordsFiltered

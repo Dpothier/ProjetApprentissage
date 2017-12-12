@@ -42,3 +42,10 @@ def dictionary_amplification(dictionary):
             ("by tfidf, amp 4", Use_tfidf(1).and_dictionnary_amplification(dictionary, 4).as_vectorizer()),
             ("by tfidf, amp 10", Use_tfidf(1).and_dictionnary_amplification(dictionary, 10).as_vectorizer()),
             ("by tfidf, amp 15", Use_tfidf(1).and_dictionnary_amplification(dictionary, 15).as_vectorizer())]
+
+def lemmatization(dictionary):
+    return [("by count, lemma", Use_count(1).and_lemmatization().as_vectorizer()),
+            ("by count, lemma, stop", Use_count(1).and_lemmatization().and_stop_words().and_stop_words().as_vectorizer()),
+            ("By count, lemma, pos", Use_count(1).and_pos_filter().and_lemmatization().as_vectorizer()),
+            ("By count, lemma, pos, stop", Use_count(1).and_pos_filter().and_stop_words().and_lemmatization().as_vectorizer())
+            ]

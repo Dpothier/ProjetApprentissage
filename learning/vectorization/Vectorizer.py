@@ -1,6 +1,7 @@
 import numpy as np
 
 class Vectorizer:
+    vectorizer = None
 
     def __init__(self, vectorizer, post_vectorizers):
         self.vectorizer = vectorizer
