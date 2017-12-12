@@ -12,7 +12,6 @@ from sklearn.metrics import silhouette_score
 #     return n, silhouette_score
 
 
-
 class Clustering_kmeans:
 
  	def __init__(self, k):

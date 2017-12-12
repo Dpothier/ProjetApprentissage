@@ -4,6 +4,7 @@ from getData import get_bdrv_data
 from vectorization.VectorizerSet import ngram_count_tf_idf
 import vectorization.VectorizerSet as vectorSets
 from dictionary import TerminologicalDictionary
+from classification.classify_kmeans import Clustering_kmeans
 
 texts, labels = get_bdrv_data()
 
