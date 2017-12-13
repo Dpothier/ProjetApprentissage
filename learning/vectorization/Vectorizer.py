@@ -1,6 +1,7 @@
 import numpy as np
 
 class Vectorizer:
+    vectorizer = None
 
     def __init__(self, vectorizer, post_vectorizers):
         self.vectorizer = vectorizer
@@ -27,7 +28,6 @@ class DictAmpPostVectorizer:
     def __call__(self, vector, vectorizer):
         amplified_vector = vector.copy()
         vocabulary = vectorizer.vocabulary_
-
         for term, index in vocabulary.items():
             if term in self.dictionary:
                 amplified_vector[:, index] = amplified_vector[:, index] * self.amp_factor

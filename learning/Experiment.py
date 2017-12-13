@@ -22,6 +22,6 @@ class ExperimentSet:
     def get_experiment_results(self, data, targets):
         for vectorizer in self.vectorizer_set:
             vector = vectorizer[1].fit_transform(data)
-            print(vector.shape)
+            print(vectorizer[1].vectorizer.vocabulary_)
             accuracy = self.classifier_method(vector, targets)
             yield((vectorizer[0], accuracy))

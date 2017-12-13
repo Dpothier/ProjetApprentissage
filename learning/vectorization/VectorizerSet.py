@@ -37,8 +37,24 @@ def dictionary_amplification(dictionary):
             ("by tf, amp 4", Use_tf(1).and_dictionnary_amplification(dictionary, 4).as_vectorizer()),
             ("by tf, amp 10", Use_tf(1).and_dictionnary_amplification(dictionary, 10).as_vectorizer()),
             ("by tf, amp 15", Use_tf(1).and_dictionnary_amplification(dictionary, 15).as_vectorizer()),
+            ("by tf, amp 25", Use_tf(1).and_dictionnary_amplification(dictionary, 25).as_vectorizer()),
+            ("by tf, amp 40", Use_tf(1).and_dictionnary_amplification(dictionary, 40).as_vectorizer()),
             ("by tfidf, amp 2", Use_tfidf(1).and_dictionnary_amplification(dictionary, 2).as_vectorizer()),
             ("by tfidf, amp 3", Use_tfidf(1).and_dictionnary_amplification(dictionary, 3).as_vectorizer()),
             ("by tfidf, amp 4", Use_tfidf(1).and_dictionnary_amplification(dictionary, 4).as_vectorizer()),
             ("by tfidf, amp 10", Use_tfidf(1).and_dictionnary_amplification(dictionary, 10).as_vectorizer()),
-            ("by tfidf, amp 15", Use_tfidf(1).and_dictionnary_amplification(dictionary, 15).as_vectorizer())]
+            ("by tfidf, amp 15", Use_tfidf(1).and_dictionnary_amplification(dictionary, 15).as_vectorizer()),
+            ("by tfidf, amp 25", Use_tfidf(1).and_dictionnary_amplification(dictionary, 25).as_vectorizer()),
+            ("by tfidf, amp 40", Use_tfidf(1).and_dictionnary_amplification(dictionary, 40).as_vectorizer()),]
+
+def lemmatization(dictionary):
+    return [("by count, lemma", Use_count(1).and_lemmatization().as_vectorizer()),
+            ("by count, lemma, stop", Use_count(1).and_lemmatization().and_stop_words().as_vectorizer()),
+            ("By count, lemma, pos", Use_count(1).and_pos_filter().and_lemmatization().as_vectorizer()),
+            ("By count, lemma, pos, stop", Use_count(1).and_pos_filter().and_stop_words().and_lemmatization().as_vectorizer())
+            ]
+
+def closed_vocab(dictionary):
+    return [('by count, closed vocab', Use_count(1).and_closed_vocab(dictionary).as_vectorizer()),
+            ('by tf, closed vocab', Use_tf(1).and_closed_vocab(dictionary).as_vectorizer()),
+            ('by tfidf, closed vocab', Use_tfidf(1).and_closed_vocab(dictionary).as_vectorizer())]
