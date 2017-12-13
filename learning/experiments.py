@@ -8,7 +8,6 @@ from getData import get_carcomplaints_data
 from getData import get_some_carcomplaints_data
 import nltk
 from vectorization.VectorizerSet import ngram_count_tf_idf
-import vectorization.VectorizerSet as vectorSets
 from dictionary import TerminologicalDictionary
 from classification.classify_kmeans import Clustering_kmeans
 
@@ -22,9 +21,9 @@ texts_carcomplaints, labels_carcomplaints = get_some_carcomplaints_data()
 dictionary = TerminologicalDictionary()
 
 experiment_set = ExperimentSet(classify_with_NB,
-                               vectorSets.lemmatization(dictionary))
+                               vectorSets.closed_vocab(dictionary))
 
-with open("../results/lemmatization_brdv.txt", mode="w", encoding="utf8") as f:
+with open("../results/closed_vocab.txt", mode="w", encoding="utf8") as f:
     for result in experiment_set.get_experiment_results(texts_brdv, labels_brdv):
         f.writelines('Mean accuracy for {}: {} \n'.format(result[0], result[1]))
         print('Mean accuracy for {}: {}'.format(result[0], result[1]))

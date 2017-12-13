@@ -18,12 +18,11 @@ def Use_tfidf(ngram):
 
 
 class VectorizerConfigurator:
-    vectorizer = None
-    post_tokenizers = []
-    post_vectorizers = []
 
     def __init__(self, vectorizer):
         self.vectorizer = vectorizer
+        self.post_vectorizers = []
+        self.post_tokenizers = []
 
     def and_stemming(self):
         self.post_tokenizers.append((0, tokens.StemmerPostTokenizer()))
@@ -45,10 +44,12 @@ class VectorizerConfigurator:
         self.post_tokenizers.append((4, tokens.StopWordPostTokenizer()))
         return self
 
+    def and_closed_vocab(self, dictionary):
+        self.post_tokenizers.append((5, tokens.ClosedVocabularyTokenizer(dictionary)))
+        return self
+
     def as_vectorizer(self):
         tokenizer = tokens.Tokenizer(tokens.NLTKTokenizer(), self.post_tokenizers)
         self.vectorizer.tokenizer = tokenizer
         vectorizer_with_post_vectorizers = Vectorizer(self.vectorizer, self.post_vectorizers)
-        self.post_tokenizers = []
-        self.post_vectorizers = []
         return vectorizer_with_post_vectorizers

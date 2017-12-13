@@ -1,0 +1,3 @@
+Mean accuracy for by count, closed vocab: 0.7439164598842017 
+Mean accuracy for by tf, closed vocab: 0.6463937138130686 
+Mean accuracy for by tfidf, closed vocab: 0.6925144747725392 

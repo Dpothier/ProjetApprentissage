@@ -1,4 +1,5 @@
 import csv
+from nltk.corpus import stopwords
 
 def load_dictionary():
     with open('../data/engdictionary.csv', encoding="utf8") as f:
@@ -19,26 +20,33 @@ def parse_dictionary_bigram(terms):
     return parse_dictionary(terms, 2)
 
 def parse_dictionary(terms, ngram):
+    stopWords = set(stopwords.words('english'))
     parsed_terms = []
     for term in terms:
         words = term.split()
-        for i in range(0, len(words) - ngram + 1):
-            parsed_terms.append(words[i:i + ngram])
+        non_stop_words = [word for word in words if word not in stopWords]
+        for i in range(0, len(non_stop_words ) - ngram + 1):
+            term_to_add = non_stop_words[i:i + ngram]
+            if term_to_add not in parsed_terms:
+                parsed_terms.append(' '.join(non_stop_words[i:i + ngram]))
 
     return parsed_terms
 
 class TerminologicalDictionary:
-    unigram_dic = None
-    bigram_dic = None
-
     def __init__(self):
         terms = load_dictionary()
         self.unigram_dic = parse_dictionary_unigram(terms)
         self.bigram_dic = parse_dictionary_bigram(terms)
+        print("Unigram terms of dictionary: {}".format(self.unigram_dic))
+        print("Bigram terms of dictionary: {}".format(self.bigram_dic))
+
 
     def __contains__(self, item):
+        #print("Checking if term is in dictionary")
         if item in self.unigram_dic:
+            #print("term: {} is in dictionary".format(item))
             return True
         if item in self.bigram_dic:
+            #print("term: {} is in dictionary".format(item))
             return True
         return False

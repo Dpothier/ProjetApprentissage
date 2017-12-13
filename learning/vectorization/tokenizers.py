@@ -87,3 +87,11 @@ class StopWordPostTokenizer:
                 wordsFiltered.append(t)
 
         return wordsFiltered
+
+class ClosedVocabularyTokenizer:
+
+    def __init__(self, dictionary):
+        self.dictionary = dictionary
+
+    def __call__(self, tokens):
+        return [token for token in tokens if token in self.dictionary.unigram_dic]
