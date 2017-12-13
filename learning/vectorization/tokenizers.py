@@ -3,6 +3,7 @@ from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 from nltk import word_tokenize
 from nltk.corpus import stopwords
+from vectorization.helper import get_wordnet_pos
 
 
 class Tokenizer:
@@ -42,21 +43,26 @@ class POSFilterPostTokenizer:
         return filtered_tag_tokens
 
 class RareWordsPostTokenizer:
-    rare_words = []
     def __init__(self, rare_words=[]):
         self.rare_words = rare_words
 
     def __call__(self, tokens):
         return [token for token in tokens if token not in self.rare_words]
 
-class WordNetLemmatizerPostTokenizer:
-    lemmatizer = None
-
+class LemmatizerPostTokenizer:
     def __init__(self):
-        self.lemmatizer =  WordNetLemmatizer()
+        self.lemmatizer = WordNetLemmatizer()
 
     def __call__(self, tokens):
         return [self.lemmatizer.lemmatize(t) for t in tokens]
+
+class LemmatizerWithPosPostTokenizer:
+    def __init__(self):
+        self.lemmatizer = WordNetLemmatizer()
+
+    def __call__(self, tokens):
+        tagged_tokens = nltk.pos_tag(tokens)
+        return [self.lemmatizer.lemmatize(t[0], get_wordnet_pos(t[1])) for t in tagged_tokens]
 
 class DictionaryAmplificationPostTokenizer:
     dictionary = None
@@ -95,3 +101,5 @@ class ClosedVocabularyTokenizer:
 
     def __call__(self, tokens):
         return [token for token in tokens if token in self.dictionary.unigram_dic]
+
+

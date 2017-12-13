@@ -37,16 +37,11 @@ class TerminologicalDictionary:
         terms = load_dictionary()
         self.unigram_dic = parse_dictionary_unigram(terms)
         self.bigram_dic = parse_dictionary_bigram(terms)
-        print("Unigram terms of dictionary: {}".format(self.unigram_dic))
-        print("Bigram terms of dictionary: {}".format(self.bigram_dic))
 
 
     def __contains__(self, item):
-        #print("Checking if term is in dictionary")
         if item in self.unigram_dic:
-            #print("term: {} is in dictionary".format(item))
             return True
         if item in self.bigram_dic:
-            #print("term: {} is in dictionary".format(item))
             return True
         return False

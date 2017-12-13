@@ -6,6 +6,7 @@ from vectorization.Vectorizer import Vectorizer
 from vectorization import Vectorizer as vectorizer
 
 
+
 def Use_count(ngram):
     return VectorizerConfigurator(CountVectorizer(ngram_range=(1, ngram)))
 
@@ -33,7 +34,11 @@ class VectorizerConfigurator:
         return self
 
     def and_lemmatization(self):
-        self.post_tokenizers.append((2, tokens.WordNetLemmatizerPostTokenizer()))
+        self.post_tokenizers.append((2, tokens.LemmatizerPostTokenizer()))
+        return self
+
+    def and_lemmatization_with_pos(self):
+        self.post_tokenizers.append((2, tokens.LemmatizerWithPosPostTokenizer()))
         return self
 
     def and_dictionnary_amplification(self, dictionary, factor):

@@ -51,7 +51,11 @@ def lemmatization(dictionary):
     return [("by count, lemma", Use_count(1).and_lemmatization().as_vectorizer()),
             ("by count, lemma, stop", Use_count(1).and_lemmatization().and_stop_words().as_vectorizer()),
             ("By count, lemma, pos", Use_count(1).and_pos_filter().and_lemmatization().as_vectorizer()),
-            ("By count, lemma, pos, stop", Use_count(1).and_pos_filter().and_stop_words().and_lemmatization().as_vectorizer())
+            ("By count, lemma, pos, stop", Use_count(1).and_pos_filter().and_stop_words().and_lemmatization().as_vectorizer()),
+            ("by count, lemma pos", Use_count(1).and_lemmatization_with_pos().as_vectorizer()),
+            ("by count, lemma pos, stop", Use_count(1).and_lemmatization_with_pos().and_stop_words().as_vectorizer()),
+            ("By count, lemma pos, pos", Use_count(1).and_pos_filter().and_lemmatization_with_pos().as_vectorizer()),
+            ("By count, lemma pos, pos, stop", Use_count(1).and_pos_filter().and_stop_words().and_lemmatization_with_pos().as_vectorizer()),
             ]
 
 def closed_vocab(dictionary):
