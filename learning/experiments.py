@@ -7,6 +7,7 @@ from getData import get_bdrv_data
 from getData import get_carcomplaints_data
 from getData import get_some_carcomplaints_data
 import nltk
+nltk.download('averaged_perceptron_tagger')
 from vectorization.VectorizerSet import ngram_count_tf_idf
 from dictionary import TerminologicalDictionary
 from classification.classify_kmeans import Clustering_kmeans
@@ -20,13 +21,13 @@ texts_carcomplaints, labels_carcomplaints = get_some_carcomplaints_data()
 
 dictionary = TerminologicalDictionary()
 
-<<<<<<< HEAD
+
 experiment_set = ExperimentSet(Clustering_kmeans(50),
                                vectorSets.count_postprocessing(dictionary))
-=======
-experiment_set = ExperimentSet(classify_with_NB,
-                               vectorSets.closed_vocab(dictionary))
->>>>>>> 4fea23fd3d64b5320daaab27fc7fe3630f28d20d
+
+#experiment_set = ExperimentSet(classify_with_NB,
+#                               vectorSets.closed_vocab(dictionary))
+
 
 with open("../results/closed_vocab.txt", mode="w", encoding="utf8") as f:
     for result in experiment_set.get_experiment_results(texts_brdv, labels_brdv):

@@ -14,7 +14,6 @@ from sklearn.metrics import silhouette_score
 
 class Clustering_kmeans:
 
-<<<<<<< HEAD
 	def __init__(self, k):
 		self.k = k
  		
@@ -27,17 +26,4 @@ class Clustering_kmeans:
 			silhouette = silhouette_score(data_vector, predictions)
 			results.append([n, silhouette])
 		return results
-=======
-    def __init__(self, k):
-        self.k = k
 
-    def __call__(self, data_vector, target):
-        results = []
-        for n in range(2, self.k+1, 2):
-            algo = KMeans(n_clusters=n, random_state=0)
-            algo.fit(data_vector)
-            predictions = algo.predict(data_vector)
-            silhouette = silhouette_score(data_vector, predictions)
-            results.append((n, silhouette))
-        return results
->>>>>>> 4fea23fd3d64b5320daaab27fc7fe3630f28d20d
