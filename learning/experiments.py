@@ -16,7 +16,7 @@ texts, labels = get_bdrv_data()
 dictionary = TerminologicalDictionary()
 
 experiment_set = ExperimentSet(Clustering_kmeans(50),
-                               vectorSets.dictionary_amplification(dictionary))
+                               vectorSets.count_postprocessing(dictionary))
 
 with open("../results/dict_amplification_comparison.txt", mode="w", encoding="utf8") as f:
     for result in experiment_set.get_experiment_results(texts, labels):
