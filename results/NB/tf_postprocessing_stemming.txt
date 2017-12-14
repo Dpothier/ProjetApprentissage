@@ -1,0 +1,4 @@
+Mean accuracy for by tf, stemming, pos: 0.6123490488006617 
+Mean accuracy for by tf, stemming, stop: 0.5295781637717121 
+Mean accuracy for by tf, stemming, amp 40: 0.7118362282878412 
+Mean accuracy for by tf, stemming, all: 0.719520264681555 

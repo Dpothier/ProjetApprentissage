@@ -1,0 +1,4 @@
+Mean accuracy for by count, stemming, pos: 0.7554466501240694 
+Mean accuracy for by count, stemming, stop: 0.7496650124069479 
+Mean accuracy for by count, stemming, amp 4: 0.7368569065343259 
+Mean accuracy for by count, stemming, all: 0.7484160463192722 

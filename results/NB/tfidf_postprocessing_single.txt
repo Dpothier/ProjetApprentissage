@@ -1,0 +1,6 @@
+Mean accuracy for by tfidf: 0.6122870140612074 
+Mean accuracy for by tfidf, stemming: 0.619987593052109 
+Mean accuracy for by tfidf, pos: 0.6694003308519438 
+Mean accuracy for by tfidf, stop: 0.6585235732009924 
+Mean accuracy for by tfidf, lemma: 0.6212613730355665 
+Mean accuracy for by tfidf, amp 40: 0.7399917287014061 

@@ -1,0 +1,4 @@
+Mean accuracy for by tfidf, lemma, pos: 0.6771009098428454 
+Mean accuracy for by tfidf, lemma, stop: 0.661095947063689 
+Mean accuracy for by tfidf, lemma, amp 40: 0.7464681555004136 
+Mean accuracy for by tfidf, lemma, all: 0.7343052109181142 

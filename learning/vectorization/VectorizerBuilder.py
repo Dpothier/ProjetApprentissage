@@ -41,7 +41,7 @@ class VectorizerConfigurator:
         self.post_tokenizers.append((2, tokens.LemmatizerWithPosPostTokenizer()))
         return self
 
-    def and_dictionnary_amplification(self, dictionary, factor):
+    def and_dict_amp(self, dictionary, factor):
         self.post_vectorizers.append((1, vectorizer.DictAmpPostVectorizer(dictionary, factor)))
         return self
 

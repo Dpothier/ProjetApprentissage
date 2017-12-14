@@ -1,0 +1,15 @@
+Mean accuracy for by count, lemma: 0.7259139784946237 
+Mean accuracy for by count, lemma, stop: 0.7483870967741935 
+Mean accuracy for By count, lemma, pos: 0.7438544251447478 
+Mean accuracy for By count, lemma, pos, stop: 0.7509884201819685 
+Mean accuracy for By count, lemma, pos, stop, amp 4: 0.7574276261373035 
+Mean accuracy for by tf, lemma: 0.4332919768403639 
+Mean accuracy for by tf, lemma, stop: 0.5359305210918114 
+Mean accuracy for By tf, lemma, pos: 0.6251654259718777 
+Mean accuracy for By tf, lemma, pos, stop: 0.6437758478081058 
+Mean accuracy for By tf, lemma, pos, stop, amp 4: 0.7246898263027296 
+Mean accuracy for by tfidf, lemma: 0.6212655086848635 
+Mean accuracy for by tfidf, lemma, stop: 0.6610504549214226 
+Mean accuracy for By tfidf, lemma, pos: 0.6758436724565757 
+Mean accuracy for By tfidf, lemma, pos, stop: 0.6765136476426798 
+Mean accuracy for By tfidf, lemma, pos, stop, amp 4: 0.7381265508684863 

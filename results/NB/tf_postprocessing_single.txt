@@ -1,0 +1,6 @@
+Mean accuracy for by tf: 0.4274855252274607 
+Mean accuracy for by tf, stemming: 0.44152191894127374 
+Mean accuracy for by tf, pos: 0.6097187758478081 
+Mean accuracy for by tf, stop: 0.530198511166253 
+Mean accuracy for by tf, lemma: 0.4332051282051282 
+Mean accuracy for by tf, amp 40: 0.7432547559966916 
