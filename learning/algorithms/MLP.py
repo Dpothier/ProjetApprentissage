@@ -17,8 +17,8 @@ class MLP:
         return run_classifier(MLPClassifier(hidden_layer_sizes=(self.current_neuron,) * self.current_layer),
                               train_data, test_data, train_target, test_target)
 
-    def produce_results_validation(self, train_data, validation_data, train_target, validation_target):
-        return run_classifier(MLPClassifier(hidden_layer_sizes=(self.best_hyperparameters[1],) * self.best_hyperparameters[0]),
+    def run_experiment_with_hyperparameters(self, train_data, validation_data, train_target, validation_target, hyperparameters):
+        return run_classifier(MLPClassifier(hidden_layer_sizes=(hyperparameters[1],) * hyperparameters[0]),
                               train_data, validation_data, train_target, validation_target)
 
     def optimize_hyperparameters(self, data, targets):
@@ -41,5 +41,5 @@ class MLP:
         #                             target_experiment,
         #                             target_validation)
 
-        return best_result + self.best_hyperparameters
+        return best_result, self.best_hyperparameters
 

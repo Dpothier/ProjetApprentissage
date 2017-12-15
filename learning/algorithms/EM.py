@@ -11,10 +11,13 @@ class EM_Gaussian:
 
     def produce_results(self, train_data, test_data, train_target, test_target):
         algo = GaussianMixture(n_components=self.current_k)
-        return run_clustering(algo, train_data.toarray(), test_data.toarray())
+        try:
+            return run_clustering(algo, train_data.toarray(), test_data.toarray())
+        except AttributeError:
+            return run_clustering(algo, train_data, test_data)
 
-    def produce_results_validation(self, train_data, validation_data, train_target, validation_target):
-        return run_clustering(GaussianMixture(n_components=self.best_hyperparameter),
+    def run_experiment_with_hyperparameters(self, train_data, validation_data, train_target, validation_target, hyperparameters):
+        return run_clustering(GaussianMixture(n_components=hyperparameters),
                               train_data.toarray(), validation_data.toarray())
 
     def optimize_hyperparameters(self, data, targets):

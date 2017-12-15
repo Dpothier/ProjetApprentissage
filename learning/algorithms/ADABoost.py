@@ -12,8 +12,8 @@ class ADABoost:
     def produce_results(self, train_data, test_data, train_target, test_target):
         return run_classifier(AdaBoostClassifier(), train_data, test_data, train_target, test_target)
 
-    def produce_results_validation(self, train_data, validation_data, train_target, validation_target):
+    def run_experiment_with_hyperparameters(self, train_data, validation_data, train_target, validation_target, hyperparameters):
         return run_classifier(AdaBoostClassifier(), train_data, validation_data, train_target, validation_target)
 
     def optimize_hyperparameters(self, data, targets):
-        return self.sets_constructor(data, targets, self.produce_results)
+        return self.sets_constructor(data, targets, self.produce_results), ()

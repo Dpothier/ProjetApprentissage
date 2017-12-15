@@ -1,17 +1,11 @@
-import vectorization.VectorizerSet as vectorSets
-from Experiment import ExperimentSet
-from Experiment import MetaExperimentSet
-from algorithms.helper import classify_with_NB
-from algorithms.helper import classify_with_NB_with_no_folds
-from dictionary import TerminologicalDictionary
-from getData import get_bdrv_data
-from getData import get_carcomplaints_data
-from getData import get_some_carcomplaints_data
 import nltk
-from dictionary import TerminologicalDictionary
-from algorithms.KMeans import KMeans
-from algorithms.EM import EM_Gaussian
+
+import vectorization.VectorizerSet as vectorSets
 from algorithms import SVM
+from dictionary import TerminologicalDictionary
+from experiment.Experiment import ExperimentSet
+from getData import get_bdrv_data
+from getData import get_some_carcomplaints_data
 
 nltk.download('averaged_perceptron_tagger')
 nltk.download('stopwords')

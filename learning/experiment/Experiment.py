@@ -12,14 +12,14 @@ class Experiment:
 
 
 class ExperimentSet:
-    def __init__(self, classifying_method, vectorizer_set):
-        self.classifying_method = classifying_method
+    def __init__(self, algorithm, vectorizer_set):
+        self.algorithm = algorithm
         self.vectorizer_set = vectorizer_set
 
     def get_experiment_results(self, data, targets):
         for vectorizer in self.vectorizer_set:
             vector = vectorizer[1].fit_transform(data)
-            accuracy = self.classifying_method(vector, targets)
+            accuracy = self.algorithm.run_experiment(vector, targets)
             yield((vectorizer[0], accuracy))
 
 class MetaExperimentSet:

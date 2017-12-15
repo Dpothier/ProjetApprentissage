@@ -4,6 +4,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import silhouette_score
 import time
+import numpy as np
 
 
 
@@ -35,14 +36,14 @@ def run_classifier(classifier, X_train, X_test, y_train, y_test):
 
 def run_clustering(clusterer, X_train, X_test):
     start_time = current_milli_time()
+    X = np.append(X_train, X_test, axis=0)
+    clusterer.fit(X)
+    pred = clusterer.predict(X)
+   # pred_test = clusterer.predict(X_test)
 
-    clusterer.fit(X_train)
-    pred_train = clusterer.predict(X_train)
-    pred_test = clusterer.predict(X_test)
-
-    silhouette_test = silhouette_score(X_test, pred_test)
-    silhouette_train = silhouette_score(X_train, pred_train)
+    silhouette = silhouette_score(X, pred)
+    #silhouette = silhouette_score(X_train, pred_train)
     execution_time = current_milli_time() - start_time
 
-    return silhouette_test, silhouette_train, execution_time
+    return silhouette, execution_time
 

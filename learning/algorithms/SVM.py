@@ -18,8 +18,8 @@ class SVM:
         return run_classifier(SVC(C=self.current_c, gamma=(1 / (2 * self.current_sigma ** 2))),
                               train_data, test_data, train_target, test_target)
 
-    def produce_results_validation(self, train_data, validation_data, train_target, validation_target):
-        return run_classifier(SVC(C=self.best_hyperparameters[0], gamma=(1 / (2 * self.best_hyperparameters[1] ** 2))),
+    def run_experiment_with_hyperparameters(self, train_data, validation_data, train_target, validation_target,hyperparameters):
+        return run_classifier(SVC(C=hyperparameters[0], gamma=(1 / (2 * hyperparameters[1] ** 2))),
                               train_data, validation_data, train_target, validation_target)
 
     def optimize_hyperparameters(self, data, targets):
@@ -45,7 +45,7 @@ class SVM:
         #                             target_experiment,
         #                             target_validation)
 
-        return best_result + best_result_hyperparameters
+        return best_result, best_result_hyperparameters
 
     def get_min_sigma(self, data):
         distance_matrix = pairwise_distances(data, metric='cityblock')

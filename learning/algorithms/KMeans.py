@@ -9,14 +9,14 @@ class KMeans:
         self.sets_constructor = sets_constructor
         self.max_k = max_k
         self.current_k = 2
-        self.best_hyperparameter = 0
+        self.best_hyperparameter = 2
 
     def produce_results(self, train_data, test_data, train_target, test_target):
         algo = cluster.KMeans(n_clusters=self.current_k)
         return run_clustering(algo, train_data, test_data)
 
-    def produce_results_validation(self, train_data, validation_data, train_target, validation_target):
-        algo = cluster.KMeans(n_clusters=self.best_hyperparameter)
+    def run_experiment_with_hyperparameters(self, train_data, validation_data, train_target, validation_target, hyperparameters):
+        algo = cluster.KMeans(n_clusters=hyperparameters)
         return run_clustering(algo, train_data, validation_data)
 
     def optimize_hyperparameters(self, data, targets):
