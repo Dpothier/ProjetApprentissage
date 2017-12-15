@@ -9,19 +9,23 @@ class KMeans:
         self.sets_constructor = sets_constructor
         self.max_k = max_k
         self.current_k = 2
+        self.best_hyperparameter = 0
 
     def produce_results(self, train_data, test_data, train_target, test_target):
         algo = cluster.KMeans(n_clusters=self.current_k)
         return run_clustering(algo, train_data, test_data)
 
+    def produce_results_validation(self, train_data, validation_data, train_target, validation_target):
+        algo = cluster.KMeans(n_clusters=self.best_hyperparameter)
+        return run_clustering(algo, train_data, validation_data)
+
     def optimize_hyperparameters(self, data, targets):
         best_result = (0, 0, 0)
-        best_result_hyperparameter = 0
         while self.current_k < self.max_k:
             result = self.sets_constructor(data, targets, self.produce_results)
             if result[0] > best_result[0]:
                 best_result = result
-                best_result_hyperparameter = self.current_k
+                self.best_hyperparameter = self.current_k
             self.current_k += 2
 
-        return best_result, best_result_hyperparameter
+        return best_result, self.best_hyperparameter

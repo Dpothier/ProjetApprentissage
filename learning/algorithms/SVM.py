@@ -11,11 +11,16 @@ class SVM:
         self.sets_constructor = sets_constructor
         self.current_c = 0
         self.current_sigma = 0
+        self.best_hyperparameters = (0, 0) #C, then sigma
 
 
     def produce_results(self, train_data, test_data, train_target, test_target):
         return run_classifier(SVC(C=self.current_c, gamma=(1 / (2 * self.current_sigma ** 2))),
                               train_data, test_data, train_target, test_target)
+
+    def produce_results_validation(self, train_data, validation_data, train_target, validation_target):
+        return run_classifier(SVC(C=self.best_hyperparameters[0], gamma=(1 / (2 * self.best_hyperparameters[1] ** 2))),
+                              train_data, validation_data, train_target, validation_target)
 
     def optimize_hyperparameters(self, data, targets):
         cs = [1e-08, 1e-07, 1e-06, 0.00001, 0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000]
