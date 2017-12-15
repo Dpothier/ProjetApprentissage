@@ -16,6 +16,23 @@ class ValidationSet:
 
         return best_results, hyperparameters
 
+
+class ValidationFromOtherDataset:
+    def __init__(self, learning_algorithm, data_validation, targets_validation):
+        self.learning_algorithm = learning_algorithm
+        self.data_validation = data_validation
+        self.targets_validation = targets_validation
+
+    def run_experiment(self, data, targets):
+
+        results, hyperparameters = self.learning_algorithm.optimize_hyperparameters(data, targets)
+
+        best_results = self.learning_algorithm.run_experiment_with_hyperparameters \
+            (data, self.data_validation, targets, self.targets_validation, hyperparameters)
+
+        return best_results, hyperparameters
+
+
 class NoValidationSet:
     def __init__(self, learning_algorithm):
         self.learning_algorithm = learning_algorithm

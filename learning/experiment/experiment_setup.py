@@ -1,5 +1,6 @@
 from set_splitting.KFold import KFold
 from set_splitting.single_split import SingleSplit
+from set_splitting.preselected import PreselectedTestSet
 from algorithms.NB import NB
 from algorithms.ADABoost import ADABoost
 from algorithms.KMeans import KMeans
@@ -7,6 +8,7 @@ from algorithms.EM import EM_Gaussian
 from algorithms.SVM import SVM
 from algorithms.MLP import MLP
 from set_splitting.ValidationSet import ValidationSet
+from set_splitting.ValidationSet import ValidationFromOtherDataset
 from set_splitting.ValidationSet import NoValidationSet
 from experiment.Experiment import ExperimentSet
 from vectorization.null_preatreatment import NullPreatreatment
@@ -19,6 +21,9 @@ def With_kfold(k):
 
 def With_single_split(test_size):
     return AlgorithmSelector(SingleSplit(test_size))
+
+def With_preselected_test_set(data_test, targets_test):
+    return AlgorithmSelector(PreselectedTestSet(data_test, targets_test))
 
 class AlgorithmSelector:
 
@@ -51,6 +56,9 @@ class ValidationSelector:
 
     def use_validation_set(self, size):
         return PretreatmentSelector(ValidationSet(self.algorithm, size))
+
+    def use_external_validation_set(self, data_validation, target_validation):
+        return PretreatmentSelector(ValidationFromOtherDataset(self.algorithm, data_validation, target_validation))
 
     def use_test_set_results(self):
         return PretreatmentSelector(NoValidationSet(self.algorithm))

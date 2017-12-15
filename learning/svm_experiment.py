@@ -10,7 +10,7 @@ dictionary = TerminologicalDictionary()
 
 setup.With_kfold(10)\
     .use_SVM()\
-    .use_test_set_results()\
+    .use_validation_set(0.2)\
     .test_on_multiple_pretreatment(sets.count_postprocessing_single(dictionary))\
     .output_to_file("../results/bdrv/svm/count_postprocessing_single")\
     .output_to_console()\
@@ -18,7 +18,7 @@ setup.With_kfold(10)\
 
 setup.With_kfold(10)\
     .use_SVM()\
-    .use_test_set_results()\
+    .use_validation_set(0.2)\
     .test_on_multiple_pretreatment(sets.count_postprocessing_stemming(dictionary))\
     .output_to_file("../results/bdrv/svm/count_postprocessing_stemming")\
     .output_to_console()\
@@ -26,7 +26,7 @@ setup.With_kfold(10)\
 
 setup.With_kfold(10)\
     .use_SVM()\
-    .use_test_set_results()\
+    .use_validation_set(0.2)\
     .test_on_multiple_pretreatment(sets.count_postprocessing_lemma(dictionary))\
     .output_to_file("../results/bdrv/svm/count_postprocessing_lemma")\
     .output_to_console()\
