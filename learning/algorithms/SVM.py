@@ -1,12 +1,15 @@
 import numpy as np
-from classification.classify import run_classifier
+from algorithms.helper import run_classifier
 from sklearn.svm import SVC
 from sklearn.model_selection import KFold
 from sklearn.metrics.pairwise import pairwise_distances
+from sklearn.model_selection import train_test_split
 
 
 class SVM:
     def __call__(self, data, target):
+        data_experiment, data_validation, target_experiment, target_validation = train_test_split(data, target,
+                                                                                                  test_size=0.2)
         kfold = KFold(n_splits=10, shuffle=True)
 
         cs = [1e-08, 1e-07, 1e-06, 0.00001, 0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000]
@@ -15,7 +18,7 @@ class SVM:
                   64 * min_sigma]
         results = np.zeros((len(cs), len(sigmas), 3))
 
-        for train_index, test_index in kfold.split(data):
+        for train_index, test_index in kfold.split(data_experiment, target_experiment):
             train_data = data[train_index]
             train_target = target[train_index]
 
@@ -45,17 +48,14 @@ class SVM:
         best = np.unravel_index(np.argmax(results[:, :, 1]), results[:, :, 1].shape)
         best_c = cs[best[0]]
         best_sigma = sigmas[best[1]]
-        best_result = results[best[0], best[1]]
 
+        best_result = run_classifier(SVC(C=best_c, gamma=(1 / (2 * best_sigma ** 2))),
+                                     data_experiment,
+                                     data_validation,
+                                     target_experiment,
+                                     target_validation)
 
-        #best_result = run_classifier(SVC(C=best_c, gamma=(1 / (2 * best_sigma ** 2))),
-        #                                 X_train,
-        #                                 X_validation,
-        #                                 y_train,
-        #                                 y_validation)
-
-        #return best_result, (best_c, best_sigma)
-        return best_result[1]
+        return best_result + (best_c, best_sigma)
 
     def get_min_sigma(self, data):
         distance_matrix = pairwise_distances(data, metric='cityblock')

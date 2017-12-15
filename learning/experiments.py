@@ -1,17 +1,17 @@
 import vectorization.VectorizerSet as vectorSets
 from Experiment import ExperimentSet
 from Experiment import MetaExperimentSet
-from classification.classify import classify_with_NB
-from classification.classify import classify_with_NB_with_no_folds
+from algorithms.helper import classify_with_NB
+from algorithms.helper import classify_with_NB_with_no_folds
 from dictionary import TerminologicalDictionary
 from getData import get_bdrv_data
 from getData import get_carcomplaints_data
 from getData import get_some_carcomplaints_data
 import nltk
 from dictionary import TerminologicalDictionary
-from classification.classify_kmeans import Clustering_kmeans
-from classification.classify_bernoulli_EM import Clustering_Gaussian_Mixture
-from classification import SVM
+from algorithms.KMeans import KMeans
+from algorithms.EM import EM_Gaussian
+from algorithms import SVM
 
 nltk.download('averaged_perceptron_tagger')
 nltk.download('stopwords')

@@ -3,7 +3,7 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
 
-class Clustering_kmeans:
+class KMeans:
 
 
     def __init__(self, k):
