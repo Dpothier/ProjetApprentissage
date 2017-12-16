@@ -32,12 +32,10 @@ class StemmerPostTokenizer:
         self.porter_stemmer = PorterStemmer()
 
     def __call__(self, tokens):
-        print("starting stemming")
         return [self.porter_stemmer.stem(t) for t in tokens]
 
 class POSFilterPostTokenizer:
     def __call__(self, tokens):
-        print("starting POS filtering")
         tagged_tokens = nltk.pos_tag(tokens)
         filtered_tag_tokens = [token[0] for token in tagged_tokens if token[1] in ["NN", "NNS", "NNP", "NNPS", "JJ", "JJR",
                                                                                    "JJS", "RB", "RBR", "RBS", "VB", "VBD",
@@ -49,7 +47,6 @@ class RareWordsPostTokenizer:
         self.rare_words = rare_words
 
     def __call__(self, tokens):
-        print("starting rare words filtering")
         return [token for token in tokens if token not in self.rare_words]
 
 class LemmatizerPostTokenizer:
@@ -57,7 +54,6 @@ class LemmatizerPostTokenizer:
         self.lemmatizer = WordNetLemmatizer()
 
     def __call__(self, tokens):
-        print("starting lemmatization")
         return [self.lemmatizer.lemmatize(t) for t in tokens]
 
 class LemmatizerWithPosPostTokenizer:
@@ -65,7 +61,6 @@ class LemmatizerWithPosPostTokenizer:
         self.lemmatizer = WordNetLemmatizer()
 
     def __call__(self, tokens):
-        print("starting lemmatization with POS tagging")
         tagged_tokens = nltk.pos_tag(tokens)
         return [self.lemmatizer.lemmatize(t[0], get_wordnet_pos(t[1])) for t in tagged_tokens]
 
@@ -79,7 +74,6 @@ class DictionaryAmplificationPostTokenizer:
 
 
     def __call__(self, tokens):
-        print("starting dictionary amplification")
         amplified_tokens = []
         for token in tokens:
             if token in self.dictionary.unigram_dic:
@@ -91,7 +85,6 @@ class DictionaryAmplificationPostTokenizer:
 class StopWordPostTokenizer:
 
     def __call__(self, tokens):
-        print("starting stop words")
         stopWords = set(stopwords.words('english'))
         wordsFiltered = []
 
@@ -107,7 +100,6 @@ class ClosedVocabularyTokenizer:
         self.dictionary = dictionary
 
     def __call__(self, tokens):
-        print("starting closed dictionary filter")
         return [token for token in tokens if token in self.dictionary.unigram_dic]
 
 
