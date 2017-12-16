@@ -11,6 +11,7 @@ class KFold:
 
         results = []
         for train_index, test_index in kfold.split(data):
+            print("new fold")
             train_data = data[train_index]
             train_target = targets[train_index]
 

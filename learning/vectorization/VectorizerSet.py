@@ -32,21 +32,21 @@ def count_postprocessing_single(dictionary):
             ("by count, pos", Use_count(1).and_pos_filter().as_vectorizer()),
             ("by count, stop", Use_count(1).and_stop_words().as_vectorizer()),
             ("by count, lemma", Use_count(1).and_lemmatization().as_vectorizer()),
-            ("by count, amp 4", Use_count(1).and_dict_amp(dictionary, 4).as_vectorizer()),]
+            #("by count, amp 4", Use_count(1).and_dict_amp(dictionary, 4).as_vectorizer()),
+     ]
 
 def count_postprocessing_stemming(dictionary):
     return [("by count, stemming, pos", Use_count(1).and_stemming().and_pos_filter().as_vectorizer()),
             ("by count, stemming, stop", Use_count(1).and_stemming().and_stop_words().as_vectorizer()),
-            ("by count, stemming, amp 4", Use_count(1).and_stemming().and_dict_amp(dictionary, 4).as_vectorizer()),
-            ("by count, stemming, all", Use_count(1).and_stemming().and_stop_words().and_pos_filter().
-                and_dict_amp(dictionary, 4).as_vectorizer()),]
+            #("by count, stemming, amp 4", Use_count(1).and_stemming().and_dict_amp(dictionary, 4).as_vectorizer()),
+            ("by count, stemming, all", Use_count(1).and_stemming().and_stop_words().and_pos_filter().as_vectorizer()),
+            ]
 
 def count_postprocessing_lemma(dictionary):
     return [("by count, lemma, pos", Use_count(1).and_lemmatization().and_pos_filter().as_vectorizer()),
             ("by count, lemma, stop", Use_count(1).and_lemmatization().and_stop_words().as_vectorizer()),
-            ("by count, lemma, amp 4", Use_count(1).and_lemmatization().and_dict_amp(dictionary, 4).as_vectorizer()),
-            ("by count, lemma, all", Use_count(1).and_lemmatization().and_stop_words().and_pos_filter().
-                and_dict_amp(dictionary, 4).as_vectorizer()),]
+            #("by count, lemma, amp 4", Use_count(1).and_lemmatization().and_dict_amp(dictionary, 4).as_vectorizer()),
+            ("by count, lemma, all", Use_count(1).and_lemmatization().and_stop_words().and_pos_filter().as_vectorizer()),]
 
 def tf_postprocessing_single(dictionary):
     return [("by tf", Use_tf(1).as_vectorizer()),
