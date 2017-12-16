@@ -34,7 +34,7 @@ setup.With_kfold(10)\
 
 
 setup.With_kfold(10)\
-    .use_EM()\
+    .use_EM(20)\
     .use_validation_set(0.2)\
     .test_on_multiple_pretreatment(sets.count_postprocessing_single(dictionary))\
     .output_to_file("../results/bdrv/em/count_postprocessing_single")\
@@ -42,7 +42,7 @@ setup.With_kfold(10)\
     .go(data, targets)
 
 setup.With_kfold(10)\
-    .use_EM()\
+    .use_EM(20)\
     .use_validation_set(0.2)\
     .test_on_multiple_pretreatment(sets.count_postprocessing_stemming(dictionary))\
     .output_to_file("../results/bdrv/em/count_postprocessing_stemming")\
@@ -50,7 +50,7 @@ setup.With_kfold(10)\
     .go(data, targets)
 
 setup.With_kfold(10)\
-    .use_EM()\
+    .use_EM(20)\
     .use_validation_set(0.2)\
     .test_on_multiple_pretreatment(sets.count_postprocessing_lemma(dictionary))\
     .output_to_file("../results/bdrv/em/count_postprocessing_lemma")\
