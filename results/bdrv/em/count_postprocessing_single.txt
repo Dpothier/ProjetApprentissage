@@ -1,0 +1,5 @@
+Results for by count: ((0.14020478478692888, 52647), 2) 
+Results for by count, stemming: ((0.14293491318506146, 23502), 2) 
+Results for by count, pos: ((0.090540537512246319, 42375), 2) 
+Results for by count, stop: ((0.12518576112944912, 50549), 2) 
+Results for by count, lemma: ((0.13838588736446336, 41663), 2) 

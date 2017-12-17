@@ -1,0 +1,3 @@
+Results for by count, stemming, pos: ((0.34612515613971279, 17386), 2) 
+Results for by count, stemming, stop: ((0.12476708808565443, 21939), 2) 
+Results for by count, stemming, all: ((0.093855507088905443, 16757), 2) 
