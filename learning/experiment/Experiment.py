@@ -18,7 +18,7 @@ class ExperimentSet:
 
     def get_experiment_results(self, data, targets):
         for vectorizer in self.vectorizer_set:
-            print("Starting vectorization with: {}".format(vectorizer[1]))
+            print("Starting vectorization with: {}".format(vectorizer[0]))
             vector = vectorizer[1].fit_transform(data)
             print("Vectorization done, starting experiment")
             accuracy = self.algorithm.run_experiment(vector, targets)

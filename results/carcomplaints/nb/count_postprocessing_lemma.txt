@@ -1,0 +1,3 @@
+Results for by count, lemma, pos: ((0.63019697325593105, 0.66935118538279559, 1420), ()) 
+Results for by count, lemma, stop: ((0.6192912989496997, 0.660254981340198, 1550), ()) 
+Results for by count, lemma, all: ((0.63618670514412268, 0.67436308595013983, 1287), ()) 

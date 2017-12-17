@@ -34,9 +34,11 @@ def parse_dictionary(terms, ngram):
 
 class TerminologicalDictionary:
     def __init__(self):
+        print("loading dictionary")
         terms = load_dictionary()
         self.unigram_dic = parse_dictionary_unigram(terms)
         self.bigram_dic = parse_dictionary_bigram(terms)
+        print("dictionary is done parsing")
 
 
     def __contains__(self, item):

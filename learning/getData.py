@@ -42,3 +42,15 @@ def get_some_carcomplaints_data():
 
 
     return data[: 50000], numeric_targets[: 50000]
+
+
+def get_data_from_both_datasets():
+    with open('../data/bdrv_texts.csv', encoding="utf8") as f:
+        rows = [{k: str(v) for k, v in row.items()}
+             for row in csv.DictReader(f, quotechar='"', delimiter=",", quoting=csv.QUOTE_ALL, skipinitialspace=True)]
+
+        bdrv_data = []
+        bdrv_targets = []
+        for row in rows:
+            bdrv_data.append(row['text'])
+            bdrv_targets.append(row['label'])
