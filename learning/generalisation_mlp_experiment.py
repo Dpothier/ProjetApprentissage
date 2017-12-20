@@ -9,7 +9,7 @@ data_train, targets_train, data_validation, targets_validation = get_data_from_b
 
 dictionary = TerminologicalDictionary()
 
-vectorizer = builder.Use_count(1).and_lemmatization().and_pos_filter().as_vectorizer()
+vectorizer = builder.Use_count(1).and_stemming().and_pos_filter().as_vectorizer()
 
 train_count = len(data_train)
 
@@ -24,9 +24,9 @@ validation_vectors = all_vectors[train_count:]
 print("Vectorization done")
 
 setup.With_kfold(10)\
-    .use_MLP()\
+    .use_SVM()\
     .use_external_validation_set(validation_vectors, targets_validation[:train_count])\
     .use_raw_data()\
-    .output_to_file("../results/generalisation/mlp/count_postprocessing_single")\
+    .output_to_file("../results/generalisation/svm/count_postprocessing_single")\
     .output_to_console()\
     .go(train_vectors, targets_train)
