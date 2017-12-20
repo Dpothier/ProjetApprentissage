@@ -25,7 +25,7 @@ print("Vectorization done")
 
 setup.With_kfold(10)\
     .use_MLP()\
-    .use_external_validation_set(validation_vectors, targets_validation[train_count:])\
+    .use_external_validation_set(validation_vectors, targets_validation[:train_count])\
     .use_raw_data()\
     .output_to_file("../results/generalisation/mlp/count_postprocessing_single")\
     .output_to_console()\
