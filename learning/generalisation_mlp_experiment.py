@@ -9,7 +9,7 @@ data_train, targets_train, data_validation, targets_validation = get_data_from_b
 
 dictionary = TerminologicalDictionary()
 
-vectorizer = builder.Use_count(1).and_stemming().and_pos_filter().as_vectorizer()
+vectorizer = builder.Use_count(1).and_stemming().and_stop_words().as_vectorizer()
 
 train_count = len(data_train)
 
