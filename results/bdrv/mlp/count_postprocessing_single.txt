@@ -3,3 +3,23 @@ Results for by count, stemming: ((0.78846153846153844, 0.9967897271268058, 6942)
 Results for by count, pos: ((0.77243589743589747, 0.9975922953451043, 4661), (2, 125)) 
 Results for by count, stop: ((0.76602564102564108, 0.9967897271268058, 6959), (2, 175)) 
 Results for by count, lemma: ((0.70192307692307687, 0.9975922953451043, 6963), (2, 125)) 
+Results for experiment count at 2018-02-14 14:30:52.280395
+mean_train_accuracy: 0.9983948635634029
+mean_test_accuracy: 0.7435897435897436
+mean_train_time: 21926.0
+Results for experiment count_stemming at 2018-02-14 14:55:36.148283
+mean_train_accuracy: 0.9991974317817014
+mean_test_accuracy: 0.7339743589743589
+mean_train_time: 36641.0
+Results for experiment count_pos at 2018-02-14 15:24:47.652101
+mean_train_accuracy: 0.9983948635634029
+mean_test_accuracy: 0.7532051282051282
+mean_train_time: 50497.0
+Results for experiment count_stop at 2018-02-14 15:52:41.455379
+mean_train_accuracy: 0.9983948635634029
+mean_test_accuracy: 0.7660256410256411
+mean_train_time: 30401.0
+Results for experiment count_lemma at 2018-02-14 16:16:20.857113
+mean_train_accuracy: 0.9967897271268058
+mean_test_accuracy: 0.7467948717948718
+mean_train_time: 21272.0

@@ -2,4 +2,6 @@
 
 class ConsoleOutput:
     def __call__(self, result):
-        print('Results for {}: {}'.format(result[0], result[1]))
+        print('Results for {}'.format(result['name']))
+        print('Accuracy: {}'.format(result['accuracy']))
+        print('Best hyperparameters: {}'.format(result['best_hyperparameters']))

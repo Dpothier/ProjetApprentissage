@@ -1,6 +1,7 @@
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import KFold
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import silhouette_score
 import time
@@ -19,7 +20,8 @@ def classify_with_NB_with_no_folds(data_vector, targets):
     return accuracy_score(y_test, predictions)
 
 
-current_milli_time = lambda: int(round(time.time() * 1000))
+def current_milli_time():
+    return int(round(time.time() * 1000))
 
 def run_classifier(classifier, X_train, X_test, y_train, y_test):
     start_time = current_milli_time()
@@ -32,7 +34,14 @@ def run_classifier(classifier, X_train, X_test, y_train, y_test):
     accuracy_test = accuracy_score(y_test, pred_test)
     execution_time = current_milli_time() - start_time
 
-    return accuracy_test, accuracy_training, execution_time
+    confusion = confusion_matrix(y_test, pred_test)
+
+    return {
+        'accuracy_test': accuracy_test,
+        'accuracy_training':  accuracy_training,
+        'execution_time': execution_time,
+        'confusion_matrix': confusion
+    }
 
 def run_clustering(clusterer, X_train, X_test):
     start_time = current_milli_time()

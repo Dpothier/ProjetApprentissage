@@ -15,6 +15,8 @@ from vectorization.null_preatreatment import NullPreatreatment
 from output.to_result_file import ResultFileOutput
 from output.to_console import ConsoleOutput
 from output.output_central import OutputCentral
+from output.model_to_file import ModelOutput
+from output.vectorizer_to_file import VectorizerOutput
 
 def With_kfold(k):
     return AlgorithmSelector(KFold(k))
@@ -42,8 +44,8 @@ class AlgorithmSelector:
     def use_EM(self, max_k):
         return ValidationSelector(EM_Gaussian(self.set_splitter, max_k))
 
-    def use_SVM(self):
-        return ValidationSelector(SVM(self.set_splitter))
+    def use_SVM(self, cs, sigmas):
+        return ValidationSelector(SVM(self.set_splitter, cs, sigmas))
 
     def use_MLP(self):
         return ValidationSelector(MLP(self.set_splitter))
@@ -87,6 +89,14 @@ class OutputSelector:
 
     def output_to_console(self):
         self.outputs.append(ConsoleOutput())
+        return self
+
+    def output_model_to_file(self, filepath):
+        self.outputs.append(ModelOutput(filepath))
+        return self
+
+    def output_vectorizer_to_file(self, filepath):
+        self.outputs.append(VectorizerOutput(filepath))
         return self
 
     def go(self, data, targets):

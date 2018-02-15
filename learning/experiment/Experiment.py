@@ -21,9 +21,15 @@ class ExperimentSet:
             print("Starting vectorization with: {}".format(vectorizer[0]))
             vector = vectorizer[1].fit_transform(data)
             print("Vectorization done, starting experiment")
-            accuracy = self.algorithm.run_experiment(vector, targets)
+            results = self.algorithm.run_experiment(vector, targets)
             print("experiment done")
-            yield((vectorizer[0], accuracy))
+            yield {
+                    'name': vectorizer[0],
+                    'accuracy': results[0],
+                    'best_hyperparameters': results[1],
+                    'best_model': results[2],
+                    'vectorizer': vectorizer[1]
+                }
 
 class MetaExperimentSet:
     def __init__(self, classifying_method, metaset, results_path):

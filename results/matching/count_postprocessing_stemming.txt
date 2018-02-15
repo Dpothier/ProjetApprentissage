@@ -1,0 +1,16 @@
+Results for experiment Matching prediction accuracy at 2018-02-15 13:56:07.297109
+mean_train_accuracy: 0.9301075268817204
+mean_test_accuracy: 0.8297872340425532
+mean_train_time: 136.0
+Results for experiment Matching prediction accuracy at 2018-02-15 14:06:40.600563
+mean_train_accuracy: 0.9220430107526881
+mean_test_accuracy: 0.8723404255319149
+mean_train_time: 45.0
+mean_confusion_matrix: [[ 82.   0.]
+ [ 12.   0.]]
+Results for experiment Matching prediction accuracy at 2018-02-15 14:08:41.084314
+mean_train_accuracy: 0.9005376344086021
+mean_test_accuracy: 0.925531914893617
+mean_train_time: 41.0
+mean_confusion_matrix: [[ 87.   0.]
+ [  7.   0.]]

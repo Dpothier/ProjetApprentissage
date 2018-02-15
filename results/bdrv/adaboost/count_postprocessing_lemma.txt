@@ -1,3 +1,12 @@
-Results for by count, lemma, pos: ((0.34342845326716293, 0.34046306925347458, 690.39999999999998), ()) 
-Results for by count, lemma, stop: ((0.34342845326716293, 0.34046306925347458, 762.5), ()) 
-Results for by count, lemma, all: ((0.34342845326716293, 0.34046306925347458, 712.89999999999998), ()) 
+Results for experiment by count_lemma_pos at 2018-02-14 12:41:13.328596
+mean_train_accuracy: 0.3404630692534746
+mean_test_accuracy: 0.3434284532671629
+mean_train_time: 845.8
+Results for experiment by count_lemma_stop at 2018-02-14 12:41:27.359121
+mean_train_accuracy: 0.3404630692534746
+mean_test_accuracy: 0.3434284532671629
+mean_train_time: 897.6
+Results for experiment by count_lemma_all at 2018-02-14 12:42:03.004910
+mean_train_accuracy: 0.3404630692534746
+mean_test_accuracy: 0.3434284532671629
+mean_train_time: 955.5

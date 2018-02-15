@@ -1,8 +1,0 @@
-Mean accuracy for by count, lemma: 0.7278246484698098 
-Mean accuracy for by count, lemma, stop: 0.750339123242349 
-Mean accuracy for By count, lemma, pos: 0.7503556658395368 
-Mean accuracy for By count, lemma, pos, stop: 0.7534491315136476 
-Mean accuracy for by count, lemma pos: 0.7291604631927213 
-Mean accuracy for by count, lemma pos, stop: 0.748358147229115 
-Mean accuracy for By count, lemma pos, pos: 0.7483912324234905 
-Mean accuracy for By count, lemma pos, pos, stop: 0.7522249793217535 

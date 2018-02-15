@@ -9,12 +9,12 @@ class ValidationSet:
     def run_experiment(self, data, targets):
         data_train, data_validation, targets_train, targets_validation = train_test_split(data, targets, test_size=self.validation_size)
 
-        results, hyperparameters = self.learning_algorithm.optimize_hyperparameters(data_train, targets_train)
+        results, hyperparameters, model, confusion_matrix = self.learning_algorithm.optimize_hyperparameters(data_train, targets_train)
 
-        best_results = self.learning_algorithm.run_experiment_with_hyperparameters\
+        best_results, model = self.learning_algorithm.run_experiment_with_hyperparameters\
             (data_train, data_validation, targets_train, targets_validation, hyperparameters)
 
-        return best_results, hyperparameters
+        return best_results, hyperparameters, model
 
 
 class ValidationFromOtherDataset:
@@ -25,12 +25,12 @@ class ValidationFromOtherDataset:
 
     def run_experiment(self, data, targets):
 
-        results, hyperparameters = self.learning_algorithm.optimize_hyperparameters(data, targets)
+        results, hyperparameters, model = self.learning_algorithm.optimize_hyperparameters(data, targets)
 
-        best_results = self.learning_algorithm.run_experiment_with_hyperparameters \
+        best_results, model = self.learning_algorithm.run_experiment_with_hyperparameters \
             (data, self.data_validation, targets, self.targets_validation, hyperparameters)
 
-        return best_results, hyperparameters
+        return best_results, hyperparameters, model
 
 
 class NoValidationSet:

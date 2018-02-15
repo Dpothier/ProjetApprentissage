@@ -1,6 +1,6 @@
-from getData import get_carcomplaints_data
 import experiment.experiment_setup as setup
 import vectorization.VectorizerSet as sets
+from data.getData import get_carcomplaints_data
 from dictionary import TerminologicalDictionary
 
 print("starting experiment")

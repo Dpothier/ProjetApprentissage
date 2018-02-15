@@ -1,3 +1,1 @@
-Results for by count, stemming, pos: ((0.72756410256410253, 0.9991974317817014, 1345), (100, 8.0)) 
-Results for by count, stemming, stop: ((0.79807692307692313, 0.9959871589085072, 1095), (100, 32.0)) 
-Results for by count, stemming, all: ((0.76923076923076927, 0.9751203852327448, 966), (10, 16.0)) 
+Results for count_stemming_posAccuracy: (0.72435897435897434, 0.9751203852327448, 5576)Best hyperparameters: (10, 16.0)Results for by count_stemming_stopAccuracy: (0.76282051282051277, 0.9534510433386838, 5711)Best hyperparameters: (100, 64.0)Results for by count_stemming_allAccuracy: (0.77884615384615385, 0.9686998394863563, 5678)Best hyperparameters: (10, 16.0)

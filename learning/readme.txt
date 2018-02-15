@@ -18,3 +18,6 @@ a fluent API. Every step adds a wrapper to the experiment. The definition steps 
 
 The experiments themselves are defined in bdrv_experiments.py, carcomplaints_experiments.py and
  generalisation_experiment.py
+
+ Experiment results are found in the /result folder and subfolders. The report only presents highlight, but all results
+ can be found there.

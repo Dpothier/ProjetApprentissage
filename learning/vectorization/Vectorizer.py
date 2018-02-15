@@ -10,6 +10,14 @@ class Vectorizer:
 
     def fit_transform(self, X):
         vector = self.vectorizer.fit_transform(X)
+        return self.apply_post_vectorizers(vector)
+
+    def transform(self, X):
+        vector = self.vectorizer.transform(X)
+        return self.apply_post_vectorizers(vector)
+
+
+    def apply_post_vectorizers(self, vector):
         vector = vector.tolil()
 
         for post_vectorizer in self.post_vectorizers:
@@ -17,7 +25,6 @@ class Vectorizer:
 
         vector = vector.tocsr()
         return vector
-
 
 class DictAmpPostVectorizer:
 

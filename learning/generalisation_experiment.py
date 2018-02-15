@@ -1,9 +1,7 @@
-from getData import get_data_from_both_datasets
 import experiment.experiment_setup as setup
-import vectorization.VectorizerSet as sets
-from dictionary import TerminologicalDictionary
 import vectorization.VectorizerBuilder as builder
-
+from data.getData import get_data_from_both_datasets
+from dictionary import TerminologicalDictionary
 
 data_train, targets_train, data_validation, targets_validation = get_data_from_both_datasets()
 
