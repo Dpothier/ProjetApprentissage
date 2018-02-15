@@ -1,4 +1,3 @@
-import experiment.experiment_setup as setup
 import vectorization.VectorizerSet as sets
 from data.getData import get_bdrv_data
 from dictionary import TerminologicalDictionary
