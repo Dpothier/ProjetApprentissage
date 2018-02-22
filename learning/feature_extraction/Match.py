@@ -11,6 +11,7 @@ def build_matches(bdrv, carcomplaints, matches):
 
 
 class BDRVCarcomplaintsMatch:
+    predicted_probability = None
 
     def __init__(self, bdrv, carcomplaint, is_match):
         self.bdrv = bdrv

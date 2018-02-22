@@ -10,7 +10,7 @@ class SvmPrototype:
         self.use_probability = use_probability
 
     def __call__(self, hyperparameters):
-        return SVC(C=hyperparameters["c"], gamma=(1 / (2 * hyperparameters["sigma"] ** 2)), probability=self.use_probability)
+        return SVC(C=hyperparameters["c"], gamma=(1 / (2 * hyperparameters["sigma"] ** 2)), probability=self.use_probability, class_weight='balanced')
 
 
 class NbPrototype:

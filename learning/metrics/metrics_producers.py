@@ -42,3 +42,5 @@ class ModelDumper:
         for i in range(0, len(results)):
             complete_filename = "{}_{}.pkl".format(self.filename, i)
             joblib.dump(results[i]['model'], complete_filename)
+
+        return {}

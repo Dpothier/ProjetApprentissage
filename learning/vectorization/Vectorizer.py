@@ -16,6 +16,9 @@ class Vectorizer:
         vector = self.vectorizer.transform(X)
         return self.apply_post_vectorizers(vector)
 
+    def fit(self, X):
+        self.vectorizer.fit(X)
+
 
     def apply_post_vectorizers(self, vector):
         vector = vector.tolil()

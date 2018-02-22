@@ -7,6 +7,9 @@ from vectorization import Vectorizer as vectorizer
 
 
 
+def Use_binary_count(ngram):
+    return VectorizerConfigurator(CountVectorizer(ngram_range=(1, ngram), binary=True))
+
 def Use_count(ngram):
     return VectorizerConfigurator(CountVectorizer(ngram_range=(1, ngram)))
 

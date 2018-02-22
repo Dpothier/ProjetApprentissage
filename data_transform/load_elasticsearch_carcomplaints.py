@@ -14,4 +14,4 @@ if es.indices.exists("carcomplaints"):
 for complaint_content in tiny_carcomplaints:
     es.index(index="carcomplaints", doc_type="complaint", body=complaint_content)
 
-    patate2000.
+es.search()
