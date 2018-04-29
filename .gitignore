@@ -6,3 +6,7 @@ learning/__pycache__/
 learning/classification/__pycache__/__init__\.cpython-36\.pyc
 
 *.pyc
+
+keyword_extraction/\.vector_cache/
+
+keyword_extraction/\data/
