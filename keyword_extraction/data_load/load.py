@@ -58,8 +58,10 @@ def parse_BILOU_tags(spans, annotations, use_int_tag=True):
 
 def load_data(folder, use_int_tags=True):
     texts = []
+    indices = {}
 
     flist = os.listdir(folder)
+    current_index = 0
     for f in flist:
         if not str(f).endswith(".txt"):
             continue
@@ -69,14 +71,19 @@ def load_data(folder, use_int_tags=True):
         text = load_text(f_text)
         process_ann, material_ann, tasks_ann = load_annotations(f_ann)
         tokens, spans = tokenize(text)
-        texts.append((tokens,
+        texts.append((current_index,
+                      tokens,
                       parse_BILOU_tags(spans, process_ann, use_int_tags),
                       parse_BILOU_tags(spans, material_ann, use_int_tags),
                       parse_BILOU_tags(spans, tasks_ann, use_int_tags)))
 
-    dict_texts = [{'texts': text[0],
-                   'process_tags': text[1],
-                   'material_tags': text[2],
-                   'task_tags': text[3]} for text in texts]
+        indices[current_index] = (f[0:-4], tokens, spans)
+        current_index += 1
 
-    return dict_texts
+    dict_texts = [{'id': text[0],
+                   'texts': text[1],
+                   'process_tags': text[2],
+                   'material_tags': text[3],
+                   'task_tags': text[4]} for text in texts]
+
+    return dict_texts, indices

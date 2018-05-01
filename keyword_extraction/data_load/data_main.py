@@ -50,28 +50,6 @@ def extract_BILOU(spans, annotations):
             for i in range(start_span+1, end_span):
                 bilou_tags[i]="I"
 
-
-    # current_entity = None
-    # for current_span in token_spans:
-    #     if current_entity is not None:
-    #         if current_span[1] != current_entity[1]:
-    #             bilou_tags.append("I")
-    #         else:
-    #             bilou_tags.append("L")
-    #             current_entity = None
-    #     else:
-    #
-    #         matching_annotation = [annotation for annotation in annotations if annotation[0] == current_span[0]]
-    #         if len(matching_annotation) == 0:
-    #             bilou_tags.append("O")
-    #         else:
-    #             matching_annotation = max(matching_annotation, key=itemgetter(1))
-    #             if matching_annotation[1] == current_span[1]:
-    #                 bilou_tags.append("U")
-    #             else:
-    #                 bilou_tags.append("B")
-    #                 current_entity = matching_annotation
-
     longest_I_streak = 0
     current_I_streak = 0
     for tag in bilou_tags:
