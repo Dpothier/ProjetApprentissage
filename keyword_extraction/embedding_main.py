@@ -8,12 +8,17 @@ import torch.nn as nn
 import training
 from collections import Counter
 
+from torchtext import vocab
 from torchtext import data
 from torchtext.data import Example
 
 from data_load.load import load_data
 from models.tcn import TCN_simple
+from models.tcn import TCN
 import eval
+import sys
+from glove import Corpus, Glove
+
 
 
 def get_tags_weight_ratio(examples):
@@ -48,17 +53,36 @@ val_examples = [Example.fromdict(data_point, fields_dict) for data_point in load
 
 tags_weight = get_tags_weight_ratio(loaded_train)
 
+
+texts_tokens = Counter([token for example in loaded_train for token in example['texts']])
+
+model = Glove.load('./embeddings/semeval200.glove')
+
+vectors = model.word_vectors
+dictionary = model.dictionary
+vocabulary = vocab.Vocab(texts_tokens)
+vocabulary.set_vectors(stoi=dictionary, vectors=torch.Tensor(vectors), dim=200)
+
 train = data.Dataset(examples=train_examples, fields=fields)
 val = data.Dataset(examples=val_examples, fields=fields)
 
-texts.build_vocab(train, vectors='glove.6B.100d')
+texts.vocab = vocabulary
 
-vocab = train.fields['texts'].vocab
 
-model = TCN_simple(vocab.vectors)
+use_gpu = True if sys.argv[1] == 'gpu' else False
+
+model = TCN(vocabulary.vectors)
+if use_gpu:
+    model = model.cuda()
 
 dataset = ((train, train_indices), (val, val_indices))
-history_process = training.train(model, dataset, n_epoch=10, batch_size=32, learning_rate=0.1, use_gpu=False, class_weight=tags_weight)
+
+training_schedules = [(10,0.01),
+                      (20,0.005),
+                      (20,0.001),
+                      (20,0.0005)]
+
+history_process = training.train(model, dataset, weight_decay=0.1, training_schedule=training_schedules, batch_size=32, use_gpu=use_gpu, class_weight=tags_weight)
 
 print("Final scores on train set")
 print(eval.calculateMeasures('./data/train2', './data/train_preds', 'rel'))

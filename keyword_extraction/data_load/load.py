@@ -1,7 +1,6 @@
 import os
 from data_load.tokenization import tokenize
 
-
 def load_text(file):
     for l in file:
         text = l
@@ -69,6 +68,7 @@ def load_data(folder, use_int_tags=True):
         f_ann = open(os.path.join(folder, f[0:-4]+".ann"), "r", encoding="utf8")
 
         text = load_text(f_text)
+
         process_ann, material_ann, tasks_ann = load_annotations(f_ann)
         tokens, spans = tokenize(text)
         texts.append((current_index,
