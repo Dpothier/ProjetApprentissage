@@ -10,3 +10,6 @@ learning/classification/__pycache__/__init__\.cpython-36\.pyc
 keyword_extraction/\.vector_cache/
 
 keyword_extraction/\data/
+
+keyword_extraction/\embeddings/
+

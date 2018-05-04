@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93039a6c-a30b-4b96-88b1-2ba87859d3d1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/keyword_extraction/create_embeddings.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/keyword_extraction/embeddings/semeval.glove" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/keyword_extraction/embeddings/semeval200.glove" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/keyword_extraction/load_embeddings.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/keyword_extraction/.idea/workspace.xml" afterPath="$PROJECT_DIR$/keyword_extraction/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/keyword_extraction/data_load/load.py" afterPath="$PROJECT_DIR$/keyword_extraction/data_load/load.py" />
-      <change beforePath="$PROJECT_DIR$/keyword_extraction/data_load/tokenization.py" afterPath="$PROJECT_DIR$/keyword_extraction/data_load/tokenization.py" />
-      <change beforePath="$PROJECT_DIR$/keyword_extraction/embedding_main.py" afterPath="$PROJECT_DIR$/keyword_extraction/embedding_main.py" />
-      <change beforePath="$PROJECT_DIR$/keyword_extraction/models/tcn.py" afterPath="$PROJECT_DIR$/keyword_extraction/models/tcn.py" />
-      <change beforePath="$PROJECT_DIR$/keyword_extraction/script_soumission.sh" afterPath="$PROJECT_DIR$/keyword_extraction/script_soumission.sh" />
-      <change beforePath="$PROJECT_DIR$/keyword_extraction/training.py" afterPath="$PROJECT_DIR$/keyword_extraction/training.py" />
-    </list>
+    <list default="true" id="93039a6c-a30b-4b96-88b1-2ba87859d3d1" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
