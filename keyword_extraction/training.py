@@ -2,13 +2,16 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
+import torch.nn.functional as F
 from sklearn.metrics import accuracy_score
 from torch.autograd import Variable
 from torchvision.transforms import ToTensor
 from deeplib.history import History
 from deeplib.data import train_valid_loaders
 from torchtext import data
+from helper.softmax import softmax
 from data_load.save import save_annotation_file
+
 
 
 def validate(model, val_loader, val_extra_data, use_gpu=False, class_weight=None, ann_folder=None):
@@ -42,11 +45,9 @@ def validate(model, val_loader, val_extra_data, use_gpu=False, class_weight=None
 
         out_process, out_material, out_task = model(texts)
 
-        print(out_process.shape)
-
-        process_predictions = out_process.max(dim=2)
-        material_predictions = out_material.max(dim=2)
-        task_predictions = out_task.max(dim=2)
+        process_predictions = out_process.max(dim=2)[1] #max returns 2 vector: the maxes, and the argmaxes
+        material_predictions = out_material.max(dim=2)[1]
+        task_predictions = out_task.max(dim=2)[1]
 
         process_loss = criterion(out_process, process_targets_encoded)
         material_loss = criterion(out_material, material_targets_encoded)
@@ -62,20 +63,15 @@ def validate(model, val_loader, val_extra_data, use_gpu=False, class_weight=None
                 task_list = task_predictions[i].data.cpu().numpy().tolist()
                 save_annotation_file('{}/{}.ann'.format(ann_folder, file_name), tokens, spans,
                                  {"Process": process_list, "Material": material_list, "Task": task_list})
-        #
-        # for i in range(len(ids)):
-        #     in_entity_indices = process_targets.data.cpu().numpy()[i, :] != 3
-        #     print(out_process.shape)
-        #     print(out_process.data.cpu().numpy())
-        #     in_entity_log_probabilities = out_process.data.cpu().numpy()[i, in_entity_indices, :]
-        #     in_entity_probabilities = np.exp(in_entity_log_probabilities)
-        #     probabilities.extend(in_entity_probabilities[:, 3].tolist())
+
+        for i in range(len(ids)):
+            in_entity_indices = process_targets.data.cpu().numpy()[i, :] != 3
+            in_entity_output = out_process.data.cpu().numpy()[i, in_entity_indices, :]
+            in_entity_probabilities = softmax(in_entity_output, axis=1)
+            probabilities.extend(in_entity_probabilities[:,3].data.tolist())
 
         val_loss.extend([process_loss.data[0], material_loss.data[0], task_loss.data[0]])
 
-        print(len(process_targets))
-        print(process_targets[0].shape)
-        print(process_targets[1].shape)
         true.extend(process_targets.data.contiguous().view(process_targets.shape[0] * process_targets.shape[1]).cpu().numpy().tolist())
         pred.extend(process_predictions.data.contiguous().view(process_predictions.shape[0] * process_predictions.shape[1]).cpu().numpy().tolist())
 
@@ -97,6 +93,7 @@ def soft_one_hot_encode(class_valued_tensor, max_value, number_of_classes, use_g
 
     one_hot_encode = torch.ones((batch_size, sequence_size, number_of_classes)) * min_value
     one_hot_encode.scatter_(2, class_valued_tensor.contiguous().data.view(batch_size, sequence_size, 1), max_value)
+    one_hot_encode = Variable(one_hot_encode)
     if use_gpu:
         one_hot_encode = one_hot_encode.cuda()
     return one_hot_encode
@@ -121,7 +118,6 @@ def train(model, dataset, training_schedule, batch_size, weight_decay=0, use_gpu
             for batch in train_iter:
                 texts = batch.texts
                 process_targets = soft_one_hot_encode(batch.process_tags.permute(1, 0), 0.8, 5, use_gpu)
-                # print(process_targets[0,:,:])
                 material_targets = soft_one_hot_encode(batch.material_tags.permute(1, 0),0.8,5, use_gpu)
                 task_targets = soft_one_hot_encode(batch.task_tags.permute(1, 0),0.8,5, use_gpu)
 

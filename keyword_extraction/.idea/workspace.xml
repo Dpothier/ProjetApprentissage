@@ -39,11 +39,21 @@
       <file leaf-file-name="embedding_main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/embedding_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="844">
+            <state relative-caret-position="344">
               <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functional.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/nn/functional.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="767" column="0" lean-forward="false" selection-start-line="767" selection-start-column="0" selection-end-line="767" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,7 +70,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tokenization.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tokenization.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_load/tokenization.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
@@ -82,14 +92,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="training.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="training.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/training.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="98" column="50" lean-forward="false" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="50" />
+            <state relative-caret-position="353">
+              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="softmax.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper/softmax.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/nn/modules/module.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="356" column="0" lean-forward="false" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -156,8 +186,9 @@
         <option value="$PROJECT_DIR$/models/tcn.py" />
         <option value="$PROJECT_DIR$/prepare_wikipedia.py" />
         <option value="$PROJECT_DIR$/create_embeddings.py" />
-        <option value="$PROJECT_DIR$/training.py" />
         <option value="$PROJECT_DIR$/data_load/tokenization.py" />
+        <option value="$PROJECT_DIR$/util/softmax.py" />
+        <option value="$PROJECT_DIR$/training.py" />
       </list>
     </option>
   </component>
@@ -194,16 +225,6 @@
               <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="keyword_extraction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
-              <item name="data_load" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="keyword_extraction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -235,7 +256,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.create_embeddings">
+  <component name="RunManager" selected="Python.embedding_main">
     <configuration name="cache_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -335,9 +356,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.create_embeddings" />
-        <item index="1" class="java.lang.String" itemvalue="Python.prepare_wikipedia" />
-        <item index="2" class="java.lang.String" itemvalue="Python.embedding_main" />
+        <item index="0" class="java.lang.String" itemvalue="Python.embedding_main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.create_embeddings" />
+        <item index="2" class="java.lang.String" itemvalue="Python.prepare_wikipedia" />
         <item index="3" class="java.lang.String" itemvalue="Python.load_embeddings" />
         <item index="4" class="java.lang.String" itemvalue="Python.cache_data" />
       </list>
@@ -366,7 +387,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17923036" sideWeight="0.49361023" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39806867" sideWeight="0.5113337" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32832617" sideWeight="0.49024776" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32832617" sideWeight="0.49024776" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33583692" sideWeight="0.49583334" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -438,7 +459,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/preds/S0010938X15301189.ann" />
     <entry file="file://$PROJECT_DIR$/data/preds/S0038092X14000942.ann" />
     <entry file="file://$PROJECT_DIR$/data/preds/S000926141500651X.ann" />
     <entry file="file://$PROJECT_DIR$/data/preds/S037596011300741X.ann" />
@@ -523,6 +543,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -576,24 +597,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/nn/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="1232" column="0" lean-forward="false" selection-start-line="1232" selection-start-column="0" selection-end-line="1232" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/nn/modules/loss.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="486" column="0" lean-forward="false" selection-start-line="486" selection-start-column="0" selection-end-line="486" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/nn/modules/module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="356" column="0" lean-forward="false" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -633,19 +641,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/training.py">
+    <entry file="file://$PROJECT_DIR$/data_load/tokenization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="98" column="50" lean-forward="false" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="50" />
+        <state relative-caret-position="288">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/nn/modules/module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="356" column="0" lean-forward="false" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/embedding_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="844">
+        <state relative-caret-position="344">
           <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -653,12 +669,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_load/tokenization.py">
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/nn/functional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="767" column="0" lean-forward="false" selection-start-line="767" selection-start-column="0" selection-end-line="767" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/softmax.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
