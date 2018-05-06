@@ -30,7 +30,7 @@ def get_tags_weight_ratio(examples):
 
     total_number_of_tags = len(all_tags)
     tags_count = Counter(all_tags)
-    tags_count_list = [tags_count[0], tags_count[1], tags_count[2], tags_count[3], tags_count[4]]
+    tags_count_list = [1/tags_count[0], 1/tags_count[1], 1/tags_count[2], 1/tags_count[3], 1/tags_count[4]]
 
     print("O counts of {}% of data".format(tags_count[3]/total_number_of_tags * 100))
 
