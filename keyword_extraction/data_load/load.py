@@ -54,10 +54,38 @@ def parse_BILOU_tags(spans, annotations, use_int_tag=True):
                 bilou_tags[i]= I
     return bilou_tags
 
+def parse_IO_tags(spans, annotations, use_int_tag=True):
+    I = 0 if use_int_tag else 'I'
+    O = 1 if use_int_tag else 'O'
 
-def load_data(folder, use_int_tags=True):
+    bilou_tags = []
+    for i in range(len(spans)):
+        bilou_tags.append(O)
+
+    for annotation in annotations:
+        start_spans = [index for index, span in enumerate(spans) if span[0] <= annotation[0] <= span[1]]
+        end_spans = [index for index, span in enumerate(spans) if span[0] <= annotation[1] <= span[1]]
+        if len(end_spans) == 0:
+            end_spans = [index for index, span in enumerate(spans) if span[0] <= annotation[1]-1 <= span[1]]
+        start_span = start_spans[0]
+        end_span = end_spans[0]
+        if start_span == end_span:
+            bilou_tags[start_span] = I
+        else:
+            bilou_tags[start_span] = I
+            bilou_tags[end_span] = I
+            for i in range(start_span+1, end_span):
+                bilou_tags[i]= I
+    return bilou_tags
+
+
+def load_data(folder, use_int_tags=True, tag_scheme='IO'):
     texts = []
     indices = {}
+
+    tag_function = parse_IO_tags
+    if tag_scheme == 'BILOU':
+        tag_function= parse_BILOU_tags
 
     flist = os.listdir(folder)
     current_index = 0
@@ -73,9 +101,9 @@ def load_data(folder, use_int_tags=True):
         tokens, spans = tokenize(text)
         texts.append((current_index,
                       tokens,
-                      parse_BILOU_tags(spans, process_ann, use_int_tags),
-                      parse_BILOU_tags(spans, material_ann, use_int_tags),
-                      parse_BILOU_tags(spans, tasks_ann, use_int_tags)))
+                      tag_function(spans, process_ann, use_int_tags),
+                      tag_function(spans, material_ann, use_int_tags),
+                      tag_function(spans, tasks_ann, use_int_tags)))
 
         indices[current_index] = (f[0:-4], tokens, spans)
         current_index += 1

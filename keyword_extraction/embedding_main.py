@@ -30,11 +30,11 @@ def get_tags_weight_ratio(examples):
 
     total_number_of_tags = len(all_tags)
     tags_count = Counter(all_tags)
-    tags_count_list = [1/tags_count[0], 1/tags_count[1], 1/tags_count[2], 1/tags_count[3], 1/tags_count[4]]
+    tags_count_list = [tags_count[0], tags_count[1], tags_count[2], tags_count[3], tags_count[4]]
 
     print("O counts of {}% of data".format(tags_count[3]/total_number_of_tags * 100))
 
-    return torch.Tensor(tags_count_list)
+    return torch.Tensor([1, 1, 1, 1, 1])
 
 
 
@@ -45,8 +45,8 @@ id = data.Field(sequential=False, use_vocab=False)
 
 fields = [('id', id), ('texts', texts), ('process_tags', tags), ('material_tags', tags), ('task_tags', tags)]
 fields_dict = {'id': ('id', id), 'texts': ('texts', texts), 'process_tags': ('process_tags',tags), 'material_tags': ('material_tags', tags), 'task_tags': ('task_tags', tags)}
-loaded_train, train_indices = load_data('./data/train2', use_int_tags=True)
-loaded_val, val_indices = load_data('./data/dev', use_int_tags=True)
+loaded_train, train_indices = load_data('./data/train2', use_int_tags=True, tag_scheme='BILOU')
+loaded_val, val_indices = load_data('./data/dev', use_int_tags=True, tag_scheme='BILOU')
 train_examples = [Example.fromdict(data_point, fields_dict) for data_point in loaded_train]
 val_examples = [Example.fromdict(data_point, fields_dict) for data_point in loaded_val]
 
