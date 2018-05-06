@@ -56,7 +56,7 @@ class ResidualCausalBlock(nn.Module):
         self.bn1 = nn.BatchNorm1d(in_depth)
         self.dropout1 = SpatialDropout(p)
 
-        self.conv2 = CausalConv1d(in_depth, out_depth, kernel_size=3, dilation=2*dilation)
+        self.conv2 = CausalConv1d(in_depth, out_depth, kernel_size=3, dilation=dilation)
         self.bn2 = nn.BatchNorm1d(out_depth)
         self.dropout2 = SpatialDropout(p)
 
@@ -87,9 +87,11 @@ class TCN(nn.Module):
         self.embeddings.weight.data.copy_(embedding_vectors)
 
         self.res1 = ResidualCausalBlock(embedding_size, embedding_size, dilation=1, p=p_first_layer)
-        self.res2 = ResidualCausalBlock(embedding_size, embedding_size, dilation=4, p=p_other_layers)
-        self.res3 = ResidualCausalBlock(embedding_size, embedding_size, dilation=16, p=p_other_layers)
-        self.res4 = ResidualCausalBlock(embedding_size, embedding_size, dilation=64, p=p_other_layers)
+        self.res2 = ResidualCausalBlock(embedding_size, embedding_size, dilation=2, p=p_other_layers)
+        self.res3 = ResidualCausalBlock(embedding_size, embedding_size, dilation=4, p=p_other_layers)
+        self.res4 = ResidualCausalBlock(embedding_size, embedding_size, dilation=8, p=p_other_layers)
+        self.res5 = ResidualCausalBlock(embedding_size, embedding_size, dilation=16, p=p_other_layers)
+        self.res6 = ResidualCausalBlock(embedding_size, embedding_size, dilation=32, p=p_other_layers)
         self.process = ResidualCausalBlock(embedding_size, 5, dilation=64, p=p_other_layers)
         self.material = ResidualCausalBlock(embedding_size, 5, dilation=64, p=p_other_layers)
         self.task = ResidualCausalBlock(embedding_size, 5, dilation=64, p=p_other_layers)
@@ -102,6 +104,8 @@ class TCN(nn.Module):
         out = F.relu(self.res2.forward(out))
         out = F.relu(self.res3.forward(out))
         out = F.relu(self.res4.forward(out))
+        out = F.relu(self.res5.forward(out))
+        out = F.relu(self.res6.forward(out))
 
         out_process = F.log_softmax(self.process.forward(out), dim=1)
         out_material = F.log_softmax(self.material.forward(x), dim=1)
