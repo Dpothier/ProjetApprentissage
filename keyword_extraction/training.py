@@ -1,4 +1,4 @@
-import numpy as np
+import sys
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -100,8 +100,8 @@ def soft_one_hot_encode(class_valued_tensor, max_value, number_of_classes, use_g
 
 
 
-def train(model, dataset, training_schedule, batch_size, weight_decay=0, use_gpu=False, class_weight=None):
-    history = History()
+def train(model, dataset, training_schedule, batch_size,history_file, weight_decay=0, use_gpu=False, class_weight=None, patience=10):
+    history = History(history_file)
     criterion = nn.BCEWithLogitsLoss(weight=class_weight)
     if use_gpu:
         criterion = criterion.cuda()
@@ -111,6 +111,8 @@ def train(model, dataset, training_schedule, batch_size, weight_decay=0, use_gpu
         train[0], batch_size=batch_size, device=-1 if use_gpu is False else None, repeat=False)
     val_iter = data.Iterator(val[0], batch_size=batch_size , device=-1 if use_gpu is False else None, repeat=False)
     cummulative_epoch = 0
+    current_patience=0
+    min_val_loss = sys.maxsize
     for schedule in training_schedule:
         optimizer = optim.Adam(model.parameters(), lr=schedule[1], weight_decay=weight_decay)
         for i in range(schedule[0]):
@@ -154,5 +156,15 @@ def train(model, dataset, training_schedule, batch_size, weight_decay=0, use_gpu
             print('Epoch {} - Train acc: {:.2f} - Val acc: {:.2f} - Train loss: {:.4f} - Val loss: {:.4f} - Train conf:{} - Val conf: {}'
                   .format(cummulative_epoch, train_acc, val_acc, train_loss, val_loss, train_confidence, val_confidence))
             cummulative_epoch += 1
+
+            if val_loss < min_val_loss:
+                min_val_loss = val_loss
+                current_patience = 0
+            else:
+                current_patience += 1
+            if current_patience == patience:
+                break;
+
+
 
     return history

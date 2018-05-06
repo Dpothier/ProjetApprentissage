@@ -56,7 +56,7 @@ tags_weight = get_tags_weight_ratio(loaded_train)
 
 texts_tokens = Counter([token for example in loaded_train for token in example['texts']])
 
-model = Glove.load('./embeddings/semeval200.glove')
+model = Glove.load('./embeddings/whole_semeval200.glove')
 
 vectors = model.word_vectors
 dictionary = model.dictionary
@@ -77,12 +77,18 @@ if use_gpu:
 
 dataset = ((train, train_indices), (val, val_indices))
 
-training_schedules = [(10,0.01),
-                      (20,0.005),
-                      (20,0.001),
-                      (20,0.0005)]
+# training_schedules = [(15,0.05),
+#                       (30, 0.01),
+#                       (100, 0.005)]
 
-history_process = training.train(model, dataset, weight_decay=0.1, training_schedule=training_schedules, batch_size=32, use_gpu=use_gpu, class_weight=tags_weight)
+training_schedules = [(20,0.05),
+                      (20, 0.01),
+                      (20, 0.005),
+                      (20, 0.001)]
+
+history_process = training.train(model, dataset, history_file='./history/four_step_20_each.pdf', weight_decay=0.1, training_schedule=training_schedules, batch_size=32, use_gpu=use_gpu, class_weight=tags_weight, patience=100)
+
+history_process.display()
 
 print("Final scores on train set")
 print(eval.calculateMeasures('./data/train2', './data/train_preds', 'rel'))

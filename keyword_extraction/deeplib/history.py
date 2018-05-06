@@ -1,9 +1,12 @@
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 
 class History:
 
-    def __init__(self):
+    def __init__(self, filename):
+        self.filename = filename
         self.history = {
             'train_acc': [],
             'val_acc': [],
@@ -36,4 +39,4 @@ class History:
         axes[1].set_ylabel('Loss')
         axes[1].plot(epochs, self.history['train_loss'], label='Train')
         axes[1].plot(epochs, self.history['val_loss'], label='Validation')
-        plt.show()
+        plt.savefig(self.filename)
