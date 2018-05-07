@@ -7,8 +7,8 @@ def tokenize(text):
 
     sentence_tokenizer = nltk.tokenize.punkt.PunktSentenceTokenizer()
     tokenizer = TreebankWordTokenizer()
-    sentences_list = sentence_tokenizer.tokenize(text)
-    sentences_span = sentence_tokenizer.span_tokenize(text)
+    sentences_list = list(sentence_tokenizer.tokenize(text))
+    sentences_span = list(sentence_tokenizer.span_tokenize(text))
     total_tokens = []
     total_spans = []
     for i in range(len(sentences_list)):
