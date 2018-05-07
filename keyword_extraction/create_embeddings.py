@@ -7,6 +7,8 @@ from data_load.tokenization import tokenize_no_span
 
 
 loaded_train, train_indices = load_data('./data/train2', use_int_tags=True)
+loaded_val, val_indices = load_data('./data/dev', use_int_tags=True)
+loaded_test, test_indices = load_data('./data/test', use_int_tags=True)
 folder = './data/wikipedia_filtered'
 flist = os.listdir(folder)
 texts = []
@@ -15,9 +17,9 @@ for f in flist:
         for line in f_text:
             texts.append(tokenize_no_span(line))
 
-
-
 texts.extend([example['texts'] for example in loaded_train])
+texts.extend([example['texts'] for example in loaded_val])
+texts.extend([example['texts'] for example in loaded_test])
 
 corpus = Corpus()
 
@@ -29,8 +31,8 @@ glove.fit(corpus.matrix, epochs=30, no_threads=4, verbose=True)
 
 glove.add_dictionary(corpus.dictionary)
 
-glove.save('./embeddings/wiki-semeval200.glove')
+glove.save('./embeddings/wiki_whole_semeval200.glove')
 
-model = Glove.load('./embeddings/wiki-semeval200.glove')
+model = Glove.load('./embeddings/wiki_whole_semeval200.glove')
 
 

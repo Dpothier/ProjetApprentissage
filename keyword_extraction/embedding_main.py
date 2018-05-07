@@ -72,7 +72,7 @@ texts.vocab = vocabulary
 
 use_gpu = True if sys.argv[1] == 'gpu' else False
 
-model = TCN(vocabulary.vectors)
+model = TCN(vocabulary.vectors, p_first_layer=0, p_other_layers=0)
 if use_gpu:
     model = model.cuda()
 
@@ -87,7 +87,7 @@ training_schedules = [(20,0.05),
                       (20, 0.005),
                       (20, 0.001)]
 
-history_process = training.train(model, dataset, history_file='./history/io_scheme.pdf', weight_decay=0.1, training_schedule=training_schedules, batch_size=32, use_gpu=use_gpu, class_weight=tags_weight, patience=100)
+history_process = training.train(model, dataset, history_file='./history/io_scheme.pdf', weight_decay=0, training_schedule=training_schedules, batch_size=32, use_gpu=use_gpu, class_weight=tags_weight, patience=100)
 
 history_process.display()
 
