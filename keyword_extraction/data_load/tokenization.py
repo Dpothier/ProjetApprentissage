@@ -14,7 +14,7 @@ def tokenize(text):
     for i in range(len(sentences_list)):
         word_tokens = tokenizer.tokenize(sentences_list[i])
         # word_tokens = [stemmer.stem(token) for token in word_tokens]
-        word_spans = tokenizer.span_tokenize(sentences_list[i])
+        word_spans = list(tokenizer.span_tokenize(sentences_list[i]))
         print(word_spans)
         word_spans = [(span[0] + sentences_span[i][0], span[1] + sentences_span[i][0]) for span in word_spans]
         total_tokens += word_tokens
