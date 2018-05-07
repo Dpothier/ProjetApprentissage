@@ -99,10 +99,11 @@ class TCN(nn.Module):
         self.res3 = ResidualCausalBlock(embedding_size, embedding_size, dilation=4, p=p_other_layers)
         self.res4 = ResidualCausalBlock(embedding_size, embedding_size, dilation=8, p=p_other_layers)
         self.res5 = ResidualCausalBlock(embedding_size, embedding_size, dilation=16, p=p_other_layers)
-        # self.res6 = ResidualCausalBlock(embedding_size, embedding_size, dilation=32, p=p_other_layers)
-        self.process = ResidualCausalBlock(embedding_size, 2, dilation=32, p=p_other_layers)
-        self.material = ResidualCausalBlock(embedding_size, 2, dilation=32, p=p_other_layers)
-        self.task = ResidualCausalBlock(embedding_size, 2, dilation=32, p=p_other_layers)
+        self.res6 = ResidualCausalBlock(embedding_size, embedding_size, dilation=32, p=p_other_layers)
+        self.res7 = ResidualCausalBlock(embedding_size, embedding_size, dilation=64, p=p_other_layers)
+        self.process = ResidualCausalBlock(embedding_size, 2, dilation=128, p=p_other_layers)
+        self.material = ResidualCausalBlock(embedding_size, 2, dilation=128, p=p_other_layers)
+        self.task = ResidualCausalBlock(embedding_size, 2, dilation=128, p=p_other_layers)
         pass
 
     def forward(self, x):
@@ -113,7 +114,8 @@ class TCN(nn.Module):
         out = F.relu(self.res3.forward(out))
         out = F.relu(self.res4.forward(out))
         out = F.relu(self.res5.forward(out))
-        # out = F.relu(self.res6.forward(out))
+        out = F.relu(self.res6.forward(out))
+        out = F.relu(self.res7.forward(out))
 
         out_process = F.log_softmax(self.process.forward(out), dim=1)
         out_material = F.log_softmax(self.material.forward(x), dim=1)
