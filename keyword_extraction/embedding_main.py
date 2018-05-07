@@ -30,7 +30,8 @@ def get_tags_weight_ratio(examples):
 
     total_number_of_tags = len(all_tags)
     tags_count = Counter(all_tags)
-    tags_count_list = [tags_count[0], tags_count[1], tags_count[2], tags_count[3], tags_count[4]]
+    print("Number of tags: {}".format(len(tags_count)))
+    tags_count_list = [tags_count[0], tags_count[1]]
 
     print("O counts of {}% of data".format(tags_count[3]/total_number_of_tags * 100))
 
@@ -40,7 +41,7 @@ def get_tags_weight_ratio(examples):
 
 
 texts = data.Field(lower=True)
-tags = data.Field(use_vocab=False, pad_token=3)
+tags = data.Field(use_vocab=False, pad_token=1)
 id = data.Field(sequential=False, use_vocab=False)
 
 fields = [('id', id), ('texts', texts), ('process_tags', tags), ('material_tags', tags), ('task_tags', tags)]
@@ -86,7 +87,7 @@ training_schedules = [(20,0.05),
                       (20, 0.005),
                       (20, 0.001)]
 
-history_process = training.train(model, dataset, history_file='./history/four_step_20_each.pdf', weight_decay=0.1, training_schedule=training_schedules, batch_size=32, use_gpu=use_gpu, class_weight=tags_weight, patience=100)
+history_process = training.train(model, dataset, history_file='./history/io_scheme.pdf', weight_decay=0.1, training_schedule=training_schedules, batch_size=32, use_gpu=use_gpu, class_weight=tags_weight, patience=100)
 
 history_process.display()
 

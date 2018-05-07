@@ -60,7 +60,15 @@ class ResidualCausalBlock(nn.Module):
         self.bn2 = nn.BatchNorm1d(out_depth)
         self.dropout2 = SpatialDropout(p)
 
-        self.downsample = CausalConv1d(in_depth, out_depth, kernel_size=1)
+        self.downsample = nn.Conv1d(in_depth, out_depth, 1) if in_depth != out_depth else None
+
+
+    def init_weights(self):
+        self.conv1.weight.data.normal_(0, 0.01)
+        self.conv2.weight.data.normal_(0, 0.01)
+        if self.downsample is not None:
+            self.downsample.weight.data.normal_(0, 0.01)
+
 
     def forward(self, x):
         residual = x
@@ -92,9 +100,9 @@ class TCN(nn.Module):
         self.res4 = ResidualCausalBlock(embedding_size, embedding_size, dilation=8, p=p_other_layers)
         self.res5 = ResidualCausalBlock(embedding_size, embedding_size, dilation=16, p=p_other_layers)
         self.res6 = ResidualCausalBlock(embedding_size, embedding_size, dilation=32, p=p_other_layers)
-        self.process = ResidualCausalBlock(embedding_size, 5, dilation=64, p=p_other_layers)
-        self.material = ResidualCausalBlock(embedding_size, 5, dilation=64, p=p_other_layers)
-        self.task = ResidualCausalBlock(embedding_size, 5, dilation=64, p=p_other_layers)
+        self.process = ResidualCausalBlock(embedding_size, 2, dilation=64, p=p_other_layers)
+        self.material = ResidualCausalBlock(embedding_size, 2, dilation=64, p=p_other_layers)
+        self.task = ResidualCausalBlock(embedding_size, 2, dilation=64, p=p_other_layers)
         pass
 
     def forward(self, x):
@@ -127,9 +135,9 @@ class TCN_simple(nn.Module):
         self.conv1 = nn.Conv1d(embedding_size, embedding_size, kernel_size=3, dilation=1, padding=1)
         self.conv2 = nn.Conv1d(embedding_size, embedding_size, kernel_size=3, dilation=2, padding=2)
         self.conv3 = nn.Conv1d(embedding_size, embedding_size, kernel_size=3, dilation=4, padding=4)
-        self.convProcess = nn.Conv1d(embedding_size, 5, kernel_size=3, dilation=1, padding=1)
-        self.convMaterial = nn.Conv1d(embedding_size, 5, kernel_size=3, dilation=1, padding=1)
-        self.convTask = nn.Conv1d(embedding_size, 5, kernel_size=3, dilation=1, padding=1)
+        self.convProcess = nn.Conv1d(embedding_size, 2, kernel_size=3, dilation=1, padding=1)
+        self.convMaterial = nn.Conv1d(embedding_size, 2, kernel_size=3, dilation=1, padding=1)
+        self.convTask = nn.Conv1d(embedding_size, 2, kernel_size=3, dilation=1, padding=1)
         pass
 
     def forward(self, x):

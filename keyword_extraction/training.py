@@ -33,9 +33,9 @@ def validate(model, val_loader, val_extra_data, use_gpu=False, class_weight=None
         process_targets = batch.process_tags.permute(1, 0)
         material_targets = batch.material_tags.permute(1, 0)
         task_targets = batch.task_tags.permute(1, 0)
-        process_targets_encoded = soft_one_hot_encode(batch.process_tags.permute(1, 0), 0.8, 5, use_gpu)
-        material_targets_encoded = soft_one_hot_encode(batch.material_tags.permute(1, 0), 0.8, 5, use_gpu)
-        task_targets_encoded = soft_one_hot_encode(batch.task_tags.permute(1, 0), 0.8, 5, use_gpu)
+        process_targets_encoded = soft_one_hot_encode(batch.process_tags.permute(1, 0), 0.8, 2, use_gpu)
+        material_targets_encoded = soft_one_hot_encode(batch.material_tags.permute(1, 0), 0.8, 2, use_gpu)
+        task_targets_encoded = soft_one_hot_encode(batch.task_tags.permute(1, 0), 0.8, 2, use_gpu)
 
         if use_gpu:
             texts = texts.cuda()
@@ -62,13 +62,13 @@ def validate(model, val_loader, val_extra_data, use_gpu=False, class_weight=None
                 material_list = material_predictions[i].data.cpu().numpy().tolist()
                 task_list = task_predictions[i].data.cpu().numpy().tolist()
                 save_annotation_file('{}/{}.ann'.format(ann_folder, file_name), tokens, spans,
-                                 {"Process": process_list, "Material": material_list, "Task": task_list})
+                                 {"Process": process_list, "Material": material_list, "Task": task_list}, tag_scheme='IO')
 
         for i in range(len(ids)):
-            in_entity_indices = process_targets.data.cpu().numpy()[i, :] != 3
+            in_entity_indices = process_targets.data.cpu().numpy()[i, :] != 1
             in_entity_output = out_process.data.cpu().numpy()[i, in_entity_indices, :]
             in_entity_probabilities = softmax(in_entity_output, axis=1)
-            probabilities.extend(in_entity_probabilities[:,3].data.tolist())
+            probabilities.extend(in_entity_probabilities[:,1].data.tolist())
 
         val_loss.extend([process_loss.data[0], material_loss.data[0], task_loss.data[0]])
 
@@ -102,6 +102,7 @@ def soft_one_hot_encode(class_valued_tensor, max_value, number_of_classes, use_g
 
 def train(model, dataset, training_schedule, batch_size,history_file, weight_decay=0, use_gpu=False, class_weight=None, patience=10):
     history = History(history_file)
+    print("Weight shape: {}".format(class_weight.shape))
     criterion = nn.BCEWithLogitsLoss(weight=class_weight)
     if use_gpu:
         criterion = criterion.cuda()
@@ -119,9 +120,10 @@ def train(model, dataset, training_schedule, batch_size,history_file, weight_dec
             model.train()
             for batch in train_iter:
                 texts = batch.texts
-                process_targets = soft_one_hot_encode(batch.process_tags.permute(1, 0), 0.8, 5, use_gpu)
-                material_targets = soft_one_hot_encode(batch.material_tags.permute(1, 0),0.8,5, use_gpu)
-                task_targets = soft_one_hot_encode(batch.task_tags.permute(1, 0),0.8,5, use_gpu)
+                process_targets = soft_one_hot_encode(batch.process_tags.permute(1, 0), 0.8, 2, use_gpu)
+                material_targets = soft_one_hot_encode(batch.material_tags.permute(1, 0),0.8,2, use_gpu)
+                task_targets = soft_one_hot_encode(batch.task_tags.permute(1, 0),0.8,2, use_gpu)
+
 
                 if use_gpu:
                     texts = texts.cuda()
@@ -133,6 +135,8 @@ def train(model, dataset, training_schedule, batch_size,history_file, weight_dec
 
                 out_process, out_material, out_task = model(texts)
 
+                print("out_shape: {}".format(out_process.shape))
+                print("targets_shape: {}".format(process_targets.shape))
                 process_loss = criterion(out_process, process_targets)
                 material_loss = criterion(out_material, material_targets)
                 task_loss = criterion(out_task, task_targets)
