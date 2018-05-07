@@ -108,8 +108,8 @@ def train(model, dataset, training_schedule, batch_size,history_file, weight_dec
 
     train, val = dataset
     train_iter = data.Iterator(
-        train[0], batch_size=batch_size, device=-1 if use_gpu is False else None, repeat=False)
-    val_iter = data.Iterator(val[0], batch_size=batch_size , device=-1 if use_gpu is False else None, repeat=False)
+        train[0], batch_size=batch_size, device=-1 if use_gpu is False else None, repeat=False, sort_key=lambda x: len(x.texts))
+    val_iter = data.Iterator(val[0], batch_size=batch_size , device=-1 if use_gpu is False else None, repeat=False, sort_key=lambda x: len(x.texts))
     cummulative_epoch = 0
     current_patience=0
     min_val_loss = sys.maxsize

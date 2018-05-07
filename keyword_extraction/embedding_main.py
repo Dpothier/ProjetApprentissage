@@ -78,10 +78,6 @@ if use_gpu:
 
 dataset = ((train, train_indices), (val, val_indices))
 
-# training_schedules = [(15,0.05),
-#                       (30, 0.01),
-#                       (100, 0.005)]
-
 training_schedules = [(20,0.05),
                       (20, 0.01),
                       (20, 0.005),
