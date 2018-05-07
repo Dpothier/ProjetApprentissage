@@ -102,7 +102,6 @@ def soft_one_hot_encode(class_valued_tensor, max_value, number_of_classes, use_g
 
 def train(model, dataset, training_schedule, batch_size,history_file, weight_decay=0, use_gpu=False, class_weight=None, patience=10):
     history = History(history_file)
-    print("Weight shape: {}".format(class_weight.shape))
     criterion = nn.BCEWithLogitsLoss(weight=class_weight)
     if use_gpu:
         criterion = criterion.cuda()
@@ -135,8 +134,6 @@ def train(model, dataset, training_schedule, batch_size,history_file, weight_dec
 
                 out_process, out_material, out_task = model(texts)
 
-                print("out_shape: {}".format(out_process.shape))
-                print("targets_shape: {}".format(process_targets.shape))
                 process_loss = criterion(out_process, process_targets)
                 material_loss = criterion(out_material, material_targets)
                 task_loss = criterion(out_task, task_targets)
