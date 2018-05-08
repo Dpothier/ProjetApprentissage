@@ -83,7 +83,7 @@ training_schedules = [(20,0.05),
                       (20, 0.005),
                       (20, 0.001)]
 
-history_process = training.train(model, dataset, history_file='./history/io_scheme.pdf', weight_decay=0, training_schedule=training_schedules, batch_size=32, use_gpu=use_gpu, class_weight=tags_weight, patience=100)
+history_process = training.train(model, dataset, history_file='./history/removed_causal_conv.pdf', weight_decay=0, training_schedule=training_schedules, batch_size=32, use_gpu=use_gpu, class_weight=tags_weight, patience=100)
 
 history_process.display()
 
