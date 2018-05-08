@@ -139,9 +139,9 @@ class TCN(nn.Module):
         self.res5 = ResidualBlock(embedding_size, embedding_size, dilation=16, p=p_other_layers)
         self.res6 = ResidualBlock(embedding_size, embedding_size, dilation=32, p=p_other_layers)
         self.res7 = ResidualBlock(embedding_size, embedding_size, dilation=64, p=p_other_layers)
-        self.process = ResidualCausalBlock(embedding_size, 2, dilation=128, p=p_other_layers)
-        self.material = ResidualCausalBlock(embedding_size, 2, dilation=128, p=p_other_layers)
-        self.task = ResidualCausalBlock(embedding_size, 2, dilation=128, p=p_other_layers)
+        self.process = ResidualBlock(embedding_size, 2, dilation=128, p=p_other_layers)
+        self.material = ResidualBlock(embedding_size, 2, dilation=128, p=p_other_layers)
+        self.task = ResidualBlock(embedding_size, 2, dilation=128, p=p_other_layers)
         pass
 
     def forward(self, x):
