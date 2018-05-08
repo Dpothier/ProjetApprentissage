@@ -85,6 +85,44 @@ class ResidualCausalBlock(nn.Module):
         return out
 
 
+class ResidualBlock(nn.Module):
+    def __init__(self, in_depth, out_depth, dilation=1, p=0.0):
+        super(ResidualBlock, self).__init__()
+        self.conv1 = nn.conv1d(in_depth, in_depth, kernel_size=3, dilation=dilation)
+        self.bn1 = nn.BatchNorm1d(in_depth)
+        self.dropout1 = SpatialDropout(p)
+
+        self.conv2 = nn.conv1d(in_depth, out_depth, kernel_size=3, dilation=dilation)
+        self.bn2 = nn.BatchNorm1d(out_depth)
+        self.dropout2 = SpatialDropout(p)
+
+        self.downsample = nn.Conv1d(in_depth, out_depth, 1) if in_depth != out_depth else None
+
+
+    def init_weights(self):
+        self.conv1.weight.data.normal_(0, 0.01)
+        self.conv2.weight.data.normal_(0, 0.01)
+        if self.downsample is not None:
+            self.downsample.weight.data.normal_(0, 0.01)
+
+
+    def forward(self, x):
+        residual = x
+
+        out = self.dropout1(F.relu(self.bn1(self.conv1(x))))
+
+        out = self.dropout2(F.relu(self.bn2(self.conv2(out))))
+
+        if self.downsample is not None:
+            residual = self.downsample(x)
+
+        out += residual
+
+        return out
+
+
+
+
 class TCN(nn.Module):
 
     def __init__(self, embedding_vectors, p_first_layer=0.2, p_other_layers=0.5):
@@ -94,13 +132,13 @@ class TCN(nn.Module):
         self.embeddings = nn.Embedding(vocabulary_size, embedding_size)
         self.embeddings.weight.data.copy_(embedding_vectors)
 
-        self.res1 = ResidualCausalBlock(embedding_size, embedding_size, dilation=1, p=p_first_layer)
-        self.res2 = ResidualCausalBlock(embedding_size, embedding_size, dilation=2, p=p_other_layers)
-        self.res3 = ResidualCausalBlock(embedding_size, embedding_size, dilation=4, p=p_other_layers)
-        self.res4 = ResidualCausalBlock(embedding_size, embedding_size, dilation=8, p=p_other_layers)
-        self.res5 = ResidualCausalBlock(embedding_size, embedding_size, dilation=16, p=p_other_layers)
-        self.res6 = ResidualCausalBlock(embedding_size, embedding_size, dilation=32, p=p_other_layers)
-        self.res7 = ResidualCausalBlock(embedding_size, embedding_size, dilation=64, p=p_other_layers)
+        self.res1 = ResidualBlock(embedding_size, embedding_size, dilation=1, p=p_first_layer)
+        self.res2 = ResidualBlock(embedding_size, embedding_size, dilation=2, p=p_other_layers)
+        self.res3 = ResidualBlock(embedding_size, embedding_size, dilation=4, p=p_other_layers)
+        self.res4 = ResidualBlock(embedding_size, embedding_size, dilation=8, p=p_other_layers)
+        self.res5 = ResidualBlock(embedding_size, embedding_size, dilation=16, p=p_other_layers)
+        self.res6 = ResidualBlock(embedding_size, embedding_size, dilation=32, p=p_other_layers)
+        self.res7 = ResidualBlock(embedding_size, embedding_size, dilation=64, p=p_other_layers)
         self.process = ResidualCausalBlock(embedding_size, 2, dilation=128, p=p_other_layers)
         self.material = ResidualCausalBlock(embedding_size, 2, dilation=128, p=p_other_layers)
         self.task = ResidualCausalBlock(embedding_size, 2, dilation=128, p=p_other_layers)

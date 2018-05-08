@@ -54,6 +54,7 @@ def parse_BILOU_tags(spans, annotations, use_int_tag=True):
                 bilou_tags[i]= I
     return bilou_tags
 
+
 def parse_IO_tags(spans, annotations, use_int_tag=True):
     I = 0 if use_int_tag else 'I'
     O = 1 if use_int_tag else 'O'
