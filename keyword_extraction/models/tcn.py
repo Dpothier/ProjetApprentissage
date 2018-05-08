@@ -88,11 +88,11 @@ class ResidualCausalBlock(nn.Module):
 class ResidualBlock(nn.Module):
     def __init__(self, in_depth, out_depth, dilation=1, p=0.0):
         super(ResidualBlock, self).__init__()
-        self.conv1 = nn.conv1d(in_depth, in_depth, kernel_size=3, dilation=dilation)
+        self.conv1 = nn.Conv1d(in_depth, in_depth, kernel_size=3, dilation=dilation)
         self.bn1 = nn.BatchNorm1d(in_depth)
         self.dropout1 = SpatialDropout(p)
 
-        self.conv2 = nn.conv1d(in_depth, out_depth, kernel_size=3, dilation=dilation)
+        self.conv2 = nn.Conv1d(in_depth, out_depth, kernel_size=3, dilation=dilation)
         self.bn2 = nn.BatchNorm1d(out_depth)
         self.dropout2 = SpatialDropout(p)
 
