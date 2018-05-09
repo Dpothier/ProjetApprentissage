@@ -94,9 +94,9 @@ for decay_value in weight_decay_values:
         if use_gpu:
             model = model.cuda()
 
-        trainer = TrainerSoftTarget(2, 0.8, use_gpu)
+        trainer = Trainer()
 
-        f = open('./results/soft_target_{}_{}.txt'.format(decay_value, dropout_value), 'w')
+        f = open('./results/hard_target_{}_{}.txt'.format(decay_value, dropout_value), 'w')
         sys.stdout = f
 
         history, best_model = trainer.train(model, dataset, history_file='./history/removed_causal_conv.pdf', weight_decay=decay_value, training_schedule=training_schedules, batch_size=batch_size, use_gpu=use_gpu, class_weight=tags_weight, patience=100)
@@ -116,11 +116,11 @@ for decay_value in weight_decay_values:
 torch.save(absolute_best_model.state_dict(), './model_dump/soft_classes_model')
 #Evaluation on test set
 
-f = open('./results/soft_target_final.txt'.format(decay_value, dropout_value), 'w')
+f = open('./results/hard_target_final.txt'.format(decay_value, dropout_value), 'w')
 sys.stdout = f
 
 test_iter = data.Iterator(loaded_test, batch_size=batch_size, device=-1 if use_gpu is False else None, repeat=False)
-trainer = TrainerSoftTarget(2, 0.8, use_gpu)
+trainer = Trainer()
 trainer.validate(model, test_iter, test_indices, use_gpu=use_gpu, class_weight=tags_weight, ann_folder='./data/test_preds')
 
 sys.stdout = orig_stdout
