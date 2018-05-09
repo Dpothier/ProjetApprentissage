@@ -3,7 +3,10 @@ import eval
 import os
 import nltk
 from operator import itemgetter
-
+from data_load.tokenization import tokenize
+from data_load.load import load_data
+from data_load.save import save_annotation_file
+from data_load.corpus import load_corpus, NERCorpusParser, word_tokenize
 
 def extract_annotations(annotation_file):
     process_ann = []
@@ -109,72 +112,43 @@ def print_alignments(tokens, spans, bilou_list):
             line += str(bilou[i].ljust(just))
         print(line)
 
-
-
-def tokenize(text, total_of_sentences):
-    sentence_tokenizer = nltk.tokenize.punkt.PunktSentenceTokenizer()
-    tokenizer = TreebankWordTokenizer()
-    sentences_list = sentence_tokenizer.tokenize(text)
-    sentences_span = sentence_tokenizer.span_tokenize(text)
-    total_tokens = []
-    total_spans = []
-    for i in range(len(sentences_list)):
-        word_tokens = tokenizer.tokenize(sentences_list[i])
-        word_spans = tokenizer.span_tokenize(sentences_list[i])
-        word_spans = [(span[0] + sentences_span[i][0], span[1] + sentences_span[i][0]) for span in word_spans]
-        total_tokens += word_tokens
-        total_spans += word_spans
-
-
-    return total_tokens, total_spans, total_of_sentences + len(sentences_span)
-
 folder_gold = '../data/train2'
 folder_pred = '../data/train_pred'
-flist_gold = os.listdir(folder_gold)
+
+
+texts, extras = load_data('../data/train2', use_int_tags=True, tag_scheme='IO')
+
 number_of_overlaps = 0
 number_of_punctuation = 0
-total_of_sentences = 0
-for f in flist_gold:
-    if not str(f).endswith(".txt"):
-        continue
-    f_ann = str(f)[0:-4] + ".ann"
-    f_text = open(os.path.join(folder_gold, f), "r", encoding="utf8")
-
-    for l in f_text:
-        text = l
-
-    tokens_list, tokens_spans, total_of_sentences = tokenize(text, total_of_sentences)
-
-    mins = [span[0] for index, span in enumerate(tokens_spans)]
-    overlaps = [index for index, span in enumerate(tokens_spans) if span[1] in mins]
+for i in range(len(texts)):
+    id = texts[i]['id']
+    file_name, tokens, spans = extras[id]
+    process_list = texts[i]['process_tags']
+    material_list = texts[i]['material_tags']
+    task_list = texts[i]['task_tags']
+    save_annotation_file('{}/{}.ann'.format(folder_pred, file_name), tokens, spans,
+                         {"Process": process_list, "Material": material_list, "Task": task_list}, tag_scheme='IO')
+    mins = [span[0] for index, span in enumerate(spans)]
+    overlaps = [index for index, span in enumerate(spans) if span[1] in mins]
     for overlap in overlaps:
-        if tokens_list[overlap + 1] == "." or tokens_list[overlap + 1] == ",":
+        if tokens[overlap + 1] == "." or tokens[overlap + 1] == ",":
             number_of_overlaps += 1
-            print("{}: Overlaping tokens: {}, {}".format(number_of_overlaps, tokens_list[overlap], tokens_list[overlap + 1]))
+            print("{}: Overlaping tokens: {}, {}".format(number_of_overlaps, tokens[overlap], tokens[overlap + 1]))
 
-    for token in tokens_list:
+    for token in tokens:
         if token == "," or token == ".":
             number_of_punctuation += 1
 
-    number_of_tokens = len(tokens_list)
-    length_of_text = len(text)
 
-    try:
-        proccess_ann, material_ann, task_ann = extract_annotations(os.path.join(folder_gold, f_ann))
-    except ValueError as e:
-        print("Unable to process: {}".format(os.path.join(folder_gold, f_ann)))
-        print(e)
+parser = NERCorpusParser(word_tokenize)
+train_documents = load_corpus('../data/train2')
+train_corpus = [e for d in train_documents for e in parser.parse(d)]
+dev_documents = load_corpus('../data/dev')
+dev_corpus = [e for d in dev_documents for e in parser.parse(d)]
+test_documents = load_corpus('../data/test')
+test_corpus = [e for d in test_documents for e in parser.parse(d)]
 
-    process_bilou = extract_BILOU(tokens_spans, proccess_ann)
-    material_bilou = extract_BILOU(tokens_spans, material_ann)
-    task_bilou = extract_BILOU(tokens_spans, task_ann)
-
-    if str(f) == "S2212671612001291.txt": #548 565
-        print_alignments(tokens_list,tokens_spans, [process_bilou, material_bilou, task_bilou])
-
-    bilou_to_annotation_file(os.path.join(folder_pred, f_ann),tokens_list, tokens_spans, {"Process": process_bilou, "Material": material_bilou, "Task": task_bilou})
 
 print(eval.calculateMeasures('../data/train2', '../data/train_pred', 'rel'))
 print("Number of overlap:{}".format(number_of_overlaps))
 print("Number of punctuation: {}".format(number_of_punctuation))
-print("Total of sentences: {}".format(total_of_sentences))
