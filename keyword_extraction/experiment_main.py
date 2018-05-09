@@ -104,7 +104,7 @@ for decay_value in weight_decay_values:
         sys.stdout = orig_stdout
         f.close()
 
-        min_val_loss = history.history['val_loss'].min()
+        min_val_loss = min(history.history['val_loss'])
         if min_val_loss < absolute_min_val_loss:
             absolute_min_val_loss = min_val_loss
             best_decay_value = decay_value
