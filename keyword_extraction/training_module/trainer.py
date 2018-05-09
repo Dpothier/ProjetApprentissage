@@ -10,6 +10,7 @@ from torchtext import data
 from data_load.save import save_annotation_file
 import numpy as np
 from helper.softmax import softmax
+import copy
 
 
 class Trainer:
@@ -79,6 +80,7 @@ class Trainer:
         cummulative_epoch = 0
         current_patience = 0
         min_val_loss = sys.maxsize
+        best_model = None
         for schedule in training_schedule:
             optimizer = optim.Adam(model.parameters(), lr=schedule[1], weight_decay=weight_decay)
             for i in range(schedule[0]):
@@ -128,13 +130,14 @@ class Trainer:
 
                 if val_loss < min_val_loss:
                     min_val_loss = val_loss
+                    best_model = copy.deepcopy(model)
                     current_patience = 0
                 else:
                     current_patience += 1
                 if current_patience == patience:
                     break
 
-        return history
+        return history, best_model
 
     def _calculate_loss(self, out_process, process_targets, out_material, material_targets, out_task, task_targets, class_weight=None, use_gpu=False):
         criterion = nn.CrossEntropyLoss(weight=class_weight)
