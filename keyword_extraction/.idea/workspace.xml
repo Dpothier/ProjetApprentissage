@@ -13,94 +13,88 @@
     <favorites_list name="keyword_extraction" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5150565">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="training_hard.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/training_hard.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-358">
-                  <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#10#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="variable.py" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/autograd/variable.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="199">
-                  <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="embedding_main.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/embedding_main.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="333">
-                  <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#12#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="tcn_hard.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/models/tcn_hard.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="470">
-                  <caret line="157" column="57" lean-forward="false" selection-start-line="157" selection-start-column="57" selection-end-line="157" selection-end-column="57" />
-                  <folding>
-                    <element signature="e#0#12#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="tcn.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/models/tcn.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-954">
-                  <caret line="88" column="61" lean-forward="false" selection-start-line="88" selection-start-column="54" selection-end-line="88" selection-end-column="61" />
-                  <folding>
-                    <element signature="e#0#12#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="history.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/deeplib/history.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="538">
-                  <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="training.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/training.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2090">
-                  <caret line="163" column="17" lean-forward="false" selection-start-line="163" selection-start-column="17" selection-end-line="163" selection-end-column="17" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="tcn.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/tcn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="102" selection-end-column="95" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="training_hard.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/training_hard.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-358">
+              <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="experiment_main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiment_main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="819">
+              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script_soumission.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script_soumission.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="residual_block.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/residual_block.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tcn_hard.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/tcn_hard.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="828">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="80" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spatial_dropout.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/spatial_dropout.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -163,12 +157,17 @@
         <option value="$PROJECT_DIR$/training.py" />
         <option value="$PROJECT_DIR$/data_load/load.py" />
         <option value="$PROJECT_DIR$/data_load/data_main.py" />
-        <option value="$PROJECT_DIR$/models/tcn.py" />
         <option value="$PROJECT_DIR$/models/training_hard.py" />
         <option value="$PROJECT_DIR$/embedding_main.py" />
-        <option value="$PROJECT_DIR$/models/tcn_hard.py" />
         <option value="$PROJECT_DIR$/deeplib/history.py" />
         <option value="$PROJECT_DIR$/training_hard.py" />
+        <option value="$PROJECT_DIR$/script_soumission.sh" />
+        <option value="$PROJECT_DIR$/models/CausalConv.py" />
+        <option value="$PROJECT_DIR$/models/causal_conv.py" />
+        <option value="$PROJECT_DIR$/models/residual_block.py" />
+        <option value="$PROJECT_DIR$/models/spatial_dropout.py" />
+        <option value="$PROJECT_DIR$/models/tcn.py" />
+        <option value="$PROJECT_DIR$/models/tcn_hard.py" />
       </list>
     </option>
   </component>
@@ -198,6 +197,11 @@
             <path>
               <item name="keyword_extraction" type="b2602c69:ProjectViewProjectNode" />
               <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword_extraction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -281,7 +285,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="keyword_extraction" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/embedding_main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment_main.py" />
       <option name="PARAMETERS" value="cpu" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -445,10 +449,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/preds/S037026930400721X.ann" />
-    <entry file="file://$PROJECT_DIR$/data/preds/S037026930400680X.ann" />
-    <entry file="file://$PROJECT_DIR$/data/preds/S0032386114008428.ann" />
-    <entry file="file://$PROJECT_DIR$/data/preds/S0167273813005298.ann" />
     <entry file="file://$PROJECT_DIR$/data/preds/S0167273814004408.ann" />
     <entry file="file://$PROJECT_DIR$/data/preds/S0167273814004548.ann" />
     <entry file="file://$PROJECT_DIR$/data/preds/S0167273815004130.ann" />
@@ -656,31 +656,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/tcn_hard.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="157" column="57" lean-forward="false" selection-start-line="157" selection-start-column="57" selection-end-line="157" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/torch/autograd/variable.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/tcn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-954">
-          <caret line="88" column="61" lean-forward="false" selection-start-line="88" selection-start-column="54" selection-end-line="88" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -702,10 +682,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/embedding_main.py">
+    <entry file="file://$PROJECT_DIR$/experiment_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
+        <state relative-caret-position="819">
           <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_soumission.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/spatial_dropout.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/causal_conv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/residual_block.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/tcn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="102" selection-end-column="95" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/tcn_hard.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="80" selection-end-column="50" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
