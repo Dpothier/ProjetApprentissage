@@ -11,6 +11,7 @@ from deeplib.data import train_valid_loaders
 from torchtext import data
 from helper.softmax import softmax
 from data_load.save import save_annotation_file
+import copy
 
 
 
@@ -114,6 +115,7 @@ def train(model, dataset, training_schedule, batch_size,history_file, weight_dec
     cummulative_epoch = 0
     current_patience=0
     min_val_loss = sys.maxsize
+    best_model = None
     for schedule in training_schedule:
         optimizer = optim.Adam(model.parameters(), lr=schedule[1], weight_decay=weight_decay)
         for i in range(schedule[0]):
@@ -161,6 +163,7 @@ def train(model, dataset, training_schedule, batch_size,history_file, weight_dec
 
             if val_loss < min_val_loss:
                 min_val_loss = val_loss
+                best_model = copy.deepcopy(model)
                 current_patience = 0
             else:
                 current_patience += 1
@@ -169,4 +172,4 @@ def train(model, dataset, training_schedule, batch_size,history_file, weight_dec
 
 
 
-    return history
+    return history, best_model

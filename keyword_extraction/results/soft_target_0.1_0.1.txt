@@ -1,0 +1,3 @@
+Epoch 0 - Train acc: 76.06 - Val acc: 79.01 - Train loss: 2072797.3333 - Val loss: 2122559.5833 - Train conf:0.9999999631202807 - Val conf: 1.0
+Epoch 1 - Train acc: 93.25 - Val acc: 94.45 - Train loss: 94876.6442 - Val loss: 105660.2656 - Train conf:0.8641449164383126 - Val conf: 0.8773542433134739
+Epoch 2 - Train acc: 93.78 - Val acc: 94.09 - Train loss: 53541.1665 - Val loss: 53956.1491 - Train conf:0.8056245710772768 - Val conf: 0.8231172413203077
