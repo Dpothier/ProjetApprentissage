@@ -11,14 +11,18 @@ class History:
             'train_acc': [],
             'val_acc': [],
             'train_loss': [],
-            'val_loss': []
+            'val_loss': [],
+            'train_confidence':[],
+            'val_confidence':[]
         }
 
-    def save(self, train_acc, val_acc, train_loss, val_loss):
+    def save(self, train_acc, val_acc, train_loss, val_loss, train_confidence, val_confidence):
         self.history['train_acc'].append(train_acc)
         self.history['val_acc'].append(val_acc)
         self.history['train_loss'].append(train_loss)
         self.history['val_loss'].append(val_loss)
+        self.history['train_confidence'].append(train_confidence)
+        self.history['val_confidence'].append(val_confidence)
 
     def display(self):
         epoch = len(self.history['train_acc'])

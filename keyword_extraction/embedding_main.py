@@ -1,11 +1,5 @@
-import os
-import time
-import glob
-
 import torch
-import torch.optim as O
-import torch.nn as nn
-import training
+import training_hard as training
 from collections import Counter
 
 from torchtext import vocab
@@ -13,8 +7,7 @@ from torchtext import data
 from torchtext.data import Example
 
 from data_load.load import load_data
-from models.tcn import TCN_simple
-from models.tcn import TCN
+from models.tcn_hard import TCN
 import eval
 import sys
 from glove import Corpus, Glove
