@@ -5,29 +5,6 @@ from torch.autograd import Variable
 from models.residual_block import ResidualBlock
 from models.residual_block import ResidualCausalBlock
 
-
-
-
-class SpatialDropout(nn.Module):
-
-    def __init__(self, p):
-        super(SpatialDropout, self).__init__()
-        self.drop_probability = p
-
-    def forward(self, x):
-        number_of_channel = x.shape[2]
-        mask = Variable(torch.bernoulli(torch.ones(number_of_channel) * 1 - self.drop_probability).expand(x.shape))
-        if x.is_cuda:
-            mask = mask.cuda()
-
-        if self.training:
-            return mask * x
-        else:
-            return x * (1 - self.drop_probability)
-
-
-
-
 class TCN(nn.Module):
 
     def __init__(self, embedding_vectors, p_first_layer=0.2, p_other_layers=0.5):
@@ -60,8 +37,8 @@ class TCN(nn.Module):
         out = F.relu(self.res6.forward(out))
         out = F.relu(self.res7.forward(out))
 
-        out_process = F.log_softmax(self.process.forward(out), dim=1)
-        out_material = F.log_softmax(self.material.forward(out), dim=1)
-        out_task = F.log_softmax(self.task.forward(out), dim=1)
+        out_process = self.process.forward(out)
+        out_material = self.material.forward(out)
+        out_task = self.task.forward(out)
 
-        return out_process.permute(0,2,1), out_material.permute(0,2,1), out_task.permute(0,2,1)
+        return out_process, out_material, out_task

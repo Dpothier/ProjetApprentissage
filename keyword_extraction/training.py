@@ -45,13 +45,13 @@ def validate(model, val_loader, val_extra_data, use_gpu=False, class_weight=None
 
         out_process, out_material, out_task = model(texts)
 
-        process_predictions = out_process.max(dim=2)[1] #max returns 2 vector: the maxes, and the argmaxes
-        material_predictions = out_material.max(dim=2)[1]
-        task_predictions = out_task.max(dim=2)[1]
+        process_predictions = out_process.max(dim=1)[1] #max returns 2 vector: the maxes, and the argmaxes
+        material_predictions = out_material.max(dim=1)[1]
+        task_predictions = out_task.max(dim=1)[1]
 
-        process_loss = criterion(out_process, process_targets_encoded)
-        material_loss = criterion(out_material, material_targets_encoded)
-        task_loss = criterion(out_task, task_targets_encoded)
+        process_loss = criterion(out_process.permute(0, 2, 1), process_targets_encoded)
+        material_loss = criterion(out_material.permute(0, 2, 1), material_targets_encoded)
+        task_loss = criterion(out_task.permute(0, 2, 1), task_targets_encoded)
 
 
         if ann_folder is not None:
@@ -66,7 +66,7 @@ def validate(model, val_loader, val_extra_data, use_gpu=False, class_weight=None
 
         for i in range(len(ids)):
             in_entity_indices = process_targets.data.cpu().numpy()[i, :] != 1
-            in_entity_output = out_process.data.cpu().numpy()[i, in_entity_indices, :]
+            in_entity_output = out_process.data.cpu().numpy()[i, :, in_entity_indices]
             in_entity_probabilities = softmax(in_entity_output, axis=1)
             probabilities.extend(in_entity_probabilities[:,1].data.tolist())
 
@@ -110,6 +110,7 @@ def train(model, dataset, training_schedule, batch_size,history_file, weight_dec
     train_iter = data.Iterator(
         train[0], batch_size=batch_size, device=-1 if use_gpu is False else None, repeat=False, sort_key=lambda x: len(x.texts))
     val_iter = data.Iterator(val[0], batch_size=batch_size , device=-1 if use_gpu is False else None, repeat=False, sort_key=lambda x: len(x.texts))
+
     cummulative_epoch = 0
     current_patience=0
     min_val_loss = sys.maxsize
@@ -134,9 +135,9 @@ def train(model, dataset, training_schedule, batch_size,history_file, weight_dec
 
                 out_process, out_material, out_task = model(texts)
 
-                process_loss = criterion(out_process, process_targets)
-                material_loss = criterion(out_material, material_targets)
-                task_loss = criterion(out_task, task_targets)
+                process_loss = criterion(out_process.permute(0, 2, 1), process_targets)
+                material_loss = criterion(out_material.permute(0, 2, 1), material_targets)
+                task_loss = criterion(out_task.permute(0, 2, 1), task_targets)
 
                 process_loss.backward(retain_graph=True)
                 material_loss.backward(retain_graph=True)
@@ -152,7 +153,7 @@ def train(model, dataset, training_schedule, batch_size,history_file, weight_dec
                 train_acc, train_loss, train_confidence = validate(model, train_iter, train[1], use_gpu, class_weight)
                 val_acc, val_loss, val_confidence = validate(model, val_iter, val[1], use_gpu, class_weight)
 
-            history.save(train_acc, val_acc, train_loss, val_loss)
+            history.save(train_acc, val_acc, train_loss, val_loss, train_confidence, val_confidence)
 
             print('Epoch {} - Train acc: {:.2f} - Val acc: {:.2f} - Train loss: {:.4f} - Val loss: {:.4f} - Train conf:{} - Val conf: {}'
                   .format(cummulative_epoch, train_acc, val_acc, train_loss, val_loss, train_confidence, val_confidence))
@@ -164,7 +165,7 @@ def train(model, dataset, training_schedule, batch_size,history_file, weight_dec
             else:
                 current_patience += 1
             if current_patience == patience:
-                break;
+                break
 
 
 

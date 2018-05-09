@@ -7,7 +7,7 @@ from torchtext import data
 from torchtext.data import Example
 
 from data_load.load import load_data
-from models.tcn_hard import TCN
+from models.tcn import TCN
 import eval
 import sys
 from glove import Corpus, Glove

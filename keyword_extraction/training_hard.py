@@ -9,6 +9,7 @@ from deeplib.data import train_valid_loaders
 from torchtext import data
 from data_load.save import save_annotation_file
 import numpy as np
+from helper.softmax import softmax
 
 
 def validate(model, val_loader, val_extra_data, use_gpu=False, class_weight=None, ann_folder=None):
@@ -18,7 +19,7 @@ def validate(model, val_loader, val_extra_data, use_gpu=False, class_weight=None
 
     val_loss = []
 
-    criterion = nn.NLLLoss(weight=class_weight)
+    criterion = nn.CrossEntropyLoss(weight=class_weight)
     if use_gpu:
         criterion = criterion.cuda()
 
@@ -60,9 +61,8 @@ def validate(model, val_loader, val_extra_data, use_gpu=False, class_weight=None
 
         for i in range(len(ids)):
             in_entity_indices = process_targets.data.cpu().numpy()[i, :] != 1
-            in_entity_log_probabilities = out_process.data.cpu().numpy()[i, :, in_entity_indices]
-            in_entity_probabilities = np.exp(in_entity_log_probabilities)
-            print(in_entity_probabilities)
+            in_entity_output = out_process.data.cpu().numpy()[i, :, in_entity_indices]
+            in_entity_probabilities = softmax(in_entity_output, axis=1)
             probabilities.extend(in_entity_probabilities[:, 1].tolist())
 
 
@@ -136,11 +136,10 @@ def train(model, dataset, training_schedule, batch_size,history_file, weight_dec
                 train_acc, train_loss, train_confidence = validate(model, train_iter, train[1], use_gpu, class_weight)
                 val_acc, val_loss, val_confidence = validate(model, val_iter, val[1], use_gpu, class_weight)
 
-            history.save(train_acc, val_acc, train_loss, val_loss)
+            history.save(train_acc, val_acc, train_loss, val_loss, train_confidence, val_confidence)
 
-            print(
-                'Epoch {} - Train acc: {:.2f} - Val acc: {:.2f} - Train loss: {:.4f} - Val loss: {:.4f} - Train conf:{} - Val conf: {}'
-                .format(cummulative_epoch, train_acc, val_acc, train_loss, val_loss, train_confidence, val_confidence))
+            print('Epoch {} - Train acc: {:.2f} - Val acc: {:.2f} - Train loss: {:.4f} - Val loss: {:.4f} - Train conf:{} - Val conf: {}'
+                  .format(cummulative_epoch, train_acc, val_acc, train_loss, val_loss, train_confidence, val_confidence))
             cummulative_epoch += 1
 
             if val_loss < min_val_loss:
@@ -149,6 +148,6 @@ def train(model, dataset, training_schedule, batch_size,history_file, weight_dec
             else:
                 current_patience += 1
             if current_patience == patience:
-                break;
+                break
 
     return history
