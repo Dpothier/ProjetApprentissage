@@ -156,8 +156,8 @@ class TCN(nn.Module):
         out = F.relu(self.res7.forward(out))
 
         out_process = F.log_softmax(self.process.forward(out), dim=1)
-        out_material = F.log_softmax(self.material.forward(x), dim=1)
-        out_task = F.log_softmax(self.task.forward(x), dim=1)
+        out_material = F.log_softmax(self.material.forward(out), dim=1)
+        out_task = F.log_softmax(self.task.forward(out), dim=1)
 
         return out_process.permute(0,2,1), out_material.permute(0,2,1), out_task.permute(0,2,1)
 
