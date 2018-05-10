@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
     hard_train_conf = []
     hard_val_conf = []
-    with open('./results/hard_target_0.001_0.2.txt', 'r') as hard_results_f:
+    with open('./results/hard_target_0.1_0.2.txt', 'r') as hard_results_f:
         for l in hard_results_f:
             try:
                 hard_train_conf.append(float(re.search('Train conf:\s?(\d.\d*)', l).group(1)))
@@ -30,27 +30,28 @@ if __name__ == '__main__':
 
     confidences = np.array([soft_train_conf, soft_val_conf, hard_train_conf, hard_val_conf])
 
-    # x = np.array(range(confidences.shape[1]))
-    # print("X axis shape: {}".format(x.shape))
-    # print(x)
-    # print("Y axis shape: {}".format(confidences[0].shape))
-    # print(confidences[0])
-    # print("about to plot")
-    # plt.plot([1,2,3,4], [2,3,4,5])
-    # print("about to show")
-    # plt.show()
+    x = np.arange(10)
 
-    t = np.arange(0.0, 2.0, 0.01)
-    s = 1 + np.sin(2 * np.pi * t)
-    print("about to plot")
-    plt.plot(t, s)
-    print("after plot")
+    fig = plt.figure()
+    ax = plt.subplot(111)
 
-    plt.xlabel('time (s)')
-    plt.ylabel('voltage (mV)')
-    plt.title('About as simple as it gets, folks')
-    plt.grid(True)
-    plt.savefig("test.png")
+    x = np.array(range(confidences.shape[1]))
+    train_soft = plt.plot(x, confidences[0], label='Soft, Train')
+    val_soft = plt.plot(x, confidences[1], label='Soft, Val')
+    train_hard = plt.plot(x, confidences[2], label='Hard, Train')
+    val_hard = plt.plot(x, confidences[3], label='Hard, Val')
+
+    # Shrink current axis by 20%
+    box = ax.get_position()
+    ax.set_position([box.x0, box.y0, box.width * 0.8, box.height])
+    ax.set_title("Confidence that in entity tokens are out entity tokens")
+    ax.set_xlabel("Epoch")
+    ax.set_ylabel("Confidence")
+
+    # Put a legend to the right of the current axis
+    ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+    plt.savefig('./results/confidence_typical.png')
     plt.show()
 
     # print(confidences.shape)
