@@ -122,7 +122,7 @@ sys.stdout = f
 
 test_iter = data.Iterator(test, batch_size=batch_size, device=-1 if use_gpu is False else None, repeat=False)
 trainer = TrainerSoftTarget(2, 0.8, use_gpu)
-trainer.validate(model, test_iter, test_indices, use_gpu=use_gpu, class_weight=tags_weight, ann_folder='./data/test_preds')
+trainer.validate(absolute_best_model, test_iter, test_indices, use_gpu=use_gpu, class_weight=tags_weight, ann_folder='./data/test_preds')
 
 sys.stdout = orig_stdout
 f.close()
@@ -170,8 +170,8 @@ f = open('./results/hard_target_final.txt'.format(decay_value, dropout_value), '
 sys.stdout = f
 
 test_iter = data.Iterator(test, batch_size=batch_size, device=-1 if use_gpu is False else None, repeat=False)
-trainer = TrainerSoftTarget(2, 0.8, use_gpu)
-trainer.validate(model, test_iter, test_indices, use_gpu=use_gpu, class_weight=tags_weight, ann_folder='./data/test_preds_hard')
+trainer = Trainer()
+trainer.validate(absolute_best_model, test_iter, test_indices, use_gpu=use_gpu, class_weight=tags_weight, ann_folder='./data/test_preds_hard')
 
 sys.stdout = orig_stdout
 f.close()
