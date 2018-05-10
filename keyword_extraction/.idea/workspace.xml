@@ -44,12 +44,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="experiment_causal_soft.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="experiment_causal_soft.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/experiment_causal_soft.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-              <folding />
+            <state relative-caret-position="1170">
+              <caret line="65" column="44" lean-forward="false" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,16 +88,6 @@
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script_soumission.sh" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/script_soumission.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -190,8 +182,8 @@
         <option value="$PROJECT_DIR$/experiment_main.py" />
         <option value="$PROJECT_DIR$/experiment_hard_classes.py" />
         <option value="$PROJECT_DIR$/experiment_non_causal.py" />
-        <option value="$PROJECT_DIR$/experiment_causal_soft.py" />
         <option value="$PROJECT_DIR$/script_soumission.sh" />
+        <option value="$PROJECT_DIR$/experiment_causal_soft.py" />
       </list>
     </option>
   </component>
@@ -849,10 +841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/experiment_causal_soft.py">
+    <entry file="file://$PROJECT_DIR$/script_soumission.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        <state relative-caret-position="198">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -867,11 +859,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script_soumission.sh">
+    <entry file="file://$PROJECT_DIR$/experiment_causal_soft.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="1170">
+          <caret line="65" column="44" lean-forward="false" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -59,11 +59,11 @@ for decay_value in weight_decay_values:
 
         history.display()
 
-torch.save(absolute_best_model.state_dict(), './model_dump/soft_classes_model')
+torch.save(absolute_best_model.state_dict(), './model_dump/soft_classes_model_causal')
 
 
 #Evaluation on test set
-f = open('./results/soft_target_final.txt', 'w')
+f = open('./results/soft_target_final_causal.txt', 'w')
 sys.stdout = f
 
 test_iter = data.Iterator(test, batch_size=batch_size, device=-1 if use_gpu is False else None, repeat=False)
