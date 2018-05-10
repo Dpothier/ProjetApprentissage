@@ -46,7 +46,7 @@ if __name__ == '__main__':
     sys.stdout = f
 
     print("Result for soft classes on train set")
-    print(eval.calculateMeasures('./data/train', './data/train_preds', 'rel'))
+    print(eval.calculateMeasures('./data/train2', './data/train_preds', 'rel'))
     print("Result for soft classes on val set")
     print(eval.calculateMeasures('./data/val', './data/val_preds', 'rel'))
     print("Result for soft classes on train set")
