@@ -72,7 +72,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="extreme_regularisation_experiment_non_causal.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="extreme_regularisation_experiment_non_causal.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extreme_regularisation_experiment_non_causal.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="333">
@@ -80,6 +80,16 @@
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="history.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/deeplib/history.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,7 +162,6 @@
         <option value="$PROJECT_DIR$/data_load/data_main.py" />
         <option value="$PROJECT_DIR$/models/training_hard.py" />
         <option value="$PROJECT_DIR$/embedding_main.py" />
-        <option value="$PROJECT_DIR$/deeplib/history.py" />
         <option value="$PROJECT_DIR$/models/CausalConv.py" />
         <option value="$PROJECT_DIR$/models/residual_block.py" />
         <option value="$PROJECT_DIR$/models/tcn_hard.py" />
@@ -181,6 +190,7 @@
         <option value="$PROJECT_DIR$/script_soumission.sh" />
         <option value="$PROJECT_DIR$/extreme_regularisation_experiment_causal.py" />
         <option value="$PROJECT_DIR$/extreme_regularisation_experiment_non_causal.py" />
+        <option value="$PROJECT_DIR$/deeplib/history.py" />
       </list>
     </option>
   </component>
@@ -210,6 +220,11 @@
             <path>
               <item name="keyword_extraction" type="b2602c69:ProjectViewProjectNode" />
               <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword_extraction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
+              <item name="deeplib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -684,13 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deeplib/history.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/training_module/trainer_soft_targets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -827,6 +835,14 @@
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deeplib/history.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
