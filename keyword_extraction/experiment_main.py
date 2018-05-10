@@ -127,6 +127,56 @@ trainer.validate(model, test_iter, test_indices, use_gpu=use_gpu, class_weight=t
 sys.stdout = orig_stdout
 f.close()
 
+print("Result for soft classes")
 print("Best results obtained on decay: {}, dropout: {}".format(best_decay_value, best_dropout_value))
 print("Final scores on test set")
-print(eval.calculateMeasures('./data/dev', './data/test_preds', 'rel'))
+print(eval.calculateMeasures('./data/test', './data/test_preds', 'rel'))
+
+results = []
+
+absolute_min_val_loss = sys.maxsize
+best_decay_value = 0
+best_dropout_value = 0
+absolute_best_model = None
+for decay_value in weight_decay_values:
+    for dropout_value in dropout_values:
+        model = TCN(vocabulary.vectors, p_first_layer=dropout_value, p_other_layers=dropout_value)
+        if use_gpu:
+            model = model.cuda()
+
+        trainer = Trainer()
+
+        f = open('./results/hard_target_{}_{}.txt'.format(decay_value, dropout_value), 'w')
+        sys.stdout = f
+
+        history, best_model = trainer.train(model, dataset, history_file='./history/removed_causal_conv.pdf', weight_decay=decay_value, training_schedule=training_schedules, batch_size=batch_size, use_gpu=use_gpu, class_weight=tags_weight, patience=100)
+
+        sys.stdout = orig_stdout
+        f.close()
+
+        min_val_loss = min(history.history['val_loss'])
+        if min_val_loss < absolute_min_val_loss:
+            absolute_min_val_loss = min_val_loss
+            best_decay_value = decay_value
+            best_dropout_value = dropout_value
+            absolute_best_model = best_model
+
+        history.display()
+
+torch.save(absolute_best_model.state_dict(), './model_dump/hard_classes_model')
+#Evaluation on test set
+
+f = open('./results/hard_target_final.txt'.format(decay_value, dropout_value), 'w')
+sys.stdout = f
+
+test_iter = data.Iterator(test, batch_size=batch_size, device=-1 if use_gpu is False else None, repeat=False)
+trainer = TrainerSoftTarget(2, 0.8, use_gpu)
+trainer.validate(model, test_iter, test_indices, use_gpu=use_gpu, class_weight=tags_weight, ann_folder='./data/test_preds_hard')
+
+sys.stdout = orig_stdout
+f.close()
+
+print("Result for hard classes")
+print("Best results obtained on decay: {}, dropout: {}".format(best_decay_value, best_dropout_value))
+print("Final scores on test set")
+print(eval.calculateMeasures('./data/test', './data/test_preds_hards', 'rel'))
