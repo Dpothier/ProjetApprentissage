@@ -1,9 +1,4 @@
-from nltk.tokenize import TreebankWordTokenizer
-import eval
-import os
-import nltk
-from operator import itemgetter
-from data_load.tokenization import tokenize
+from semeval import eval
 from data_load.load import load_data
 from data_load.save import save_annotation_file
 from data_load.corpus import load_corpus, NERCorpusParser, word_tokenize

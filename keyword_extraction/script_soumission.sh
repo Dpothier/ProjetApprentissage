@@ -9,4 +9,5 @@ module load apps/python/3.5.0
 
 source deepenv/bin/activate
 
-python experiment_main.py gpu
+evaluate_results_main gpu
+python experiment_causal_soft.py gpu

@@ -1,5 +1,15 @@
 import os
 from data_load.tokenization import tokenize
+import torch
+from collections import Counter
+
+from torchtext import vocab
+from torchtext import data
+from torchtext.data import Example
+
+from glove import Glove
+from helper.class_weight import get_tags_weight_ratio
+
 
 def load_text(file):
     for l in file:
@@ -116,3 +126,40 @@ def load_data(folder, use_int_tags=True, tag_scheme='IO'):
                    'task_tags': text[4]} for text in texts]
 
     return dict_texts, indices
+
+
+def prepare_dataset():
+    texts = data.Field(lower=True)
+    tags = data.Field(use_vocab=False, pad_token=1)
+    id = data.Field(sequential=False, use_vocab=False)
+
+    fields = [('id', id), ('texts', texts), ('process_tags', tags), ('material_tags', tags), ('task_tags', tags)]
+    fields_dict = {'id': ('id', id), 'texts': ('texts', texts), 'process_tags': ('process_tags', tags),
+                   'material_tags': ('material_tags', tags), 'task_tags': ('task_tags', tags)}
+    loaded_train, train_extra = load_data('./data/train2', use_int_tags=True, tag_scheme='IO')
+    loaded_val, val_extra = load_data('./data/dev', use_int_tags=True, tag_scheme='IO')
+    loaded_test, test_extra = load_data('./data/test', use_int_tags=True, tag_scheme='IO')
+    train_examples = [Example.fromdict(data_point, fields_dict) for data_point in loaded_train]
+    val_examples = [Example.fromdict(data_point, fields_dict) for data_point in loaded_val]
+    test_examples = [Example.fromdict(data_point, fields_dict) for data_point in loaded_test]
+
+    tags_weight = get_tags_weight_ratio(loaded_train)
+
+    texts_tokens = Counter([token for example in loaded_train for token in example['texts']])
+
+    model = Glove.load('./embeddings/whole_semeval200.glove')
+
+    vectors = model.word_vectors
+    dictionary = model.dictionary
+    vocabulary = vocab.Vocab(texts_tokens)
+    vocabulary.set_vectors(stoi=dictionary, vectors=torch.Tensor(vectors), dim=200)
+
+    train = data.Dataset(examples=train_examples, fields=fields)
+    val = data.Dataset(examples=val_examples, fields=fields)
+    test = data.Dataset(examples=test_examples, fields=fields)
+
+    texts.vocab = vocabulary
+
+    return (train, train_extra, val, val_extra, test, test_extra), \
+            vocabulary, tags_weight
+
