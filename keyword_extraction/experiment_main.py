@@ -63,6 +63,7 @@ vocabulary.set_vectors(stoi=dictionary, vectors=torch.Tensor(vectors), dim=200)
 
 train = data.Dataset(examples=train_examples, fields=fields)
 val = data.Dataset(examples=val_examples, fields=fields)
+test = data.Dataset(examples=test_examples, fields=fields)
 
 texts.vocab = vocabulary
 
@@ -119,12 +120,13 @@ torch.save(absolute_best_model.state_dict(), './model_dump/soft_classes_model')
 f = open('./results/soft_target_final.txt'.format(decay_value, dropout_value), 'w')
 sys.stdout = f
 
-test_iter = data.Iterator(loaded_test, batch_size=batch_size, device=-1 if use_gpu is False else None, repeat=False)
+test_iter = data.Iterator(test, batch_size=batch_size, device=-1 if use_gpu is False else None, repeat=False)
 trainer = TrainerSoftTarget(2, 0.8, use_gpu)
 trainer.validate(model, test_iter, test_indices, use_gpu=use_gpu, class_weight=tags_weight, ann_folder='./data/test_preds')
 
 sys.stdout = orig_stdout
 f.close()
 
+print("Best results obtained on decay: {}, dropout: {}".format(best_decay_value, best_dropout_value))
 print("Final scores on test set")
 print(eval.calculateMeasures('./data/dev', './data/test_preds', 'rel'))
