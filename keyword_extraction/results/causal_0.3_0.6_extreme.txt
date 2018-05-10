@@ -1,0 +1,143 @@
+Epoch 0 - Train acc: 64.15 - Val acc: 64.16 - Train loss: 1393287.3201 - Val loss: 1508378.7812 - Train conf:0.9909002884947458 - Val conf: 0.989409676392266
+Epoch 1 - Train acc: 93.35 - Val acc: 94.72 - Train loss: 52652.8816 - Val loss: 52012.7129 - Train conf:0.7680508347722474 - Val conf: 0.790684595965902
+Epoch 2 - Train acc: 93.49 - Val acc: 94.32 - Train loss: 52108.3363 - Val loss: 52207.2422 - Train conf:0.7758391979780631 - Val conf: 0.8089984127180189
+Epoch 3 - Train acc: 93.53 - Val acc: 94.81 - Train loss: 51930.6481 - Val loss: 51628.4010 - Train conf:0.761069037187157 - Val conf: 0.7962964468324704
+Epoch 4 - Train acc: 93.52 - Val acc: 94.55 - Train loss: 51869.4379 - Val loss: 51842.3919 - Train conf:0.7333198817600685 - Val conf: 0.7766378491638816
+Epoch 5 - Train acc: 93.90 - Val acc: 94.96 - Train loss: 51644.1000 - Val loss: 51490.5612 - Train conf:0.7110244262249902 - Val conf: 0.7637030302772456
+Epoch 6 - Train acc: 94.19 - Val acc: 94.48 - Train loss: 51557.1899 - Val loss: 51806.6927 - Train conf:0.6842863688340348 - Val conf: 0.7455445380498654
+Epoch 7 - Train acc: 94.31 - Val acc: 94.87 - Train loss: 51525.2164 - Val loss: 51459.1224 - Train conf:0.646785716092466 - Val conf: 0.7239462847787975
+Epoch 8 - Train acc: 94.79 - Val acc: 94.33 - Train loss: 51267.0719 - Val loss: 51927.9173 - Train conf:0.6223236253114355 - Val conf: 0.7182535777698044
+Epoch 9 - Train acc: 94.81 - Val acc: 94.66 - Train loss: 51265.3497 - Val loss: 51646.2552 - Train conf:0.5675637477764169 - Val conf: 0.7016190507906689
+Epoch 10 - Train acc: 95.02 - Val acc: 94.94 - Train loss: 51131.8348 - Val loss: 51414.4036 - Train conf:0.5564635242462348 - Val conf: 0.7108082964097138
+Epoch 11 - Train acc: 95.06 - Val acc: 94.93 - Train loss: 51194.6352 - Val loss: 51550.8646 - Train conf:0.567982282957757 - Val conf: 0.720618401659045
+Epoch 12 - Train acc: 95.16 - Val acc: 94.89 - Train loss: 51031.6876 - Val loss: 51330.1543 - Train conf:0.5661380100218449 - Val conf: 0.7154024358870101
+Epoch 13 - Train acc: 95.33 - Val acc: 94.89 - Train loss: 50938.4013 - Val loss: 51376.6940 - Train conf:0.5486714918296727 - Val conf: 0.7300970665825925
+Epoch 14 - Train acc: 95.44 - Val acc: 94.81 - Train loss: 50849.0206 - Val loss: 51384.6673 - Train conf:0.5098938963041266 - Val conf: 0.6926689286189078
+Epoch 15 - Train acc: 95.69 - Val acc: 94.48 - Train loss: 50676.1727 - Val loss: 51550.1315 - Train conf:0.5439095604561821 - Val conf: 0.729266203087566
+Epoch 16 - Train acc: 95.80 - Val acc: 94.45 - Train loss: 50654.2430 - Val loss: 51630.4128 - Train conf:0.5011661019540835 - Val conf: 0.7087444652631777
+Epoch 17 - Train acc: 95.92 - Val acc: 94.38 - Train loss: 50520.8507 - Val loss: 51641.0879 - Train conf:0.5140455433923807 - Val conf: 0.7037886334419524
+Epoch 18 - Train acc: 96.15 - Val acc: 94.46 - Train loss: 50481.1025 - Val loss: 51739.3451 - Train conf:0.505850752297464 - Val conf: 0.7277230312599536
+Epoch 19 - Train acc: 96.08 - Val acc: 94.36 - Train loss: 50487.9482 - Val loss: 51813.7943 - Train conf:0.4593515607918349 - Val conf: 0.7013426378897247
+Epoch 20 - Train acc: 96.41 - Val acc: 94.67 - Train loss: 50322.5842 - Val loss: 51334.1712 - Train conf:0.4395322320275013 - Val conf: 0.690164549794899
+Epoch 21 - Train acc: 96.78 - Val acc: 94.33 - Train loss: 50098.9731 - Val loss: 51659.7695 - Train conf:0.4116037235974198 - Val conf: 0.692108736656296
+Epoch 22 - Train acc: 97.14 - Val acc: 94.64 - Train loss: 49953.4985 - Val loss: 51351.0521 - Train conf:0.37161406607172526 - Val conf: 0.6739135956383866
+Epoch 23 - Train acc: 97.48 - Val acc: 94.28 - Train loss: 49792.6522 - Val loss: 51766.3158 - Train conf:0.36060087923270484 - Val conf: 0.6800015185121162
+Epoch 24 - Train acc: 97.52 - Val acc: 93.99 - Train loss: 49715.4508 - Val loss: 51791.6113 - Train conf:0.36801813797028254 - Val conf: 0.6967134720591062
+Epoch 25 - Train acc: 97.86 - Val acc: 93.75 - Train loss: 49622.2423 - Val loss: 51940.0052 - Train conf:0.3018167520215369 - Val conf: 0.6455743334256469
+Epoch 26 - Train acc: 97.92 - Val acc: 94.61 - Train loss: 49535.3894 - Val loss: 51514.5495 - Train conf:0.33379715615318784 - Val conf: 0.6981187098650414
+Epoch 27 - Train acc: 97.85 - Val acc: 94.58 - Train loss: 49554.7122 - Val loss: 51614.9544 - Train conf:0.28457591889882566 - Val conf: 0.6661893704394198
+Epoch 28 - Train acc: 97.79 - Val acc: 94.60 - Train loss: 49561.2505 - Val loss: 51620.0169 - Train conf:0.35153772196787086 - Val conf: 0.7267405138031926
+Epoch 29 - Train acc: 98.22 - Val acc: 94.13 - Train loss: 49401.4349 - Val loss: 51897.2656 - Train conf:0.2915650810667219 - Val conf: 0.6894512962084086
+Epoch 30 - Train acc: 98.25 - Val acc: 94.52 - Train loss: 49343.3881 - Val loss: 51530.7917 - Train conf:0.28114721398799947 - Val conf: 0.6717321608520438
+Epoch 31 - Train acc: 98.30 - Val acc: 94.29 - Train loss: 49345.1495 - Val loss: 51774.1608 - Train conf:0.22014194105182064 - Val conf: 0.6156157248086425
+Epoch 32 - Train acc: 98.54 - Val acc: 93.83 - Train loss: 49248.3397 - Val loss: 52042.4492 - Train conf:0.22927297534865212 - Val conf: 0.6576987456280782
+Epoch 33 - Train acc: 98.43 - Val acc: 93.97 - Train loss: 49253.6156 - Val loss: 52072.9447 - Train conf:0.25476711111607975 - Val conf: 0.6876233785056223
+Epoch 34 - Train acc: 98.66 - Val acc: 94.37 - Train loss: 49159.3490 - Val loss: 51661.3776 - Train conf:0.23567795575064596 - Val conf: 0.6525038167219922
+Epoch 35 - Train acc: 98.75 - Val acc: 94.41 - Train loss: 49110.7789 - Val loss: 51624.2949 - Train conf:0.25565514617010004 - Val conf: 0.6983696810162653
+Epoch 36 - Train acc: 98.76 - Val acc: 94.34 - Train loss: 49103.6344 - Val loss: 51783.6413 - Train conf:0.19916606644306317 - Val conf: 0.6637226174113902
+Epoch 37 - Train acc: 98.65 - Val acc: 94.43 - Train loss: 49142.7596 - Val loss: 51700.0794 - Train conf:0.23221873217306316 - Val conf: 0.6740811962082575
+Epoch 38 - Train acc: 98.87 - Val acc: 94.37 - Train loss: 49048.6761 - Val loss: 51715.5169 - Train conf:0.2299338245663304 - Val conf: 0.6819736225327023
+Epoch 39 - Train acc: 98.83 - Val acc: 94.45 - Train loss: 49043.8948 - Val loss: 51678.0996 - Train conf:0.22642907864949788 - Val conf: 0.6829041906348248
+Epoch 40 - Train acc: 98.84 - Val acc: 93.97 - Train loss: 49006.6444 - Val loss: 51921.5430 - Train conf:0.25547866754477616 - Val conf: 0.7199622022922381
+Epoch 41 - Train acc: 99.07 - Val acc: 93.81 - Train loss: 48896.1710 - Val loss: 52044.2396 - Train conf:0.20133256476441225 - Val conf: 0.6850191581279439
+Epoch 42 - Train acc: 99.21 - Val acc: 93.90 - Train loss: 48823.7169 - Val loss: 52091.4076 - Train conf:0.19840301739720764 - Val conf: 0.696348473512478
+Epoch 43 - Train acc: 99.25 - Val acc: 94.08 - Train loss: 48790.5644 - Val loss: 52068.6055 - Train conf:0.18766412858463338 - Val conf: 0.6966273622428841
+Epoch 44 - Train acc: 99.31 - Val acc: 94.37 - Train loss: 48756.8871 - Val loss: 51757.1699 - Train conf:0.20228024209174983 - Val conf: 0.7137826293240166
+Epoch 45 - Train acc: 99.31 - Val acc: 93.97 - Train loss: 48742.2255 - Val loss: 52183.4440 - Train conf:0.17315799298441292 - Val conf: 0.6964235490353776
+Epoch 46 - Train acc: 99.33 - Val acc: 94.37 - Train loss: 48727.1219 - Val loss: 51756.9186 - Train conf:0.15554999304154904 - Val conf: 0.6739741719188773
+Epoch 47 - Train acc: 99.44 - Val acc: 93.83 - Train loss: 48678.1644 - Val loss: 52183.1536 - Train conf:0.13599622392723532 - Val conf: 0.6619586255467185
+Epoch 48 - Train acc: 99.48 - Val acc: 94.23 - Train loss: 48674.0612 - Val loss: 51892.0358 - Train conf:0.13842275228882486 - Val conf: 0.659277179322367
+Epoch 49 - Train acc: 99.34 - Val acc: 94.47 - Train loss: 48697.0412 - Val loss: 51762.7259 - Train conf:0.15534613083700013 - Val conf: 0.6764474131894064
+Epoch 50 - Train acc: 99.48 - Val acc: 94.33 - Train loss: 48644.2675 - Val loss: 51713.1074 - Train conf:0.16923262559769303 - Val conf: 0.7108478895564634
+Epoch 51 - Train acc: 99.37 - Val acc: 94.46 - Train loss: 48690.8782 - Val loss: 51694.0078 - Train conf:0.187373763937031 - Val conf: 0.7286894619015755
+Epoch 52 - Train acc: 99.52 - Val acc: 94.05 - Train loss: 48619.9324 - Val loss: 52132.7826 - Train conf:0.12436540223247766 - Val conf: 0.684200747402291
+Epoch 53 - Train acc: 99.44 - Val acc: 94.55 - Train loss: 48641.1647 - Val loss: 51733.9219 - Train conf:0.17439105992422005 - Val conf: 0.7149633721916633
+Epoch 54 - Train acc: 99.55 - Val acc: 94.03 - Train loss: 48605.9023 - Val loss: 52279.9199 - Train conf:0.11360478899202282 - Val conf: 0.6507559777650131
+Epoch 55 - Train acc: 99.51 - Val acc: 94.38 - Train loss: 48616.2423 - Val loss: 51808.5977 - Train conf:0.11619793338097467 - Val conf: 0.6534795646911105
+Epoch 56 - Train acc: 99.60 - Val acc: 93.99 - Train loss: 48580.1970 - Val loss: 52171.6257 - Train conf:0.11455752004906417 - Val conf: 0.6583891873364603
+Epoch 57 - Train acc: 99.49 - Val acc: 94.18 - Train loss: 48620.2031 - Val loss: 52097.9395 - Train conf:0.1469934179353426 - Val conf: 0.6894741728558575
+Epoch 58 - Train acc: 99.59 - Val acc: 94.37 - Train loss: 48569.0820 - Val loss: 51825.1699 - Train conf:0.14527128045612384 - Val conf: 0.7016730059843262
+Epoch 59 - Train acc: 99.57 - Val acc: 94.43 - Train loss: 48562.5308 - Val loss: 51736.3457 - Train conf:0.1348733067941295 - Val conf: 0.6953161657742325
+Epoch 60 - Train acc: 99.68 - Val acc: 94.32 - Train loss: 48498.6688 - Val loss: 51762.1374 - Train conf:0.11931616177434909 - Val conf: 0.6974856366241184
+Epoch 61 - Train acc: 99.71 - Val acc: 94.04 - Train loss: 48476.8683 - Val loss: 52151.7188 - Train conf:0.11618915187722392 - Val conf: 0.695154580964783
+Epoch 62 - Train acc: 99.73 - Val acc: 94.39 - Train loss: 48463.7071 - Val loss: 51857.1230 - Train conf:0.10767755625016172 - Val conf: 0.6917871913939894
+Epoch 63 - Train acc: 99.73 - Val acc: 94.38 - Train loss: 48456.5401 - Val loss: 51863.1732 - Train conf:0.11349791224731046 - Val conf: 0.6967745236490375
+Epoch 64 - Train acc: 99.75 - Val acc: 93.92 - Train loss: 48436.3204 - Val loss: 52319.5137 - Train conf:0.11364816372876746 - Val conf: 0.7081227235644031
+Epoch 65 - Train acc: 99.77 - Val acc: 94.01 - Train loss: 48420.6635 - Val loss: 52233.4284 - Train conf:0.09512620342146362 - Val conf: 0.6822413559432082
+Epoch 66 - Train acc: 99.76 - Val acc: 94.42 - Train loss: 48422.2608 - Val loss: 51797.0430 - Train conf:0.10647108110539683 - Val conf: 0.7025110367338712
+Epoch 67 - Train acc: 99.79 - Val acc: 94.34 - Train loss: 48406.7379 - Val loss: 51847.9355 - Train conf:0.08951266304524746 - Val conf: 0.6852687623805734
+Epoch 68 - Train acc: 99.78 - Val acc: 94.05 - Train loss: 48405.2662 - Val loss: 52136.3249 - Train conf:0.10129256201839452 - Val conf: 0.6979222514106685
+Epoch 69 - Train acc: 99.80 - Val acc: 93.68 - Train loss: 48389.0585 - Val loss: 52206.1074 - Train conf:0.09244871913713831 - Val conf: 0.6950536145934675
+Epoch 70 - Train acc: 99.80 - Val acc: 93.92 - Train loss: 48395.3925 - Val loss: 52260.4355 - Train conf:0.09505597404717846 - Val conf: 0.7013610993911114
+Epoch 71 - Train acc: 99.79 - Val acc: 94.43 - Train loss: 48392.8333 - Val loss: 51832.1595 - Train conf:0.09971259474565695 - Val conf: 0.7105356018242872
+Epoch 72 - Train acc: 99.80 - Val acc: 94.39 - Train loss: 48393.1495 - Val loss: 51744.3704 - Train conf:0.09634734984496093 - Val conf: 0.7053115285169603
+Epoch 73 - Train acc: 99.82 - Val acc: 94.39 - Train loss: 48376.5180 - Val loss: 51827.5872 - Train conf:0.09750372469427247 - Val conf: 0.7044800334847322
+Epoch 74 - Train acc: 99.83 - Val acc: 93.91 - Train loss: 48376.8308 - Val loss: 52216.3900 - Train conf:0.0905232188150267 - Val conf: 0.6941979276793643
+Epoch 75 - Train acc: 99.82 - Val acc: 93.89 - Train loss: 48380.2462 - Val loss: 52327.5892 - Train conf:0.08595962348832546 - Val conf: 0.6923122236485941
+Epoch 76 - Train acc: 99.81 - Val acc: 94.42 - Train loss: 48380.1069 - Val loss: 51783.7318 - Train conf:0.0926473486386174 - Val conf: 0.704949361628428
+Epoch 77 - Train acc: 99.81 - Val acc: 93.73 - Train loss: 48371.6357 - Val loss: 52291.8880 - Train conf:0.09535312920537498 - Val conf: 0.7175597834790011
+Epoch 78 - Train acc: 99.83 - Val acc: 93.75 - Train loss: 48361.3140 - Val loss: 52247.6921 - Train conf:0.08937401415740086 - Val conf: 0.7068665948236821
+Epoch 79 - Train acc: 99.83 - Val acc: 94.38 - Train loss: 48364.6754 - Val loss: 51841.4518 - Train conf:0.08723719543491994 - Val conf: 0.7008002392950875
+Best model on validation set obtained at epoch: 12
+Evaluation on all datasets for the best model on validation:
+           precision   recall f1-score  support
+
+    Process     0.22     0.21     0.21     2988
+   Material     0.36     0.30     0.33     2604
+       Task     0.02     0.01     0.01     1129
+
+avg / total     0.26     0.21     0.23     6721
+
+
+{'overall': {'support': 6721, 'precision': 0.26304996271439224, 'f1-score': 0.2335126189491105, 'recall': 0.20993899717303974}, 'Task': {'support': 1129, 'precision': 0.01634877384196185, 'f1-score': 0.00802139037433155, 'recall': 0.005314437555358724}, 'Process': {'support': 2988, 'precision': 0.21851981760785688, 'f1-score': 0.21339270423017637, 'recall': 0.20850066934404285}, 'Material': {'support': 2604, 'precision': 0.36439888164026096, 'f1-score': 0.32926315789473687, 'recall': 0.30030721966205837}}
+           precision   recall f1-score  support
+
+    Process     0.07     0.05     0.06      455
+   Material     0.32     0.20     0.25      562
+       Task     0.00     0.00     0.00      137
+
+avg / total     0.18     0.12     0.14     1154
+
+
+{'overall': {'support': 1154, 'precision': 0.17955439056356487, 'f1-score': 0.1429316640584246, 'recall': 0.11871750433275563}, 'Task': {'support': 137, 'precision': 0.0, 'f1-score': 0.0, 'recall': 0.0}, 'Process': {'support': 455, 'precision': 0.06611570247933884, 'f1-score': 0.05867970660146699, 'recall': 0.05274725274725275}, 'Material': {'support': 562, 'precision': 0.32285714285714284, 'f1-score': 0.24780701754385967, 'recall': 0.20106761565836298}}
+           precision   recall f1-score  support
+
+   Material     0.16     0.09     0.12      904
+    Process     0.09     0.06     0.07      954
+       Task     0.01     0.01     0.01      193
+
+avg / total     0.11     0.07     0.08     2051
+
+
+{'overall': {'support': 2051, 'precision': 0.11246943765281174, 'f1-score': 0.08419768151311775, 'recall': 0.06728425158459288}, 'Task': {'support': 193, 'precision': 0.012345679012345678, 'f1-score': 0.0072992700729927005, 'recall': 0.0051813471502590676}, 'Process': {'support': 954, 'precision': 0.08507223113964688, 'f1-score': 0.06721623335447051, 'recall': 0.05555555555555555}, 'Material': {'support': 904, 'precision': 0.16061185468451242, 'f1-score': 0.11772950245269796, 'recall': 0.09292035398230089}}
+Evaluation on all datasets for the model of the last epoch:
+           precision   recall f1-score  support
+
+    Process     0.89     0.85     0.86     2988
+       Task     0.87     0.89     0.88     1129
+   Material     0.89     0.84     0.87     2604
+
+avg / total     0.89     0.85     0.87     6721
+
+
+{'overall': {'support': 6721, 'precision': 0.8860818350898946, 'f1-score': 0.8679875502922644, 'recall': 0.8506174676387442}, 'Task': {'support': 1129, 'precision': 0.8726003490401396, 'f1-score': 0.8791208791208791, 'recall': 0.8857395925597874}, 'Process': {'support': 2988, 'precision': 0.885343618513324, 'f1-score': 0.8647260273972602, 'recall': 0.8450468540829986}, 'Material': {'support': 2604, 'precision': 0.8932355338223309, 'f1-score': 0.866745749308027, 'recall': 0.8417818740399385}}
+           precision   recall f1-score  support
+
+    Process     0.10     0.13     0.11      455
+   Material     0.29     0.22     0.25      562
+       Task     0.03     0.04     0.03      137
+
+avg / total     0.16     0.16     0.16     1154
+
+
+{'overall': {'support': 1154, 'precision': 0.1579391891891892, 'f1-score': 0.15996578272027373, 'recall': 0.16204506065857885}, 'Task': {'support': 137, 'precision': 0.026595744680851064, 'f1-score': 0.030769230769230767, 'recall': 0.0364963503649635}, 'Process': {'support': 455, 'precision': 0.10124333925399645, 'f1-score': 0.11198428290766209, 'recall': 0.12527472527472527}, 'Material': {'support': 562, 'precision': 0.28868360277136257, 'f1-score': 0.2512562814070351, 'recall': 0.22241992882562278}}
+           precision   recall f1-score  support
+
+   Material     0.16     0.14     0.15      904
+    Process     0.11     0.12     0.12      954
+       Task     0.02     0.03     0.02      193
+
+avg / total     0.12     0.12     0.12     2051
+
+
+{'overall': {'support': 2051, 'precision': 0.11582833410244578, 'f1-score': 0.11901375059269796, 'recall': 0.12237932715748416}, 'Task': {'support': 193, 'precision': 0.018072289156626505, 'f1-score': 0.022857142857142857, 'recall': 0.031088082901554404}, 'Process': {'support': 954, 'precision': 0.11036468330134357, 'f1-score': 0.11523046092184368, 'recall': 0.12054507337526206}, 'Material': {'support': 904, 'precision': 0.16393442622950818, 'f1-score': 0.15321154979375368, 'recall': 0.14380530973451328}}

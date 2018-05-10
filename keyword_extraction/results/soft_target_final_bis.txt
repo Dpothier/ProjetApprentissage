@@ -1,0 +1,33 @@
+Result for soft classes on train set
+           precision   recall f1-score  support
+
+    Process     0.16     0.13     0.14     2988
+   Material     0.38     0.26     0.31     2604
+       Task     0.03     0.00     0.00     1129
+
+avg / total     0.25     0.16     0.19     6721
+
+
+{'Material': {'precision': 0.37690140845070425, 'recall': 0.2569124423963134, 'support': 2604, 'f1-score': 0.30554921214889247}, 'overall': {'precision': 0.24703419399860432, 'recall': 0.15801220056539206, 'support': 6721, 'f1-score': 0.1927404718693285}, 'Process': {'precision': 0.15711422845691383, 'recall': 0.13119143239625167, 'support': 2988, 'f1-score': 0.14298741564836767}, 'Task': {'precision': 0.034482758620689655, 'recall': 0.0008857395925597874, 'support': 1129, 'f1-score': 0.0017271157167530226}}
+Result for soft classes on val set
+           precision   recall f1-score  support
+
+    Process     0.06     0.05     0.05      455
+   Material     0.39     0.20     0.27      562
+       Task     0.00     0.00     0.00      137
+
+avg / total     0.20     0.12     0.15     1154
+
+
+{'Material': {'precision': 0.39372822299651566, 'recall': 0.20106761565836298, 'support': 562, 'f1-score': 0.2661955241460542}, 'overall': {'precision': 0.20426829268292682, 'recall': 0.11611785095320624, 'support': 1154, 'f1-score': 0.14806629834254145}, 'Process': {'precision': 0.05722070844686648, 'recall': 0.046153846153846156, 'support': 455, 'f1-score': 0.051094890510948905}, 'Task': {'precision': 0.0, 'recall': 0.0, 'support': 137, 'f1-score': 0.0}}
+Result for soft classes on train set
+           precision   recall f1-score  support
+
+    Process     0.06     0.03     0.04      954
+   Material     0.17     0.08     0.10      904
+       Task     0.00     0.00     0.00      193
+
+avg / total     0.10     0.05     0.07     2051
+
+
+{'Material': {'precision': 0.17, 'recall': 0.0752212389380531, 'support': 904, 'f1-score': 0.10429447852760737}, 'overall': {'precision': 0.1040582726326743, 'recall': 0.04875670404680644, 'support': 2051, 'f1-score': 0.06640106241699868}, 'Process': {'precision': 0.05755395683453238, 'recall': 0.033542976939203356, 'support': 954, 'f1-score': 0.0423841059602649}, 'Task': {'precision': 0.0, 'recall': 0.0, 'support': 193, 'f1-score': 0.0}}
