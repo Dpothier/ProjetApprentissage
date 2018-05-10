@@ -5,6 +5,7 @@ from semeval import eval
 import sys
 from training_module.trainer_soft_targets import TrainerSoftTarget
 from data_load.load import prepare_dataset
+import numpy as np
 
 orig_stdout = sys.stdout
 
@@ -53,7 +54,11 @@ for decay_value in weight_decay_values:
         trainer.validate(best_model, train_iter, train_extra, use_gpu=use_gpu, class_weight=tags_weight, ann_folder='./data/train_preds')
         trainer.validate(best_model, val_iter, val_extra, use_gpu=use_gpu, class_weight=tags_weight, ann_folder='./data/val_preds')
 
-        print("Best model")
+        val_losses = np.array(history.history['val_loss'])
+        min_val_loss = float(val_losses.min())
+        min_val_loss_index = int(val_losses.argmin())
+
+        print("Best model on epoch: {}".format(min_val_loss_index))
         print(eval.calculateMeasures('./data/train2', './data/train_preds', 'rel'))
         print(eval.calculateMeasures('./data/dev', './data/val_preds', 'rel'))
 
@@ -69,7 +74,7 @@ for decay_value in weight_decay_values:
         sys.stdout = orig_stdout
         f.close()
 
-        min_val_loss = min(history.history['val_loss'])
+
         if min_val_loss < absolute_min_val_loss:
             absolute_min_val_loss = min_val_loss
             best_decay_value = decay_value

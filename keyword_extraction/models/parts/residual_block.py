@@ -1,7 +1,7 @@
 import torch.nn as nn
 import torch.nn.functional as F
-from models.spatial_dropout import SpatialDropout
-from models.causal_conv import CausalConv1d
+from models.parts.spatial_dropout import SpatialDropout
+from models.parts.causal_conv import CausalConv1d
 
 class ResidualCausalBlock(nn.Module):
     def __init__(self, in_depth, out_depth, dilation=1, p=0.0):
