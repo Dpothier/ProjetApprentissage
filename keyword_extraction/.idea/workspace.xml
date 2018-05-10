@@ -26,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="experiment_main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="experiment_main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/experiment_main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="413">
@@ -34,6 +34,16 @@
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script_soumission.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/script_soumission.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,9 +184,9 @@
         <option value="$PROJECT_DIR$/training.py" />
         <option value="$PROJECT_DIR$/results/result.txt.py" />
         <option value="$PROJECT_DIR$/model_dump/dummi.py" />
-        <option value="$PROJECT_DIR$/script_soumission.sh" />
         <option value="$PROJECT_DIR$/training_module/trainer.py" />
         <option value="$PROJECT_DIR$/experiment_main.py" />
+        <option value="$PROJECT_DIR$/script_soumission.sh" />
       </list>
     </option>
   </component>
@@ -731,13 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script_soumission.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eval.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -783,6 +786,14 @@
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_soumission.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
