@@ -1,4 +1,5 @@
 import torch.nn as nn
+import torch.nn.functional as F
 
 class CausalConv1d(nn.Conv1d):
     def __init__(self,
