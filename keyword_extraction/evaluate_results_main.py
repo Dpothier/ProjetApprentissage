@@ -12,6 +12,7 @@ if __name__ == '__main__':
     orig_stdout = sys.stdout
     use_gpu = True if sys.argv[1] == 'gpu' else False
 
+    print("use_gpu:{}".format(use_gpu))
 
 
     dataset_complete, vocabulary, tags_weight = prepare_dataset()
@@ -22,6 +23,10 @@ if __name__ == '__main__':
 
     model = TCN(vocabulary.vectors, p_first_layer=0.2, p_other_layers=0.2)
     model.load_state_dict(torch.load('./model_dump/soft_classes_model'))
+    if use_gpu:
+        model = model.cuda()
+    else:
+        model = model.cpu()
 
     trainer = TrainerSoftTarget(2, 0.8, use_gpu)
     batch_size=32
@@ -41,9 +46,9 @@ if __name__ == '__main__':
     sys.stdout = f
 
     print("Result for soft classes on train set")
-    print(eval.calculateMeasures('./data/train', './data/train_preds', 'rel'))
+    print(eval.calculateMeasures('./data/train2', './data/train_preds', 'rel'))
     print("Result for soft classes on val set")
-    print(eval.calculateMeasures('./data/val', './data/val_preds', 'rel'))
+    print(eval.calculateMeasures('./data/dev', './data/val_preds', 'rel'))
     print("Result for soft classes on train set")
     print(eval.calculateMeasures('./data/test', './data/test_preds', 'rel'))
 

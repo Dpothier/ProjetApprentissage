@@ -1,9 +1,7 @@
-import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.autograd import Variable
-from models.residual_block import ResidualBlock
-from models.residual_block import ResidualCausalBlock
+from models.parts.residual_block import ResidualBlock
+from models.parts.residual_block import ResidualCausalBlock
 
 class TCN(nn.Module):
 
