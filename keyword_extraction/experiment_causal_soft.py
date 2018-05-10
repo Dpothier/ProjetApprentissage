@@ -39,10 +39,10 @@ for decay_value in weight_decay_values:
 
         trainer = TrainerSoftTarget(2, 0.8, use_gpu)
 
-        f = open('./results/soft_target_causal_{}_{}.txt'.format(decay_value, dropout_value), 'w')
+        f = open('./results/soft_target_causal_{}_{}_comparison.txt'.format(decay_value, dropout_value), 'w')
         sys.stdout = f
 
-        history_file = './history/soft_target_causal_{}_{}.pdf'.format(decay_value, dropout_value)
+        history_file = './history/soft_target_causal_{}_{}_comparison.pdf'.format(decay_value, dropout_value)
         history, best_model = trainer.train(model, dataset, history_file=history_file, weight_decay=decay_value,
                                             training_schedule=training_schedules, batch_size=batch_size, use_gpu=use_gpu,
                                             class_weight=tags_weight, patience=100)
@@ -82,18 +82,18 @@ torch.save(absolute_best_model.state_dict(), './model_dump/soft_classes_model_ca
 
 
 #Evaluation on test set
-f = open('./results/soft_target_final_causal.txt', 'w')
-sys.stdout = f
-
-test_iter = data.Iterator(test, batch_size=batch_size, device=-1 if use_gpu is False else None, repeat=False)
-trainer = TrainerSoftTarget(2, 0.8, use_gpu)
-trainer.validate(absolute_best_model, test_iter, test_extra, use_gpu=use_gpu, class_weight=tags_weight, ann_folder='./data/test_preds')
-
-
-print("Result for soft classes")
-print("Best results obtained on decay: {}, dropout: {}".format(best_decay_value, best_dropout_value))
-print("Final scores on test set")
-print(eval.calculateMeasures('./data/test', './data/test_preds', 'rel'))
-
-sys.stdout = orig_stdout
-f.close()
+# f = open('./results/soft_target_final_causal.txt', 'w')
+# sys.stdout = f
+#
+# test_iter = data.Iterator(test, batch_size=batch_size, device=-1 if use_gpu is False else None, repeat=False)
+# trainer = TrainerSoftTarget(2, 0.8, use_gpu)
+# trainer.validate(absolute_best_model, test_iter, test_extra, use_gpu=use_gpu, class_weight=tags_weight, ann_folder='./data/test_preds')
+#
+#
+# print("Result for soft classes")
+# print("Best results obtained on decay: {}, dropout: {}".format(best_decay_value, best_dropout_value))
+# print("Final scores on test set")
+# print(eval.calculateMeasures('./data/test', './data/test_preds', 'rel'))
+#
+# sys.stdout = orig_stdout
+# f.close()
