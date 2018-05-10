@@ -47,7 +47,7 @@ class TCN(nn.Module):
 class CausalTCN(nn.Module):
 
     def __init__(self, embedding_vectors, p_first_layer=0.2, p_other_layers=0.5):
-        super(TCN, self).__init__()
+        super(CausalTCN, self).__init__()
         vocabulary_size = embedding_vectors.shape[0]
         embedding_size = embedding_vectors.shape[1]
         self.embeddings = nn.Embedding(vocabulary_size, embedding_size)

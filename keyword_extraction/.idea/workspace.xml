@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="tcn.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tcn.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/tcn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1062">
-              <caret line="64" column="39" lean-forward="false" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
+            <state relative-caret-position="828">
+              <caret line="51" column="51" lean-forward="true" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -37,18 +37,18 @@
       <file leaf-file-name="experiment_hard_classes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/experiment_hard_classes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+            <state relative-caret-position="0">
+              <caret line="0" column="12" lean-forward="true" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="experiment_causal_soft.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="experiment_causal_soft.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/experiment_causal_soft.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="65" column="44" lean-forward="false" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+            <state relative-caret-position="0">
+              <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -83,8 +83,8 @@
       <file leaf-file-name="evaluate_results_main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/evaluate_results_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="53" lean-forward="false" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+            <state relative-caret-position="-236">
+              <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -175,15 +175,15 @@
         <option value="$PROJECT_DIR$/results/result.txt.py" />
         <option value="$PROJECT_DIR$/model_dump/dummi.py" />
         <option value="$PROJECT_DIR$/training_module/trainer.py" />
-        <option value="$PROJECT_DIR$/models/tcn.py" />
         <option value="$PROJECT_DIR$/helper/class_weight.py" />
-        <option value="$PROJECT_DIR$/evaluate_results_main.py" />
         <option value="$PROJECT_DIR$/data_load/load.py" />
         <option value="$PROJECT_DIR$/experiment_main.py" />
         <option value="$PROJECT_DIR$/experiment_hard_classes.py" />
         <option value="$PROJECT_DIR$/experiment_non_causal.py" />
-        <option value="$PROJECT_DIR$/script_soumission.sh" />
         <option value="$PROJECT_DIR$/experiment_causal_soft.py" />
+        <option value="$PROJECT_DIR$/evaluate_results_main.py" />
+        <option value="$PROJECT_DIR$/script_soumission.sh" />
+        <option value="$PROJECT_DIR$/models/tcn.py" />
       </list>
     </option>
   </component>
@@ -233,6 +233,11 @@
               <item name="keyword_extraction" type="b2602c69:ProjectViewProjectNode" />
               <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
               <item name="model_dump" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword_extraction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="keyword_extraction" type="b2602c69:ProjectViewProjectNode" />
@@ -797,14 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/tcn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="64" column="39" lean-forward="false" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_load/load.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2">
@@ -812,6 +809,14 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment_non_causal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -827,16 +832,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/experiment_hard_classes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment_non_causal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="true" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -844,15 +841,15 @@
     <entry file="file://$PROJECT_DIR$/script_soumission.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/evaluate_results_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="53" lean-forward="false" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+        <state relative-caret-position="-236">
+          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
@@ -861,11 +858,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/experiment_causal_soft.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="65" column="44" lean-forward="false" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+        <state relative-caret-position="0">
+          <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/tcn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="51" column="51" lean-forward="true" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
