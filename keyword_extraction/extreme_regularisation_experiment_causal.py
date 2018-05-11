@@ -22,9 +22,9 @@ training_schedules = [(20,0.05),
                       (20, 0.005),
                       (20, 0.001)]
 
-weight_decay_values = 0.4
+weight_decay_values = 0.15
 dropout_first_layer = 0.2
-dropout_values = 0.6
+dropout_values = 0.4
 batch_size = 32
 
 results = []
