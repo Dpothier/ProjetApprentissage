@@ -13,3 +13,5 @@ keyword_extraction/\data/
 
 keyword_extraction/\embeddings/
 
+diluted_conv/datasets
+diluted_conv/embeddings/

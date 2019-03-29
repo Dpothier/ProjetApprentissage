@@ -22,6 +22,8 @@ from diluted_conv.models.diluted_convolution import TCN
 from diluted_conv.pytoune_util import *
 import os
 from diluted_conv.pad_collate import PadCollate
+import time
+from diluted_conv.callbacks import TimeCallback
 
 
 
@@ -79,6 +81,7 @@ def main():
             lr_scheduler = ExponentialLR(gamma=0.9)
             early_stopping = EarlyStopping(patience=2)
             best_model_restore = BestModelRestore()
+            time_callback = TimeCallback()
 
             loss = nn.CrossEntropyLoss()
 
@@ -90,8 +93,16 @@ def main():
 
 
 
-            total_time = os.times()
-            model.fit_generator(train, test, epochs=epochs, callbacks=[gradient_clipping, lr_scheduler, early_stopping, best_model_restore])
+            total_time_start = os.times()
+            model.fit_generator(train, test, epochs=epochs, callbacks=[gradient_clipping, lr_scheduler, early_stopping, best_model_restore, time_callback])
+
+            epoch_times = time_callback.epoch_times
+
+            results.add_result_lines([
+                "Total elapsed time: {}".format(total_time_start),
+                "Trained for {} epochs".format(len(epoch_times)),
+                "Average epoch time: {}".format(sum(epoch_times)/len(epoch_times))])
+
 
             loss, metrics, preds = model.evaluate_generator(test, return_pred=True)
 
