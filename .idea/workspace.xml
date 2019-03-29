@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93039a6c-a30b-4b96-88b1-2ba87859d3d1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/prepare_imdb.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/train_routine_py.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diluted_conv/IMDB_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diluted_conv/dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diluted_conv/embeddings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diluted_conv/models/diluted_convolution.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diluted_conv/models/parts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diluted_conv/models/parts/causal_conv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diluted_conv/models/parts/residual_block.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diluted_conv/models/parts/spatial_dropout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diluted_conv/pad_collate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diluted_conv/prepare_imdb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diluted_conv/results.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diluted_conv/train_routine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diluted_conv/trainer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/ProjetApprentissage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProjetApprentissage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyword_extraction/.idea/keyword_extraction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/keyword_extraction/.idea/keyword_extraction.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyword_extraction/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keyword_extraction/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyword_extraction/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keyword_extraction/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,81 +28,26 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1993188530">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$train_routine_py.coverage" NAME="train_routine.py Coverage Results" MODIFIED="1553700636087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$prepare_imdb.coverage" NAME="prepare_imdb Coverage Results" MODIFIED="1553703420497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/keyword_extraction/extreme_regularisation_experiment_causal.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/keyword_extraction/experiment_causal_soft.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/keyword_extraction/data_load/load.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1515">
-              <caret line="111" column="32" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/keyword_extraction/data_load/tokenization.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="4" selection-start-line="4" selection-end-line="21" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/keyword_extraction/embedding.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/keyword_extraction/create_embeddings.py">
+        <entry file="file://$PROJECT_DIR$/diluted_conv/train_routine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="354">
+              <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diluted_conv/prepare_imdb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -97,52 +56,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_transform/load_elasticsearch_carcomplaints.py">
+        <entry file="file://$PROJECT_DIR$/diluted_conv/pad_collate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="690">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diluted_conv/models/diluted_convolution.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#21#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_transform/load_elasticsearch_small_bdrv.py">
+        <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/utils/data/dataloader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="8970">
+              <caret line="614" selection-start-line="614" selection-end-line="614" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/learning/brdv_experiments.py">
+        <entry file="file://$PROJECT_DIR$/diluted_conv/pytoune_util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="630">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/learning/data/getData.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -155,14 +117,28 @@
         <option value="$PROJECT_DIR$/keyword_extraction/extreme_regularisation_experiment_non_causal.py" />
         <option value="$PROJECT_DIR$/keyword_extraction/extreme_regularisation_experiment_causal.py" />
         <option value="$PROJECT_DIR$/data_transform/load_elasticsearch_carcomplaints.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/trainer.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/dataset.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/metrics_util.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/results.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/IMBD_dataset.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/models/parts/residual_block.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/embeddings.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/models/pad_collate.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/IMDB_dataset.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/pad_collate.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/models/diluted_convolution.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/prepare_imdb.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/pytoune_util.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/train_routine.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="y" value="27" />
-    <option name="width" value="966" />
-    <option name="height" value="1038" />
+    <option name="x" value="67" />
+    <option name="y" value="25" />
+    <option name="width" value="927" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -179,7 +155,52 @@
             <path>
               <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
+              <item name="diluted_conv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
+              <item name="diluted_conv" type="462c0819:PsiDirectoryNode" />
+              <item name="datasets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
+              <item name="diluted_conv" type="462c0819:PsiDirectoryNode" />
+              <item name="datasets" type="462c0819:PsiDirectoryNode" />
+              <item name="IMDB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
+              <item name="diluted_conv" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
+              <item name="legacy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
+              <item name="legacy" type="462c0819:PsiDirectoryNode" />
               <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
+              <item name="legacy" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
+              <item name="legacy" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="parts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -189,8 +210,19 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/diluted_conv/models" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/diluted_conv" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/diluted_conv/models" />
+      <recent name="$PROJECT_DIR$/diluted_conv/embeddings" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -204,7 +236,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.train_routine.py">
     <configuration name="extreme_regularisation_experiment_causal" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ProjetApprentissage" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -217,6 +249,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/keyword_extraction/extreme_regularisation_experiment_causal.py" />
       <option name="PARAMETERS" value="cpu" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -226,6 +259,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.train_routine.py" />
+      <item itemvalue="Python.prepare_imdb" />
+      <item itemvalue="Python.extreme_regularisation_experiment_causal" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.extreme_regularisation_experiment_causal" />
@@ -242,174 +280,304 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513105968467</updated>
+      <workItem from="1551195916381" duration="1335000" />
+      <workItem from="1551222616425" duration="874000" />
+      <workItem from="1551281992863" duration="1343000" />
+      <workItem from="1551818022450" duration="1846000" />
+      <workItem from="1552498378708" duration="50000" />
+      <workItem from="1553698730442" duration="4701000" />
+      <workItem from="1553703825528" duration="734000" />
+      <workItem from="1553704716935" duration="5667000" />
+      <workItem from="1553713671065" duration="5514000" />
+      <workItem from="1553801213154" duration="6271000" />
+      <workItem from="1553808247386" duration="5933000" />
+      <workItem from="1553862453936" duration="734000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="35002000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15409836" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17432208" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32910052" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32829374" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="8" visible="true" weight="0.32937366" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32937366" />
+      <window_info anchor="bottom" id="Messages" order="14" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Data View" order="3" />
+      <window_info anchor="right" id="Remote Host" order="4" />
+      <window_info anchor="right" id="SciView" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/diluted_conv/prepare_imdb.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$train_routine_py.coverage" NAME="train_routine.py Coverage Results" MODIFIED="1553861082528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diluted_conv" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$prepare_imdb.coverage" NAME="prepare_imdb Coverage Results" MODIFIED="1553807690812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/learning/getData.py" />
     <entry file="file://$PROJECT_DIR$/learning/Experiment.py" />
     <entry file="file://$PROJECT_DIR$/learning/classification/classify.py" />
     <entry file="file://$PROJECT_DIR$/learning/experiments.py" />
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/confidence_best.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/causal_0.3_0.6_extreme.txt">
+    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/confidence_best.png" />
+    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/causal_0.3_0.6_extreme.txt" />
+    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/causal_0.2_0.5_extreme.txt" />
+    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/noncausal_0.3_0.6_extreme.txt" />
+    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/noncausal_0.2_0.5_extreme.txt" />
+    <entry file="file://$PROJECT_DIR$/keyword_extraction/extreme_regularisation_experiment_non_causal.py" />
+    <entry file="file://$PROJECT_DIR$/data_transform/condense_bdrv.py" />
+    <entry file="file://$PROJECT_DIR$/data_transform/prepare_bdrv.py" />
+    <entry file="file://$PROJECT_DIR$/learning/dictionary.py" />
+    <entry file="file://$PROJECT_DIR$/keyword_extraction/extreme_regularisation_experiment_causal.py" />
+    <entry file="file://$PROJECT_DIR$/keyword_extraction/experiment_causal_soft.py" />
+    <entry file="file://$PROJECT_DIR$/keyword_extraction/data_load/load.py" />
+    <entry file="file://$PROJECT_DIR$/keyword_extraction/data_load/tokenization.py" />
+    <entry file="file://$PROJECT_DIR$/keyword_extraction/embedding.py" />
+    <entry file="file://$PROJECT_DIR$/data_transform/load_elasticsearch_carcomplaints.py" />
+    <entry file="file://$PROJECT_DIR$/data_transform/load_elasticsearch_small_bdrv.py" />
+    <entry file="file://$PROJECT_DIR$/learning/brdv_experiments.py" />
+    <entry file="file://$PROJECT_DIR$/learning/data/getData.py" />
+    <entry file="file://$PROJECT_DIR$/keyword_extraction/create_embeddings.py" />
+    <entry file="file://$PROJECT_DIR$/legacy/keyword_extraction/load_embeddings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-535">
-          <caret line="84" column="47" lean-forward="true" selection-start-line="84" selection-start-column="47" selection-end-line="84" selection-end-column="47" />
+        <state relative-caret-position="360">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/causal_0.2_0.5_extreme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2281" />
+    <entry file="file://$PROJECT_DIR$/diluted_conv/metrics_util.py" />
+    <entry file="file://$PROJECT_DIR$/diluted_conv/embeddings/glove.6B.100d.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="135">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/noncausal_0.3_0.6_extreme.txt">
+    <entry file="file://$PROJECT_DIR$/legacy/learning/matching_experiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2299" />
+        <state relative-caret-position="360">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/noncausal_0.2_0.5_extreme.txt">
+    <entry file="file:///usr/lib/python3.6/tokenize.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1071" />
+        <state relative-caret-position="6645">
+          <caret line="451" selection-start-line="451" selection-end-line="451" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/extreme_regularisation_experiment_non_causal.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_transform/condense_bdrv.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_transform/prepare_bdrv.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/learning/dictionary.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/extreme_regularisation_experiment_causal.py">
+    <entry file="file://$PROJECT_DIR$/diluted_conv/results.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        <state relative-caret-position="510">
+          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/experiment_causal_soft.py">
+    <entry file="file://$PROJECT_DIR$/legacy/keyword_extraction/models/tcn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/data_load/load.py">
+    <entry file="file://$PROJECT_DIR$/diluted_conv/dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="111" column="32" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="32" />
+        <state relative-caret-position="240">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diluted_conv/trainer.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diluted_conv/models/parts/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diluted_conv/IMDB_dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/data_load/tokenization.py">
+    <entry file="file://$PROJECT_DIR$/diluted_conv/embeddings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" selection-start-line="4" selection-end-line="21" selection-end-column="36" />
+        <state relative-caret-position="270">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/embedding.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torchtext/vocab.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="4680">
+          <caret line="326" selection-start-line="326" selection-end-line="326" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diluted_conv/models/parts/residual_block.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_transform/load_elasticsearch_carcomplaints.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/diluted_conv/datasets/IMDB/train.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="990">
+          <caret line="66" column="723" selection-start-line="66" selection-start-column="723" selection-end-line="66" selection-end-column="723" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_transform/load_elasticsearch_small_bdrv.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/nn/modules/module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="7215">
+          <caret line="488" selection-start-line="488" selection-end-line="488" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learning/brdv_experiments.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/nn/modules/loss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="13425">
+          <caret line="903" selection-start-line="903" selection-end-line="903" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learning/data/getData.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/nn/functional.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="20055">
+          <caret line="1353" selection-start-line="1353" selection-end-line="1353" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/create_embeddings.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/sklearn/utils/validation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="168">
+          <caret line="234" selection-start-line="234" selection-end-line="234" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/sklearn/metrics/classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diluted_conv/datasets/IMDB/test.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diluted_conv/train_routine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diluted_conv/prepare_imdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diluted_conv/pad_collate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diluted_conv/models/diluted_convolution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/utils/data/dataloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8970">
+          <caret line="614" selection-start-line="614" selection-end-line="614" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diluted_conv/pytoune_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
