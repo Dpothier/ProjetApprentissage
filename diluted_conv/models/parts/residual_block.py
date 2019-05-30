@@ -8,11 +8,10 @@ class ResidualCausalBlock(nn.Module):
         super(ResidualCausalBlock, self).__init__()
         self.conv1 = CausalConv1d(in_depth, in_depth, kernel_size=3, dilation=dilation)
         self.bn1 = nn.BatchNorm1d(in_depth)
-        self.dropout1 = SpatialDropout(p)
+        self.dropout = SpatialDropout(p)
 
         self.conv2 = CausalConv1d(in_depth, out_depth, kernel_size=3, dilation=dilation)
         self.bn2 = nn.BatchNorm1d(out_depth)
-        self.dropout2 = SpatialDropout(p)
 
         self.downsample = nn.Conv1d(in_depth, out_depth, 1) if in_depth != out_depth else None
 
@@ -27,9 +26,9 @@ class ResidualCausalBlock(nn.Module):
     def forward(self, x):
         residual = x
 
-        out = self.dropout1(F.relu(self.bn1(self.conv1(x))))
+        out = self.dropout(F.relu(self.bn1(self.conv1(x))))
 
-        out = self.dropout2(F.relu(self.bn2(self.conv2(out))))
+        out = self.dropout(F.relu(self.bn2(self.conv2(out))))
 
         if self.downsample is not None:
             residual = self.downsample(x)

@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="train_routine.py" type="PythonConfigurationType" factoryName="Python">
+  <configuration default="false" name="conditioned layer on IMDB" type="PythonConfigurationType" factoryName="Python">
     <module name="ProjetApprentissage" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
@@ -7,13 +7,13 @@
       <env name="PYTHONUNBUFFERED" value="1" />
     </envs>
     <option name="SDK_HOME" value="sftp://dpothier@132.203.120.155:22/mnt/storage/dpothier/gartner-env/bin/python3" />
-    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/diluted_conv" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/conditioned_layers" />
     <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/diluted_conv/train_routine.py" />
-    <option name="PARAMETERS" value="datasets/IMDB/ embeddings/glove.6B.100d.txt results/under_kernel_size/ &quot;gpu0&quot;" />
+    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conditioned_layers/experiments/on_IMDB/experiment.py" />
+    <option name="PARAMETERS" value="datasets/IMDB/clean/ embeddings/glove.6B.100d.txt &quot;gpu1&quot;" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
     <option name="MODULE_MODE" value="false" />

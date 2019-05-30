@@ -15,3 +15,6 @@ keyword_extraction/\embeddings/
 
 diluted_conv/datasets
 diluted_conv/embeddings/
+
+diluted_conv/results/
+diluted_conv/\.vector_cache/

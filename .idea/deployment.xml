@@ -2,7 +2,7 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
-      <paths name="dpothier@132.203.120.155:22">
+      <paths name="dpothier@132.203.120.10:22">
         <serverdata>
           <mappings>
             <mapping deploy="/tmp/ProjetApprentissage" local="$PROJECT_DIR$" web="/" />

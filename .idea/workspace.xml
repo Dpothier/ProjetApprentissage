@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93039a6c-a30b-4b96-88b1-2ba87859d3d1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/diluted_conv/callbacks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/experiment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/runs/events.out.tfevents.1558973967.deepnlp-System-Product-Name.36901.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/runs/events.out.tfevents.1558988699.deepnlp-System-Product-Name.40312.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/experiments/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets/experiment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/training/random.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diluted_conv/train_routine.py" beforeDir="false" afterPath="$PROJECT_DIR$/diluted_conv/train_routine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/datasets/Cola/ColaDataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/datasets/Cola/ColaDataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer_soft_targets/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer_soft_targets/experiment.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,77 +26,86 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="37" selection-start-line="37" selection-end-line="37" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2108">
+              <caret line="129" selection-start-line="129" selection-end-line="129" />
+              <folding>
+                <element signature="e#37#49#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conditioned_layers/training/loss.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1683">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer_soft_targets/experiment.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-197">
+              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/diluted_conv/train_routine.py">
+        <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets/experiment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+            <state relative-caret-position="850">
+              <caret line="71" column="46" lean-forward="true" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diluted_conv/callbacks.py">
+        <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_lstm/lstm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="24" />
+            <state relative-caret-position="136">
+              <caret line="8" column="94" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="94" />
               <folding>
-                <element signature="e#0#48#0" expanded="true" />
+                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diluted_conv/prepare_imdb.py">
+        <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/1361030228/codecs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="5236">
+              <caret line="308" selection-start-line="308" selection-end-line="308" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diluted_conv/pad_collate.py">
+        <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/sklearn/metrics/classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diluted_conv/models/diluted_convolution.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/utils/data/dataloader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8970">
-              <caret line="614" selection-start-line="614" selection-end-line="614" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diluted_conv/pytoune_util.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="8959">
+              <caret line="545" selection-start-line="545" selection-end-line="545" />
             </state>
           </provider>
         </entry>
@@ -103,46 +119,107 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>save_hyperparameters</find>
+      <find>get_subsequent_mask</find>
+      <find>get_attn_key_pad_mask</find>
+      <find>get_sinusoid_encoding_table</find>
+      <find>get_non_pad_mask</find>
+      <find>F.relu(F.conv1d(output, w_1, bias=w_1_bias))</find>
+      <find>len_max_seq</find>
+      <find>n_position</find>
+      <find>seq_q</find>
+      <find>StepwiseRNN</find>
+      <find>calculate_weight</find>
+      <find>tgt_word_prj</find>
+      <find>g</find>
+      <find>matmul</find>
+      <find>linear</find>
+      <find>cross entropy</find>
+      <find>cross_entropy</find>
+      <find>nll_loss</find>
+      <find>cross</find>
+      <find>loss</find>
+      <find>DataLoader</find>
+      <find>best_model</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/torch</dir>
+    </dirStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/learning/experiments.py" />
-        <option value="$PROJECT_DIR$/learning/Experiment.py" />
-        <option value="$PROJECT_DIR$/keyword_extraction/extreme_regularisation_experiment_non_causal.py" />
-        <option value="$PROJECT_DIR$/keyword_extraction/extreme_regularisation_experiment_causal.py" />
-        <option value="$PROJECT_DIR$/data_transform/load_elasticsearch_carcomplaints.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/trainer.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/dataset.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/metrics_util.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/results.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/IMBD_dataset.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/models/parts/residual_block.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/embeddings.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/models/pad_collate.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/IMDB_dataset.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/pad_collate.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/models/diluted_convolution.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/prepare_imdb.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/pytoune_util.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/callbacks.py" />
+        <option value="$PROJECT_DIR$/diluted_conv/results/single_layer_residual_base_bigger_than_kernel0.005_0.1_results.txt" />
+        <option value="$PROJECT_DIR$/diluted_conv/results/single_layer_residual_base_bigger_than_kernel/0.005_0.1_results.txt" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/experiment.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/experiments/experiment.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/training/history.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/__init__.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/__init__.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/transformer/__init__.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/training/embeddings.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/datasets/Cola/clean_data.py" />
         <option value="$PROJECT_DIR$/diluted_conv/train_routine.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/training/multi_linear.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/training/newfile.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/experiments/initial/experiment.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/transformer/Layers.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/transformer/SubLayers.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/transformer/Models.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/experiments/simpler_model/experiment.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/experiments/bigger_simpler_model/experiment.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/base/Layers.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/base/SubLayers.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/simpler/Layers.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/simpler/Models.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/simpler/SubLayers.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/base/Models.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/baseline_lstm/lstm.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/experiments/lstm/experiment.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/experiments/on_IMDB/experiment.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/datasets/IMDB/IMDB_dataset.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/with_activation/SubLayers.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/with_activation/Models.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/experiments/with_activation/experiment.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/experiments/bigger/experiment.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/__init__.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Layers.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/SubLayers.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer/experiment.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/with_computation_graph/autograd_function.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/experiments/mathew_corr_on_existing_model/experiment.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/datasets/Cola/calculate_class_weight.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/training/loss.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/training/metrics_util.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/training/dataloader.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/training/random.py" />
+        <option value="$PROJECT_DIR$/TensorBoardTest/test.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/test.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/experiment.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/datasets/Cola/ColaDataset.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Models.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer_soft_targets/experiment.py" />
+        <option value="$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets/experiment.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
+    <option name="x" value="419" />
+    <option name="y" value="136" />
     <option name="width" value="927" />
-    <option name="height" value="1055" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,73 +230,57 @@
             <path>
               <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
-              <item name="diluted_conv" type="462c0819:PsiDirectoryNode" />
+              <item name="conditioned_layers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
-              <item name="diluted_conv" type="462c0819:PsiDirectoryNode" />
+              <item name="conditioned_layers" type="462c0819:PsiDirectoryNode" />
               <item name="datasets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
-              <item name="diluted_conv" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="IMDB" type="462c0819:PsiDirectoryNode" />
+              <item name="conditioned_layers" type="462c0819:PsiDirectoryNode" />
+              <item name="networks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
-              <item name="diluted_conv" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="conditioned_layers" type="462c0819:PsiDirectoryNode" />
+              <item name="networks" type="462c0819:PsiDirectoryNode" />
+              <item name="baseline_lstm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
-              <item name="legacy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
-              <item name="legacy" type="462c0819:PsiDirectoryNode" />
-              <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
-              <item name="legacy" type="462c0819:PsiDirectoryNode" />
-              <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
-              <item name="legacy" type="462c0819:PsiDirectoryNode" />
-              <item name="keyword_extraction" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="parts" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/diluted_conv/models" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/diluted_conv" />
+      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test" />
+      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/with_activation" />
+      <recent name="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer" />
+      <recent name="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/base" />
+      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/initial" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/diluted_conv/models" />
-      <recent name="$PROJECT_DIR$/diluted_conv/embeddings" />
+      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets" />
+      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test" />
+      <recent name="$PROJECT_DIR$/conditioned_layers/experiments" />
+      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/mathew_corr_on_existing_model" />
+      <recent name="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/with_computation_graph" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -234,7 +295,117 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.train_routine.py">
+  <component name="RunManager" selected="Python.conditioned baseline transformer soft targets">
+    <configuration name="LSTM" type="PythonConfigurationType" factoryName="Python">
+      <module name="ProjetApprentissage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://dpothier@132.203.120.155:22/mnt/storage/dpothier/gartner-env/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/conditioned_layers" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conditioned_layers/experiments/lstm/experiment.py" />
+      <option name="PARAMETERS" value="datasets/Cola/clean/ embeddings/glove.6B.100d.txt &quot;gpu0&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="calculate_class_weight" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ProjetApprentissage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/conditioned_layers/" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conditioned_layers/datasets/Cola/calculate_class_weight.py" />
+      <option name="PARAMETERS" value="datasets/Cola/clean/ embeddings/glove.6B.100d.txt" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="clean cola data" type="PythonConfigurationType" factoryName="Python">
+      <module name="ProjetApprentissage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://dpothier@132.203.120.155:22/mnt/storage/dpothier/gartner-env/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/conditioned_layers/datasets/Cola" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conditioned_layers/datasets/Cola/clean_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="conditioned baseline transformer soft targets" type="PythonConfigurationType" factoryName="Python">
+      <module name="ProjetApprentissage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://dpothier@132.203.120.155:22/mnt/storage/dpothier/gartner-env/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/conditioned_layers" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer_soft_targets/experiment.py" />
+      <option name="PARAMETERS" value="datasets/Cola/clean/ embeddings/glove.6B.100d.txt &quot;gpu0&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="experiment" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ProjetApprentissage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/experiment.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="extreme_regularisation_experiment_causal" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ProjetApprentissage" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -257,13 +428,72 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tensorboard test experiment" type="PythonConfigurationType" factoryName="Python">
+      <module name="ProjetApprentissage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://dpothier@132.203.120.155:22/mnt/storage/dpothier/gartner-env/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/conditioned_layers" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/experiment.py" />
+      <option name="PARAMETERS" value="datasets/Cola/clean/ embeddings/glove.6B.100d.txt &quot;gpu0&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ProjetApprentissage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.train_routine.py" />
+      <item itemvalue="Python.LSTM" />
+      <item itemvalue="Python.clean cola data" />
+      <item itemvalue="Python.conditioned layer with activation" />
       <item itemvalue="Python.prepare_imdb" />
+      <item itemvalue="Python.conditioned transformer baseline mathew corr" />
+      <item itemvalue="Python.conditioned baseline transformer soft targets" />
+      <item itemvalue="Python.tensorboard test experiment" />
+      <item itemvalue="Python.conditioned layer bigger" />
+      <item itemvalue="Python.conditioned layer on IMDB" />
+      <item itemvalue="Python.conditioned layer basic experiment" />
+      <item itemvalue="Python.conditioned layer simpler" />
       <item itemvalue="Python.extreme_regularisation_experiment_causal" />
+      <item itemvalue="Python.calculate_class_weight" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.experiment" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.experiment" />
+        <item itemvalue="Python.calculate_class_weight" />
         <item itemvalue="Python.extreme_regularisation_experiment_causal" />
       </list>
     </recent_temporary>
@@ -289,35 +519,95 @@
       <workItem from="1553713671065" duration="5514000" />
       <workItem from="1553801213154" duration="6271000" />
       <workItem from="1553808247386" duration="5933000" />
-      <workItem from="1553862453936" duration="1286000" />
+      <workItem from="1553862453936" duration="4688000" />
+      <workItem from="1553957111036" duration="264000" />
+      <workItem from="1553960874490" duration="7648000" />
+      <workItem from="1554300558832" duration="823000" />
+      <workItem from="1554830736103" duration="4917000" />
+      <workItem from="1554905621990" duration="1756000" />
+      <workItem from="1554922775351" duration="1257000" />
+      <workItem from="1554930542883" duration="33000" />
+      <workItem from="1554947790329" duration="1095000" />
+      <workItem from="1554990938424" duration="6783000" />
+      <workItem from="1555351181277" duration="5971000" />
+      <workItem from="1555442790725" duration="5680000" />
+      <workItem from="1555526445963" duration="5681000" />
+      <workItem from="1556027414961" duration="597000" />
+      <workItem from="1556049310791" duration="594000" />
+      <workItem from="1556307190764" duration="10096000" />
+      <workItem from="1556380081534" duration="4935000" />
+      <workItem from="1556539725985" duration="14696000" />
+      <workItem from="1556720961208" duration="21117000" />
+      <workItem from="1556750428931" duration="5238000" />
+      <workItem from="1556800913515" duration="1363000" />
+      <workItem from="1556807520099" duration="922000" />
+      <workItem from="1556809002559" duration="744000" />
+      <workItem from="1556809997131" duration="29000" />
+      <workItem from="1556810570332" duration="35000" />
+      <workItem from="1556810708960" duration="531000" />
+      <workItem from="1556816425931" duration="1043000" />
+      <workItem from="1556818325576" duration="5965000" />
+      <workItem from="1556888310230" duration="653000" />
+      <workItem from="1556913527723" duration="5493000" />
+      <workItem from="1556984002936" duration="16810000" />
+      <workItem from="1557161376533" duration="22775000" />
+      <workItem from="1557245415572" duration="9269000" />
+      <workItem from="1557322747802" duration="6941000" />
+      <workItem from="1557345573973" duration="7333000" />
+      <workItem from="1557409246603" duration="771000" />
+      <workItem from="1557422712095" duration="1564000" />
+      <workItem from="1557509428416" duration="5985000" />
+      <workItem from="1557585857468" duration="2123000" />
+      <workItem from="1557761304739" duration="597000" />
+      <workItem from="1557846253500" duration="6503000" />
+      <workItem from="1557946253388" duration="587000" />
+      <workItem from="1558107146055" duration="1577000" />
+      <workItem from="1558543220601" duration="18080000" />
+      <workItem from="1558621383118" duration="10000000" />
+      <workItem from="1558712809054" duration="5388000" />
+      <workItem from="1558722268298" duration="2349000" />
+      <workItem from="1558968069700" duration="4445000" />
+      <workItem from="1558987276804" duration="2171000" />
+      <workItem from="1559075006061" duration="6230000" />
+      <workItem from="1559140294495" duration="6683000" />
+      <workItem from="1559155697222" duration="1036000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35554000" />
+    <option name="totallyTimeSpent" value="294132000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17432208" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21638075" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32829374" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43304536" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4991699" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32937366" />
-      <window_info anchor="bottom" id="Python Console" order="8" visible="true" weight="0.32937366" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32937366" />
-      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.32937366" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.4975097" weight="0.32829374" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50249034" side_tool="true" weight="0.3275862" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.4997233" visible="true" weight="0.17278618" />
+      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="bottom" id="TODO" order="14" sideWeight="0.4991699" weight="0.3286638" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -326,6 +616,33 @@
       <window_info anchor="right" id="SciView" order="5" />
       <window_info anchor="right" id="Database" order="6" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23851688" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43304536" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4991699" visible="true" weight="0.39956802" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.32937366" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.4975097" weight="0.32829374" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50249034" side_tool="true" weight="0.3275862" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.4997233" weight="0.17278618" />
+      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="bottom" id="TODO" order="14" sideWeight="0.4991699" weight="0.3286638" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Data View" order="3" />
+      <window_info anchor="right" id="Remote Host" order="4" />
+      <window_info anchor="right" id="SciView" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -338,254 +655,425 @@
           <line>44</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/conditioned_layers/experiments/initial/experiment.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/base/Models.py</url>
+          <line>86</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/conditioned_layers/datasets/IMDB/IMDB_dataset.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/conditioned_layers/experiments/mathew_corr_on_existing_model/experiment.py</url>
+          <line>98</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$train_routine_py.coverage" NAME="train_routine.py Coverage Results" MODIFIED="1553861082528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diluted_conv" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$train_routine_py.coverage" NAME="train_routine.py Coverage Results" MODIFIED="1555031158559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diluted_conv" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_with_activation.coverage" NAME="conditioned layer with activation Coverage Results" MODIFIED="1557260725697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_transformer_baseline_mathew_corr.coverage" NAME="conditioned transformer baseline mathew corr Coverage Results" MODIFIED="1558544991184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$experiment.coverage" NAME="experiment Coverage Results" MODIFIED="1559078959435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_on_IMDB.coverage" NAME="conditioned layer on IMDB Coverage Results" MODIFIED="1557197423284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$tensorboard_test_experiment.coverage" NAME="tensorboard test experiment Coverage Results" MODIFIED="1559082730799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$clean_cola_data.coverage" NAME="clean cola data Coverage Results" MODIFIED="1556574428882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/datasets/Cola" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_baseline_transformer_soft_targets.coverage" NAME="conditioned baseline transformer soft targets Coverage Results" MODIFIED="1559146034422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_basic_experiment.coverage" NAME="conditioned layer basic experiment Coverage Results" MODIFIED="1556996523640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$test.coverage" NAME="test Coverage Results" MODIFIED="1559079478142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_bigger.coverage" NAME="conditioned layer bigger Coverage Results" MODIFIED="1557267047000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$calculate_class_weight.coverage" NAME="calculate_class_weight Coverage Results" MODIFIED="1558546145375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$prepare_imdb.coverage" NAME="prepare_imdb Coverage Results" MODIFIED="1553807690812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$LSTM.coverage" NAME="LSTM Coverage Results" MODIFIED="1557176947131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_simpler.coverage" NAME="conditioned layer simpler Coverage Results" MODIFIED="1557164897841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_transformer_baseline.coverage" NAME="conditioned transformer baseline Coverage Results" MODIFIED="1557355765865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/learning/Experiment.py" />
-    <entry file="file://$PROJECT_DIR$/learning/classification/classify.py" />
-    <entry file="file://$PROJECT_DIR$/learning/experiments.py" />
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/confidence_best.png" />
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/causal_0.3_0.6_extreme.txt" />
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/causal_0.2_0.5_extreme.txt" />
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/noncausal_0.3_0.6_extreme.txt" />
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/results/noncausal_0.2_0.5_extreme.txt" />
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/extreme_regularisation_experiment_non_causal.py" />
-    <entry file="file://$PROJECT_DIR$/data_transform/condense_bdrv.py" />
-    <entry file="file://$PROJECT_DIR$/data_transform/prepare_bdrv.py" />
-    <entry file="file://$PROJECT_DIR$/learning/dictionary.py" />
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/extreme_regularisation_experiment_causal.py" />
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/experiment_causal_soft.py" />
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/data_load/load.py" />
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/data_load/tokenization.py" />
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/embedding.py" />
-    <entry file="file://$PROJECT_DIR$/data_transform/load_elasticsearch_carcomplaints.py" />
-    <entry file="file://$PROJECT_DIR$/data_transform/load_elasticsearch_small_bdrv.py" />
-    <entry file="file://$PROJECT_DIR$/learning/brdv_experiments.py" />
-    <entry file="file://$PROJECT_DIR$/learning/data/getData.py" />
-    <entry file="file://$PROJECT_DIR$/keyword_extraction/create_embeddings.py" />
-    <entry file="file://$PROJECT_DIR$/legacy/keyword_extraction/load_embeddings.py">
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/with_activation/Layers.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/with_activation/SubLayers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="18" />
+        <state relative-caret-position="2175">
+          <caret line="150" column="41" selection-start-line="150" selection-start-column="41" selection-end-line="150" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/with_activation/experiment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Beam.py" />
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Optim.py" />
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Constants.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/with_computation_graph/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/with_computation_graph/SubLayers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1436" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/base/Models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="48" column="41" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="41" />
+          <folding>
+            <element signature="e#37#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/SubLayers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#54#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/training/multi_linear.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/torch/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" column="74" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/torch/onnx/symbolic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4140">
+          <caret line="276" lean-forward="true" selection-start-line="276" selection-end-line="276" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/torch/tensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/with_computation_graph/autograd_function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/metrics_util.py" />
-    <entry file="file://$PROJECT_DIR$/diluted_conv/embeddings/glove.6B.100d.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="135">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legacy/learning/matching_experiment.py">
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Layers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#26#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3.6/tokenize.py">
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/base/SubLayers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6645">
-          <caret line="451" selection-start-line="451" selection-end-line="451" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/results.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+        <state relative-caret-position="1935">
+          <caret line="134" column="43" selection-start-line="134" selection-start-column="38" selection-end-line="134" selection-end-column="43" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#54#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/legacy/keyword_extraction/models/tcn.py">
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Modules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        <state>
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/dataset.py">
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/torch/nn/functional.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="508">
+          <caret line="1781" column="21" lean-forward="true" selection-start-line="1781" selection-start-column="21" selection-end-line="1781" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/torch/nn/modules/loss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="891" column="29" selection-start-line="891" selection-start-column="29" selection-end-line="891" selection-end-column="29" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/trainer.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/models/parts/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/IMDB_dataset.py">
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer/experiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="175">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/pytoune/framework/metrics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/optim/adam.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="78" column="83" selection-start-line="78" selection-start-column="83" selection-end-line="78" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/datasets/Cola/calculate_class_weight.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/training/dataloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/caffe2/python/workspace.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/training/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/embeddings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torchtext/vocab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4680">
-          <caret line="326" selection-start-line="326" selection-end-line="326" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/models/parts/residual_block.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/datasets/IMDB/train.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="990">
-          <caret line="66" column="723" selection-start-line="66" selection-start-column="723" selection-end-line="66" selection-end-column="723" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/nn/modules/module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7215">
-          <caret line="488" selection-start-line="488" selection-end-line="488" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/nn/modules/loss.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13425">
-          <caret line="903" selection-start-line="903" selection-end-line="903" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/nn/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20055">
-          <caret line="1353" selection-start-line="1353" selection-end-line="1353" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/sklearn/utils/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="234" selection-start-line="234" selection-end-line="234" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/sklearn/metrics/classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/datasets/IMDB/test.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/prepare_imdb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/pad_collate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/models/diluted_convolution.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/utils/data/dataloader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8970">
-          <caret line="614" selection-start-line="614" selection-end-line="614" />
+        <state relative-caret-position="166">
+          <caret line="559" selection-start-line="559" selection-end-line="559" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/pytoune_util.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/utils/data/_utils/collate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="385">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/nn/modules/pooling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9605">
+          <caret line="568" column="11" selection-start-line="568" selection-start-column="11" selection-end-line="568" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/training/embeddings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/callbacks.py">
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/training/metrics_util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/pytoune/framework/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="596" selection-start-line="596" selection-end-line="596" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/nn/modules/sparse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/nn/functional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="1505" selection-start-line="1505" selection-end-line="1505" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/experiment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/datasets/Cola/ColaDataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
           <folding>
-            <element signature="e#0#48#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diluted_conv/train_routine.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/utils/tensorboard/writer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="8687">
+          <caret line="533" selection-start-line="533" selection-end-line="533" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/jit/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3434">
+          <caret line="230" selection-start-line="230" selection-end-line="230" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/mathew_corr_on_existing_model/experiment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="97" column="4" selection-start-line="97" selection-start-column="4" selection-end-line="98" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/utils/tensorboard/_pytorch_graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="275" selection-start-line="275" selection-end-line="275" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/nn/modules/module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="492" selection-start-line="492" selection-end-line="492" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="37" selection-start-line="37" selection-end-line="37" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2108">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+          <folding>
+            <element signature="e#37#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/training/loss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1683">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/1361030228/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5236">
+          <caret line="308" selection-start-line="308" selection-end-line="308" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/sklearn/metrics/classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8959">
+          <caret line="545" selection-start-line="545" selection-end-line="545" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer_soft_targets/experiment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-197">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_lstm/lstm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="94" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="94" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets/experiment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="71" column="46" lean-forward="true" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
         </state>
       </provider>
     </entry>

@@ -27,17 +27,17 @@ class TCN(nn.Module):
     def forward(self, x):
         x = self.embeddings(x).permute(1,2,0)
 
-        out = F.relu(self.res1.forward(x))
-        out = F.relu(self.res2.forward(out))
-        out = F.relu(self.res3.forward(out))
-        out = F.relu(self.res4.forward(out))
-        out = F.relu(self.res5.forward(out))
-        out = F.relu(self.res6.forward(out))
-        out = F.relu(self.res7.forward(out))
+        out = F.relu(self.res1.forward(, x)
+        out = F.relu(self.res2.forward(, out)
+        out = F.relu(self.res3.forward(, out)
+        out = F.relu(self.res4.forward(, out)
+        out = F.relu(self.res5.forward(, out)
+        out = F.relu(self.res6.forward(, out)
+        out = F.relu(self.res7.forward(, out)
 
-        out_process = self.process.forward(out)
-        out_material = self.material.forward(out)
-        out_task = self.task.forward(out)
+        out_process = self.process.forward(, out
+        out_material = self.material.forward(, out
+        out_task = self.task.forward(, out
 
         return out_process, out_material, out_task
 
@@ -66,16 +66,16 @@ class CausalTCN(nn.Module):
     def forward(self, x):
         x = self.embeddings(x).permute(1,2,0)
 
-        out = F.relu(self.res1.forward(x))
-        out = F.relu(self.res2.forward(out))
-        out = F.relu(self.res3.forward(out))
-        out = F.relu(self.res4.forward(out))
-        out = F.relu(self.res5.forward(out))
-        out = F.relu(self.res6.forward(out))
-        out = F.relu(self.res7.forward(out))
+        out = F.relu(self.res1.forward(, x)
+        out = F.relu(self.res2.forward(, out)
+        out = F.relu(self.res3.forward(, out)
+        out = F.relu(self.res4.forward(, out)
+        out = F.relu(self.res5.forward(, out)
+        out = F.relu(self.res6.forward(, out)
+        out = F.relu(self.res7.forward(, out)
 
-        out_process = self.process.forward(out)
-        out_material = self.material.forward(out)
-        out_task = self.task.forward(out)
+        out_process = self.process.forward(, out
+        out_material = self.material.forward(, out
+        out_task = self.task.forward(, out
 
         return out_process, out_material, out_task
