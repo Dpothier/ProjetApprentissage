@@ -41,7 +41,7 @@ class ColaDataset(Dataset):
         Y = self.targets[idx]
 
         if self.return_target:
-            return X, X_pos, Y
+            return (X, X_pos), Y
         return X, X_pos
 
     def len_of_longest_sequence(self):
@@ -73,43 +73,6 @@ class ColaDataset(Dataset):
 
             return xs, xs_pos
 
-
-# def ColaCollate(batch):
-#     """
-#            args:
-#                batch - list of (tensor, label)
-#
-#            reutrn:
-#                xs - a tensor of all examples in 'batch' after padding
-#                ys - a LongTensor of all labels in batch
-#            """
-#     # find longest sequence
-#     max_len = max(map(lambda x: x[0][0].shape[0], batch))
-#     # pad according to max_len
-#     batch = list(map(lambda x: ((pad_tensor(x[0][0], pad=max_len, dim=0), pad_tensor(x[0][1], pad=max_len, dim=0)), x[1]), batch))
-#     # stack all
-#     xs = torch.stack(list(map(lambda x: x[0][0], batch)), dim=0)
-#     xs_pos = torch.stack(list(map(lambda x: x[0][1], batch)), dim=0)
-#     ys = torch.LongTensor(list(map(lambda x: x[1], batch)))
-#     return (xs, xs_pos), ys
-
-# def ColaCollateNoTarget(batch):
-#     """
-#            args:
-#                batch - list of (tensor, label)
-#
-#            reutrn:
-#                xs - a tensor of all examples in 'batch' after padding
-#                ys - a LongTensor of all labels in batch
-#            """
-#     # find longest sequence
-#     max_len = max(map(lambda x: x[0].shape[0], batch))
-#     # pad according to max_len
-#     batch = list(map(lambda x: (pad_tensor(x[0], pad=max_len, dim=0), pad_tensor(x[1], pad=max_len, dim=0)), batch))
-#     # stack all
-#     xs = torch.stack(list(map(lambda x: x[0], batch)), dim=0)
-#     xs_pos = torch.stack(list(map(lambda x: x[1], batch)), dim=0)
-#     return xs, xs_pos
 
 def pad_tensor(vec, pad, dim):
     """

@@ -1,6 +1,6 @@
 ''' Define the Layers '''
 import torch.nn as nn
-from conditioned_layers.networks.conditioned_transformer.base.SubLayers import MultiHeadAttention, PositionwiseFeedForward, GeneratedFullyConnectedLayer
+from conditioned_layers.networks.generative_transformer.base.SubLayers import MultiHeadAttention, PositionwiseFeedForward, GeneratedFullyConnectedLayer
 
 __author__ = "Yu-Hsiang Huang"
 

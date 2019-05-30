@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from conditioned_layers.training.multi_linear import MultiLinear
-from conditioned_layers.networks.conditioned_transformer.Modules import ScaledDotProductAttention
+from conditioned_layers.networks.generative_transformer.Modules import ScaledDotProductAttention
 
 __author__ = "Yu-Hsiang Huang"
 

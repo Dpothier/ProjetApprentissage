@@ -3,8 +3,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-import conditioned_layers.networks.baseline_transformer.Constants as Constants
-from conditioned_layers.networks.baseline_transformer.Layers import EncoderLayer
+import networks.baseline_transformer.Constants as Constants
+from networks.baseline_transformer.Layers import EncoderLayer
 
 __author__ = "Yu-Hsiang Huang"
 

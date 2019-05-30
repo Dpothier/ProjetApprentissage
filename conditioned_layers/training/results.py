@@ -3,7 +3,7 @@ import shutil
 import seaborn as sn
 import pandas as pd
 import matplotlib.pyplot as plt
-from conditioned_layers.training.history import History
+from training.history import History
 
 class Results:
 

@@ -3,9 +3,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-import conditioned_layers.networks.conditioned_transformer.Constants as Constants
-from conditioned_layers.networks.conditioned_transformer.base.Layers import EncoderLayer
-from conditioned_layers.networks.conditioned_transformer.base.SubLayers import StepwiseRNN
+import conditioned_layers.networks.generative_transformer.Constants as Constants
+from conditioned_layers.networks.generative_transformer.base.Layers import EncoderLayer
+from conditioned_layers.networks.generative_transformer.base.SubLayers import StepwiseRNN
 
 __author__ = "Yu-Hsiang Huang"
 
