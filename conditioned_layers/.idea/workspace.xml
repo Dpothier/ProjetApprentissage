@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c4dd41b-be7e-4675-8580-8defe3f30e2d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bert_pretraining/fuse_sentence_files.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bert_pretraining/sentence_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bert_pretraining/sentence_parser_folder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bert_pretraining/sentencepiece_tokenizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/base_generative_transformer_st/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/base_generative_transformer_st/experiment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/ProjetApprentissage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/ProjetApprentissage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/Cola/ColaDataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/Cola/ColaDataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TensorFlowTest/.idea/TensorFlowTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../TensorFlowTest/.idea/TensorFlowTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TensorFlowTest/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TensorFlowTest/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TensorFlowTest/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TensorFlowTest/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TensorFlowTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TensorFlowTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TensorFlowTest/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TensorFlowTest/Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experiments/baseline_LSTM_soft_targets/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/baseline_LSTM_soft_targets/experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/baseline_transformer/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/baseline_transformer/experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/baseline_transformer_soft_targets/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/baseline_transformer_soft_targets/experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/baseline_transformer/Layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/baseline_transformer/Layers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/baseline_transformer/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/baseline_transformer/Models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/baseline_transformer/SubLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/baseline_transformer/SubLayers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/networks/generative_transformer/base/Layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/base/Layers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/networks/generative_transformer/base/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/base/Models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/networks/generative_transformer/base/SubLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/base/SubLayers.py" afterDir="false" />
@@ -19,10 +28,6 @@
       <change beforePath="$PROJECT_DIR$/networks/generative_transformer/with_activation/Layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/with_activation/Layers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/networks/generative_transformer/with_activation/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/with_activation/Models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/networks/generative_transformer/with_activation/SubLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/with_activation/SubLayers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/generative_transformer/with_computation_graph/Layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/with_computation_graph/Layers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/generative_transformer/with_computation_graph/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/with_computation_graph/Models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/generative_transformer/with_computation_graph/SubLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/with_computation_graph/SubLayers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training/results.py" beforeDir="false" afterPath="$PROJECT_DIR$/training/results.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,88 +38,102 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiments/baseline_transformer_soft_targets/experiment.py">
+        <entry file="file://$PROJECT_DIR$/datasets/Cola/ColaDataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="61" column="22" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="22" />
+            <state relative-caret-position="597">
+              <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bert_pretraining/sentence_parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/networks/generative_transformer/simpler/Layers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/datasets/Cola/ColaDataset.py">
+        <entry file="file://$PROJECT_DIR$/bert_pretraining/sentence_parser_folder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="323">
+              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/1495869477/219578554/sklearn/metrics/classification.py">
+        <entry file="file://$PROJECT_DIR$/bert_pretraining/fuse_sentence_files.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8908">
-              <caret line="542" selection-start-line="542" selection-end-line="542" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/networks/baseline_transformer/Models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state>
               <folding>
-                <element signature="e#37#49#0" expanded="true" />
+                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/networks/baseline_transformer/Layers.py">
+        <entry file="file://$PROJECT_DIR$/networks/generative_transformer/simpler/Models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
-              <folding>
-                <element signature="e#26#47#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/networks/baseline_transformer/SubLayers.py">
+        <entry file="file://$PROJECT_DIR$/networks/generative_transformer/simpler/SubLayers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
-              <folding>
-                <element signature="e#54#72#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/training/results.py">
+        <entry file="file://$PROJECT_DIR$/networks/generative_transformer/with_activation/Layers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiments/baseline_LSTM_soft_targets/experiment.py">
+        <entry file="file://$PROJECT_DIR$/networks/generative_transformer/with_activation/Models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="63" column="130" selection-start-line="63" selection-start-column="130" selection-end-line="63" selection-end-column="130" />
+            <state relative-caret-position="119">
+              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/networks/generative_transformer/with_activation/SubLayers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -131,6 +150,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>sn</find>
+      <find>return_target</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,7 +160,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/experiments/baseline_transformer/experiment.py" />
-        <option value="$PROJECT_DIR$/experiments/baseline_LSTM_soft_targets/experiment.py" />
         <option value="$PROJECT_DIR$/training/results.py" />
         <option value="$PROJECT_DIR$/networks/baseline_transformer/Models.py" />
         <option value="$PROJECT_DIR$/networks/baseline_transformer/Layers.py" />
@@ -148,21 +167,27 @@
         <option value="$PROJECT_DIR$/experiments/test.py" />
         <option value="$PROJECT_DIR$/experiments/baseline_transformer_soft_targets/experiment.py" />
         <option value="$PROJECT_DIR$/datasets/Cola/ColaDataset.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/runConfigurations/transformer_baseline_experiment_soft_targets.xml" />
+        <option value="$PROJECT_DIR$/experiments/generative_transformer_st/experiment.py" />
+        <option value="$PROJECT_DIR$/experiments/baseline_LSTM_soft_targets/experiment.py" />
+        <option value="$PROJECT_DIR$/networks/generative_transformer/base/Models.py" />
+        <option value="$PROJECT_DIR$/networks/generative_transformer/base/Layers.py" />
+        <option value="$PROJECT_DIR$/networks/generative_transformer/base/SubLayers.py" />
+        <option value="$PROJECT_DIR$/networks/generative_transformer/simpler/Layers.py" />
+        <option value="$PROJECT_DIR$/networks/generative_transformer/simpler/Models.py" />
+        <option value="$PROJECT_DIR$/networks/generative_transformer/simpler/SubLayers.py" />
+        <option value="$PROJECT_DIR$/networks/generative_transformer/with_activation/Layers.py" />
+        <option value="$PROJECT_DIR$/networks/generative_transformer/with_activation/Models.py" />
+        <option value="$PROJECT_DIR$/networks/generative_transformer/with_activation/SubLayers.py" />
+        <option value="$PROJECT_DIR$/experiments/base_generative_transformer_st/experiment.py" />
+        <option value="$PROJECT_DIR$/bert_pretraining/sentence_parser.py" />
+        <option value="$PROJECT_DIR$/bert_pretraining/sentence_parser_folder.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="927" />
-    <option name="height" value="1055" />
+    <option name="y" value="28" />
+    <option name="width" value="1680" />
+    <option name="height" value="1052" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -181,7 +206,7 @@
             <path>
               <item name="conditioned_layers" type="b2602c69:ProjectViewProjectNode" />
               <item name="conditioned_layers" type="462c0819:PsiDirectoryNode" />
-              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="networks" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -192,10 +217,18 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/networks/baseline_bert" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/experiments/baseline_LSTM_soft_targets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/experiments/generative_transformer_st" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -209,6 +242,62 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Python.sentence_parser_folder">
+    <configuration name="lstm baseline experiment soft targets" type="PythonConfigurationType" factoryName="Python">
+      <module name="conditioned_layers" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://dpothier@132.203.120.10:22/mnt/storage/dpothier/conditioned_layers/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/generative_transformer_st/experiment.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sentence_parser_folder" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="conditioned_layers" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bert_pretraining/sentence_parser_folder.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.transformer baseline experiment soft targets" />
+      <item itemvalue="Python.lstm baseline experiment soft targets" />
+      <item itemvalue="Python.sentence_parser_folder" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.sentence_parser_folder" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -221,23 +310,32 @@
       <updated>1559227573625</updated>
       <workItem from="1559227575523" duration="45000" />
       <workItem from="1559227639270" duration="8227000" />
-      <workItem from="1559242348130" duration="606000" />
+      <workItem from="1559242348130" duration="1212000" />
+      <workItem from="1559325257855" duration="1887000" />
+      <workItem from="1559570320864" duration="726000" />
+      <workItem from="1559581374082" duration="4294000" />
+      <workItem from="1559656476138" duration="2052000" />
+      <workItem from="1559843095312" duration="648000" />
+      <workItem from="1560193489188" duration="599000" />
+      <workItem from="1560269081410" duration="599000" />
+      <workItem from="1560353911130" duration="598000" />
+      <workItem from="1560430217083" duration="607000" />
+      <workItem from="1560791274762" duration="1570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8878000" />
+    <option name="totallyTimeSpent" value="23064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29496402" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36690646" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32937366" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -247,8 +345,8 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="File Transfer" order="13" visible="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32937366" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32937366" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -268,10 +366,17 @@
           <line>58</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/networks/generative_transformer/base/Models.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/conditioned_layers$lstm_baseline_experiment_soft_targets.coverage" NAME="lstm baseline experiment soft targets Coverage Results" MODIFIED="1559325313968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
+    <SUITE FILE_PATH="coverage/conditioned_layers$sentence_parser_folder.coverage" NAME="sentence_parser_folder Coverage Results" MODIFIED="1560797922448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
     <SUITE FILE_PATH="coverage/conditioned_layers$experiment.coverage" NAME="transformer baseline experiment soft targets Coverage Results" MODIFIED="1559240848043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
   </component>
   <component name="editorHistoryManager">
@@ -282,20 +387,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/baseline_transformer_soft_targets/experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="22" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/1495869477/219578554/sklearn/metrics/classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8908">
-          <caret line="542" selection-start-line="542" selection-end-line="542" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/test.py" />
     <entry file="file://$PROJECT_DIR$/networks/baseline_transformer/Models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -306,22 +398,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/1495869477/219578554/sklearn/metrics/classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="542" selection-start-line="542" selection-end-line="542" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/networks/baseline_transformer/Layers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
           <folding>
             <element signature="e#26#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networks/baseline_transformer/SubLayers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
-          <folding>
-            <element signature="e#54#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -336,29 +425,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/baseline_LSTM_soft_targets/experiment.py">
+    <entry file="file://$PROJECT_DIR$/experiments/baseline_transformer_soft_targets/experiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="130" selection-start-line="63" selection-start-column="130" selection-end-line="63" selection-end-column="130" />
+        <state relative-caret-position="314">
+          <caret line="90" column="83" selection-start-line="90" selection-start-column="73" selection-end-line="90" selection-end-column="83" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/test.py">
+    <entry file="file://$PROJECT_DIR$/experiments/baseline_LSTM_soft_targets/experiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="340">
+          <caret line="86" column="83" selection-start-line="86" selection-start-column="83" selection-end-line="86" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networks/baseline_transformer/SubLayers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#54#72#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/base/Models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/base_generative_transformer_st/experiment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/base/Layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/base/SubLayers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/simpler/Layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/simpler/Models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/simpler/SubLayers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/with_activation/Layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/with_activation/Models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/with_activation/SubLayers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datasets/Cola/ColaDataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="597">
+          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bert_pretraining/fuse_sentence_files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bert_pretraining/sentence_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bert_pretraining/sentence_parser_folder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>

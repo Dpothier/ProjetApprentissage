@@ -10,9 +10,10 @@ from pytoune.framework import Model
 from pytoune.framework.callbacks.clip_grad import ClipNorm
 from pytoune.framework.callbacks.lr_scheduler import ExponentialLR
 from pytoune.framework.callbacks.best_model_restore import BestModelRestore
+from pytoune.framework.callbacks import EarlyStopping
 from datasets.Cola.ColaDataset import ColaDataset
 from training.metrics_util import *
-from networks.baseline_lstm.lstm import LSTM_model
+from networks.generative_transformer.base.Models import Transformer
 from training.embeddings import load
 from training.loss import SoftCrossEntropyLoss, SoftenTargets
 from training.dataloader import DataLoader
@@ -39,11 +40,14 @@ def main(dataset, embeddings, gpu):
     batch_size = 32
 
     if gpu == 'cpu':
+        print("Setting computation on cpu")
         use_gpu = False
     elif gpu == 'gpu1':
+        print("Setting computation on gpu1")
         torch.cuda.set_device(1)
         use_gpu = True
     else:
+        print("Setting computation on gpu0")
         torch.cuda.set_device(0)
         use_gpu = True
 
@@ -52,9 +56,9 @@ def main(dataset, embeddings, gpu):
 
     output_folder_base = os.path.dirname(os.path.realpath(__file__)) + "/results/"
 
-    learning_rates = [0.0001, 0.00001]
-    weight_decays = [0, 0.001, 0.005]
-    dropout_rates = [0, 0.1, 0.2, 0.3]
+    learning_rates = [0.00005, 0.00001]
+    weight_decays = [0]
+    dropout_rates = [0]
 
     word_vectors, vocab_table = load(embeddings)
 
@@ -63,6 +67,7 @@ def main(dataset, embeddings, gpu):
     dev = DataLoader(ColaDataset("{}dev.tsv".format(dataset), vocab_table, TEST_MODE=TEST_MODE), batch_size=batch_size)
     # test = DataLoader(ColaDataset("{}test.tsv".format(dataset_prefix), vocab_table, TEST_MODE=TEST_MODE), batch_size=batch_size)
 
+    len_max_seq = max([train.dataset.len_of_longest_sequence(), dev.dataset.len_of_longest_sequence()])
     best_results = None
     for learning_rate in learning_rates:
         for weight_decay in weight_decays:
@@ -74,7 +79,7 @@ def main(dataset, embeddings, gpu):
                 set_random_seed(SEED)
 
                 # Create the classifier
-                module = LSTM_model( word_vectors, d_word_vec=512, d_model=512, d_inner=2048, dropout=dropout_rate)
+                module = Transformer(word_vectors, len_max_seq, d_word_vec=128, d_model=128, d_inner=1024, n_layers=6, n_head=8, d_k=32, d_v=32, d_state=64, dropout=0.1)
 
                 classes_weight = calculate_weight(train)
                 print("Weight of classes: {}".format(classes_weight))
@@ -83,7 +88,7 @@ def main(dataset, embeddings, gpu):
                 optimizer = optim.Adam(module.parameters(), lr=learning_rate, weight_decay=weight_decay)
                 gradient_clipping = ClipNorm(module.parameters(), 1)
                 lr_scheduler = ExponentialLR(gamma=0.9)
-                # early_stopping = EarlyStopping(patience=10)
+                early_stopping = EarlyStopping(patience=25)
                 best_model_restore = BestModelRestore(monitor="val_acc", mode="max")
 
                 loss = SoftCrossEntropyLoss(soft_target_fct=SoftenTargets(2, 0.8), weight=classes_weight)

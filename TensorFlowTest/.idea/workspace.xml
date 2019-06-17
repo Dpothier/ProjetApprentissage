@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc8ff2bb-4c82-4487-a581-9cd98ab7bf1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conditioned_layers/experiments/bigger/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/experiments/bigger/experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conditioned_layers/experiments/bigger_simpler_model/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/experiments/bigger_simpler_model/experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conditioned_layers/experiments/initial/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/experiments/initial/experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conditioned_layers/experiments/on_IMDB/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/experiments/on_IMDB/experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conditioned_layers/experiments/simpler_model/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/experiments/simpler_model/experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conditioned_layers/experiments/with_activation/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/experiments/with_activation/experiment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conditioned_layers/experiments/base_generative_transformer_st/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conditioned_layers/experiments/base_generative_transformer_st/experiment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TensorFlowTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TensorFlowTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conditioned_layers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conditioned_layers/experiments/baseline_LSTM_soft_targets/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/experiments/baseline_LSTM_soft_targets/experiment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/base/Layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/base/Layers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/base/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/base/Models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/base/SubLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/base/SubLayers.py" afterDir="false" />
@@ -19,9 +20,6 @@
       <change beforePath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/with_activation/Layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/with_activation/Layers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/with_activation/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/with_activation/Models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/with_activation/SubLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/with_activation/SubLayers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/with_computation_graph/Layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/with_computation_graph/Layers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/with_computation_graph/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/with_computation_graph/Models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/with_computation_graph/SubLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conditioned_layers/networks/generative_transformer/with_computation_graph/SubLayers.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +31,11 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="1" selection-end-line="20" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -58,19 +60,14 @@
   <component name="ProjectConfigurationFiles">
     <option name="files">
       <list>
-        <option value="$PROJECT_DIR$/.idea/TensorFlowTest.iml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/deployment.xml" />
+        <option value="$PROJECT_DIR$/.idea/webServers.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="419" />
-    <option name="y" value="136" />
-    <option name="width" value="927" />
-    <option name="height" value="1053" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="y" value="28" />
+    <option name="width" value="1680" />
+    <option name="height" value="1052" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -93,11 +90,20 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../conditioned_layers" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="TensorFlowTest" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="TensorFlowTest" />
+      </console-settings>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -111,6 +117,35 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="TensorFlowTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://root@132.203.120.10:26/usr/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Test" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -123,21 +158,30 @@
       <updated>1559227139155</updated>
       <workItem from="1559227141345" duration="432000" />
       <workItem from="1559227623056" duration="15000" />
+      <workItem from="1559245012097" duration="848000" />
+      <workItem from="1559266933660" duration="278000" />
+      <workItem from="1559320543963" duration="7490000" />
+      <workItem from="1559570317652" duration="602000" />
+      <workItem from="1559581373700" duration="599000" />
+      <workItem from="1559656475341" duration="599000" />
+      <workItem from="1559843094500" duration="598000" />
+      <workItem from="1560193474974" duration="593000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="447000" />
+    <option name="totallyTimeSpent" value="12054000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.123408966" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13890426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33585313" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -160,9 +204,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TensorFlowTest$Test.coverage" NAME="Test Coverage Results" MODIFIED="1559330389171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Test.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
