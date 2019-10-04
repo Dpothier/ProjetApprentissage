@@ -11,7 +11,7 @@ import csv
 @click.command()
 @click.option('-i', '--input', default="bert_pretraining/books/")
 @click.option('-o', '--output', default="bert_pretraining/books_sentences.txt")
-@click.option('-c', '--corpus', default="bert_pretraining/wikipedia_corpus.tsv")
+@click.option('-c', '--corpus', default="bert_pretraining/books_corpus.tsv")
 def main(input, output, corpus):
     with open(output, encoding="utf-8", mode="w+") as o:
         with open(corpus, encoding="utf-8", mode="w+") as c:

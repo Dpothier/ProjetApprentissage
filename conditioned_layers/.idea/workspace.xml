@@ -2,32 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c4dd41b-be7e-4675-8580-8defe3f30e2d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bert_pretraining/fuse_sentence_files.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bert_pretraining/sentence_parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bert_pretraining/sentence_parser_folder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bert_pretraining/sentencepiece_tokenizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/base_generative_transformer_st/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/base_generative_transformer_st/experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/ProjetApprentissage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/ProjetApprentissage.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TensorFlowTest/.idea/TensorFlowTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../TensorFlowTest/.idea/TensorFlowTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TensorFlowTest/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TensorFlowTest/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TensorFlowTest/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TensorFlowTest/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TensorFlowTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TensorFlowTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TensorFlowTest/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TensorFlowTest/Test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/baseline_bert.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bert_pretraining/prepare_corpus.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bert_pretraining/prepare_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/LM_pretrain/BertDataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/baseline_bert/experiment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/networks/baseline_bert/pretrain_loss.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/networks/baseline_bert/utils/bert_lm_metrics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/networks/metatransformer/layer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/networks/policy_mlp/policymlp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/PolicyMLP/MLP_Primitives_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/baseline_LSTM_soft_targets/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/baseline_LSTM_soft_targets/experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/generative_transformer/base/Layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/base/Layers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/generative_transformer/base/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/base/Models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/generative_transformer/base/SubLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/base/SubLayers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/generative_transformer/simpler/Layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/simpler/Layers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/generative_transformer/simpler/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/simpler/Models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/generative_transformer/simpler/SubLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/simpler/SubLayers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/generative_transformer/with_activation/Layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/with_activation/Layers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/generative_transformer/with_activation/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/with_activation/Models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/generative_transformer/with_activation/SubLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/generative_transformer/with_activation/SubLayers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bert_pretraining/sentence_parser_folder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bert_pretraining/sentence_parser_folder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/baseline_bert/bert.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/baseline_bert/bert.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/baseline_bert/language_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/baseline_bert/language_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training/embeddings.py" beforeDir="false" afterPath="$PROJECT_DIR$/training/embeddings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,115 +24,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datasets/Cola/ColaDataset.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bert_pretraining/sentence_parser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/networks/generative_transformer/simpler/Layers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bert_pretraining/sentence_parser_folder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bert_pretraining/fuse_sentence_files.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/networks/generative_transformer/simpler/Models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/networks/generative_transformer/simpler/SubLayers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/networks/generative_transformer/with_activation/Layers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/networks/generative_transformer/with_activation/Models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/networks/generative_transformer/with_activation/SubLayers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Python Unit Test" />
       </list>
     </option>
   </component>
@@ -151,79 +36,29 @@
     <findStrings>
       <find>sn</find>
       <find>return_target</find>
+      <find>seq_len</find>
+      <find>GeneratedFullyConnectedLayer</find>
+      <find>zip</find>
+      <find>classes_weight</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/experiments/baseline_transformer/experiment.py" />
-        <option value="$PROJECT_DIR$/training/results.py" />
-        <option value="$PROJECT_DIR$/networks/baseline_transformer/Models.py" />
-        <option value="$PROJECT_DIR$/networks/baseline_transformer/Layers.py" />
-        <option value="$PROJECT_DIR$/networks/baseline_transformer/SubLayers.py" />
-        <option value="$PROJECT_DIR$/experiments/test.py" />
-        <option value="$PROJECT_DIR$/experiments/baseline_transformer_soft_targets/experiment.py" />
-        <option value="$PROJECT_DIR$/datasets/Cola/ColaDataset.py" />
-        <option value="$PROJECT_DIR$/experiments/generative_transformer_st/experiment.py" />
-        <option value="$PROJECT_DIR$/experiments/baseline_LSTM_soft_targets/experiment.py" />
-        <option value="$PROJECT_DIR$/networks/generative_transformer/base/Models.py" />
-        <option value="$PROJECT_DIR$/networks/generative_transformer/base/Layers.py" />
-        <option value="$PROJECT_DIR$/networks/generative_transformer/base/SubLayers.py" />
-        <option value="$PROJECT_DIR$/networks/generative_transformer/simpler/Layers.py" />
-        <option value="$PROJECT_DIR$/networks/generative_transformer/simpler/Models.py" />
-        <option value="$PROJECT_DIR$/networks/generative_transformer/simpler/SubLayers.py" />
-        <option value="$PROJECT_DIR$/networks/generative_transformer/with_activation/Layers.py" />
-        <option value="$PROJECT_DIR$/networks/generative_transformer/with_activation/Models.py" />
-        <option value="$PROJECT_DIR$/networks/generative_transformer/with_activation/SubLayers.py" />
-        <option value="$PROJECT_DIR$/experiments/base_generative_transformer_st/experiment.py" />
-        <option value="$PROJECT_DIR$/bert_pretraining/sentence_parser.py" />
-        <option value="$PROJECT_DIR$/bert_pretraining/sentence_parser_folder.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="28" />
-    <option name="width" value="1680" />
-    <option name="height" value="1052" />
-  </component>
+  <component name="ProjectId" id="1RFkIf1pyBSkUOk5F6oJpP7PEnl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="conditioned_layers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="conditioned_layers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="conditioned_layers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="conditioned_layers" type="462c0819:PsiDirectoryNode" />
-              <item name="networks" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/networks/baseline_bert" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/PolicyMLP/MLP_Primitives_test.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/experiments/baseline_bert" />
+      <recent name="$PROJECT_DIR$/networks/baseline_bert" />
       <recent name="$PROJECT_DIR$/experiments/baseline_LSTM_soft_targets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -242,7 +77,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sentence_parser_folder">
+  <component name="RunManager" selected="Python tests.pytest in MLP_Primitives_test.py">
     <configuration name="lstm baseline experiment soft targets" type="PythonConfigurationType" factoryName="Python">
       <module name="conditioned_layers" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -257,6 +92,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/generative_transformer_st/experiment.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sentence_parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="conditioned_layers" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bert_pretraining/sentence_parser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -287,14 +144,53 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for MLP_Primitives_test.MyTestCase.test_layer_weights_and_bias_full_layer" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="conditioned_layers" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/PolicyMLP" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;MLP_Primitives_test.MyTestCase.test_layer_weights_and_bias_full_layer&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in MLP_Primitives_test.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="conditioned_layers" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/PolicyMLP" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/PolicyMLP/MLP_Primitives_test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.transformer baseline experiment soft targets" />
       <item itemvalue="Python.lstm baseline experiment soft targets" />
+      <item itemvalue="Python.baseline_bert" />
       <item itemvalue="Python.sentence_parser_folder" />
+      <item itemvalue="Python.sentence_parser" />
+      <item itemvalue="Python tests.pytest in MLP_Primitives_test.py" />
+      <item itemvalue="Python tests.pytest for MLP_Primitives_test.MyTestCase.test_layer_weights_and_bias_full_layer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in MLP_Primitives_test.py" />
+        <item itemvalue="Python tests.pytest for MLP_Primitives_test.MyTestCase.test_layer_weights_and_bias_full_layer" />
         <item itemvalue="Python.sentence_parser_folder" />
+        <item itemvalue="Python.sentence_parser" />
       </list>
     </recent_temporary>
   </component>
@@ -320,43 +216,45 @@
       <workItem from="1560269081410" duration="599000" />
       <workItem from="1560353911130" duration="598000" />
       <workItem from="1560430217083" duration="607000" />
-      <workItem from="1560791274762" duration="1570000" />
+      <workItem from="1560791274762" duration="4667000" />
+      <workItem from="1560806927324" duration="1561000" />
+      <workItem from="1560869394688" duration="2411000" />
+      <workItem from="1560880913022" duration="9809000" />
+      <workItem from="1560966222561" duration="7379000" />
+      <workItem from="1561040235110" duration="1493000" />
+      <workItem from="1561068931436" duration="272000" />
+      <workItem from="1561119831486" duration="5118000" />
+      <workItem from="1561387025276" duration="6195000" />
+      <workItem from="1561404375118" duration="4902000" />
+      <workItem from="1561658534125" duration="1616000" />
+      <workItem from="1562261099729" duration="599000" />
+      <workItem from="1562341258183" duration="594000" />
+      <workItem from="1562424403409" duration="847000" />
+      <workItem from="1562596649627" duration="599000" />
+      <workItem from="1562769299766" duration="702000" />
+      <workItem from="1563205314739" duration="659000" />
+      <workItem from="1570020023162" duration="3418000" />
+      <workItem from="1570038189739" duration="8142000" />
+      <workItem from="1570124075560" duration="8812000" />
+      <workItem from="1570154233041" duration="232000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23064000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36690646" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32937366" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32937366" />
-      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32937366" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -375,188 +273,13 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/conditioned_layers$sentence_parser.coverage" NAME="sentence_parser Coverage Results" MODIFIED="1560882115132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
+    <SUITE FILE_PATH="coverage/conditioned_layers$sentence_parser_folder.coverage" NAME="sentence_parser_folder Coverage Results" MODIFIED="1560883899442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
+    <SUITE FILE_PATH="coverage/conditioned_layers$experiment.coverage" NAME="baseline_bert Coverage Results" MODIFIED="1561125513910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
+    <SUITE FILE_PATH="coverage/conditioned_layers$baseline_bert.coverage" NAME="baseline_bert Coverage Results" MODIFIED="1561406972642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
     <SUITE FILE_PATH="coverage/conditioned_layers$lstm_baseline_experiment_soft_targets.coverage" NAME="lstm baseline experiment soft targets Coverage Results" MODIFIED="1559325313968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
-    <SUITE FILE_PATH="coverage/conditioned_layers$sentence_parser_folder.coverage" NAME="sentence_parser_folder Coverage Results" MODIFIED="1560797922448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
-    <SUITE FILE_PATH="coverage/conditioned_layers$experiment.coverage" NAME="transformer baseline experiment soft targets Coverage Results" MODIFIED="1559240848043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/experiments/baseline_transformer/experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1411">
-          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/test.py" />
-    <entry file="file://$PROJECT_DIR$/networks/baseline_transformer/Models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#37#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/1495869477/219578554/sklearn/metrics/classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="542" selection-start-line="542" selection-end-line="542" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networks/baseline_transformer/Layers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
-          <folding>
-            <element signature="e#26#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/training/results.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/baseline_transformer_soft_targets/experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="90" column="83" selection-start-line="90" selection-start-column="73" selection-end-line="90" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/baseline_LSTM_soft_targets/experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="86" column="83" selection-start-line="86" selection-start-column="83" selection-end-line="86" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networks/baseline_transformer/SubLayers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
-          <folding>
-            <element signature="e#54#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/base/Models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/base_generative_transformer_st/experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/base/Layers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/base/SubLayers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/simpler/Layers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/simpler/Models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/simpler/SubLayers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/with_activation/Layers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/with_activation/Models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networks/generative_transformer/with_activation/SubLayers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/Cola/ColaDataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bert_pretraining/fuse_sentence_files.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bert_pretraining/sentence_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bert_pretraining/sentence_parser_folder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <SUITE FILE_PATH="coverage/conditioned_layers$pytest_in_MLP_Primitives_test_py.coverage" NAME="pytest in MLP_Primitives_test.py Coverage Results" MODIFIED="1570154464002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/PolicyMLP" />
+    <SUITE FILE_PATH="coverage/conditioned_layers$pytest_for_MLP_Primitives_test_MyTestCase_test_layer_dimensions.coverage" NAME="pytest in MLP_Primitives_test.py Coverage Results" MODIFIED="1570049792751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/PolicyMLP" />
+    <SUITE FILE_PATH="coverage/conditioned_layers$pytest_for_MLP_Primitives_test_MyTestCase_test_layer_weights_and_bias_full_layer.coverage" NAME="pytest for MLP_Primitives_test.MyTestCase.test_layer_weights_and_bias_full_layer Coverage Results" MODIFIED="1570125742669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/PolicyMLP" />
   </component>
 </project>
