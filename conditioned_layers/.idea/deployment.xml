@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="dpothier@132.203.120.10:22">
+  <component name="PublishConfigData" autoUpload="Always" serverName="dpothier@132.203.120.129:22">
     <serverData>
-      <paths name="dpothier@132.203.120.10:22">
+      <paths name="dpothier@132.203.120.129:22">
         <serverdata>
           <mappings>
             <mapping deploy="/dpothier/tmp/ProjetApprentissage/conditioned_layers" local="$PROJECT_DIR$" />

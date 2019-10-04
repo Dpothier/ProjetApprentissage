@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c4dd41b-be7e-4675-8580-8defe3f30e2d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/policy_mlp/policymlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/policy_mlp/policymlp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/PolicyMLP/MLP_Primitives_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/PolicyMLP/MLP_Primitives_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +42,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/PolicyMLP/MLP_Primitives_test.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -225,6 +226,7 @@
       <workItem from="1570038189739" duration="8142000" />
       <workItem from="1570124075560" duration="8812000" />
       <workItem from="1570154233041" duration="2073000" />
+      <workItem from="1570196053952" duration="1172000" />
     </task>
     <servers />
   </component>
