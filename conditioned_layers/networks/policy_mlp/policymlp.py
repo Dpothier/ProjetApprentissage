@@ -33,15 +33,17 @@ class MLP_Primitives(nn.Module):
     def __call__(self, attention):
         # attention dim are number of output x number of primitives
         # For each output to be produced, we have a different attention vector
-        number_of_outputs = attention.size()[0]
+        batch_size = attention.size()[0]
+        number_of_outputs = attention.size()[1]
         # The attention vector do not have a state_size dimension, but the attention weights must be applied on every state feature, so we expand the vector
-        weight_attention = attention.expand(self.primitives_size, -1,  -1).transpose(0,1)
+        weight_attention = attention.expand(self.primitives_size,-1, -1,  -1)
+        weight_attention = weight_attention.transpose(0, 1).transpose(1, 2)
 
         # The primitives are the same for every output, so we expand the weights and biases
-        prepared_primitives = self.primitives_weight.expand(number_of_outputs, -1, -1)
-        layer_weight = (prepared_primitives * weight_attention).sum(2)
+        prepared_primitives = self.primitives_weight.expand(number_of_outputs, -1, -1).expand(batch_size, -1, -1, -1)
+        layer_weight = (prepared_primitives * weight_attention).sum(3)
 
-        layer_bias = (self.primitives_bias.expand(number_of_outputs, -1) * attention).sum(1)
+        layer_bias = (self.primitives_bias.expand(number_of_outputs, -1).expand(batch_size, -1, -1) * attention).sum(2)
 
         return Parametrized_Linear_Layer(layer_weight, layer_bias)
 
