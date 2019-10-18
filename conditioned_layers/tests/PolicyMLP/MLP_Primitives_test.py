@@ -2,7 +2,7 @@ import unittest
 import networks.policy_mlp.policymlp as pkg
 import torch
 
-class MyTestCase(unittest.TestCase):
+class PrimitivesTests(unittest.TestCase):
     def setUp(self) -> None:
         self.batch_size = 2
         self.number_of_primitives = 3
@@ -15,7 +15,7 @@ class MyTestCase(unittest.TestCase):
         self.attention_batched = torch.Tensor([[[0.2,0.5,0.3],[0.1,0.9,0.0],[0.8,0.1,0.1],[0.3,0.4,0.3]],
                                                [[0.2,0.3,0.5], [0.4,0.3,0.3],[0.7,0.1,0.2],[0.5,0.3,0.2]]])
 
-        self.MLP_Primitives_set_weight = pkg.MLP_Primitives(self.state_size, self.number_of_primitives, self.primitives_weight, self.primitives_bias)
+        self.MLP_Primitives_set_weight = pkg.Parametrized_MLP_Primitives(self.primitives_weight, self.primitives_bias)
         self.MLP_primitives_random_weight = pkg.MLP_Primitives(self.state_size, self.number_of_primitives)
 
     def test_layer_dimensions_single_output(self):
