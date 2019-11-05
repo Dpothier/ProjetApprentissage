@@ -19,6 +19,22 @@ def calculate_weight(data : DataLoader):
 
     return max_occurence / occurences
 
+def calculate_weight_mnist(data : DataLoader):
+    targets = data.train_labels
+
+    if len(targets.shape) == 2:
+        targets = np.argmax(targets, axis=1)
+
+    number_of_classes = targets.unique().shape[0]
+
+    occurences = torch.zeros(number_of_classes)
+    for i in range(number_of_classes):
+        occurences[i] = targets[targets == i].shape[0]
+
+    max_occurence = occurences.max().repeat(number_of_classes)
+
+    return max_occurence / occurences
+
 def get_targets(data: DataLoader):
     targets = None
     for X, y in data:
@@ -51,9 +67,9 @@ def discritize_preds(preds):
     return preds_classes
 
 
-def produce_accuracy_precision_recall_f1(preds, true):
+def produce_accuracy_precision_recall_f1(preds, true, average):
     accuracy = metrics.accuracy_score(preds, true)
-    precision, recall, f1, support = metrics.precision_recall_fscore_support(preds, true, average='binary')
+    precision, recall, f1, support = metrics.precision_recall_fscore_support(preds, true, average=average)
 
     return accuracy, precision, recall, f1
 

@@ -15,7 +15,7 @@ class MyTestCase(unittest.TestCase):
                                                                 torch.Tensor([[0, 0, 0], [0, 0, 0]]))
         self.layers = [self.first_layer, self.second_layer]
 
-        self.seed_to_query = pkg.Parametrized_SeedToQueryFct(self.layers, F.relu)
+        self.seed_to_query = pkg.Parametrized_SeedToQueryFct(2, self.layers, F.relu)
 
 
 
