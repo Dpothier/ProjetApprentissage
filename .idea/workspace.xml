@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93039a6c-a30b-4b96-88b1-2ba87859d3d1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/conditioned_layers/bert_pretraining/fuse_sentence_files.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conditioned_layers/bert_pretraining/sentence_parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conditioned_layers/bert_pretraining/sentence_parser_folder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conditioned_layers/bert_pretraining/sentencepiece_tokenizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conditioned_layers/experiments/base_generative_transformer_st/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conditioned_layers/experiments/base_generative_transformer_st/experiment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/ProjetApprentissage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProjetApprentissage.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TensorFlowTest/.idea/TensorFlowTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TensorFlowTest/.idea/TensorFlowTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TensorFlowTest/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TensorFlowTest/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TensorFlowTest/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TensorFlowTest/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TensorFlowTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TensorFlowTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TensorFlowTest/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/TensorFlowTest/Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets/experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/base/Layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/base/Layers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/base/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/base/Models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/base/SubLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/base/SubLayers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/simpler/Layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/simpler/Layers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/simpler/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/simpler/Models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/simpler/SubLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/simpler/SubLayers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/with_activation/Layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/with_activation/Layers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/with_activation/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/with_activation/Models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/with_activation/SubLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/with_activation/SubLayers.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,118 +16,6 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ProjetApprentissage$train_routine_py.coverage" NAME="train_routine.py Coverage Results" MODIFIED="1553700636087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$prepare_imdb.coverage" NAME="prepare_imdb Coverage Results" MODIFIED="1553703420497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2108">
-              <caret line="129" selection-start-line="129" selection-end-line="129" />
-              <folding>
-                <element signature="e#37#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conditioned_layers/training/loss.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1683">
-              <caret line="101" selection-start-line="101" selection-end-line="101" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer_soft_targets/experiment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2448">
-              <caret line="144" column="34" selection-start-line="144" selection-start-column="34" selection-end-line="144" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conditioned_layers/bert_pretraining/sentence_parser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="34" selection-end-line="25" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conditioned_layers/bert_pretraining/sentence_parser_folder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="18" column="44" selection-end-line="26" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conditioned_layers/bert_pretraining/fuse_sentence_files.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="7" column="79" selection-end-line="22" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/conditioned_layers/bert_pretraining/sentencepiece_tokenizer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/click/core.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12648">
-              <caret line="763" selection-start-line="763" selection-end-line="763" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer/experiment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" selection-start-line="23" selection-end-line="26" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/sklearn/metrics/classification.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8959">
-              <caret line="545" selection-start-line="545" selection-end-line="545" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -190,104 +56,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/__init__.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/__init__.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/transformer/__init__.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/training/embeddings.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/datasets/Cola/clean_data.py" />
-        <option value="$PROJECT_DIR$/diluted_conv/train_routine.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/training/multi_linear.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/training/newfile.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/experiments/initial/experiment.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/transformer/Layers.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/transformer/SubLayers.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/transformer/Models.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/experiments/simpler_model/experiment.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/experiments/bigger_simpler_model/experiment.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/base/Layers.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/base/SubLayers.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/simpler/Layers.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/simpler/Models.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/simpler/SubLayers.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/base/Models.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/baseline_lstm/lstm.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/experiments/lstm/experiment.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/experiments/on_IMDB/experiment.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/datasets/IMDB/IMDB_dataset.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/with_activation/SubLayers.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/with_activation/Models.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/experiments/with_activation/experiment.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/experiments/bigger/experiment.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/__init__.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Layers.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/SubLayers.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer/experiment.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/with_computation_graph/autograd_function.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/experiments/mathew_corr_on_existing_model/experiment.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/datasets/Cola/calculate_class_weight.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/training/loss.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/training/metrics_util.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/training/dataloader.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/training/random.py" />
-        <option value="$PROJECT_DIR$/TensorBoardTest/test.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/test.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/experiment.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/datasets/Cola/ColaDataset.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Models.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer_soft_targets/experiment.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets/experiment.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/bert_pretraining/wikipedia_sentences_parser.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/bert_pretraining/sentence_parser.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/bert_pretraining/sentence_parser_folder.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/bert_pretraining/fuse_sentence_files.py" />
-        <option value="$PROJECT_DIR$/conditioned_layers/bert_pretraining/sentencepiece_tokenizer.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="419" />
-    <option name="y" value="136" />
-    <option name="width" value="927" />
-    <option name="height" value="1053" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
-              <item name="conditioned_layers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjetApprentissage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjetApprentissage" type="462c0819:PsiDirectoryNode" />
-              <item name="conditioned_layers" type="462c0819:PsiDirectoryNode" />
-              <item name="bert_pretraining" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
+  <component name="ProjectId" id="1TnwYTZNdKYQPyaTddjIgXuCOQm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/conditioned_layers" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$USER_HOME$/python_venv/policyANN" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -621,11 +396,10 @@
       <workItem from="1560448212770" duration="5484000" />
       <workItem from="1560777573940" duration="1628000" />
       <workItem from="1560790025274" duration="932000" />
+      <workItem from="1574109235048" duration="1410000" />
+      <workItem from="1574355743378" duration="2208000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="305249000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -636,65 +410,21 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2268954" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.43304536" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4991699" weight="0.39956802" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.32937366" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="7" sideWeight="0.4975097" visible="true" weight="0.32829374" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50249034" side_tool="true" weight="0.3275862" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.4997233" weight="0.17278618" />
-      <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="bottom" id="TODO" order="14" sideWeight="0.4991699" weight="0.3286638" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Data View" order="3" />
-      <window_info anchor="right" id="Remote Host" order="4" />
-      <window_info anchor="right" id="SciView" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23851688" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43304536" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4991699" visible="true" weight="0.39956802" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.32937366" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.4975097" weight="0.32829374" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50249034" side_tool="true" weight="0.3275862" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.4997233" weight="0.17278618" />
-      <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="bottom" id="TODO" order="14" sideWeight="0.4991699" weight="0.3286638" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Data View" order="3" />
-      <window_info anchor="right" id="Remote Host" order="4" />
-      <window_info anchor="right" id="SciView" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -740,413 +470,24 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$train_routine_py.coverage" NAME="train_routine.py Coverage Results" MODIFIED="1555031158559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diluted_conv" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_with_activation.coverage" NAME="conditioned layer with activation Coverage Results" MODIFIED="1557260725697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_transformer_baseline_mathew_corr.coverage" NAME="conditioned transformer baseline mathew corr Coverage Results" MODIFIED="1558544991184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$experiment.coverage" NAME="experiment Coverage Results" MODIFIED="1559078959435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_on_IMDB.coverage" NAME="conditioned layer on IMDB Coverage Results" MODIFIED="1557197423284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$tensorboard_test_experiment.coverage" NAME="tensorboard test experiment Coverage Results" MODIFIED="1559082730799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$fuse_sentence_files.coverage" NAME="fuse_sentence_files Coverage Results" MODIFIED="1560786660483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$clean_cola_data.coverage" NAME="clean cola data Coverage Results" MODIFIED="1556574428882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/datasets/Cola" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_baseline_transformer_soft_targets.coverage" NAME="conditioned baseline transformer soft targets Coverage Results" MODIFIED="1559146034422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_basic_experiment.coverage" NAME="conditioned layer basic experiment Coverage Results" MODIFIED="1556996523640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$test.coverage" NAME="test Coverage Results" MODIFIED="1559079478142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_bigger.coverage" NAME="conditioned layer bigger Coverage Results" MODIFIED="1557267047000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$calculate_class_weight.coverage" NAME="calculate_class_weight Coverage Results" MODIFIED="1558546145375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_bigger.coverage" NAME="conditioned layer bigger Coverage Results" MODIFIED="1557267047000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$prepare_imdb.coverage" NAME="prepare_imdb Coverage Results" MODIFIED="1553807690812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$LSTM.coverage" NAME="LSTM Coverage Results" MODIFIED="1557176947131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$sentence_parser.coverage" NAME="sentence_parser Coverage Results" MODIFIED="1560450668840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$sentence_parser_folder.coverage" NAME="sentence_parser_folder Coverage Results" MODIFIED="1560457771508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_simpler.coverage" NAME="conditioned layer simpler Coverage Results" MODIFIED="1557164897841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$train_routine_py.coverage" NAME="train_routine.py Coverage Results" MODIFIED="1555031158559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diluted_conv" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$experiment.coverage" NAME="experiment Coverage Results" MODIFIED="1559078959435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$test.coverage" NAME="test Coverage Results" MODIFIED="1559079478142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_on_IMDB.coverage" NAME="conditioned layer on IMDB Coverage Results" MODIFIED="1557197423284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$tensorboard_test_experiment.coverage" NAME="tensorboard test experiment Coverage Results" MODIFIED="1559082730799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$LSTM.coverage" NAME="LSTM Coverage Results" MODIFIED="1557176947131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_transformer_baseline.coverage" NAME="conditioned transformer baseline Coverage Results" MODIFIED="1557355765865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/base/Models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="48" column="41" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="41" />
-          <folding>
-            <element signature="e#37#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/SubLayers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#54#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/training/multi_linear.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/torch/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="74" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/torch/onnx/symbolic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4140">
-          <caret line="276" lean-forward="true" selection-start-line="276" selection-end-line="276" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/torch/tensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Layers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#26#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/base/SubLayers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1935">
-          <caret line="134" column="43" selection-start-line="134" selection-start-column="38" selection-end-line="134" selection-end-column="43" />
-          <folding>
-            <element signature="e#54#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Modules.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/torch/nn/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="1781" column="21" lean-forward="true" selection-start-line="1781" selection-start-column="21" selection-end-line="1781" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/torch/nn/modules/loss.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="891" column="29" selection-start-line="891" selection-start-column="29" selection-end-line="891" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/pytoune/framework/metrics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/optim/adam.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="78" column="83" selection-start-line="78" selection-start-column="83" selection-end-line="78" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/datasets/Cola/calculate_class_weight.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/training/dataloader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/caffe2/python/workspace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/training/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/utils/data/dataloader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="559" selection-start-line="559" selection-end-line="559" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/utils/data/_utils/collate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/nn/modules/pooling.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9605">
-          <caret line="568" column="11" selection-start-line="568" selection-start-column="11" selection-end-line="568" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/training/embeddings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/training/metrics_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/806733368/pytoune/framework/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="596" selection-start-line="596" selection-end-line="596" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/nn/modules/sparse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/nn/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="1505" selection-start-line="1505" selection-end-line="1505" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/experiment.py" />
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/datasets/Cola/ColaDataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/utils/tensorboard/writer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8687">
-          <caret line="533" selection-start-line="533" selection-end-line="533" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/jit/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3434">
-          <caret line="230" selection-start-line="230" selection-end-line="230" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/mathew_corr_on_existing_model/experiment.py" />
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/utils/tensorboard/_pytorch_graph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="275" selection-start-line="275" selection-end-line="275" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/torch/nn/modules/module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="492" selection-start-line="492" selection-end-line="492" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/test.py" />
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets/experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_lstm/lstm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="94" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="94" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-1402999527/1361030228/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5236">
-          <caret line="308" selection-start-line="308" selection-end-line="308" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/combinatorial_tranformer/base/Layers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/generative_transformer/with_computation_graph/autograd_function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/bert_pretraining/documents_utf8_filtered_20pageviews.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/nltk/tokenize/punkt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="1294" selection-start-line="1294" selection-end-line="1294" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/bert_pretraining/wikipedia_sentences.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/networks/baseline_transformer/Models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
-          <folding>
-            <element signature="e#37#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/training/loss.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1683">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer_soft_targets/experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2448">
-          <caret line="144" column="34" selection-start-line="144" selection-start-column="34" selection-end-line="144" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/bert_pretraining/sentence_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="34" selection-end-line="25" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/bert_pretraining/sentence_parser_folder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="44" selection-end-line="26" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/bert_pretraining/fuse_sentence_files.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="79" selection-end-line="22" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/click/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12648">
-          <caret line="763" selection-start-line="763" selection-end-line="763" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer/experiment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="26" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1402999527/806733368/sklearn/metrics/classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8959">
-          <caret line="545" selection-start-line="545" selection-end-line="545" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conditioned_layers/bert_pretraining/sentencepiece_tokenizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$fuse_sentence_files.coverage" NAME="fuse_sentence_files Coverage Results" MODIFIED="1560786660483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$clean_cola_data.coverage" NAME="clean cola data Coverage Results" MODIFIED="1556574428882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/datasets/Cola" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_basic_experiment.coverage" NAME="conditioned layer basic experiment Coverage Results" MODIFIED="1556996523640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$sentence_parser.coverage" NAME="sentence_parser Coverage Results" MODIFIED="1560450668840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_transformer_baseline_mathew_corr.coverage" NAME="conditioned transformer baseline mathew corr Coverage Results" MODIFIED="1558544991184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_with_activation.coverage" NAME="conditioned layer with activation Coverage Results" MODIFIED="1557260725697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
   </component>
 </project>

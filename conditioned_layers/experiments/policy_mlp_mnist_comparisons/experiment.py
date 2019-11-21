@@ -54,9 +54,6 @@ def main(gpu):
         torch.cuda.set_device(0)
         use_gpu = True
 
-    np.random.seed(133)
-    torch.manual_seed(133)
-
     output_folder_base = os.path.dirname(os.path.realpath(__file__)) + "/results/"
 
     learning_rates = [0.001, 0.0001, 0.00001]

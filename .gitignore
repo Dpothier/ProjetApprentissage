@@ -20,3 +20,11 @@ diluted_conv/embeddings/
 
 diluted_conv/results/
 diluted_conv/\.vector_cache/
+
+conditioned_layers/data/
+
+conditioned_layers/datasets/
+
+conditioned_layers/embeddings/
+
+conditioned_layers/experiments/datasets/

@@ -5,9 +5,9 @@ import torch.nn.functional as F
 
 class CNN(nn.Module):
 
-    def __init__(self, state_channels, number_of_conv_layers, number_of_classes):
+    def __init__(self, state_channels, number_of_conv_layers, number_of_classes, in_channels=1):
         super().__init__()
-        self.initial_layer = nn.Conv2d(in_channels=1, out_channels=state_channels, kernel_size=1, padding=0)
+        self.initial_layer = nn.Conv2d(in_channels=in_channels, out_channels=state_channels, kernel_size=1, padding=0)
         self.classification_layer = nn.Linear(in_features=state_channels, out_features=number_of_classes)
 
         mid_layers = []
