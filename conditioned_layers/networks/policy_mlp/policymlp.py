@@ -128,7 +128,7 @@ class PolicyMLPWithOnlyRNN(nn.Module):
         seed = self.initial_seed.expand(batch_size, -1, -1)
         for i in range(self.T):
             seed = self.stepwiseRNN(state, seed)
-            layer = self.layer_constructor(torch.softmax(seed, dim=2))
+            layer = self.layer_constructor(torch.tanh(seed, dim=2))
             state = torch.relu(layer(state))
 
         output = self.classification_layer(state)

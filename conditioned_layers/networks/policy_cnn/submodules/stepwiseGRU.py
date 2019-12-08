@@ -20,7 +20,7 @@ class Paramerized_StepwiseGRU(nn.Module):
         self.add_module("candidate_input", candidate_input)
 
     # x is batch x state_size, h is batch x seed_size
-    # Output is batch x seed_size
+    # Output is batch x state_size x x seed_size, it produces one seed for every unit of the layer for every instance
     def __call__(self, x, h):
         z = torch.sigmoid(self.update_input(x) + self.update_mem(h))
         r = torch.sigmoid(self.reset_input(x) + self.reset_mem(h))

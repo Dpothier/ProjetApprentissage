@@ -95,10 +95,7 @@ class PolicyGeneratedResidualLinearLayer(nn.Module):
     def __init__(self, weight: Tensor, bias: Tensor = None):
         super().__init__()
         self.weight = weight
-        if bias is None:
-            self.bias = None
-        else:
-            self.bias = bias
+        self.bias = bias
 
 
     def __call__(self, input: Tensor):

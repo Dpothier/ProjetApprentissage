@@ -2,12 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93039a6c-a30b-4b96-88b1-2ba87859d3d1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ProjetApprentissage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProjetApprentissage.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/base_generative_transformer_st/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/training/analyse_results/architectural_metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/base_generative_transformer_st/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_bert/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_mlp_mnist_128_state/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer_soft_targets/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps/keep_training.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_full_residual_128_primitives/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_full_residual_128_primitives/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_full_residual_128_primitives/keep_training.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_residual/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_residual/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_residual/keep_training.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_residual_128_primitives/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_residual_128_primitives/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_residual_128_primitives/keep_training.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_3_steps/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_3_steps/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_3_steps/keep_training.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_3_steps_residual/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_3_steps_residual/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_3_steps_residual/keep_training.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_5_steps_residual/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_5_steps_residual/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_5_steps_residual/keep_training.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_16_state_1_steps_residual_16_primitives/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_16_state_1_steps_residual_16_primitives/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_16_state_1_steps_residual_16_primitives/keep_training.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_32_state_1_steps_residual_32_primitives/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_32_state_1_steps_residual_32_primitives/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_32_state_1_steps_residual_32_primitives/keep_training.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_512_state/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_512_state/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_64_state/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_64_state/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_64_state_1_steps_residual_64_primitives/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_64_state_1_steps_residual_64_primitives/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_64_state_1_steps_residual_64_primitives/keep_training.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_smaller_state/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_smaller_state/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_smaller_state/keep_training.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/policy_cnn/submodules/stepwiseGRU.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/policy_cnn/submodules/stepwiseGRU.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/policy_mlp/policymlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/policy_mlp/policymlp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/policy_mlp/submodules/LinearLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/policy_mlp/submodules/LinearLayers.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +101,11 @@
   </component>
   <component name="ProjectId" id="1TnwYTZNdKYQPyaTddjIgXuCOQm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -79,18 +127,6 @@
       <recent name="$PROJECT_DIR$/conditioned_layers/experiments" />
       <recent name="$PROJECT_DIR$/conditioned_layers/experiments/mathew_corr_on_existing_model" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.fuse_sentence_files">
     <configuration name="LSTM" type="PythonConfigurationType" factoryName="Python">
@@ -319,6 +355,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -398,6 +446,11 @@
       <workItem from="1560790025274" duration="932000" />
       <workItem from="1574109235048" duration="1410000" />
       <workItem from="1574355743378" duration="2208000" />
+      <workItem from="1574368307553" duration="2739000" />
+      <workItem from="1574435601618" duration="3514000" />
+      <workItem from="1574873827000" duration="13017000" />
+      <workItem from="1575486527715" duration="633000" />
+      <workItem from="1575735839780" duration="1769000" />
     </task>
     <servers />
   </component>
@@ -425,6 +478,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575735851645">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575735851645" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -470,24 +529,24 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_baseline_transformer_soft_targets.coverage" NAME="conditioned baseline transformer soft targets Coverage Results" MODIFIED="1559146034422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$calculate_class_weight.coverage" NAME="calculate_class_weight Coverage Results" MODIFIED="1558546145375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_bigger.coverage" NAME="conditioned layer bigger Coverage Results" MODIFIED="1557267047000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$prepare_imdb.coverage" NAME="prepare_imdb Coverage Results" MODIFIED="1553807690812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$sentence_parser_folder.coverage" NAME="sentence_parser_folder Coverage Results" MODIFIED="1560457771508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$LSTM.coverage" NAME="LSTM Coverage Results" MODIFIED="1557176947131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$tensorboard_test_experiment.coverage" NAME="tensorboard test experiment Coverage Results" MODIFIED="1559082730799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_baseline_transformer_soft_targets.coverage" NAME="conditioned baseline transformer soft targets Coverage Results" MODIFIED="1559146034422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_basic_experiment.coverage" NAME="conditioned layer basic experiment Coverage Results" MODIFIED="1556996523640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$fuse_sentence_files.coverage" NAME="fuse_sentence_files Coverage Results" MODIFIED="1560786660483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_with_activation.coverage" NAME="conditioned layer with activation Coverage Results" MODIFIED="1557260725697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_bigger.coverage" NAME="conditioned layer bigger Coverage Results" MODIFIED="1557267047000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_transformer_baseline.coverage" NAME="conditioned transformer baseline Coverage Results" MODIFIED="1557355765865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_simpler.coverage" NAME="conditioned layer simpler Coverage Results" MODIFIED="1557164897841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$train_routine_py.coverage" NAME="train_routine.py Coverage Results" MODIFIED="1555031158559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diluted_conv" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_transformer_baseline_mathew_corr.coverage" NAME="conditioned transformer baseline mathew corr Coverage Results" MODIFIED="1558544991184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$clean_cola_data.coverage" NAME="clean cola data Coverage Results" MODIFIED="1556574428882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/datasets/Cola" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_on_IMDB.coverage" NAME="conditioned layer on IMDB Coverage Results" MODIFIED="1557197423284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$experiment.coverage" NAME="experiment Coverage Results" MODIFIED="1559078959435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$test.coverage" NAME="test Coverage Results" MODIFIED="1559079478142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_on_IMDB.coverage" NAME="conditioned layer on IMDB Coverage Results" MODIFIED="1557197423284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$tensorboard_test_experiment.coverage" NAME="tensorboard test experiment Coverage Results" MODIFIED="1559082730799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$LSTM.coverage" NAME="LSTM Coverage Results" MODIFIED="1557176947131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_transformer_baseline.coverage" NAME="conditioned transformer baseline Coverage Results" MODIFIED="1557355765865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$fuse_sentence_files.coverage" NAME="fuse_sentence_files Coverage Results" MODIFIED="1560786660483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$clean_cola_data.coverage" NAME="clean cola data Coverage Results" MODIFIED="1556574428882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/datasets/Cola" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_basic_experiment.coverage" NAME="conditioned layer basic experiment Coverage Results" MODIFIED="1556996523640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$calculate_class_weight.coverage" NAME="calculate_class_weight Coverage Results" MODIFIED="1558546145375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$sentence_parser_folder.coverage" NAME="sentence_parser_folder Coverage Results" MODIFIED="1560457771508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$train_routine_py.coverage" NAME="train_routine.py Coverage Results" MODIFIED="1555031158559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diluted_conv" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$sentence_parser.coverage" NAME="sentence_parser Coverage Results" MODIFIED="1560450668840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_transformer_baseline_mathew_corr.coverage" NAME="conditioned transformer baseline mathew corr Coverage Results" MODIFIED="1558544991184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
-    <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_with_activation.coverage" NAME="conditioned layer with activation Coverage Results" MODIFIED="1557260725697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
   </component>
 </project>
