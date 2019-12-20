@@ -28,3 +28,26 @@ conditioned_layers/datasets/
 conditioned_layers/embeddings/
 
 conditioned_layers/experiments/datasets/
+
+conditioned_layers/training/analyse_results/grouped_results/
+
+conditioned_layers/training/analyse_results/report.txt
+
+conditioned_layers/experiments/baseline_cnn_mnist_grid_T_12/results/
+
+conditioned_layers/experiments/baseline_cnn_mnist_grid_T_8/results/
+
+conditioned_layers/experiments/baseline_mlp_mnist_comparisons/results/
+
+conditioned_layers/experiments/policy_cnn_mnist_grid_T_12/results/
+
+conditioned_layers/experiments/policy_cnn_mnist_grid_T_4/results/
+
+conditioned_layers/experiments/policy_cnn_mnist_grid_T_8/results/
+
+
+conditioned_layers/experiments/baseline_cnn_mnist_grid_T_4/results/
+
+conditioned_layers/experiments/policy_mlp_mnist_comparisons/results/
+
+conditioned_layers/experiments/policy_mlp_mnist_comparisons/data/
