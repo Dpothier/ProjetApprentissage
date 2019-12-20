@@ -73,7 +73,7 @@ def main(gpu):
         for T in Ts:
             for state_size in state_sizes:
                 for seed_size in seeds_sizes:
-                    output_folder = output_folder_base + "lr_{}_t_{}_state_size_{}/".format(learning_rate, T, state_size)
+                    output_folder = output_folder_base + "lr_{}_t_{}_state_size_{}_seed_size_{}/".format(learning_rate, T, state_size, seed_size)
                     results = Results(output_folder)
                     save_hyperparameters(results, learning_rate, epochs, batch_size, T, state_size, seed_size)
                     seed_results = {}
