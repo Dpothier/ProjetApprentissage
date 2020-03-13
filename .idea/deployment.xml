@@ -2,10 +2,10 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
-      <paths name="dpothier@132.203.120.10:22">
+      <paths name="deepnlp">
         <serverdata>
           <mappings>
-            <mapping deploy="dpothier/tmp/ProjetApprentissage" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="ProjetApprentissage/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

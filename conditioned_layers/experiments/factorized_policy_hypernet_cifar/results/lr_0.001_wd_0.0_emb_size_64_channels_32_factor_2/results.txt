@@ -1,0 +1,14 @@
+Hyperparameters values 
+Learning rate: 0.001 
+Weight decay: 0.0 
+Number of training epochs: 0 
+Batch size: 128 
+emb size 64 
+channel counts 32 
+factor counts 2 
+Results 
+Train Accuracy: 0.87372 
+Test Accuracy: 0.8323 
+Precision: 0.8323 
+Recall: 0.8323 
+f1: 0.8323 

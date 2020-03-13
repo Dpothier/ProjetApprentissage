@@ -2,54 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93039a6c-a30b-4b96-88b1-2ba87859d3d1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_hypernet_static_feature_count_cifar/experiment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_hypernet_static_feature_count_cifar/find_successful_experiments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/networks/stable_features_policy_hypernetwork/modules/layer_embeddings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/networks/stable_features_policy_hypernetwork/modules/policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/networks/stable_features_policy_hypernetwork/modules/residual_block.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/networks/stable_features_policy_hypernetwork/modules/stepwiseGRU.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/networks/stable_features_policy_hypernetwork/network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/networks/true_policy_hypernetwork/modules/layer_embeddings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/networks/true_policy_hypernetwork/modules/policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/networks/true_policy_hypernetwork/modules/residual_block.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/networks/true_policy_hypernetwork/modules/stepwiseGRU.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/networks/true_policy_hypernetwork/network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ProjetApprentissage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProjetApprentissage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/base_generative_transformer_st/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/training/analyse_results/architectural_metrics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/base_generative_transformer_st/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_bert/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_mlp_mnist_128_state/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_transformer_soft_targets/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps/keep_training.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_full_residual_128_primitives/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_full_residual_128_primitives/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_full_residual_128_primitives/keep_training.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_residual/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_residual/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_residual/keep_training.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_residual_128_primitives/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_residual_128_primitives/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_1_steps_residual_128_primitives/keep_training.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_3_steps/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_3_steps/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_3_steps/keep_training.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_3_steps_residual/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_3_steps_residual/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_3_steps_residual/keep_training.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_5_steps_residual/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_5_steps_residual/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_128_state_5_steps_residual/keep_training.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_16_state_1_steps_residual_16_primitives/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_16_state_1_steps_residual_16_primitives/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_16_state_1_steps_residual_16_primitives/keep_training.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_32_state_1_steps_residual_32_primitives/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_32_state_1_steps_residual_32_primitives/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_32_state_1_steps_residual_32_primitives/keep_training.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_512_state/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_512_state/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_64_state/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_64_state/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_64_state_1_steps_residual_64_primitives/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_64_state_1_steps_residual_64_primitives/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_64_state_1_steps_residual_64_primitives/keep_training.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_smaller_state/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_smaller_state/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/policy_mlp_mnist_smaller_state/keep_training.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/policy_cnn/submodules/stepwiseGRU.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/policy_cnn/submodules/stepwiseGRU.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/policy_mlp/policymlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/policy_mlp/policymlp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/policy_mlp/submodules/LinearLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/policy_mlp/submodules/LinearLayers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,8 +78,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/python_venv/policyANN" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/conditioned_layers" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -128,7 +97,7 @@
       <recent name="$PROJECT_DIR$/conditioned_layers/experiments/mathew_corr_on_existing_model" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.fuse_sentence_files">
+  <component name="RunManager" selected="Python.experiment (1)">
     <configuration name="LSTM" type="PythonConfigurationType" factoryName="Python">
       <module name="ProjetApprentissage" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -195,7 +164,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="experiment" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="experiment (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ProjetApprentissage" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -203,12 +172,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/conditioned_layers/experiments/baseline_hypernet_static_feature_count_cifar" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test/experiment.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conditioned_layers/experiments/baseline_hypernet_static_feature_count_cifar/experiment.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -330,28 +299,28 @@
     <list>
       <item itemvalue="Python.LSTM" />
       <item itemvalue="Python.clean cola data" />
-      <item itemvalue="Python.conditioned layer with activation" />
-      <item itemvalue="Python.prepare_imdb" />
-      <item itemvalue="Python.conditioned transformer baseline mathew corr" />
       <item itemvalue="Python.conditioned baseline transformer soft targets" />
       <item itemvalue="Python.tensorboard test experiment" />
+      <item itemvalue="Python.conditioned transformer baseline mathew corr" />
+      <item itemvalue="Python.conditioned layer simpler" />
+      <item itemvalue="Python.conditioned layer with activation" />
+      <item itemvalue="Python.conditioned layer basic experiment" />
+      <item itemvalue="Python.prepare_imdb" />
       <item itemvalue="Python.conditioned layer bigger" />
       <item itemvalue="Python.conditioned layer on IMDB" />
-      <item itemvalue="Python.conditioned layer basic experiment" />
-      <item itemvalue="Python.conditioned layer simpler" />
-      <item itemvalue="Python.test" />
-      <item itemvalue="Python.experiment" />
+      <item itemvalue="Python.fuse_sentence_files" />
       <item itemvalue="Python.sentence_parser" />
       <item itemvalue="Python.sentence_parser_folder" />
-      <item itemvalue="Python.fuse_sentence_files" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.experiment (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.experiment (1)" />
         <item itemvalue="Python.fuse_sentence_files" />
         <item itemvalue="Python.sentence_parser_folder" />
         <item itemvalue="Python.sentence_parser" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.experiment" />
       </list>
     </recent_temporary>
   </component>
@@ -451,6 +420,8 @@
       <workItem from="1574873827000" duration="13017000" />
       <workItem from="1575486527715" duration="633000" />
       <workItem from="1575735839780" duration="1769000" />
+      <workItem from="1583529053582" duration="11000" />
+      <workItem from="1583529576558" duration="944000" />
     </task>
     <servers />
   </component>
@@ -480,10 +451,54 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575735851645">
+    <state x="442" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583530526569">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575735851645" />
+    <state x="442" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583530526569" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583530653600">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1583530653600" />
+    <state width="1807" height="374" key="GridCell.Tab.0.bottom" timestamp="1583530655039">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="374" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583530655039" />
+    <state width="1807" height="374" key="GridCell.Tab.0.center" timestamp="1583530655038">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="374" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583530655038" />
+    <state width="1807" height="374" key="GridCell.Tab.0.left" timestamp="1583530655038">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="374" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583530655038" />
+    <state width="1807" height="374" key="GridCell.Tab.0.right" timestamp="1583530655039">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="374" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583530655039" />
+    <state width="1807" height="343" key="GridCell.Tab.1.bottom" timestamp="1583530655014">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="343" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583530655014" />
+    <state width="1807" height="343" key="GridCell.Tab.1.center" timestamp="1583530655013">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="343" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583530655013" />
+    <state width="1807" height="343" key="GridCell.Tab.1.left" timestamp="1583530655012">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="343" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583530655012" />
+    <state width="1807" height="343" key="GridCell.Tab.1.right" timestamp="1583530655013">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="343" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583530655013" />
+    <state x="482" y="187" width="1221" height="730" key="SettingsEditor" timestamp="1583530648818">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="482" y="187" width="1221" height="730" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1583530648818" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1583530305379">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583530305378" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -541,6 +556,7 @@
     <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_simpler.coverage" NAME="conditioned layer simpler Coverage Results" MODIFIED="1557164897841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_transformer_baseline_mathew_corr.coverage" NAME="conditioned transformer baseline mathew corr Coverage Results" MODIFIED="1558544991184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$clean_cola_data.coverage" NAME="clean cola data Coverage Results" MODIFIED="1556574428882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/datasets/Cola" />
+    <SUITE FILE_PATH="coverage/ProjetApprentissage$experiment__1_.coverage" NAME="experiment (1) Coverage Results" MODIFIED="1583530506363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/experiments/baseline_hypernet_static_feature_count_cifar" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$conditioned_layer_on_IMDB.coverage" NAME="conditioned layer on IMDB Coverage Results" MODIFIED="1557197423284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$experiment.coverage" NAME="experiment Coverage Results" MODIFIED="1559078959435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test" />
     <SUITE FILE_PATH="coverage/ProjetApprentissage$test.coverage" NAME="test Coverage Results" MODIFIED="1559079478142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
