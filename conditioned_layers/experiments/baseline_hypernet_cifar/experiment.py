@@ -63,9 +63,7 @@ def main(gpu):
     Ts = [8]
     state_sizes = [64]
     seeds_sizes = [64]
-    seeds = [133]
-    milestone = [168000, 336000, 400000, 450000, 550000, 600000]
-    max_iter = 100000
+    seeds = [133, 42, 55, 132, 178, 125, 666, 4242, 8526, 7456]
     epochs = 0
 
     max_epoch = 2564

@@ -31,7 +31,7 @@ TEST_MODE = False
 SEED = 133
 
 @click.command()
-@click.option('-g', '--gpu', default="gpu0")
+@click.option('-g', '--gpu', default="gpu1")
 def main(gpu):
     """
     Trains the LSTM-based integrated pattern-based and distributional method for hypernymy detection
@@ -58,7 +58,7 @@ def main(gpu):
     output_folder_base = os.path.dirname(os.path.realpath(__file__)) + "/results/"
 
     learning_rates = [0.001]
-    weight_decays = [0.0005]
+    weight_decays = [0.0000]
     achitecture_params = [(64, 32, 2, 2)] #Emb_size, channel_count, embedding_factor_count, channel_factor_count
     seeds = [133]
     epochs = 0
@@ -86,7 +86,7 @@ def main(gpu):
     for learning_rate in learning_rates:
         for weight_decay in weight_decays:
                 for architecture_param in achitecture_params:
-                    output_folder = output_folder_base + "lr_{}_wd_{}_emb_size_{}_channels_{}_factor_{}_correct_factor/".format(learning_rate, weight_decay, architecture_param[0], architecture_param[1], architecture_param[2])
+                    output_folder = output_folder_base + "lr_{}_wd_{}_emb_size_{}_channels_{}_embfactor_{}_chanfactor_{}/".format(learning_rate, weight_decay, architecture_param[0], architecture_param[1], architecture_param[2], architecture_param[3])
                     results = Results(output_folder)
                     save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, architecture_param)
                     seed_results = {}

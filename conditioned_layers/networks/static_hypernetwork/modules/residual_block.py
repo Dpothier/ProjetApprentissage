@@ -1,5 +1,6 @@
 import torch.nn as nn
 import torch.nn.functional as F
+import time
 
 
 class IdentityLayer(nn.Module):
@@ -25,11 +26,16 @@ class ResidualBlock(nn.Module):
         self.bn2 = nn.BatchNorm2d(out_size)
 
     def forward(self, x, conv1_w, conv2_w):
-
         residual = self.reslayer(x)
 
-        out = F.relu(self.bn1(F.conv2d(x, conv1_w, stride=self.stride1, padding=1)), inplace=True)
-        out = self.bn2(F.conv2d(out, conv2_w, padding=1))
+        out = F.conv2d(x, conv1_w, stride=self.stride1, padding=1)
+
+        out = F.relu(self.bn1(out), inplace=True)
+
+        out = F.conv2d(out, conv2_w, padding=1)
+
+        out = self.bn2(out)
+
 
         out += residual
 

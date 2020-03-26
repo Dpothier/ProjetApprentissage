@@ -20,7 +20,7 @@ from training.metrics_util import *
 from networks.mnist_cnn_baseline.cnn import CNN
 from training.embeddings import load
 from training.loss import SoftCrossEntropyLoss, SoftenTargets
-from networks.factorized_policy_hypernetwork.network import PrimaryNetwork
+from networks.factorized_policy_hypernetwork_fast.network import PrimaryNetwork
 from training.random import set_random_seed
 import os
 import sklearn
@@ -31,7 +31,7 @@ TEST_MODE = False
 SEED = 133
 
 @click.command()
-@click.option('-g', '--gpu', default="gpu1")
+@click.option('-g', '--gpu', default="gpu0")
 def main(gpu):
     """
     Trains the LSTM-based integrated pattern-based and distributional method for hypernymy detection
@@ -85,7 +85,7 @@ def main(gpu):
     for learning_rate in learning_rates:
         for weight_decay in weight_decays:
                 for architecture_param in achitecture_params:
-                    output_folder = output_folder_base + "lr_{}_wd_{}_emb_size_{}_channels_{}_factor_{}/".format(learning_rate, weight_decay, architecture_param[0], architecture_param[1], architecture_param[2])
+                    output_folder = output_folder_base + "lr_{}_wd_{}_emb_size_{}_channels_{}_factor_{}_fast/".format(learning_rate, weight_decay, architecture_param[0], architecture_param[1], architecture_param[2])
                     results = Results(output_folder)
                     save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, architecture_param)
                     seed_results = {}
