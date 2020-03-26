@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c4dd41b-be7e-4675-8580-8defe3f30e2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork/modules/residual_block.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork/modules/residual_block.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/policy_mlp/policymlp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/policy_mlp/submodules/LinearLayers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/policy_mlp/submodules/Primitives.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/policy_mlp/submodules/QueryToAttention.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/policy_mlp/submodules/SeedToQueryFct.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/policy_mlp/submodules/stepwiseGRU.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/policy_mlp_single_state/policymlp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/policy_mlp_single_state/submodules/LinearLayers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/policy_mlp_single_state/submodules/Primitives.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/policy_mlp_single_state/submodules/QueryToAttention.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/policy_mlp_single_state/submodules/SeedToQueryFct.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/policy_mlp_single_state/submodules/stepwiseGRU.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +327,7 @@
       <workItem from="1584377368094" duration="1324000" />
       <workItem from="1584389083427" duration="700000" />
       <workItem from="1584725413362" duration="2941000" />
-      <workItem from="1585077650261" duration="21339000" />
+      <workItem from="1585077650261" duration="21550000" />
     </task>
     <servers />
   </component>
@@ -425,7 +435,7 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/networks/factorized_policy_hypernetwork_fast/modules/residual_block.py</url>
+          <url>file://$PROJECT_DIR$/networks/factorized_policy_hypernetwork/modules/residual_block.py</url>
           <line>50</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
