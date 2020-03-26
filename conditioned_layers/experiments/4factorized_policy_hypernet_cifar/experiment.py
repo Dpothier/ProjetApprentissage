@@ -20,7 +20,7 @@ from training.metrics_util import *
 from networks.mnist_cnn_baseline.cnn import CNN
 from training.embeddings import load
 from training.loss import SoftCrossEntropyLoss, SoftenTargets
-from networks.factorized_policy_hypernetwork_fast.network import PrimaryNetwork
+from networks.factorized_policy_hypernetwork.network import PrimaryNetwork
 from training.random import set_random_seed
 import os
 import sklearn

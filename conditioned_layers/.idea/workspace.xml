@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c4dd41b-be7e-4675-8580-8defe3f30e2d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/experiments/group_convo_tests/experiment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork_fast/modules/layer_embeddings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork_fast/modules/policy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork_fast/modules/residual_block.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork_fast/modules/stepwiseGRU.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork_fast/network.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/4factorized_policy_hypernet_cifar/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/4factorized_policy_hypernet_cifar/experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/4factorized_policy_hypernet_cifar/results/lr_0.001_wd_0.0_emb_size_64_channels_32_factor_4/results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/4factorized_policy_hypernet_cifar/results/lr_0.001_wd_0.0_emb_size_64_channels_32_factor_4/results.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/baseline_hypernet_cifar/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/baseline_hypernet_cifar/experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/factorized_policy_hypernet_cifar/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/factorized_policy_hypernet_cifar/experiment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork/modules/residual_block.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork/modules/residual_block.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork/network.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork/network.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/static_hypernetwork/modules/residual_block.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/static_hypernetwork/modules/residual_block.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,7 +317,7 @@
       <workItem from="1584377368094" duration="1324000" />
       <workItem from="1584389083427" duration="700000" />
       <workItem from="1584725413362" duration="2941000" />
-      <workItem from="1585077650261" duration="20703000" />
+      <workItem from="1585077650261" duration="21339000" />
     </task>
     <servers />
   </component>

@@ -53,7 +53,6 @@ class PrimaryNetwork(nn.Module):
         policy_time = 0
         for i in range(18):
             obs = F.adaptive_avg_pool2d(x, (1, 1)).squeeze(3).squeeze(2)
-
             policy_start = time.time()
             w1, w2 = self.policy(obs)
             policy_end = time.time()
@@ -77,10 +76,10 @@ class PrimaryNetwork(nn.Module):
         batch_end = time.time()
         batch_time = batch_end - batch_start
 
-        print("Regular network")
+        # print("Fast network")
         # print("\n Batch took {} ms".format(batch_time))
-        # print("Conv took: {}, {}%".format(conv_time, conv_time / batch_time * 100))
-        # print("Policy took: {}, {}%".format(policy_time, policy_time / batch_time * 100))
+        # print("Conv took: {}, {}%".format(conv_time, conv_time/batch_time * 100))
+        # print("Policy took: {}, {}%".format(policy_time, policy_time/batch_time * 100))
 
 
         return x
