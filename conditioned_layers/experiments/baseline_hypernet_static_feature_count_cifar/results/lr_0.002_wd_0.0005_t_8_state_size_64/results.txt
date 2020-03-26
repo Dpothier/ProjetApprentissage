@@ -1,8 +1,0 @@
-Hyperparameters values 
-Learning rate: 0.002 
-Weight decay: 0.0005 
-Number of training epochs: 0 
-Batch size: 128 
-T: 8 
-state size 64 
-seed size 64 
