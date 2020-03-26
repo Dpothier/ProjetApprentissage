@@ -1,7 +1,0 @@
-Hyperparameters values 
-Dataset: datasets/Cola/clean/ 
-Embeddings: embeddings/glove.6B.100d.txt 
-Learning rate: 5e-05 
-Number of training epochs: 50 
-Batch size: 32 
-Decay rate: 0 
