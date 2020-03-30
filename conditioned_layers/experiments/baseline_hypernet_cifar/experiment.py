@@ -66,8 +66,9 @@ def main(gpu):
     seeds = [133, 42, 55, 132, 178, 125, 666, 4242, 8526, 7456]
     epochs = 0
 
-    max_epoch = 2564
-    milestones_epoch = [430, 861, 1025, 1153, 1410, 1538]
+    lr_schedule = [75, 150, 200, 225, 250, 275]
+
+    max_epoch = 300
 
     transform_train = transforms.Compose([
         transforms.RandomCrop(32, padding=4),
@@ -81,8 +82,8 @@ def main(gpu):
         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
     ])
 
-    mnist_trainset = DataLoader(datasets.CIFAR10(root='../datasets', train=True, download=True, transform=transform_train), batch_size=batch_size, num_workers=4)
-    mnist_devset = DataLoader(datasets.CIFAR10(root='../datasets', train=False, download=True, transform=transform_test), batch_size=batch_size, num_workers=4)
+    cifar_trainset = DataLoader(datasets.CIFAR10(root='../datasets', train=True, download=True, transform=transform_train), batch_size=batch_size, num_workers=4)
+    cifar_devset = DataLoader(datasets.CIFAR10(root='../datasets', train=False, download=True, transform=transform_test), batch_size=batch_size, num_workers=4)
 
     best_results = None
     all_average_results = []
@@ -102,12 +103,12 @@ def main(gpu):
                             # Create the classifier
                             module = PrimaryNetwork()
 
-                            classes_weight = calculate_weight(mnist_trainset)
+                            classes_weight = calculate_weight(cifar_trainset)
 
                             optimizer = optim.Adam(module.parameters(), lr=learning_rate)
                             csvlogger = CSVLogger("{}/{}_log.csv".format(output_folder, seed))
                             best_model_restore = BestModelRestore(monitor="val_acc", mode="max")
-                            lr_scheduler = MultiStepLR(milestones=milestones_epoch, gamma=0.5)
+                            lr_scheduler = MultiStepLR(milestones=lr_schedule, gamma=0.5)
 
                             loss = nn.CrossEntropyLoss(weight=classes_weight)
 
@@ -117,17 +118,17 @@ def main(gpu):
                             if use_gpu:
                                 model = model.cuda()
 
-                            model.fit_generator(mnist_trainset, mnist_devset, epochs=max_epoch, callbacks=[best_model_restore, csvlogger, lr_scheduler])
+                            model.fit_generator(cifar_trainset, cifar_devset, epochs=max_epoch, callbacks=[best_model_restore, csvlogger, lr_scheduler])
 
-                            test_loss, test_metrics, test_preds = model.evaluate_generator(mnist_devset, return_pred=True)
-                            train_loss, train_metrics, train_preds = model.evaluate_generator(mnist_trainset, return_pred=True)
+                            test_loss, test_metrics, test_preds = model.evaluate_generator(cifar_devset, return_pred=True)
+                            train_loss, train_metrics, train_preds = model.evaluate_generator(cifar_trainset, return_pred=True)
 
 
                             test_preds = flatten_and_discritize_preds(test_preds)
-                            test_true = get_targets(mnist_devset)
+                            test_true = get_targets(cifar_devset)
 
                             train_preds = flatten_and_discritize_preds(train_preds)
-                            train_true = get_targets(mnist_trainset)
+                            train_true = get_targets(cifar_trainset)
 
                             write_results(results, "Results", test_preds, test_true, train_preds, train_true)
                             results.save_model(model)
@@ -136,8 +137,6 @@ def main(gpu):
                                 train_preds, train_true, "micro")
                             test_accuracy, test_precision, test_recall, test_f1 = produce_accuracy_precision_recall_f1(test_preds,
                                                                                                                        test_true, "micro")
-                            train_corr = sklearn.metrics.matthews_corrcoef(train_preds, train_true)
-                            dev_corr = sklearn.metrics.matthews_corrcoef(test_preds, test_true)
 
                             seed_results[seed] = {
                                 "train accuracy": train_accuracy,
