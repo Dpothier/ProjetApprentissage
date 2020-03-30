@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from torch.nn.parameter import Parameter
-from networks.factorized_policy_hypernetwork.modules.stepwiseGRU import StepwiseGRU
+from networks.factorized_policy_hypernetwork.modules.state_update import StepwiseGRU, StateUpdateGRU, StateUpdateLSTM
 
 
 class Policy(nn.Module):
@@ -25,7 +25,7 @@ class Policy(nn.Module):
             2), requires_grad=True)
         self.states = None
 
-        self.state_update = StepwiseGRU(self.channels, self.embedding_factors_size)
+        self.state_update = StateUpdateGRU(self.channels, self.embedding_factors_size)
 
         self.layer_generator_weight = Parameter(torch.fmod(
             torch.randn((self.embedding_size, self.channels_factor_size * self.kernel_size * self.kernel_size)), 2))

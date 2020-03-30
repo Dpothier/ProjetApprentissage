@@ -17,7 +17,6 @@ from poutyne.framework.callbacks import EarlyStopping
 from poutyne.framework.callbacks import CSVLogger
 from datasets.Cola.ColaDataset import ColaDataset
 from training.metrics_util import *
-from networks.mnist_cnn_baseline.cnn import CNN
 from training.embeddings import load
 from training.loss import SoftCrossEntropyLoss, SoftenTargets
 from networks.factorized_policy_hypernetwork.network import PrimaryNetwork
@@ -31,7 +30,7 @@ TEST_MODE = False
 SEED = 133
 
 @click.command()
-@click.option('-g', '--gpu', default="gpu1")
+@click.option('-g', '--gpu', default="gpu0")
 def main(gpu):
     """
     Trains the LSTM-based integrated pattern-based and distributional method for hypernymy detection
@@ -57,12 +56,12 @@ def main(gpu):
 
     output_folder_base = os.path.dirname(os.path.realpath(__file__)) + "/results/"
 
-    learning_rates = [0.001]
+    learning_rates = [0.002]
     weight_decays = [0.0000]
     achitecture_params = [(64, 32, 2, 2)] #Emb_size, channel_count, embedding_factor_count, channel_factor_count
     seeds = [133]
     epochs = 0
-    lr_schedule = [150, 250]
+    lr_schedule = [75, 150, 200, 225, 250, 275]
 
     max_epoch = 300
 
@@ -86,7 +85,7 @@ def main(gpu):
     for learning_rate in learning_rates:
         for weight_decay in weight_decays:
                 for architecture_param in achitecture_params:
-                    output_folder = output_folder_base + "lr_{}_wd_{}_emb_size_{}_channels_{}_embfactor_{}_chanfactor_{}/".format(learning_rate, weight_decay, architecture_param[0], architecture_param[1], architecture_param[2], architecture_param[3])
+                    output_folder = output_folder_base + "lr_{}_wd_{}_emb_size_{}_channels_{}_embfactor_{}_chanfactor_{}_celltest/".format(learning_rate, weight_decay, architecture_param[0], architecture_param[1], architecture_param[2], architecture_param[3])
                     results = Results(output_folder)
                     save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, architecture_param)
                     seed_results = {}
@@ -202,7 +201,8 @@ def save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_siz
         "Batch size: {}".format(batch_size),
         "emb size {}".format(architecture_params[0]),
         "channel counts {}".format(architecture_params[1]),
-        "factor counts {}".format(architecture_params[2])
+        "embedding factor counts {}".format(architecture_params[2]),
+        "channel factor counts {}".format(architecture_params[3])
     ])
 
 
