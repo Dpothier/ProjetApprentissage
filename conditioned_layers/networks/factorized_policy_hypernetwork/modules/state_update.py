@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+from torch.nn.parameter import Parameter
 
 # Implements a GRU, but computes a single step at a time. Parameter are injected
 class Paramerized_StepwiseGRU(nn.Module):
@@ -86,17 +87,39 @@ class StateUpdateGRU(nn.Module):
         return next_states
 
 class StateUpdateLSTM(nn.Module):
-    def __init__(self, initial_c, input_size, hidden_size, bias=True):
+    def __init__(self, channels_size, embedding_factors_size, channels_factors_count, embedding_factors_count, bias=True):
         super().__init__()
-        self.initial_c = initial_c
+
+        self.channels_size = channels_size
+        self.embedding_factors_size = embedding_factors_size
+        self.channels_factors_count = channels_factors_count
+        self.embedding_factors_count = embedding_factors_count
+
+        self.initial_c = Parameter(torch.fmod(
+            torch.randn(2 * self.channels_factors_count ** 2 * self.embedding_factors_count, self.embedding_factors_size),
+            2), requires_grad=True)
         self.current_c = None
-        self.cell = nn.LSTMCell(input_size=input_size, hidden_size=hidden_size, bias=bias)
+        self.cell = nn.LSTMCell(input_size=channels_size, hidden_size=embedding_factors_size, bias=bias)
 
     def init_state(self, batch_size):
-        self.current_c = self.initial_c.expand(batch_size, -1, -1, -1, -1)
+        self.current_c = self.initial_c.repeat_interleave(batch_size, dim=0)
 
-    def __call__(self, x, h):
-        out, self.current_c = self.cell(x, (h, self.current_c))
+    def __call__(self, obs, previous_states):
+        batch_size, number_of_states_to_update, channels_factor_count, embedding_factors_count, embedding_factors_size \
+            = previous_states.size()
 
-        return out
+        obs = obs.unsqueeze(1).expand(-1, number_of_states_to_update, -1)
+        obs = obs.unsqueeze(2).expand(-1, -1, channels_factor_count, -1)
+        obs = obs.unsqueeze(3).expand(-1, -1, -1, embedding_factors_count, -1)
+        obs = obs.contiguous()
+
+        obs = obs.view(batch_size * number_of_states_to_update * channels_factor_count * embedding_factors_count, -1)
+        previous_states = previous_states.contiguous()
+        previous_states = previous_states.view(
+            batch_size * number_of_states_to_update * channels_factor_count * embedding_factors_count,
+            embedding_factors_size)
+
+        out, self.current_c = self.cell(obs, (previous_states, self.current_c))
+
+        return out.view(batch_size, number_of_states_to_update, channels_factor_count, embedding_factors_count, -1)
 

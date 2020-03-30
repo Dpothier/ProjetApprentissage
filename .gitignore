@@ -51,3 +51,9 @@ conditioned_layers/experiments/baseline_cnn_mnist_grid_T_4/results/
 conditioned_layers/experiments/policy_mlp_mnist_comparisons/results/
 
 conditioned_layers/experiments/policy_mlp_mnist_comparisons/data/
+
+conditioned_layers/experiments/baseline_cnn_cifar_tests/results/
+
+conditioned_layers/experiments/factorized_policy_hypernet_cifar/results/
+
+conditioned_layers/experiments/baseline_hypernet_cifar/results/

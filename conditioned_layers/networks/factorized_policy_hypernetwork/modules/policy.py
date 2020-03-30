@@ -16,7 +16,7 @@ class Policy(nn.Module):
         self.embedding_size = self.embedding_factors_size * embedding_factor_count
 
         self.channels_factor_size = channels // channels_factor_count
-        self.channels = self.channels_factor_size * channels_factor_count
+        self.channels_size = self.channels_factor_size * channels_factor_count
 
         self.kernel_size = kernel_size
 
@@ -25,7 +25,8 @@ class Policy(nn.Module):
             2), requires_grad=True)
         self.states = None
 
-        self.state_update = StateUpdateGRU(self.channels, self.embedding_factors_size)
+
+        self.state_update = StateUpdateLSTM(self.channels_size, self.embedding_factors_size, self.channels_factor_count, self.embedding_factor_count)
 
         self.layer_generator_weight = Parameter(torch.fmod(
             torch.randn((self.embedding_size, self.channels_factor_size * self.kernel_size * self.kernel_size)), 2))
@@ -71,3 +72,4 @@ class Policy(nn.Module):
 
     def init_states(self, batch_size):
         self.states = self.start_states.expand(batch_size, -1, -1, -1, -1)
+        self.state_update.init_state(batch_size)

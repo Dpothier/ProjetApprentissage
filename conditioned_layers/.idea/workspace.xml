@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c4dd41b-be7e-4675-8580-8defe3f30e2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/networks/policy_mlp/policymlp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/policy_mlp/submodules/LinearLayers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/policy_mlp/submodules/Primitives.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/policy_mlp/submodules/QueryToAttention.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/policy_mlp/submodules/SeedToQueryFct.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/policy_mlp/submodules/stepwiseGRU.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/policy_mlp_single_state/policymlp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/policy_mlp_single_state/submodules/LinearLayers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/policy_mlp_single_state/submodules/Primitives.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/policy_mlp_single_state/submodules/QueryToAttention.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/policy_mlp_single_state/submodules/SeedToQueryFct.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/policy_mlp_single_state/submodules/stepwiseGRU.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork/modules/policy.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork/modules/policy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork/modules/state_update.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork/modules/state_update.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +65,7 @@
       <recent name="$PROJECT_DIR$/experiments/generative_transformer_st" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.experiment test">
+  <component name="RunManager" selected="Python.factorized_policy_hypernet">
     <configuration name="experiment (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="conditioned_layers" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,12 +118,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/4factorized_policy_hypernet_cifar" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/factorized_policy_hypernet_cifar" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/4factorized_policy_hypernet_cifar/experiment.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/factorized_policy_hypernet_cifar/experiment.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -210,17 +202,18 @@
       <item itemvalue="Python.transformer baseline experiment soft targets" />
       <item itemvalue="Python.lstm baseline experiment soft targets" />
       <item itemvalue="Python.baseline_bert" />
+      <item itemvalue="Python.factorized_policy_hypernet" />
+      <item itemvalue="Python.experiment" />
+      <item itemvalue="Python.rnn tests" />
+      <item itemvalue="Python.experiment (2)" />
       <item itemvalue="Python.find_successful_experiments" />
       <item itemvalue="Python.experiment_hypernet_static_feature" />
-      <item itemvalue="Python.experiment (2)" />
       <item itemvalue="Python.experiment test" />
-      <item itemvalue="Python.experiment" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.experiment test" />
         <item itemvalue="Python.experiment" />
-        <item itemvalue="Python.experiment (2)" />
+        <item itemvalue="Python.experiment test" />
         <item itemvalue="Python.experiment_hypernet_static_feature" />
         <item itemvalue="Python.find_successful_experiments" />
       </list>
@@ -327,7 +320,9 @@
       <workItem from="1584377368094" duration="1324000" />
       <workItem from="1584389083427" duration="700000" />
       <workItem from="1584725413362" duration="2941000" />
-      <workItem from="1585077650261" duration="21550000" />
+      <workItem from="1585077650261" duration="26714000" />
+      <workItem from="1585301719643" duration="11691000" />
+      <workItem from="1585496603659" duration="7746000" />
     </task>
     <servers />
   </component>
@@ -348,58 +343,62 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585162624419">
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585337692792">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1585162624419" />
-    <state x="701" y="444" width="575" height="217" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1585235510978">
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1585337692792" />
+    <state x="522" y="27" width="923" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585318798131">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="701" y="444" width="575" height="217" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1585235510978" />
+    <state x="522" y="27" width="923" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1585318798131" />
+    <state x="701" y="444" width="747" height="217" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1585318755470">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="701" y="444" width="747" height="217" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1585318755470" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1584461244058">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1584461244058" />
-    <state width="903" height="278" key="GridCell.Tab.0.bottom" timestamp="1585237595225">
+    <state width="903" height="278" key="GridCell.Tab.0.bottom" timestamp="1585604290968">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="903" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1585237595225" />
-    <state width="903" height="278" key="GridCell.Tab.0.center" timestamp="1585237595223">
+    <state width="903" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1585604290968" />
+    <state width="903" height="278" key="GridCell.Tab.0.center" timestamp="1585604290967">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="903" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1585237595223" />
-    <state width="903" height="278" key="GridCell.Tab.0.left" timestamp="1585237595223">
+    <state width="903" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1585604290967" />
+    <state width="903" height="278" key="GridCell.Tab.0.left" timestamp="1585604290966">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="903" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1585237595223" />
-    <state width="903" height="278" key="GridCell.Tab.0.right" timestamp="1585237595224">
+    <state width="903" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1585604290966" />
+    <state width="903" height="278" key="GridCell.Tab.0.right" timestamp="1585604290968">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="903" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1585237595224" />
-    <state width="1021" height="344" key="GridCell.Tab.1.bottom" timestamp="1585169768745">
+    <state width="903" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1585604290968" />
+    <state width="1016" height="344" key="GridCell.Tab.1.bottom" timestamp="1585598722525">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1021" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1585169768745" />
-    <state width="1021" height="344" key="GridCell.Tab.1.center" timestamp="1585169768744">
+    <state width="1016" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1585598722525" />
+    <state width="1016" height="344" key="GridCell.Tab.1.center" timestamp="1585598722524">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1021" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1585169768744" />
-    <state width="1021" height="344" key="GridCell.Tab.1.left" timestamp="1585169768744">
+    <state width="1016" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1585598722524" />
+    <state width="1016" height="344" key="GridCell.Tab.1.left" timestamp="1585598722524">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1021" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1585169768744" />
-    <state width="1021" height="344" key="GridCell.Tab.1.right" timestamp="1585169768745">
+    <state width="1016" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1585598722524" />
+    <state width="1016" height="344" key="GridCell.Tab.1.right" timestamp="1585598722524">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1021" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1585169768745" />
+    <state width="1016" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1585598722524" />
     <state x="270" y="173" key="SettingsEditor" timestamp="1583532212629">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="270" y="173" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1583532212629" />
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1584390732108">
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1585301910879">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1584390732108" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1585301910879" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -439,6 +438,26 @@
           <line>50</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/experiments/factorized_policy_hypernet_cifar/experiment.py</url>
+          <line>114</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/experiments/factorized_policy_hypernet_cifar/experiment.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/experiments/RNN_tests/experiment.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/experiments/RNN_tests/experiment.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -452,6 +471,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/conditioned_layers$experiment__5_.coverage" NAME="experiment (5) Coverage Results" MODIFIED="1572314559874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/policy_mlp_mnist_128_state_1_steps_full_residual_128_primitives" />
     <SUITE FILE_PATH="coverage/conditioned_layers$find_successful_experiments.coverage" NAME="find_successful_experiments Coverage Results" MODIFIED="1576851556506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/training/analyse_results" />
+    <SUITE FILE_PATH="coverage/conditioned_layers$factorized_policy_hypernet.coverage" NAME="factorized_policy_hypernet Coverage Results" MODIFIED="1585604290942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/4factorized_policy_hypernet_cifar" />
     <SUITE FILE_PATH="coverage/conditioned_layers$pytest_for_QueryToAttention_test_MyTestCase.coverage" NAME="pytest for QueryToAttention_test.MyTestCase Coverage Results" MODIFIED="1571431243619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/PolicyMLP" />
     <SUITE FILE_PATH="coverage/conditioned_layers$experiment__3_.coverage" NAME="experiment (3) Coverage Results" MODIFIED="1572624093009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/policy_mlp_mnist_comparisons" />
     <SUITE FILE_PATH="coverage/conditioned_layers$sentence_parser.coverage" NAME="sentence_parser Coverage Results" MODIFIED="1560882115132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
@@ -462,11 +482,12 @@
     <SUITE FILE_PATH="coverage/conditioned_layers$pytest_for_MLP_Primitives_test_MyTestCase_test_layer_dimensions.coverage" NAME="pytest in MLP_Primitives_test.py Coverage Results" MODIFIED="1570049792751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/PolicyMLP" />
     <SUITE FILE_PATH="coverage/conditioned_layers$pytest_for_MLP_Primitives_test_MyTestCase_test_layer_weights_and_bias_full_layer.coverage" NAME="pytest for MLP_Primitives_test.MyTestCase.test_layer_weights_and_bias_full_layer Coverage Results" MODIFIED="1570125742669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/PolicyMLP" />
     <SUITE FILE_PATH="coverage/conditioned_layers$pytest_for_stepwiseGRU_test_MyTestCase.coverage" NAME="pytest for stepwiseGRU_test.MyTestCase Coverage Results" MODIFIED="1570653796360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/PolicyMLP" />
-    <SUITE FILE_PATH="coverage/conditioned_layers$experiment__1_.coverage" NAME="experiment (1) Coverage Results" MODIFIED="1572380468758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/policy_cnn_mnist_tests" />
-    <SUITE FILE_PATH="coverage/conditioned_layers$experiment__2_.coverage" NAME="experiment (2) Coverage Results" MODIFIED="1584041714573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/factorized_policy_hypernet_cifar" />
+    <SUITE FILE_PATH="coverage/conditioned_layers$experiment__1_.coverage" NAME="rnn tests Coverage Results" MODIFIED="1585341392022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/RNN_tests" />
+    <SUITE FILE_PATH="coverage/conditioned_layers$rnn_tests.coverage" NAME="rnn tests Coverage Results" MODIFIED="1585598570674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/RNN_tests" />
+    <SUITE FILE_PATH="coverage/conditioned_layers$experiment__2_.coverage" NAME="experiment (2) Coverage Results" MODIFIED="1585256376829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/factorized_policy_hypernet_cifar" />
     <SUITE FILE_PATH="coverage/conditioned_layers$pytest_in_MLP_Primitives_test_py.coverage" NAME="pytest in MLP_Primitives_test.py Coverage Results" MODIFIED="1570197314680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/PolicyMLP" />
     <SUITE FILE_PATH="coverage/conditioned_layers$experiment__6_.coverage" NAME="experiment (6) Coverage Results" MODIFIED="1572544871616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/baseline_cnn_mnist_tests" />
-    <SUITE FILE_PATH="coverage/conditioned_layers$experiment.coverage" NAME="experiment Coverage Results" MODIFIED="1585171504876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/4factorized_policy_hypernet_cifar" />
+    <SUITE FILE_PATH="coverage/conditioned_layers$experiment.coverage" NAME="factorized_policy_hypernet Coverage Results" MODIFIED="1585257085285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/4factorized_policy_hypernet_cifar" />
     <SUITE FILE_PATH="coverage/conditioned_layers$experiment_test.coverage" NAME="experiment test Coverage Results" MODIFIED="1585237595200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/group_convo_tests" />
     <SUITE FILE_PATH="coverage/conditioned_layers$pytest_for_SeedToQuery_test_MyTestCase.coverage" NAME="pytest for SeedToQuery_test.MyTestCase Coverage Results" MODIFIED="1571600830489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/PolicyMLP" />
     <SUITE FILE_PATH="coverage/conditioned_layers$lstm_baseline_experiment_soft_targets.coverage" NAME="lstm baseline experiment soft targets Coverage Results" MODIFIED="1559325313968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
