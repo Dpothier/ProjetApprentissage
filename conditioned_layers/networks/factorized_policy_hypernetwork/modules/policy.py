@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from torch.nn.parameter import Parameter
-from networks.factorized_policy_hypernetwork.modules.state_update import StepwiseGRU, StateUpdateGRU, StateUpdateLSTM
+from networks.factorized_policy_hypernetwork.modules.state_update import StepwiseGRU, StateUpdateGRU, StateUpdateLSTM, StateUpdateMultiGRU
 
 
 class Policy(nn.Module):
@@ -20,13 +20,13 @@ class Policy(nn.Module):
 
         self.kernel_size = kernel_size
 
-        self.start_states = Parameter(torch.fmod(
-            torch.randn(2, self.channels_factor_count ** 2, self.embedding_factor_count, self.embedding_factors_size),
-            2), requires_grad=True)
-        self.states = None
+        # self.start_states = Parameter(torch.fmod(
+        #     torch.randn(2, self.channels_factor_count ** 2, self.embedding_factor_count, self.embedding_factors_size),
+        #     2), requires_grad=True)
+        # self.states = None
 
 
-        self.state_update = StateUpdateLSTM(self.channels_size, self.embedding_factors_size, self.channels_factor_count, self.embedding_factor_count)
+        self.state_update = StateUpdateMultiGRU(2, self.channels_size, self.embedding_factors_size, self.channels_factor_count, self.embedding_factor_count)
 
         self.layer_generator_weight = Parameter(torch.fmod(
             torch.randn((self.embedding_size, self.channels_factor_size * self.kernel_size * self.kernel_size)), 2))
@@ -60,16 +60,16 @@ class Policy(nn.Module):
     def forward(self, obs):
         batch_size = obs.size()[0]
 
-        self.states = self.state_update(obs, self.states)
+        states = self.state_update(obs)
 
-        w1 = self.compute_layer(torch.reshape(self.states[:, 0, :, :, :],
+        w1 = self.compute_layer(torch.reshape(states[:, 0, :, :, :],
                                               (batch_size, self.channels_factor_count ** 2, self.embedding_size)))
 
-        w2 = self.compute_layer(torch.reshape(self.states[:, 1, :, :, :],
+        w2 = self.compute_layer(torch.reshape(states[:, 1, :, :, :],
                                               (batch_size, self.channels_factor_count ** 2, self.embedding_size)))
 
         return w1, w2
 
     def init_states(self, batch_size):
-        self.states = self.start_states.expand(batch_size, -1, -1, -1, -1)
+        # self.states = self.start_states.expand(batch_size, -1, -1, -1, -1)
         self.state_update.init_state(batch_size)
