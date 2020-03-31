@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7c4dd41b-be7e-4675-8580-8defe3f30e2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/factorized_policy_hypernet_cifar/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/factorized_policy_hypernet_cifar/experiment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork/modules/policy.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork/modules/policy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork/modules/state_update.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/factorized_policy_hypernetwork/modules/state_update.py" afterDir="false" />
     </list>
@@ -323,7 +322,7 @@
       <workItem from="1585077650261" duration="26714000" />
       <workItem from="1585301719643" duration="11691000" />
       <workItem from="1585496603659" duration="7746000" />
-      <workItem from="1585666244353" duration="8136000" />
+      <workItem from="1585666244353" duration="8600000" />
     </task>
     <servers />
   </component>

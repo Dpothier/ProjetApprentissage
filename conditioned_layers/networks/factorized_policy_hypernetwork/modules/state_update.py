@@ -55,37 +55,6 @@ class StepwiseGRU(Paramerized_StepwiseGRU):
 
         super().__init__(update_mem, update_input, reset_mem, reset_input, candidate_mem, candidate_input)
 
-
-class StateUpdateGRU(nn.Module):
-
-    def __init__(self, input_size, hidden_size, bias=True):
-        super().__init__()
-        self.cell = nn.GRUCell(input_size=input_size, hidden_size=hidden_size, bias=bias)
-        self.batch_size = None
-
-    def init_state(self, batch_size):
-        self.batch_size = batch_size
-        pass
-
-    def __call__(self, obs, previous_states):
-        batch_size, number_of_states_to_update, channels_factor_count, embedding_factors_count, embedding_factors_size\
-            = previous_states.size()
-
-        obs = obs.unsqueeze(1).expand(-1, number_of_states_to_update, -1)
-        obs = obs.unsqueeze(2).expand(-1, -1, channels_factor_count, -1)
-        obs = obs.unsqueeze(3).expand(-1, -1, -1, embedding_factors_count, -1)
-        obs = obs.contiguous()
-
-        obs = obs.view(batch_size * number_of_states_to_update * channels_factor_count * embedding_factors_count, -1)
-        previous_states = previous_states.contiguous()
-        previous_states = previous_states.view(batch_size * number_of_states_to_update * channels_factor_count * embedding_factors_count,
-                                               embedding_factors_size)
-
-        next_states = self.cell(obs, previous_states)\
-            .view(batch_size, number_of_states_to_update, channels_factor_count, embedding_factors_count, embedding_factors_size)\
-            .contiguous()
-        return next_states
-
 class StateUpdateLSTM(nn.Module):
     def __init__(self, channels_size, embedding_factors_size, channels_factors_count, embedding_factors_count, bias=True):
         super().__init__()
@@ -124,7 +93,7 @@ class StateUpdateLSTM(nn.Module):
 
         return out.view(batch_size, number_of_states_to_update, channels_factor_count, embedding_factors_count, -1)
 
-class StateUpdateMultiGRU(nn.Module):
+class StateUpdateGRU(nn.Module):
 
     def __init__(self, layer_count, channels_factor_size, embedding_factors_size, channels_factors_count, embedding_factors_count, bias=True):
         super().__init__()
@@ -159,14 +128,7 @@ class StateUpdateMultiGRU(nn.Module):
         pass
 
     def __call__(self, obs):
-
         obs = obs.repeat((self.states_to_update * self.channels_factors_count**2 * self.embedding_factors_count, 1))
-        # obs = obs.unsqueeze(1).expand(-1, self.states_to_update, -1)
-        # obs = obs.unsqueeze(2).expand(-1, -1, self.channels_factors_count ** 2, -1)
-        # obs = obs.unsqueeze(3).expand(-1, -1, -1, self.embedding_factors_count, -1)
-        # obs = obs.contiguous()
-        #
-        # obs = obs.view(self.batch_size * self.number_of_states_to_update * self.channels_factor_count * self.embedding_factors_count, -1)
 
         out = obs
         for i in range(self.layer_count):
@@ -177,13 +139,5 @@ class StateUpdateMultiGRU(nn.Module):
         out = out.view(self.batch_size, self.states_to_update, self.channels_factors_count**2, self.embedding_factors_count, self.embedding_factors_size)\
             .contiguous()
         return out
-        # previous_states = previous_states.contiguous()
-        # previous_states = previous_states.view(self.batch_size * self.number_of_states_to_update * self.channels_factors_count * self.embedding_factors_count,
-        #                                        self.embedding_factors_size)
-        #
-        # next_states = self.cell(obs, previous_states)\
-        #     .view(self.batch_size, self.number_of_states_to_update, self.channels_factor_count, self.embedding_factors_count, self.embedding_factors_size)\
-        #     .contiguous()
-        # return next_states
 
 
