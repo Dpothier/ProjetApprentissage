@@ -102,7 +102,7 @@ class StateUpdateLSTM(nn.Module):
         self.cell = nn.LSTMCell(input_size=channels_size, hidden_size=embedding_factors_size, bias=bias)
 
     def init_state(self, batch_size):
-        self.current_c = self.initial_c.repeat_interleave(batch_size, dim=0)
+        self.current_c = self.initial_c.repeat((batch_size, 1))
 
     def __call__(self, obs, previous_states):
         batch_size, number_of_states_to_update, channels_factor_count, embedding_factors_count, embedding_factors_size \
