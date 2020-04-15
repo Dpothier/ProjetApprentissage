@@ -57,3 +57,5 @@ conditioned_layers/experiments/baseline_cnn_cifar_tests/results/
 conditioned_layers/experiments/factorized_policy_hypernet_cifar/results/
 
 conditioned_layers/experiments/baseline_hypernet_cifar/results/
+
+datasets/

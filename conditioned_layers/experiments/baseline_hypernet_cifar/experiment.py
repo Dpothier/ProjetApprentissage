@@ -8,24 +8,20 @@ import torchvision
 import torchvision.datasets as datasets
 import torchvision.transforms as transforms
 import torch.optim as optim
+from torch.utils.data import Subset
 from training.results import Results
 from poutyne.framework import Model
-from poutyne.framework.callbacks.clip_grad import ClipNorm
-from poutyne.framework.callbacks.lr_scheduler import ExponentialLR
+
 from poutyne.framework.callbacks.best_model_restore import BestModelRestore
 from poutyne.framework.callbacks.lr_scheduler import MultiStepLR
-from poutyne.framework.callbacks import EarlyStopping
 from poutyne.framework.callbacks import CSVLogger
-from datasets.Cola.ColaDataset import ColaDataset
 from training.metrics_util import *
-from networks.mnist_cnn_baseline.cnn import CNN
-from training.embeddings import load
-from training.loss import SoftCrossEntropyLoss, SoftenTargets
 from networks.static_hypernetwork.network import PrimaryNetwork
 from training.random import set_random_seed
 import os
-import sklearn
+import math
 import click
+import random
 
 
 TEST_MODE = False
@@ -33,7 +29,9 @@ SEED = 133
 
 @click.command()
 @click.option('-g', '--gpu', default="gpu0")
-def main(gpu):
+@click.option('-f', '--fraction', default=0.5)
+@click.option('-c', '--channels', default=16)
+def main(gpu, fraction, channels):
     """
     Trains the LSTM-based integrated pattern-based and distributional method for hypernymy detection
     :return:
@@ -41,7 +39,6 @@ def main(gpu):
 
 
     batch_size = 128
-    success_treshold = 0.95
 
 
     if gpu == 'cpu':
@@ -58,17 +55,18 @@ def main(gpu):
 
     output_folder_base = os.path.dirname(os.path.realpath(__file__)) + "/results/"
 
-    learning_rates = [0.002]
+    filter_size = channels **2
+
+    learning_rates = [0.002, 0.001]
     weight_decays = [0.0005]
-    Ts = [8]
-    state_sizes = [64]
-    seeds_sizes = [64]
-    seeds = [133, 42, 55, 132, 178, 125, 666, 4242, 8526, 7456]
+    layer_emb_sizes = [filter_size/4]
+    base_channel_counts = [channels]
+    seeds = [133, 42]
     epochs = 0
 
     lr_schedule = [75, 150, 200, 225, 250, 275]
 
-    max_epoch = 300
+    max_epoch = 1
 
     transform_train = transforms.Compose([
         transforms.RandomCrop(32, padding=4),
@@ -81,134 +79,115 @@ def main(gpu):
         transforms.ToTensor(),
         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
     ])
+    cifar_trainset = datasets.CIFAR10(root='../datasets', train=True, download=True, transform=transform_train)
+    fraction_indices = get_trainset_fraction_indices(cifar_trainset.targets, cifar_trainset.class_to_idx.values(), fraction)
+    cifar_trainset = Subset(cifar_trainset, fraction_indices)
 
-    cifar_trainset = DataLoader(datasets.CIFAR10(root='../datasets', train=True, download=True, transform=transform_train), batch_size=batch_size, num_workers=4)
-    cifar_devset = DataLoader(datasets.CIFAR10(root='../datasets', train=False, download=True, transform=transform_test), batch_size=batch_size, num_workers=4)
+    cifar_devset = datasets.CIFAR10(root='../datasets', train=False, download=True, transform=transform_test)
 
-    best_results = None
-    all_average_results = []
+    trainloader = DataLoader(cifar_trainset, batch_size=batch_size, num_workers=4)
+    devloader = DataLoader(cifar_devset, batch_size=batch_size, num_workers=4)
+
     for learning_rate in learning_rates:
         for weight_decay in weight_decays:
-            for T in Ts:
-                for state_size in state_sizes:
-                    for seed_size in seeds_sizes:
-                        output_folder = output_folder_base + "lr_{}_wd_{}_t_{}_state_size_{}/".format(learning_rate, weight_decay, T, state_size)
-                        results = Results(output_folder)
-                        save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, T, state_size, seed_size)
-                        seed_results = {}
+            for layer_emb_size in layer_emb_sizes:
+                for base_channel_count in base_channel_counts:
+                    output_folder = output_folder_base + "lr_{}_wd_{}_layer_emb_{}_base_channels_{}_train_pct_{}/"\
+                        .format(learning_rate, weight_decay, layer_emb_size, base_channel_count, fraction)
+                    results = Results(output_folder)
+                    save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, layer_emb_size, base_channel_count, fraction)
+                    seed_results = {}
 
-                        for seed in seeds:
-                            set_random_seed(seed)
+                    for seed in seeds:
+                        set_random_seed(seed)
 
-                            # Create the classifier
-                            module = PrimaryNetwork()
+                        # Create the classifier
+                        module = PrimaryNetwork()
 
-                            classes_weight = calculate_weight(cifar_trainset)
+                        classes_weight = calculate_weight(trainloader)
 
-                            optimizer = optim.Adam(module.parameters(), lr=learning_rate)
-                            csvlogger = CSVLogger("{}/{}_log.csv".format(output_folder, seed))
-                            best_model_restore = BestModelRestore(monitor="val_acc", mode="max")
-                            lr_scheduler = MultiStepLR(milestones=lr_schedule, gamma=0.5)
+                        optimizer = optim.Adam(module.parameters(), lr=learning_rate)
+                        csvlogger = CSVLogger("{}/{}_log.csv".format(output_folder, seed))
+                        best_model_restore = BestModelRestore(monitor="val_acc", mode="max")
+                        lr_scheduler = MultiStepLR(milestones=lr_schedule, gamma=0.5)
 
-                            loss = nn.CrossEntropyLoss(weight=classes_weight)
-
-
-                            model = Model(module, optimizer, loss, metrics=['accuracy'])
-
-                            if use_gpu:
-                                model = model.cuda()
-
-                            model.fit_generator(cifar_trainset, cifar_devset, epochs=max_epoch, callbacks=[best_model_restore, csvlogger, lr_scheduler])
-
-                            test_loss, test_metrics, test_preds = model.evaluate_generator(cifar_devset, return_pred=True)
-                            train_loss, train_metrics, train_preds = model.evaluate_generator(cifar_trainset, return_pred=True)
+                        loss = nn.CrossEntropyLoss(weight=classes_weight)
 
 
-                            test_preds = flatten_and_discritize_preds(test_preds)
-                            test_true = get_targets(cifar_devset)
+                        model = Model(module, optimizer, loss, metrics=['accuracy'])
 
-                            train_preds = flatten_and_discritize_preds(train_preds)
-                            train_true = get_targets(cifar_trainset)
+                        if use_gpu:
+                            model = model.cuda()
 
-                            write_results(results, "Results", test_preds, test_true, train_preds, train_true)
-                            results.save_model(model)
+                        model.fit_generator(trainloader, devloader, epochs=max_epoch, callbacks=[best_model_restore, csvlogger, lr_scheduler])
 
-                            train_accuracy, train_precision, train_recall, train_f1 = produce_accuracy_precision_recall_f1(
-                                train_preds, train_true, "micro")
-                            test_accuracy, test_precision, test_recall, test_f1 = produce_accuracy_precision_recall_f1(test_preds,
-                                                                                                                       test_true, "micro")
+                        test_loss, test_metrics, test_preds = model.evaluate_generator(devloader, return_pred=True)
+                        train_loss, train_metrics, train_preds = model.evaluate_generator(trainloader, return_pred=True)
 
-                            seed_results[seed] = {
-                                "train accuracy": train_accuracy,
-                                "test accuracy": test_accuracy,
-                                "precision": test_precision,
-                                "recall": test_recall,
-                                "f1": test_f1
-                            }
 
-                        number_of_seeds = len(seeds)
-                        average_results = {
-                            "learning rate": learning_rate,
-                            "T": T,
-                            "state size": state_size,
-                            "train accuracy": sum([result["train accuracy"] for result in seed_results.values()]) / number_of_seeds,
-                            "test accuracy": sum([result["test accuracy"] for result in seed_results.values()]) / number_of_seeds,
-                            "precision": sum([result["precision"] for result in seed_results.values()]) / number_of_seeds,
-                            "recall": sum([result["recall"] for result in seed_results.values()]) / number_of_seeds,
-                            "f1": sum([result["f1"] for result in seed_results.values()]) / number_of_seeds,
+                        test_preds = flatten_and_discritize_preds(test_preds)
+                        test_true = get_targets(devloader)
+
+                        train_preds = flatten_and_discritize_preds(train_preds)
+                        train_true = get_targets(trainloader)
+
+                        train_accuracy, train_precision, train_recall, train_f1 = produce_accuracy_precision_recall_f1(
+                            train_preds, train_true, "micro")
+                        test_accuracy, test_precision, test_recall, test_f1 = produce_accuracy_precision_recall_f1(test_preds,
+                                                                                                                   test_true, "micro")
+                        seed_results[seed] = {
+                            "train accuracy": train_accuracy.item(),
+                            "test accuracy": test_accuracy.item(),
+                            "precision": test_precision.item(),
+                            "recall": test_recall.item(),
+                            "f1": test_f1.item()
                         }
-                        all_average_results.append(average_results)
-                        if best_results is None:
-                            best_results = average_results
-                        elif average_results["test accuracy"] > best_results["test accuracy"]:
-                            best_results = average_results
+                        results.add_result(seed, seed_results[seed])
 
-    final_output = output_folder_base + "/summary/"
-    final_results = Results(final_output)
-
-    final_results.add_result_line("Following hyperparameters achieved success")
-    for results in all_average_results:
-        if results["test accuracy"] > success_treshold:
-            final_results.add_result_line("Lr: {}, T: {}, State size: {}   Final test accuracy: {}".format(
-                results["learning rate"], results["T"], results["state size"], results["test accuracy"]))
+                    number_of_seeds = len(seeds)
+                    average_results = {
+                        "train accuracy": sum([result["train accuracy"] for result in seed_results.values()]) / number_of_seeds,
+                        "test accuracy": sum([result["test accuracy"] for result in seed_results.values()]) / number_of_seeds,
+                        "precision": sum([result["precision"] for result in seed_results.values()]) / number_of_seeds,
+                        "recall": sum([result["recall"] for result in seed_results.values()]) / number_of_seeds,
+                        "f1": sum([result["f1"] for result in seed_results.values()]) / number_of_seeds,
+                    }
+                    results.add_result("average", average_results)
 
 
-
-    final_results.add_result_lines([
-        "Stats on best model",
-        "learning rate: {}".format(best_results["learning rate"]),
-        "T: {}".format(best_results["T"]),
-        "state size: {}".format(best_results["state size"]),
-        "train accuracy: {}".format(best_results["train accuracy"]),
-        "test accuracy: {}".format(best_results["test accuracy"]),
-        "precision: {}".format(best_results["precision"]),
-        "recall: {}".format(best_results["recall"]),
-        "f1: {}".format(best_results["f1"])
-    ])
-
-def write_results(results, heading, test_preds, test_true, train_preds, train_true):
+def write_results(results, seed, test_preds, test_true, train_preds, train_true):
     accuracy, precision, recall, f1 = produce_accuracy_precision_recall_f1(test_preds, test_true, "micro")
     train_accuracy, _, _, _ = produce_accuracy_precision_recall_f1(train_preds, train_true, "micro")
-    results.add_result_lines([
-        heading,
-        "Train Accuracy: {}".format(train_accuracy),
-        "Test Accuracy: {}".format(accuracy),
-        "Precision: {}".format(precision),
-        "Recall: {}".format(recall),
-        "f1: {}".format(f1)
-        ])
 
-def save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, T, state_size, seed_size):
-    results.add_result_lines([
-        "Hyperparameters values",
-        "Learning rate: {}".format(learning_rate),
-        "Weight decay: {}".format(weight_decay),
-        "Number of training epochs: {}".format(epochs),
-        "Batch size: {}".format(batch_size),
-        "T: {}".format(T),
-        "state size {}".format(state_size),
-        "seed size {}".format(seed_size)
-    ])
+    results.add_result(seed, {
+        "Train Accuracy": train_accuracy.item(),
+        "Test Accuracy": accuracy.item(),
+        "Precision": precision.item(),
+        "Recall": recall.item(),
+        "f1": f1.item()
+    })
+
+def save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, emb_layer_size, base_channel_count, training_pct):
+    results.add_hyperparameters({
+        "Learning rate": learning_rate,
+        "Weight decay": weight_decay,
+        "Number of training epochs": epochs,
+        "Batch size": batch_size,
+        "emb_layer_size": emb_layer_size,
+        "base_channel_count": base_channel_count,
+        "training_pct": training_pct
+    })
+
+def get_trainset_fraction_indices(targets, classes, fraction):
+    indices = []
+    for klass in classes:
+        class_indices = [i for i, e in enumerate(targets) if e == klass]
+        subset_size = math.floor(len(class_indices) * fraction)
+        indices.extend(random.sample(class_indices, subset_size))
+
+    random.shuffle(indices)
+    return indices
+
 
 
 

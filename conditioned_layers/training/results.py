@@ -4,6 +4,7 @@ import seaborn as sn
 import pandas as pd
 import matplotlib.pyplot as plt
 from training.history import History
+from yaml import dump
 
 class Results:
 
@@ -14,6 +15,8 @@ class Results:
 
         os.makedirs(folder)
 
+        self.yaml_tree = {}
+        self.yaml_tree["results"] = {}
         self.folder = folder
         self.history = History()
 
@@ -25,6 +28,22 @@ class Results:
                 lines.append("{} : {}".format(metric.name, metric.value))
 
         self.add_result_lines(lines)
+
+    def add_hyperparameters(self, hyperparameters, save=True):
+        self.yaml_tree["hyperparameters"] = hyperparameters
+
+        if save:
+            self.save()
+
+    def add_result(self, seed, results, save=True):
+        self.yaml_tree["results"][seed] = results
+
+        if save:
+            self.save()
+
+    def save(self):
+        with open(self.folder + "results.yaml", mode="w", encoding="utf-8") as f:
+            dump(self.yaml_tree, f)
 
     def add_result_line(self, line):
         print(line)

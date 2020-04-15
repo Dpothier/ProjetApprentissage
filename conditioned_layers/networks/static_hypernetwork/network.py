@@ -10,20 +10,27 @@ from networks.static_hypernetwork.modules.policy import Policy
 
 class PrimaryNetwork(nn.Module):
 
-    def __init__(self, z_dim=64):
+    def __init__(self, layer_emb_size=64, base_channel_count=16):
         super(PrimaryNetwork, self).__init__()
         self.conv1 = nn.Conv2d(3, 16, 3, padding=1)
         self.bn1 = nn.BatchNorm2d(16)
 
-        self.z_dim = z_dim
-        self.hope = Policy(z_dim=self.z_dim)
+        self.layer_emb_size = layer_emb_size
+        self.hope = Policy(z_dim=self.layer_emb_size)
 
         self.zs_size = [[1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1],
                         [2, 1], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2],
                         [4, 2], [4, 4], [4, 4], [4, 4], [4, 4], [4, 4], [4, 4], [4, 4], [4, 4], [4, 4], [4, 4], [4, 4]]
 
-        self.filter_size = [[16,16], [16,16], [16,16], [16,16], [16,16], [16,16], [16,32], [32,32], [32,32], [32,32],
-                            [32,32], [32,32], [32,64], [64,64], [64,64], [64,64], [64,64], [64,64]]
+        self.filter_size = [[base_channel_count, base_channel_count], [base_channel_count, base_channel_count],
+                            [base_channel_count, base_channel_count], [base_channel_count, base_channel_count],
+                            [base_channel_count, base_channel_count], [base_channel_count, base_channel_count],
+                            [base_channel_count, 2 * base_channel_count], [2 * base_channel_count, 2 * base_channel_count],
+                            [2 * base_channel_count, 2 * base_channel_count], [2 * base_channel_count, 2 * base_channel_count],
+                            [2 * base_channel_count, 2 * base_channel_count], [2 * base_channel_count, 2 * base_channel_count],
+                            [2 * base_channel_count, 4 * base_channel_count], [4 * base_channel_count, 4 * base_channel_count],
+                            [4 * base_channel_count, 4 * base_channel_count], [4 * base_channel_count, 4 * base_channel_count],
+                            [4 * base_channel_count, 4 * base_channel_count], [4 * base_channel_count, 4 * base_channel_count]]
 
         self.res_net = nn.ModuleList()
 
@@ -36,7 +43,7 @@ class PrimaryNetwork(nn.Module):
         self.zs = nn.ModuleList()
 
         for i in range(36):
-            self.zs.append(LayerEmbedding(self.zs_size[i], self.z_dim))
+            self.zs.append(LayerEmbedding(self.zs_size[i], self.layer_emb_size))
 
         self.global_avg = nn.AvgPool2d(8)
         self.final = nn.Linear(64, 10)
