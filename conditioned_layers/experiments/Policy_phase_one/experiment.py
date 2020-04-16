@@ -1,44 +1,47 @@
 import sys
 
 sys.path.append('../common')
-sys.path.append('/mnt/storage/dpothier/tmp/pytoune')
 
 import torch.nn as nn
 import torchvision
 import torchvision.datasets as datasets
 import torchvision.transforms as transforms
 import torch.optim as optim
-from torch.utils.data import Subset
 from training.results import Results
 from poutyne.framework import Model
-
+from torch.utils.data import Subset
 from poutyne.framework.callbacks.best_model_restore import BestModelRestore
 from poutyne.framework.callbacks.lr_scheduler import MultiStepLR
 from poutyne.framework.callbacks import CSVLogger
 from training.metrics_util import *
-from networks.static_hypernetwork.network import PrimaryNetwork
-from training.random import set_random_seed, fraction_dataset
+from networks.factorized_policy_hypernetwork.network import PrimaryNetwork
+from training.random import set_random_seed
 import os
-import math
+import sklearn
 import click
-import random
 
 
 TEST_MODE = False
 SEED = 133
 
 @click.command()
-@click.option('-g', '--gpu', default="gpu0")
+@click.option('-g', '--gpu', default="gpu1")
 @click.option('-f', '--fraction', default=1)
-@click.option('-c', '--channels', default=16)
-def main(gpu, fraction, channels):
+@click.option('-c', '--channels', default=32)
+@click.option('-l', '--layerembfactors', default=1)
+def main(gpu, fraction, channels, layerembfactors):
     """
     Trains the LSTM-based integrated pattern-based and distributional method for hypernymy detection
     :return:
     """
 
+    fraction = float(fraction)
+    channels = int(channels)
+    layerembfactors = int(layerembfactors)
 
     batch_size = 128
+    success_treshold = 0.95
+
 
     if gpu == 'cpu':
         print("Setting computation on cpu")
@@ -52,24 +55,16 @@ def main(gpu, fraction, channels):
         torch.cuda.set_device(0)
         use_gpu = True
 
-    fraction = float(fraction)
-    channels = int(channels)
-
     output_folder_base = os.path.dirname(os.path.realpath(__file__)) + "/results/"
 
-    filter_size = channels **2
-
-    learning_rates = [0.002, 0.001]
-    weight_decays = [0.0005]
-    layer_emb_sizes = [filter_size//4]
-    base_channel_counts = [channels]
-    seeds = [133, 42, 58, 65 ,70]
+    learning_rates = [0.002]
+    weight_decays = [0.0000]
+    achitecture_params = [(64, channels, layerembfactors, 2)] #Emb_size, channel_count, embedding_factor_count, channel_factor_count
+    seeds = [133]
     epochs = 0
-
     lr_schedule = [75, 150, 200, 225, 250, 275]
 
-    fraction_step_factors = 1 / fraction
-    max_epoch = int(300 * fraction_step_factors)
+    max_epoch = 300
 
     transform_train = transforms.Compose([
         transforms.RandomCrop(32, padding=4),
@@ -82,21 +77,23 @@ def main(gpu, fraction, channels):
         transforms.ToTensor(),
         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
     ])
+
     cifar_trainset = datasets.CIFAR10(root='../datasets', train=True, download=True, transform=transform_train)
     cifar_devset = datasets.CIFAR10(root='../datasets', train=False, download=True, transform=transform_test)
 
+    best_results = None
+    all_average_results = []
     for learning_rate in learning_rates:
         for weight_decay in weight_decays:
-            for layer_emb_size in layer_emb_sizes:
-                for base_channel_count in base_channel_counts:
-                    output_folder = output_folder_base + "lr_{}_wd_{}_layer_emb_{}_base_channels_{}_train_pct_{}/"\
-                        .format(learning_rate, weight_decay, layer_emb_size, base_channel_count, fraction)
+                for architecture_param in achitecture_params:
+                    output_folder = output_folder_base + "factor_counts_{}".format(architecture_param[2])
                     results = Results(output_folder)
-                    save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, layer_emb_size, base_channel_count, fraction)
+                    save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, architecture_param)
                     seed_results = {}
 
                     for seed in seeds:
                         set_random_seed(seed)
+
                         fraction_indices = get_trainset_fraction_indices(cifar_trainset.targets,
                                                                          cifar_trainset.class_to_idx.values(), fraction)
                         cifar_training_subset = Subset(cifar_trainset, fraction_indices)
@@ -105,7 +102,8 @@ def main(gpu, fraction, channels):
                         devloader = DataLoader(cifar_devset, batch_size=batch_size, num_workers=4)
 
                         # Create the classifier
-                        module = PrimaryNetwork(layer_emb_size=layer_emb_size, base_channel_count=base_channel_count)
+                        module = PrimaryNetwork(z_dim=architecture_param[0], filter_size=architecture_param[1],
+                                                embedding_factor_count=architecture_param[2], channels_factor_count=architecture_param[3])
 
                         classes_weight = calculate_weight(trainloader)
 
@@ -134,40 +132,84 @@ def main(gpu, fraction, channels):
                         train_preds = flatten_and_discritize_preds(train_preds)
                         train_true = get_targets(trainloader)
 
+                        write_results(results, "Results", test_preds, test_true, train_preds, train_true)
+                        results.save_model(model)
+
                         train_accuracy, train_precision, train_recall, train_f1 = produce_accuracy_precision_recall_f1(
                             train_preds, train_true, "micro")
                         test_accuracy, test_precision, test_recall, test_f1 = produce_accuracy_precision_recall_f1(test_preds,
                                                                                                                    test_true, "micro")
+
                         seed_results[seed] = {
-                            "train accuracy": train_accuracy.item(),
-                            "test accuracy": test_accuracy.item(),
-                            "precision": test_precision.item(),
-                            "recall": test_recall.item(),
-                            "f1": test_f1.item()
+                            "train accuracy": train_accuracy,
+                            "test accuracy": test_accuracy,
+                            "precision": test_precision,
+                            "recall": test_recall,
+                            "f1": test_f1
                         }
                         results.add_result(seed, seed_results[seed])
 
                     number_of_seeds = len(seeds)
                     average_results = {
+                        "learning rate": learning_rate,
+                        "state size": architecture_param,
                         "train accuracy": sum([result["train accuracy"] for result in seed_results.values()]) / number_of_seeds,
                         "test accuracy": sum([result["test accuracy"] for result in seed_results.values()]) / number_of_seeds,
                         "precision": sum([result["precision"] for result in seed_results.values()]) / number_of_seeds,
                         "recall": sum([result["recall"] for result in seed_results.values()]) / number_of_seeds,
                         "f1": sum([result["f1"] for result in seed_results.values()]) / number_of_seeds,
                     }
-                    results.add_result("average", average_results)
+                    all_average_results.append(average_results)
+                    if best_results is None:
+                        best_results = average_results
+                    elif average_results["test accuracy"] > best_results["test accuracy"]:
+                        best_results = average_results
 
-def save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, emb_layer_size, base_channel_count, training_pct):
+    final_output = output_folder_base + "/summary/"
+    final_results = Results(final_output)
+
+    final_results.add_result_line("Following hyperparameters achieved success")
+    for results in all_average_results:
+        if results["test accuracy"] > success_treshold:
+            final_results.add_result_line("Lr: {}, T: {}, State size: {}   Final test accuracy: {}".format(
+                results["learning rate"], results["T"], results["state size"], results["test accuracy"]))
+
+
+
+    final_results.add_result_lines([
+        "Stats on best model",
+        "learning rate: {}".format(best_results["learning rate"]),
+        "state size: {}".format(best_results["state size"]),
+        "train accuracy: {}".format(best_results["train accuracy"]),
+        "test accuracy: {}".format(best_results["test accuracy"]),
+        "precision: {}".format(best_results["precision"]),
+        "recall: {}".format(best_results["recall"]),
+        "f1: {}".format(best_results["f1"])
+    ])
+
+def write_results(results, heading, test_preds, test_true, train_preds, train_true):
+    accuracy, precision, recall, f1 = produce_accuracy_precision_recall_f1(test_preds, test_true, "micro")
+    train_accuracy, _, _, _ = produce_accuracy_precision_recall_f1(train_preds, train_true, "micro")
+    results.add_result_lines([
+        heading,
+        "Train Accuracy: {}".format(train_accuracy),
+        "Test Accuracy: {}".format(accuracy),
+        "Precision: {}".format(precision),
+        "Recall: {}".format(recall),
+        "f1: {}".format(f1)
+        ])
+
+def save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, architecture_params):
     results.add_hyperparameters({
         "Learning rate": learning_rate,
         "Weight decay": weight_decay,
         "Number of training epochs": epochs,
         "Batch size": batch_size,
-        "emb_layer_size": emb_layer_size,
-        "base_channel_count": base_channel_count,
-        "training_pct": training_pct
+        "emb size": architecture_params[0],
+        "channel counts": architecture_params[1],
+        "embedding factor counts": architecture_params[2],
+        "channel factor counts": architecture_params[3]
     })
-
 
 
 

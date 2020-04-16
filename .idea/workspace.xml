@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93039a6c-a30b-4b96-88b1-2ba87859d3d1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/experiments/Policy_phase_one/experiment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_hypernet_cifar/experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/experiments/baseline_hypernet_cifar/experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/static_hypernetwork/modules/policy.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/static_hypernetwork/modules/policy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/static_hypernetwork/network.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/static_hypernetwork/network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditioned_layers/training/random.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/training/random.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,23 +36,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/conditioned_layers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/conditioned_layers/experiments/Policy_phase_one" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/Policy_phase_one" />
+      <recent name="$PROJECT_DIR$/conditioned_layers/networks/combinatorial_tranformer" />
+      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets" />
+      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test" />
+      <recent name="$PROJECT_DIR$/conditioned_layers/experiments" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test" />
       <recent name="$PROJECT_DIR$/conditioned_layers/experiments/with_activation" />
       <recent name="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer" />
       <recent name="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/base" />
       <recent name="$PROJECT_DIR$/conditioned_layers/experiments/initial" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/conditioned_layers/networks/combinatorial_tranformer" />
-      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets" />
-      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test" />
-      <recent name="$PROJECT_DIR$/conditioned_layers/experiments" />
-      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/mathew_corr_on_existing_model" />
     </key>
   </component>
   <component name="RunManager" selected="Python.baseline_hypernet_cifar">
@@ -372,7 +372,7 @@
       <workItem from="1586185143285" duration="599000" />
       <workItem from="1586355828796" duration="1198000" />
       <workItem from="1586802115930" duration="2172000" />
-      <workItem from="1586878395891" duration="20649000" />
+      <workItem from="1586878395891" duration="23280000" />
     </task>
     <servers />
   </component>
@@ -405,26 +405,30 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="457" y="208" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1586980452467" />
+    <state x="689" y="444" width="599" height="217" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1587061374555">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="689" y="444" width="599" height="217" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1587061374555" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1586963129075">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1586963129075" />
-    <state width="1807" height="374" key="GridCell.Tab.0.bottom" timestamp="1586980397579">
+    <state width="1807" height="253" key="GridCell.Tab.0.bottom" timestamp="1587061389222">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="374" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1586980397579" />
-    <state width="1807" height="374" key="GridCell.Tab.0.center" timestamp="1586980397578">
+    <state width="1807" height="253" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1587061389222" />
+    <state width="1807" height="253" key="GridCell.Tab.0.center" timestamp="1587061389222">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="374" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1586980397578" />
-    <state width="1807" height="374" key="GridCell.Tab.0.left" timestamp="1586980397577">
+    <state width="1807" height="253" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1587061389222" />
+    <state width="1807" height="253" key="GridCell.Tab.0.left" timestamp="1587061389221">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="374" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1586980397577" />
-    <state width="1807" height="374" key="GridCell.Tab.0.right" timestamp="1586980397578">
+    <state width="1807" height="253" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1587061389221" />
+    <state width="1807" height="253" key="GridCell.Tab.0.right" timestamp="1587061389222">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="374" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1586980397578" />
+    <state width="1807" height="253" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1587061389222" />
     <state width="1807" height="329" key="GridCell.Tab.1.bottom" timestamp="1586980349419">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
