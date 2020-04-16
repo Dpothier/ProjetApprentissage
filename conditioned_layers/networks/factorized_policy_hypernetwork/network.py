@@ -11,7 +11,7 @@ from networks.factorized_policy_hypernetwork.modules.policy import Policy
 
 class PrimaryNetwork(nn.Module):
 
-    def __init__(self, z_dim=64, filter_size=32, embedding_factor_count=1, channels_factor_count=1):
+    def __init__(self, z_dim=64, filter_size=32, embedding_factor_count=1, channels_factor_count=1, policy=None):
         super(PrimaryNetwork, self).__init__()
         self.conv1 = nn.Conv2d(3, filter_size, 3, padding=1)
         self.bn1 = nn.BatchNorm2d(filter_size)
@@ -19,8 +19,11 @@ class PrimaryNetwork(nn.Module):
         self.filter_size = filter_size
 
         self.z_dim = z_dim
-        self.policy = Policy(channels=filter_size, embedding_size=z_dim,
+        if policy is None:
+            self.policy = Policy(channels=filter_size, embedding_size=z_dim,
                              embedding_factor_count=embedding_factor_count, channels_factor_count=channels_factor_count)
+        else:
+            self.policy = policy
 
         self.res_net = nn.ModuleList()
 
