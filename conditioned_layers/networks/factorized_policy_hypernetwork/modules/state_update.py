@@ -56,42 +56,63 @@ class StepwiseGRU(Paramerized_StepwiseGRU):
         super().__init__(update_mem, update_input, reset_mem, reset_input, candidate_mem, candidate_input)
 
 class StateUpdateLSTM(nn.Module):
-    def __init__(self, channels_size, embedding_factors_size, channels_factors_count, embedding_factors_count, bias=True):
+    def __init__(self, layer_count, channels_factor_size, embedding_factors_size, channels_factors_count, embedding_factors_count, bias=True):
         super().__init__()
-
-        self.channels_size = channels_size
+        self.layer_count = layer_count
+        self.channels_factors_size = channels_factor_size
         self.embedding_factors_size = embedding_factors_size
         self.channels_factors_count = channels_factors_count
         self.embedding_factors_count = embedding_factors_count
+        self.states_to_update = 2
 
+        cells = []
+        hiddens = []
+        cs = []
 
-        self.initial_c = Parameter(torch.fmod(
-            torch.randn(2 * self.channels_factors_count ** 2 * self.embedding_factors_count, self.embedding_factors_size),
-            2), requires_grad=True)
-        self.current_c = None
-        self.cell = nn.LSTMCell(input_size=channels_size, hidden_size=embedding_factors_size, bias=bias)
+        for i in range(layer_count):
+            hiddens.append(Parameter(torch.fmod(
+            torch.randn(self.states_to_update * channels_factors_count ** 2 * embedding_factors_count, embedding_factors_size),
+            2), requires_grad=True))
+            cs.append(Parameter(torch.fmod(
+                torch.randn(self.states_to_update * channels_factors_count ** 2 * embedding_factors_count,
+                            embedding_factors_size),
+                2), requires_grad=True))
+            cells.append(nn.GRUCell(input_size=channels_factor_size, hidden_size=embedding_factors_size, bias=bias))
+
+        self.base_hiddens = nn.ParameterList(hiddens)
+        self.base_cs = nn.ParameterList(cs)
+        self.cells = nn.ModuleList(cells)
+
+        self.current_hiddens = None
+        self.current_cs = None
+        self.batch_size = None
 
     def init_state(self, batch_size):
-        self.current_c = self.initial_c.repeat((batch_size, 1))
+        self.batch_size = batch_size
 
-    def __call__(self, obs, previous_states):
-        batch_size, number_of_states_to_update, channels_factor_count, embedding_factors_count, embedding_factors_size \
-            = previous_states.size()
+        self.current_hiddens = []
+        for hidden in self.base_hiddens:
+            self.current_hiddens.append(hidden.repeat((batch_size, 1)))
 
-        obs = obs.unsqueeze(1).expand(-1, number_of_states_to_update, -1)
-        obs = obs.unsqueeze(2).expand(-1, -1, channels_factor_count, -1)
-        obs = obs.unsqueeze(3).expand(-1, -1, -1, embedding_factors_count, -1)
-        obs = obs.contiguous()
+        for c in self.base_cs:
+            self.current_cs.append(c.repeat((batch_size, 1)))
 
-        obs = obs.view(batch_size * number_of_states_to_update * channels_factor_count * embedding_factors_count, -1)
-        previous_states = previous_states.contiguous()
-        previous_states = previous_states.view(
-            batch_size * number_of_states_to_update * channels_factor_count * embedding_factors_count,
-            embedding_factors_size)
+        pass
 
-        out, self.current_c = self.cell(obs, (previous_states, self.current_c))
+    def __call__(self, obs):
+        obs = obs.repeat((self.states_to_update * self.channels_factors_count**2 * self.embedding_factors_count, 1))
 
-        return out.view(batch_size, number_of_states_to_update, channels_factor_count, embedding_factors_count, -1)
+        out = obs
+        for i in range(self.layer_count):
+            out, new_c = self.cells[i](out, self.current_hiddens[i], self.current_cs[i])
+            self.current_hiddens[i] = out
+            self.current_cs[i] = new_c
+
+
+        out = out.view(self.batch_size, self.states_to_update, self.channels_factors_count**2, self.embedding_factors_count, self.embedding_factors_size)\
+            .contiguous()
+        return out
+
 
 class StateUpdateGRU(nn.Module):
 
