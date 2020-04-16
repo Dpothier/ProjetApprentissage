@@ -6,7 +6,7 @@ from networks.factorized_policy_hypernetwork.modules.state_update import Stepwis
 
 class Policy(nn.Module):
 
-    def __init__(self, channels=32, channels_factor_count=1, embedding_size=64, embedding_factor_count=1,
+    def __init__(self, channels=32, channels_factor_count=1, embedding_size=64, embedding_factor_count=1, state_update_depth=1,
                  kernel_size=3, state_update_constructor=StateUpdateGRU):
         super(Policy, self).__init__()
         self.embedding_factor_count = embedding_factor_count
@@ -20,7 +20,7 @@ class Policy(nn.Module):
 
         self.kernel_size = kernel_size
 
-        self.state_update = state_update_constructor(2, self.channels_size, self.embedding_factors_size, self.channels_factor_count, self.embedding_factor_count)
+        self.state_update = state_update_constructor(state_update_depth, self.channels_size, self.embedding_factors_size, self.channels_factor_count, self.embedding_factor_count)
 
         self.layer_generator_weight = Parameter(torch.fmod(
             torch.randn((self.embedding_size, self.channels_factor_size * self.kernel_size * self.kernel_size)), 2))

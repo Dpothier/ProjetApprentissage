@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93039a6c-a30b-4b96-88b1-2ba87859d3d1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/conditioned_layers/experiments/Policy_phase_three/experiment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/factorized_policy_hypernetwork/modules/policy.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/factorized_policy_hypernetwork/modules/policy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditioned_layers/networks/factorized_policy_hypernetwork/network.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditioned_layers/networks/factorized_policy_hypernetwork/network.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,23 +35,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/conditioned_layers/experiments/Policy_phase_two" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/conditioned_layers/experiments/Policy_phase_three" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/Policy_phase_three" />
       <recent name="$PROJECT_DIR$/conditioned_layers/experiments/Policy_phase_two" />
       <recent name="$PROJECT_DIR$/conditioned_layers/experiments/Policy_phase_one" />
       <recent name="$PROJECT_DIR$/conditioned_layers/networks/combinatorial_tranformer" />
       <recent name="$PROJECT_DIR$/conditioned_layers/experiments/baseline_LSTM_soft_targets" />
-      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/Policy_phase_three" />
       <recent name="$PROJECT_DIR$/conditioned_layers/experiments/TensorBoard_test" />
       <recent name="$PROJECT_DIR$/conditioned_layers/experiments/with_activation" />
       <recent name="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer" />
       <recent name="$PROJECT_DIR$/conditioned_layers/networks/conditioned_transformer/base" />
-      <recent name="$PROJECT_DIR$/conditioned_layers/experiments/initial" />
     </key>
   </component>
   <component name="RunManager" selected="Python.baseline_hypernet_cifar">
@@ -371,7 +371,7 @@
       <workItem from="1586185143285" duration="599000" />
       <workItem from="1586355828796" duration="1198000" />
       <workItem from="1586802115930" duration="2172000" />
-      <workItem from="1586878395891" duration="28639000" />
+      <workItem from="1586878395891" duration="29616000" />
     </task>
     <servers />
   </component>
