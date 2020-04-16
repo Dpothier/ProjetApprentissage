@@ -12,11 +12,14 @@ class PrimaryNetwork(nn.Module):
 
     def __init__(self, layer_emb_size=64, base_channel_count=16):
         super(PrimaryNetwork, self).__init__()
-        self.conv1 = nn.Conv2d(3, 16, 3, padding=1)
-        self.bn1 = nn.BatchNorm2d(16)
+        self.layer_emb_size=layer_emb_size
+        self.base_channel_count=base_channel_count
+
+        self.conv1 = nn.Conv2d(3, base_channel_count, 3, padding=1)
+        self.bn1 = nn.BatchNorm2d(base_channel_count)
 
         self.layer_emb_size = layer_emb_size
-        self.hope = Policy(z_dim=self.layer_emb_size)
+        self.hope = Policy(layer_emb_size=self.layer_emb_size, out_size=base_channel_count, in_size=base_channel_count)
 
         self.zs_size = [[1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1],
                         [2, 1], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2],
@@ -46,7 +49,7 @@ class PrimaryNetwork(nn.Module):
             self.zs.append(LayerEmbedding(self.zs_size[i], self.layer_emb_size))
 
         self.global_avg = nn.AvgPool2d(8)
-        self.final = nn.Linear(64, 10)
+        self.final = nn.Linear(4 * base_channel_count, 10)
 
     def forward(self, x):
 
@@ -64,6 +67,6 @@ class PrimaryNetwork(nn.Module):
             x = self.res_net[i](x, w1, w2)
 
         x = self.global_avg(x)
-        x = self.final(x.view(-1, 64))
+        x = self.final(x.view(-1, 4 * self.base_channel_count))
 
         return x

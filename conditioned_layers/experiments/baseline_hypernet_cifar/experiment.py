@@ -40,7 +40,6 @@ def main(gpu, fraction, channels):
 
     batch_size = 128
 
-
     if gpu == 'cpu':
         print("Setting computation on cpu")
         use_gpu = False
@@ -53,20 +52,24 @@ def main(gpu, fraction, channels):
         torch.cuda.set_device(0)
         use_gpu = True
 
+    fraction = float(fraction)
+    channels = int(channels)
+
     output_folder_base = os.path.dirname(os.path.realpath(__file__)) + "/results/"
 
     filter_size = channels **2
 
     learning_rates = [0.002, 0.001]
     weight_decays = [0.0005]
-    layer_emb_sizes = [filter_size/4]
+    layer_emb_sizes = [filter_size//4]
     base_channel_counts = [channels]
-    seeds = [133, 42]
+    seeds = [133, 42, 58, 65 ,70]
     epochs = 0
 
     lr_schedule = [75, 150, 200, 225, 250, 275]
 
-    max_epoch = 1
+    fraction_step_factors = 1 / fraction
+    max_epoch = int(300 * fraction_step_factors)
 
     transform_train = transforms.Compose([
         transforms.RandomCrop(32, padding=4),
@@ -102,7 +105,7 @@ def main(gpu, fraction, channels):
                         set_random_seed(seed)
 
                         # Create the classifier
-                        module = PrimaryNetwork()
+                        module = PrimaryNetwork(layer_emb_size=layer_emb_size, base_channel_count=base_channel_count)
 
                         classes_weight = calculate_weight(trainloader)
 

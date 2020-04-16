@@ -5,7 +5,7 @@ from torch.nn.parameter import Parameter
 
 class Policy(nn.Module):
 
-    def __init__(self, f_size = 3, layer_emb_size = 64, out_size=16, in_size=16):
+    def __init__(self, f_size = 3, layer_emb_size=64, out_size=16, in_size=16):
         super(Policy, self).__init__()
         self.layer_emb_size = layer_emb_size
         self.f_size = f_size
