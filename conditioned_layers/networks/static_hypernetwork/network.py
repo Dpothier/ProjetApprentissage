@@ -19,7 +19,7 @@ class PrimaryNetwork(nn.Module):
         self.bn1 = nn.BatchNorm2d(base_channel_count)
 
         self.layer_emb_size = layer_emb_size
-        self.hope = Policy(layer_emb_size=self.layer_emb_size, out_size=base_channel_count, in_size=base_channel_count)
+        self.Policy = Policy(layer_emb_size=self.layer_emb_size, out_size=base_channel_count, in_size=base_channel_count)
 
         self.zs_size = [[1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1],
                         [2, 1], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2],
@@ -59,11 +59,9 @@ class PrimaryNetwork(nn.Module):
             # if i != 15 and i != 17:
             z_1 = self.zs[2*i]
             z_2 = self.zs[2*i + 1]
-            w1 = self.hope(z_1)
-            w2 = self.hope(z_2)
+            w1 = self.Policy(z_1)
+            w2 = self.Policy(z_2)
 
-            # w1 = self.zs[2*i](self.hope)
-            # w2 = self.zs[2*i+1](self.hope)
             x = self.res_net[i](x, w1, w2)
 
         x = self.global_avg(x)

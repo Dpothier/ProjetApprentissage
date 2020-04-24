@@ -77,7 +77,7 @@ class StateUpdateLSTM(nn.Module):
                 torch.randn(self.states_to_update * channels_factors_count ** 2 * embedding_factors_count,
                             embedding_factors_size),
                 2), requires_grad=True))
-            cells.append(nn.GRUCell(input_size=channels_factor_size, hidden_size=embedding_factors_size, bias=bias))
+            cells.append(nn.LSTMCell(input_size=channels_factor_size, hidden_size=embedding_factors_size, bias=bias))
 
         self.base_hiddens = nn.ParameterList(hiddens)
         self.base_cs = nn.ParameterList(cs)
@@ -91,6 +91,7 @@ class StateUpdateLSTM(nn.Module):
         self.batch_size = batch_size
 
         self.current_hiddens = []
+        self.current_cs = []
         for hidden in self.base_hiddens:
             self.current_hiddens.append(hidden.repeat((batch_size, 1)))
 
@@ -104,7 +105,7 @@ class StateUpdateLSTM(nn.Module):
 
         out = obs
         for i in range(self.layer_count):
-            out, new_c = self.cells[i](out, self.current_hiddens[i], self.current_cs[i])
+            out, new_c = self.cells[i](out, (self.current_hiddens[i], self.current_cs[i]))
             self.current_hiddens[i] = out
             self.current_cs[i] = new_c
 

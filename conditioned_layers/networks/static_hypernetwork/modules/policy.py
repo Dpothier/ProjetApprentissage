@@ -18,15 +18,6 @@ class Policy(nn.Module):
         self.w2 = Parameter(torch.fmod(torch.randn((self.layer_emb_size, self.in_size * self.layer_emb_size)).cuda(), 2))
         self.b2 = Parameter(torch.fmod(torch.randn((self.in_size * self.layer_emb_size)).cuda(), 2))
 
-    # def forward(self, z):
-    #     h_in = torch.matmul(z, self.w2) + self.b2
-    #     h_in = h_in.view(self.in_size, self.z_dim)
-    #
-    #     h_final = torch.matmul(h_in, self.w1) + self.b1
-    #     kernel = h_final.view(self.out_size, self.in_size, self.f_size, self.f_size)
-    #
-    #     return kernel
-
     def parse_kernel(self, z):
         h_in = torch.matmul(z, self.w2) + self.b2
         h_in = h_in.view(self.in_size, self.layer_emb_size)

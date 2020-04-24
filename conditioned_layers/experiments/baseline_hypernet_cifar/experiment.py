@@ -29,7 +29,7 @@ SEED = 133
 
 @click.command()
 @click.option('-g', '--gpu', default="gpu0")
-@click.option('-f', '--fraction', default=1)
+@click.option('-f', '--fraction', default=1.0)
 @click.option('-c', '--channels', default=16)
 def main(gpu, fraction, channels):
     """

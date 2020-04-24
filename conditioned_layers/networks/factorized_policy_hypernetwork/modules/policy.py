@@ -65,5 +65,4 @@ class Policy(nn.Module):
         return w1, w2
 
     def init_states(self, batch_size):
-        # self.states = self.start_states.expand(batch_size, -1, -1, -1, -1)
         self.state_update.init_state(batch_size)

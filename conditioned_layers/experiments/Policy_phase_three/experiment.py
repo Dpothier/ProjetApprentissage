@@ -17,7 +17,7 @@ from training.metrics_util import *
 from networks.factorized_policy_hypernetwork.network import PrimaryNetwork
 from networks.factorized_policy_hypernetwork.modules.policy import Policy
 from networks.factorized_policy_hypernetwork.modules.state_update import StateUpdateLSTM, StateUpdateGRU
-from training.random import set_random_seed
+from training.random import set_random_seed, fraction_dataset
 import os
 import sklearn
 import click
@@ -28,7 +28,7 @@ SEED = 133
 
 @click.command()
 @click.option('-g', '--gpu', default="gpu1")
-@click.option('-f', '--fraction', default=1)
+@click.option('-f', '--fraction', default=1.0)
 @click.option('-c', '--channels', default=32)
 @click.option('-d', '--depthstateupdate', default=1 )
 def main(gpu, fraction, channels, depthstateupdate):
@@ -62,11 +62,11 @@ def main(gpu, fraction, channels, depthstateupdate):
     learning_rates = [0.002]
     weight_decays = [0.0000]
     achitecture_params = [(64, channels, 4, 2)] #Emb_size, channel_count, embedding_factor_count, channel_factor_count
-    seeds = [133]
-    epochs = 0
+    seeds = [133, 42, 58, 65 ,70]
     lr_schedule = [75, 150, 200, 225, 250, 275]
 
-    max_epoch = 300
+    fraction_step_factors = 1 / fraction
+    max_epoch = int(300 * fraction_step_factors)
 
     transform_train = transforms.Compose([
         transforms.RandomCrop(32, padding=4),
@@ -83,21 +83,19 @@ def main(gpu, fraction, channels, depthstateupdate):
     cifar_trainset = datasets.CIFAR10(root='../datasets', train=True, download=True, transform=transform_train)
     cifar_devset = datasets.CIFAR10(root='../datasets', train=False, download=True, transform=transform_test)
 
-    best_results = None
-    all_average_results = []
     for learning_rate in learning_rates:
         for weight_decay in weight_decays:
                 for architecture_param in achitecture_params:
                     output_folder = output_folder_base + "factor_counts_{}".format(architecture_param[2])
                     results = Results(output_folder)
-                    save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, architecture_param)
+                    save_hyperparameters(results, learning_rate, weight_decay, max_epoch, batch_size, architecture_param)
                     seed_results = {}
 
                     for seed in seeds:
                         set_random_seed(seed)
 
-                        fraction_indices = get_trainset_fraction_indices(cifar_trainset.targets,
-                                                                         cifar_trainset.class_to_idx.values(), fraction)
+                        fraction_indices = fraction_dataset(cifar_trainset.targets,
+                                                            cifar_trainset.class_to_idx.values(), fraction)
                         cifar_training_subset = Subset(cifar_trainset, fraction_indices)
 
                         trainloader = DataLoader(cifar_training_subset, batch_size=batch_size, num_workers=4)
@@ -141,9 +139,6 @@ def main(gpu, fraction, channels, depthstateupdate):
                         train_preds = flatten_and_discritize_preds(train_preds)
                         train_true = get_targets(trainloader)
 
-                        write_results(results, "Results", test_preds, test_true, train_preds, train_true)
-                        results.save_model(model)
-
                         train_accuracy, train_precision, train_recall, train_f1 = produce_accuracy_precision_recall_f1(
                             train_preds, train_true, "micro")
                         test_accuracy, test_precision, test_recall, test_f1 = produce_accuracy_precision_recall_f1(test_preds,
@@ -157,56 +152,17 @@ def main(gpu, fraction, channels, depthstateupdate):
                             "f1": test_f1
                         }
                         results.add_result(seed, seed_results[seed])
+                        results.save_model(seed, model)
 
                     number_of_seeds = len(seeds)
                     average_results = {
-                        "learning rate": learning_rate,
-                        "state size": architecture_param,
                         "train accuracy": sum([result["train accuracy"] for result in seed_results.values()]) / number_of_seeds,
                         "test accuracy": sum([result["test accuracy"] for result in seed_results.values()]) / number_of_seeds,
                         "precision": sum([result["precision"] for result in seed_results.values()]) / number_of_seeds,
                         "recall": sum([result["recall"] for result in seed_results.values()]) / number_of_seeds,
                         "f1": sum([result["f1"] for result in seed_results.values()]) / number_of_seeds,
                     }
-                    all_average_results.append(average_results)
-                    if best_results is None:
-                        best_results = average_results
-                    elif average_results["test accuracy"] > best_results["test accuracy"]:
-                        best_results = average_results
-
-    final_output = output_folder_base + "/summary/"
-    final_results = Results(final_output)
-
-    final_results.add_result_line("Following hyperparameters achieved success")
-    for results in all_average_results:
-        if results["test accuracy"] > success_treshold:
-            final_results.add_result_line("Lr: {}, T: {}, State size: {}   Final test accuracy: {}".format(
-                results["learning rate"], results["T"], results["state size"], results["test accuracy"]))
-
-
-
-    final_results.add_result_lines([
-        "Stats on best model",
-        "learning rate: {}".format(best_results["learning rate"]),
-        "state size: {}".format(best_results["state size"]),
-        "train accuracy: {}".format(best_results["train accuracy"]),
-        "test accuracy: {}".format(best_results["test accuracy"]),
-        "precision: {}".format(best_results["precision"]),
-        "recall: {}".format(best_results["recall"]),
-        "f1: {}".format(best_results["f1"])
-    ])
-
-def write_results(results, heading, test_preds, test_true, train_preds, train_true):
-    accuracy, precision, recall, f1 = produce_accuracy_precision_recall_f1(test_preds, test_true, "micro")
-    train_accuracy, _, _, _ = produce_accuracy_precision_recall_f1(train_preds, train_true, "micro")
-    results.add_result_lines([
-        heading,
-        "Train Accuracy: {}".format(train_accuracy),
-        "Test Accuracy: {}".format(accuracy),
-        "Precision: {}".format(precision),
-        "Recall: {}".format(recall),
-        "f1: {}".format(f1)
-        ])
+                    results.add_result("average", average_results)
 
 def save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, architecture_params):
     results.add_hyperparameters({

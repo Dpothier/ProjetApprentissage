@@ -56,8 +56,8 @@ class Results:
                 print(line)
                 f.write("{} \n".format(line))
 
-    def save_model(self, model):
-        model.save_weights(self.folder + "model.pth")
+    def save_model(self,seed,  model):
+        model.save_weights(self.folder + "{}_model.pth".format(seed))
 
 
     def save_history_metrics(self,epoch, metrics):
