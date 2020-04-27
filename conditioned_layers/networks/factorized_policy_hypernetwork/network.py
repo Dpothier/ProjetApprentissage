@@ -60,14 +60,6 @@ class PrimaryNetwork(nn.Module):
             w1, w2 = self.policy(obs)
             policy_end = time.time()
             policy_time += policy_end - policy_start
-            # if i != 15 and i != 17:
-            # z_1 = self.zs[2*i]
-            # z_2 = self.zs[2*i + 1]
-            # w1 = self.hope(z_1)
-            # w2 = self.hope(z_2)
-
-            # w1 = self.zs[2*i](self.hope)
-            # w2 = self.zs[2*i+1](self.hope)
             conv_start = time.time()
             x = self.res_net[i](x, w1, w2)
             conv_end = time.time()

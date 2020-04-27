@@ -12,8 +12,8 @@ class PrimaryNetwork(nn.Module):
 
     def __init__(self, layer_emb_size=64, base_channel_count=16):
         super(PrimaryNetwork, self).__init__()
-        self.layer_emb_size=layer_emb_size
-        self.base_channel_count=base_channel_count
+        self.layer_emb_size = layer_emb_size
+        self.base_channel_count = base_channel_count
 
         self.conv1 = nn.Conv2d(3, base_channel_count, 3, padding=1)
         self.bn1 = nn.BatchNorm2d(base_channel_count)

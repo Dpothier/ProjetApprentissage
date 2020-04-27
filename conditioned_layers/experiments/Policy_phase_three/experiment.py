@@ -28,9 +28,9 @@ SEED = 133
 
 @click.command()
 @click.option('-g', '--gpu', default="gpu1")
-@click.option('-f', '--fraction', default=1.0)
+@click.option('-f', '--fraction', default=1)
 @click.option('-c', '--channels', default=32)
-@click.option('-d', '--depthstateupdate', default=1 )
+@click.option('-d', '--depthstateupdate', default=1)
 def main(gpu, fraction, channels, depthstateupdate):
     """
     Trains the LSTM-based integrated pattern-based and distributional method for hypernymy detection
@@ -42,8 +42,6 @@ def main(gpu, fraction, channels, depthstateupdate):
     depthstateupdate = int(depthstateupdate)
 
     batch_size = 128
-    success_treshold = 0.95
-
 
     if gpu == 'cpu':
         print("Setting computation on cpu")
@@ -86,9 +84,9 @@ def main(gpu, fraction, channels, depthstateupdate):
     for learning_rate in learning_rates:
         for weight_decay in weight_decays:
                 for architecture_param in achitecture_params:
-                    output_folder = output_folder_base + "factor_counts_{}".format(architecture_param[2])
+                    output_folder = output_folder_base + "layer_count_{}/".format(depthstateupdate)
                     results = Results(output_folder)
-                    save_hyperparameters(results, learning_rate, weight_decay, max_epoch, batch_size, architecture_param)
+                    save_hyperparameters(results, learning_rate, weight_decay, max_epoch, batch_size, architecture_param, depthstateupdate)
                     seed_results = {}
 
                     for seed in seeds:
@@ -105,7 +103,7 @@ def main(gpu, fraction, channels, depthstateupdate):
                         # Create the policy
                         policy = Policy(channels=architecture_param[1], embedding_size=architecture_param[0],
                              embedding_factor_count=architecture_param[2], channels_factor_count=architecture_param[3],
-                             state_update_depth=depthstateupdate)
+                             state_update_constructor=StateUpdateGRU, state_update_depth=depthstateupdate)
 
                         # Create the classifier
                         module = PrimaryNetwork(z_dim=architecture_param[0], filter_size=architecture_param[1],
@@ -145,11 +143,11 @@ def main(gpu, fraction, channels, depthstateupdate):
                                                                                                                    test_true, "micro")
 
                         seed_results[seed] = {
-                            "train accuracy": train_accuracy,
-                            "test accuracy": test_accuracy,
-                            "precision": test_precision,
-                            "recall": test_recall,
-                            "f1": test_f1
+                            "train accuracy": train_accuracy.item(),
+                            "test accuracy": test_accuracy.item(),
+                            "precision": test_precision.item(),
+                            "recall": test_recall.item(),
+                            "f1": test_f1.item()
                         }
                         results.add_result(seed, seed_results[seed])
                         results.save_model(seed, model)
@@ -164,7 +162,7 @@ def main(gpu, fraction, channels, depthstateupdate):
                     }
                     results.add_result("average", average_results)
 
-def save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, architecture_params):
+def save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, architecture_params, state_update_depth):
     results.add_hyperparameters({
         "Learning rate": learning_rate,
         "Weight decay": weight_decay,
@@ -173,7 +171,8 @@ def save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_siz
         "emb size": architecture_params[0],
         "channel counts": architecture_params[1],
         "embedding factor counts": architecture_params[2],
-        "channel factor counts": architecture_params[3]
+        "channel factor counts": architecture_params[3],
+        "state update depth": state_update_depth
     })
 
 

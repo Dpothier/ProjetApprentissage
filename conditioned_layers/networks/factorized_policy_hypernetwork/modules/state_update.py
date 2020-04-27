@@ -130,10 +130,15 @@ class StateUpdateGRU(nn.Module):
         hiddens = []
 
         for i in range(layer_count):
+            if i == 0:
+                input_size = channels_factor_size
+            else:
+                input_size = embedding_factors_size
+
             hiddens.append(Parameter(torch.fmod(
             torch.randn(self.states_to_update * channels_factors_count ** 2 * embedding_factors_count, embedding_factors_size),
             2), requires_grad=True))
-            cells.append(nn.GRUCell(input_size=channels_factor_size, hidden_size=embedding_factors_size, bias=bias))
+            cells.append(nn.GRUCell(input_size=input_size, hidden_size=embedding_factors_size, bias=bias))
 
         self.base_hiddens = nn.ParameterList(hiddens)
         self.cells = nn.ModuleList(cells)
