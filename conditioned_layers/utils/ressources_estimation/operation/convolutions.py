@@ -1,5 +1,5 @@
-from utils.ressources_estimation.estimator import Estimator
-from utils.ressources_estimation.basics import MatMul, Linear_Layer, PointToPointOperation, Batch_Norm, Relu
+from utils.ressources_estimation.operation.estimator import Estimator
+from utils.ressources_estimation.operation.basics import MatMul, Linear_Layer, PointToPointOperation, Batch_Norm, Relu
 
 class Predicted_Conv(Estimator):
     def __init__(self, width, length, in_channels, out_channels, kernel_size, bias=False):

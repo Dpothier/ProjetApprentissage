@@ -61,3 +61,7 @@ conditioned_layers/experiments/baseline_hypernet_cifar/results/
 datasets/
 
 conditioned_layers/experiments/Policy_phase_one/results/
+
+conditioned_layers/experiments/Policy_phase_two/results/
+
+conditioned_layers/utils/ressources_estimation/results/
