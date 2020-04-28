@@ -19,7 +19,7 @@ from datasets.Cola.ColaDataset import ColaDataset
 from training.metrics_util import *
 from training.embeddings import load
 from training.loss import SoftCrossEntropyLoss, SoftenTargets
-from networks.factorized_policy_hypernetwork.network import PrimaryNetwork
+from networks.policy_hypernetwork.network import PrimaryNetwork
 from training.random import set_random_seed
 import os
 import sklearn

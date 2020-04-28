@@ -11,7 +11,7 @@ from networks.policy_hypernetwork.modules.policy import Policy
 
 class PrimaryNetwork(nn.Module):
 
-    def __init__(self, z_dim=64, filter_size=32):
+    def __init__(self, z_dim=64, filter_size=32, embedding_factor_count=1, channels_factor_count=1, policy=None):
         super(PrimaryNetwork, self).__init__()
         self.conv1 = nn.Conv2d(3, filter_size, 3, padding=1)
         self.bn1 = nn.BatchNorm2d(filter_size)
@@ -19,7 +19,11 @@ class PrimaryNetwork(nn.Module):
         self.filter_size = filter_size
 
         self.z_dim = z_dim
-        self.policy = Policy(channels=filter_size, embedding_size=z_dim)
+        if policy is None:
+            self.policy = Policy(channels=filter_size, embedding_size=z_dim,
+                             embedding_factor_count=embedding_factor_count, channels_factor_count=channels_factor_count)
+        else:
+            self.policy = policy
 
         self.res_net = nn.ModuleList()
 
@@ -47,19 +51,15 @@ class PrimaryNetwork(nn.Module):
 
 
         conv_start, conv_end = None, None
+        policy_start, policy_end = None, None
         conv_time = 0
+        policy_time = 0
         for i in range(18):
             obs = F.adaptive_avg_pool2d(x, (1, 1)).squeeze(3).squeeze(2)
-
+            policy_start = time.time()
             w1, w2 = self.policy(obs)
-            # if i != 15 and i != 17:
-            # z_1 = self.zs[2*i]
-            # z_2 = self.zs[2*i + 1]
-            # w1 = self.hope(z_1)
-            # w2 = self.hope(z_2)
-
-            # w1 = self.zs[2*i](self.hope)
-            # w2 = self.zs[2*i+1](self.hope)
+            policy_end = time.time()
+            policy_time += policy_end - policy_start
             conv_start = time.time()
             x = self.res_net[i](x, w1, w2)
             conv_end = time.time()
@@ -71,7 +71,10 @@ class PrimaryNetwork(nn.Module):
         batch_end = time.time()
         batch_time = batch_end - batch_start
 
-        # print("batch took {} ms, conv took {} ms, {} %".format(batch_time, conv_time, conv_time/batch_time * 100))
+        # print("Fast network")
+        # print("\n Batch took {} ms".format(batch_time))
+        # print("Conv took: {}, {}%".format(conv_time, conv_time/batch_time * 100))
+        # print("Policy took: {}, {}%".format(policy_time, policy_time/batch_time * 100))
 
 
         return x

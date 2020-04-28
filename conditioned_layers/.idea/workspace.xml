@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c4dd41b-be7e-4675-8580-8defe3f30e2d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/ressources_estimation/experiments_comparison.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/ressources_estimation/operation/RNN.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/ressources_estimation/operation/networks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/ressources_estimation/RNN.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/ressources_estimation/basics.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/ressources_estimation/operation/basics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/ressources_estimation/convolutions.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/ressources_estimation/operation/convolutions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/ressources_estimation/estimator.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/ressources_estimation/operation/estimator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/ressources_estimation/networks.py" beforeDir="false" />
-    </list>
+    <list default="true" id="7c4dd41b-be7e-4675-8580-8defe3f30e2d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -346,7 +335,7 @@
       <workItem from="1587152565523" duration="2880000" />
       <workItem from="1587244419480" duration="15391000" />
       <workItem from="1587497682445" duration="8954000" />
-      <workItem from="1587661133433" duration="39576000" />
+      <workItem from="1587661133433" duration="40044000" />
     </task>
     <servers />
   </component>

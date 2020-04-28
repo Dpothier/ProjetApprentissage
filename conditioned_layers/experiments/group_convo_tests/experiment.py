@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import time
 from networks.static_hypernetwork.modules.residual_block import ResidualBlock as ResidualBlockStatic
-from networks.factorized_policy_hypernetwork.modules.residual_block import ResidualBlock as ResidualBlockPolicy
+from networks.policy_hypernetwork.modules.residual_block import ResidualBlock as ResidualBlockPolicy
 
 
 torch.cuda.set_device(0)

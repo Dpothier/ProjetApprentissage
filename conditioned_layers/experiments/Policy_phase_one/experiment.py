@@ -14,7 +14,7 @@ from poutyne.framework.callbacks.best_model_restore import BestModelRestore
 from poutyne.framework.callbacks.lr_scheduler import MultiStepLR
 from poutyne.framework.callbacks import CSVLogger
 from training.metrics_util import *
-from networks.factorized_policy_hypernetwork.network import PrimaryNetwork
+from networks.policy_hypernetwork.network import PrimaryNetwork
 from training.random import set_random_seed, fraction_dataset
 import os
 import sklearn
