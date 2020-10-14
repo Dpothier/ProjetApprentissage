@@ -1,0 +1,20 @@
+\begin{table}[h!]
+\centering
+\caption{Phase 1: Performances et ressources pour différentes valeurs de factorisation des vecteurs de couche}
+\vspace{6pt}
+\begin{tabular}{ccccc}
+\toprule
+Nombre de facteurs & Paramètres & Calculs(FLOPS) & \begin{tabular}{c}
+Exactitude\\
+entraînement\\
+\end{tabular} & \begin{tabular}{c}
+Exactitude\\
+test\\
+\end{tabular}\\
+\cmidrule(r{.3em}l){1-5}
+1 & 9.19e+04 & 3.72e+08 & \textbf{0.88} & \textbf{0.8110}\\
+2 & 8.11e+04 & 3.69e+08 & 0.88 & \textbf{0.8089}\\
+4 & \textbf{7.81e+04} & \textbf{3.68e+08} & 0.87 & \textbf{0.8095}\\
+\bottomrule
+\end{tabular}
+\end{table}

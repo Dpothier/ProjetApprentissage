@@ -1,0 +1,22 @@
+\begin{table}[h!]
+\centering
+\caption{Mesure de la réduction du modèle et du jeu d'entraînement sur les performances de la base de référence}
+\vspace{6pt}
+\begin{tabular}{ccccc}
+\toprule
+Configuration & Paramètres & Calculs(FLOPS) & \begin{tabular}{c}
+Exactitude\\
+entraînement\\
+\end{tabular} & \begin{tabular}{c}
+Exactitude\\
+test\\
+\end{tabular}\\
+\cmidrule(r{.3em}l){1-5}
+Modèle complet & 1.05e+05 & 2.43e+08 & \textbf{0.96} & \textbf{0.8626}\\
+Modèle réduit & \textbf{1.11e+04} & \textbf{4.38e+07} & 0.80 & 0.7874\\
+Fraction 25\% & 1.05e+05 & 2.43e+08 & 0.96 & 0.8410\\
+Fraction 50\% & 1.05e+05 & 2.43e+08 & 0.96 & 0.8142\\
+Fraction 75\% & 1.05e+05 & 2.43e+08 & 0.95 & 0.7490\\
+\bottomrule
+\end{tabular}
+\end{table}

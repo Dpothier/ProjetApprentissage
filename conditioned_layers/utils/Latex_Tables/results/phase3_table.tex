@@ -1,0 +1,20 @@
+\begin{table}[h!]
+\centering
+\caption{Phase 3: Performances et ressources pour différents nombres de cellules RNN}
+\vspace{6pt}
+\begin{tabular}{ccccc}
+\toprule
+Nombre de cellules RNN & Paramètres & Calculs(FLOPS) & \begin{tabular}{c}
+Exactitude\\
+entraînement\\
+\end{tabular} & \begin{tabular}{c}
+Exactitude\\
+test\\
+\end{tabular}\\
+\cmidrule(r{.3em}l){1-5}
+1 & \textbf{7.81e+04} & \textbf{3.68e+08} & 0.87 & 0.8064\\
+2 & 7.96e+04 & 3.68e+08 & \textbf{0.89} & \textbf{0.8144}\\
+4 & 8.27e+04 & 3.69e+08 & \textbf{0.89} & 0.8059\\
+\bottomrule
+\end{tabular}
+\end{table}

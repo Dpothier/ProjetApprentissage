@@ -1,0 +1,19 @@
+\begin{table}[h!]
+\centering
+\caption{Phase 2: Performances et ressources pour différents types de cellule RNN}
+\vspace{6pt}
+\begin{tabular}{ccccc}
+\toprule
+Type de cellule RNN & Paramètres & Calculs(FLOPS) & \begin{tabular}{c}
+Exactitude\\
+entraînement\\
+\end{tabular} & \begin{tabular}{c}
+Exactitude\\
+test\\
+\end{tabular}\\
+\cmidrule(r{.3em}l){1-5}
+GRU & \textbf{7.81e+04} & \textbf{3.68e+08} & 0.87 & \textbf{0.8064}\\
+LSTM & 7.86e+04 & 3.68e+08 & \textbf{0.87} & 0.7955\\
+\bottomrule
+\end{tabular}
+\end{table}
