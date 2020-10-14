@@ -59,9 +59,10 @@ def main(gpu, fraction, channels):
 
     filter_size = channels **2
 
-    learning_rates = [0.002, 0.001]
+    learning_rates = [0.002]
     weight_decays = [0.0005]
-    layer_emb_sizes = [filter_size//4]
+    # layer_emb_sizes = [filter_size//4]
+    layer_emb_sizes = [64]
     base_channel_counts = [channels]
     seeds = [133, 42, 58, 65 ,70]
     epochs = 0
@@ -89,16 +90,16 @@ def main(gpu, fraction, channels):
         for weight_decay in weight_decays:
             for layer_emb_size in layer_emb_sizes:
                 for base_channel_count in base_channel_counts:
-                    output_folder = output_folder_base + "lr_{}_wd_{}_layer_emb_{}_base_channels_{}_train_pct_{}/"\
-                        .format(learning_rate, weight_decay, layer_emb_size, base_channel_count, fraction)
+                    output_folder = output_folder_base + "layer_emb_{}_base_channels_{}_train_pct_{}/"\
+                        .format(layer_emb_size, base_channel_count, fraction)
                     results = Results(output_folder)
-                    save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, layer_emb_size, base_channel_count, fraction)
+                    save_hyperparameters(results, learning_rate, weight_decay, epochs, batch_size, layer_emb_size, base_channel_count, int(100*fraction))
                     seed_results = {}
 
                     for seed in seeds:
                         set_random_seed(seed)
-                        fraction_indices = get_trainset_fraction_indices(cifar_trainset.targets,
-                                                                         cifar_trainset.class_to_idx.values(), fraction)
+                        fraction_indices = fraction_dataset(cifar_trainset.targets,
+                                                            cifar_trainset.class_to_idx.values(), fraction)
                         cifar_training_subset = Subset(cifar_trainset, fraction_indices)
 
                         trainloader = DataLoader(cifar_training_subset, batch_size=batch_size, num_workers=4)
