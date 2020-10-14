@@ -1,0 +1,45 @@
+embeddings_1_factor:
+  computation:
+    classification: 33450
+    first_conv: 2162688
+    layer: 303206400
+    policy: 61820928
+    state_update: 4608000
+    total: 371831466
+  memory:
+    classification: 320
+    first_conv: 866
+    layer: 72
+    policy: 74752
+    state_update: 15872
+    total: 91882
+embeddings_2_factor:
+  computation:
+    classification: 33450
+    first_conv: 2162688
+    layer: 303206400
+    policy: 61820928
+    state_update: 1419264
+    total: 368642730
+  memory:
+    classification: 320
+    first_conv: 866
+    layer: 72
+    policy: 74752
+    state_update: 5120
+    total: 81130
+embeddings_4_factor:
+  computation:
+    classification: 33450
+    first_conv: 2162688
+    layer: 303206400
+    policy: 61820928
+    state_update: 488448
+    total: 367711914
+  memory:
+    classification: 320
+    first_conv: 866
+    layer: 72
+    policy: 74752
+    state_update: 2048
+    total: 78058

@@ -1,0 +1,75 @@
+fraction_25:
+  computation:
+    classification: 5450.0
+    embeddings: 0
+    first_conv: 1081344
+    layer: 148733952
+    policy: 92731392
+    total: 242552138.0
+  memory:
+    classification: 640
+    embeddings: 13824
+    first_conv: 434
+    layer: 15432
+    policy: 74752
+    total: 105082
+fraction_50:
+  computation:
+    classification: 5450.0
+    embeddings: 0
+    first_conv: 1081344
+    layer: 148733952
+    policy: 92731392
+    total: 242552138.0
+  memory:
+    classification: 640
+    embeddings: 13824
+    first_conv: 434
+    layer: 15432
+    policy: 74752
+    total: 105082
+fraction_75:
+  computation:
+    classification: 5450.0
+    embeddings: 0
+    first_conv: 1081344
+    layer: 148733952
+    policy: 92731392
+    total: 242552138.0
+  memory:
+    classification: 640
+    embeddings: 13824
+    first_conv: 434
+    layer: 15432
+    policy: 74752
+    total: 105082
+full:
+  computation:
+    classification: 5450.0
+    embeddings: 0
+    first_conv: 1081344
+    layer: 148733952
+    policy: 92731392
+    total: 242552138.0
+  memory:
+    classification: 640
+    embeddings: 13824
+    first_conv: 434
+    layer: 15432
+    policy: 74752
+    total: 105082
+reduced:
+  computation:
+    classification: 2730.0
+    embeddings: 0
+    first_conv: 540672
+    layer: 38191104
+    policy: 5018112
+    total: 43752618.0
+  memory:
+    classification: 320
+    embeddings: 3456
+    first_conv: 218
+    layer: 3912
+    policy: 3200
+    total: 11106

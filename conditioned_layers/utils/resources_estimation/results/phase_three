@@ -1,0 +1,45 @@
+layer_count_1:
+  computation:
+    classification: 33450
+    first_conv: 2162688
+    layer: 303206400
+    policy: 61820928
+    state_update: 488448
+    total: 367711914
+  memory:
+    classification: 320
+    first_conv: 866
+    layer: 72
+    policy: 74752
+    state_update: 2048
+    total: 78058
+layer_count_2:
+  computation:
+    classification: 33450
+    first_conv: 2162688
+    layer: 303206400
+    policy: 61820928
+    state_update: 976896
+    total: 368200362
+  memory:
+    classification: 320
+    first_conv: 866
+    layer: 72
+    policy: 74752
+    state_update: 3584
+    total: 79594
+layer_count_4:
+  computation:
+    classification: 33450
+    first_conv: 2162688
+    layer: 303206400
+    policy: 61820928
+    state_update: 1953792
+    total: 369177258
+  memory:
+    classification: 320
+    first_conv: 866
+    layer: 72
+    policy: 74752
+    state_update: 6656
+    total: 82666
